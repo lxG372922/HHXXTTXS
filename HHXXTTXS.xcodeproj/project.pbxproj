@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416D08D22B38D3D004D16A4 /* COCHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0416D08C22B38D3D004D16A4 /* COCHomeHeaderView.m */; };
+		0416D08F22B38EF9004D16A4 /* COCHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D08E22B38EF9004D16A4 /* COCHomeHeaderView.xib */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -55,6 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0416D08B22B38D3D004D16A4 /* COCHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHomeHeaderView.h; sourceTree = "<group>"; };
+		0416D08C22B38D3D004D16A4 /* COCHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeHeaderView.m; sourceTree = "<group>"; };
+		0416D08E22B38EF9004D16A4 /* COCHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHomeHeaderView.xib; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -441,6 +446,9 @@
 			children = (
 				18F20B9D22B352D70064DE4C /* COCHomeViewController.h */,
 				18F20B9E22B352D70064DE4C /* COCHomeViewController.m */,
+				0416D08B22B38D3D004D16A4 /* COCHomeHeaderView.h */,
+				0416D08C22B38D3D004D16A4 /* COCHomeHeaderView.m */,
+				0416D08E22B38EF9004D16A4 /* COCHomeHeaderView.xib */,
 			);
 			path = COCHome;
 			sourceTree = "<group>";
@@ -543,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
+				0416D08F22B38EF9004D16A4 /* COCHomeHeaderView.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
@@ -622,6 +631,7 @@
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
 				18F20B1422B350010064DE4C /* NSString+Verify.m in Sources */,
+				0416D08D22B38D3D004D16A4 /* COCHomeHeaderView.m in Sources */,
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				18F20B9F22B352D70064DE4C /* COCHomeViewController.m in Sources */,
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
