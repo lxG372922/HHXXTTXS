@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049B973422B3841B003D943E /* NSString+LabelSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973222B3841B003D943E /* NSString+LabelSize.m */; };
+		049B973822B38556003D943E /* COCPositionHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973722B38556003D943E /* COCPositionHostViewController.m */; };
+		049B973B22B389EA003D943E /* PostHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973A22B389EA003D943E /* PostHeaderView.m */; };
+		049B973E22B38AD1003D943E /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973D22B38AD1003D943E /* PositionModel.m */; };
+		049B974122B38D27003D943E /* COCHostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974022B38D27003D943E /* COCHostModel.m */; };
+		049B974422B39084003D943E /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974322B39084003D943E /* myLabel.m */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -55,6 +61,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049B973222B3841B003D943E /* NSString+LabelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSize.m"; sourceTree = "<group>"; };
+		049B973322B3841B003D943E /* NSString+LabelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSize.h"; sourceTree = "<group>"; };
+		049B973522B3844A003D943E /* COCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHeader.h; sourceTree = "<group>"; };
+		049B973622B38556003D943E /* COCPositionHostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCPositionHostViewController.h; sourceTree = "<group>"; };
+		049B973722B38556003D943E /* COCPositionHostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCPositionHostViewController.m; sourceTree = "<group>"; };
+		049B973922B389EA003D943E /* PostHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostHeaderView.h; sourceTree = "<group>"; };
+		049B973A22B389EA003D943E /* PostHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostHeaderView.m; sourceTree = "<group>"; };
+		049B973C22B38AD1003D943E /* PositionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionModel.h; sourceTree = "<group>"; };
+		049B973D22B38AD1003D943E /* PositionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
+		049B973F22B38D27003D943E /* COCHostModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHostModel.h; sourceTree = "<group>"; };
+		049B974022B38D27003D943E /* COCHostModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHostModel.m; sourceTree = "<group>"; };
+		049B974222B39083003D943E /* myLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLabel.h; sourceTree = "<group>"; };
+		049B974322B39084003D943E /* myLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myLabel.m; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +180,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049B972F22B38268003D943E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				049B973622B38556003D943E /* COCPositionHostViewController.h */,
+				049B973722B38556003D943E /* COCPositionHostViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		049B973022B38268003D943E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				049B973C22B38AD1003D943E /* PositionModel.h */,
+				049B973D22B38AD1003D943E /* PositionModel.m */,
+				049B973F22B38D27003D943E /* COCHostModel.h */,
+				049B974022B38D27003D943E /* COCHostModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		049B973122B38268003D943E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				049B973922B389EA003D943E /* PostHeaderView.h */,
+				049B973A22B389EA003D943E /* PostHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18F20AB822B34E960064DE4C = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +261,8 @@
 		18F20AEA22B350010064DE4C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				049B973322B3841B003D943E /* NSString+LabelSize.h */,
+				049B973222B3841B003D943E /* NSString+LabelSize.m */,
 				18F20AF522B350010064DE4C /* NSDictionary+InfoDictionary.h */,
 				18F20B0122B350010064DE4C /* NSDictionary+InfoDictionary.m */,
 				18F20AED22B350010064DE4C /* NSNumber+digitalValue.h */,
@@ -362,6 +412,8 @@
 		18F20B3722B351EB0064DE4C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				049B974222B39083003D943E /* myLabel.h */,
+				049B974322B39084003D943E /* myLabel.m */,
 				18F20B3822B351EB0064DE4C /* JMBaseButton */,
 			);
 			path = ThirdParty;
@@ -421,8 +473,12 @@
 		18F20B9A22B352340064DE4C /* COCPosition */ = {
 			isa = PBXGroup;
 			children = (
+				049B972F22B38268003D943E /* Controller */,
+				049B973022B38268003D943E /* Model */,
+				049B973122B38268003D943E /* View */,
 				18F20BA322B352F10064DE4C /* COCPositionViewController.h */,
 				18F20BA422B352F10064DE4C /* COCPositionViewController.m */,
+				049B973522B3844A003D943E /* COCHeader.h */,
 			);
 			path = COCPosition;
 			sourceTree = "<group>";
@@ -615,6 +671,7 @@
 			files = (
 				18F20B0B22B350010064DE4C /* UIView+CenterLoading.m in Sources */,
 				18F20AE922B34FAE0064DE4C /* COCBaseNaviController.m in Sources */,
+				049B974422B39084003D943E /* myLabel.m in Sources */,
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
@@ -622,10 +679,12 @@
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
 				18F20B1422B350010064DE4C /* NSString+Verify.m in Sources */,
+				049B973822B38556003D943E /* COCPositionHostViewController.m in Sources */,
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				18F20B9F22B352D70064DE4C /* COCHomeViewController.m in Sources */,
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
+				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
@@ -642,6 +701,7 @@
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
+				049B973422B3841B003D943E /* NSString+LabelSize.m in Sources */,
 				18F20B0822B350010064DE4C /* UITextView+Placeholder.m in Sources */,
 				18F20AE622B34F520064DE4C /* COCBaseViewController.m in Sources */,
 				18F20BA222B352EA0064DE4C /* COCQuotesViewController.m in Sources */,
@@ -650,7 +710,9 @@
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
 				18F20B1122B350010064DE4C /* NSDictionary+InfoDictionary.m in Sources */,
 				18F20BA522B352F10064DE4C /* COCPositionViewController.m in Sources */,
+				049B973E22B38AD1003D943E /* PositionModel.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
+				049B974122B38D27003D943E /* COCHostModel.m in Sources */,
 				18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */,
 				18F20BBE22B354E60064DE4C /* ASORequestSerializer.m in Sources */,
 			);
