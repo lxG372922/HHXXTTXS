@@ -87,8 +87,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     if(!cell){
         cell = [[COCHostTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:communityReportCell_id_1];
     }
-
-    //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
 //    [cell setNewsTableViewCellControlContentWithModel:dic];
 

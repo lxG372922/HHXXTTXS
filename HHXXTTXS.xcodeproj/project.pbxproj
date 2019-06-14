@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0416D09622B3A0C3004D16A4 /* COCHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D09322B3A0C3004D16A4 /* COCHomeHeaderView.xib */; };
-		0416D09722B3A0C3004D16A4 /* COCHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0416D09522B3A0C3004D16A4 /* COCHomeHeaderView.m */; };
 		049B973422B3841B003D943E /* NSString+LabelSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973222B3841B003D943E /* NSString+LabelSize.m */; };
 		049B973822B38556003D943E /* COCPositionHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973722B38556003D943E /* COCPositionHostViewController.m */; };
 		049B973B22B389EA003D943E /* PostHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973A22B389EA003D943E /* PostHeaderView.m */; };
@@ -16,6 +14,8 @@
 		049B974122B38D27003D943E /* COCHostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974022B38D27003D943E /* COCHostModel.m */; };
 		049B974422B39084003D943E /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974322B39084003D943E /* myLabel.m */; };
 		049B974722B3AE56003D943E /* COCHostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974622B3AE56003D943E /* COCHostTableViewCell.m */; };
+		049B974B22B3B919003D943E /* COCHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974822B3B917003D943E /* COCHomeHeaderView.m */; };
+		049B974C22B3B919003D943E /* COCHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B974922B3B919003D943E /* COCHomeHeaderView.xib */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -64,9 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0416D09322B3A0C3004D16A4 /* COCHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCHomeHeaderView.xib; sourceTree = "<group>"; };
-		0416D09422B3A0C3004D16A4 /* COCHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCHomeHeaderView.h; sourceTree = "<group>"; };
-		0416D09522B3A0C3004D16A4 /* COCHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCHomeHeaderView.m; sourceTree = "<group>"; };
 		049B973222B3841B003D943E /* NSString+LabelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSize.m"; sourceTree = "<group>"; };
 		049B973322B3841B003D943E /* NSString+LabelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSize.h"; sourceTree = "<group>"; };
 		049B973522B3844A003D943E /* COCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHeader.h; sourceTree = "<group>"; };
@@ -82,6 +79,9 @@
 		049B974322B39084003D943E /* myLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myLabel.m; sourceTree = "<group>"; };
 		049B974522B3AE56003D943E /* COCHostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHostTableViewCell.h; sourceTree = "<group>"; };
 		049B974622B3AE56003D943E /* COCHostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHostTableViewCell.m; sourceTree = "<group>"; };
+		049B974822B3B917003D943E /* COCHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCHomeHeaderView.m; sourceTree = "<group>"; };
+		049B974922B3B919003D943E /* COCHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCHomeHeaderView.xib; sourceTree = "<group>"; };
+		049B974A22B3B919003D943E /* COCHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCHomeHeaderView.h; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -505,11 +505,11 @@
 		18F20B9C22B3523D0064DE4C /* COCHome */ = {
 			isa = PBXGroup;
 			children = (
+				049B974A22B3B919003D943E /* COCHomeHeaderView.h */,
+				049B974822B3B917003D943E /* COCHomeHeaderView.m */,
+				049B974922B3B919003D943E /* COCHomeHeaderView.xib */,
 				18F20B9D22B352D70064DE4C /* COCHomeViewController.h */,
 				18F20B9E22B352D70064DE4C /* COCHomeViewController.m */,
-				0416D09422B3A0C3004D16A4 /* COCHomeHeaderView.h */,
-				0416D09522B3A0C3004D16A4 /* COCHomeHeaderView.m */,
-				0416D09322B3A0C3004D16A4 /* COCHomeHeaderView.xib */,
 			);
 			path = COCHome;
 			sourceTree = "<group>";
@@ -612,7 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
-				0416D09622B3A0C3004D16A4 /* COCHomeHeaderView.xib in Resources */,
+				049B974C22B3B919003D943E /* COCHomeHeaderView.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
@@ -694,12 +694,12 @@
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
 				18F20B1422B350010064DE4C /* NSString+Verify.m in Sources */,
 				049B973822B38556003D943E /* COCPositionHostViewController.m in Sources */,
-				0416D09722B3A0C3004D16A4 /* COCHomeHeaderView.m in Sources */,
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				18F20B9F22B352D70064DE4C /* COCHomeViewController.m in Sources */,
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
+				049B974B22B3B919003D943E /* COCHomeHeaderView.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
