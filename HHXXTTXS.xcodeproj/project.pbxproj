@@ -16,6 +16,9 @@
 		04BC5A8522B3AC3600A406EF /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A7D22B3AC3500A406EF /* MyHeaderView.m */; };
 		04BC5A8622B3AC3600A406EF /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A7F22B3AC3500A406EF /* MyTableViewCell.m */; };
 		04BC5A8722B3AC3600A406EF /* MyFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A8122B3AC3500A406EF /* MyFooterView.m */; };
+		04BC5A8A22B3AF3400A406EF /* ModifyNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A8922B3AF3400A406EF /* ModifyNameViewController.m */; };
+		04BC5A8D22B3B4F000A406EF /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A8C22B3B4F000A406EF /* SignatureViewController.m */; };
+		04BC5A9022B3B8C100A406EF /* ModifyPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5A8F22B3B8C100A406EF /* ModifyPassViewController.m */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -84,6 +87,12 @@
 		04BC5A8122B3AC3500A406EF /* MyFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFooterView.m; sourceTree = "<group>"; };
 		04BC5A8222B3AC3500A406EF /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		04BC5A8322B3AC3600A406EF /* MineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeader.h; sourceTree = "<group>"; };
+		04BC5A8822B3AF3400A406EF /* ModifyNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyNameViewController.h; sourceTree = "<group>"; };
+		04BC5A8922B3AF3400A406EF /* ModifyNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyNameViewController.m; sourceTree = "<group>"; };
+		04BC5A8B22B3B4F000A406EF /* SignatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		04BC5A8C22B3B4F000A406EF /* SignatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
+		04BC5A8E22B3B8C100A406EF /* ModifyPassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPassViewController.h; sourceTree = "<group>"; };
+		04BC5A8F22B3B8C100A406EF /* ModifyPassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPassViewController.m; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,12 +231,12 @@
 		04BC5A7C22B3AC3500A406EF /* V */ = {
 			isa = PBXGroup;
 			children = (
+				04BC5A8022B3AC3500A406EF /* MyHeaderView.h */,
 				04BC5A7D22B3AC3500A406EF /* MyHeaderView.m */,
 				04BC5A7E22B3AC3500A406EF /* MyFooterView.h */,
-				04BC5A7F22B3AC3500A406EF /* MyTableViewCell.m */,
-				04BC5A8022B3AC3500A406EF /* MyHeaderView.h */,
 				04BC5A8122B3AC3500A406EF /* MyFooterView.m */,
 				04BC5A8222B3AC3500A406EF /* MyTableViewCell.h */,
+				04BC5A7F22B3AC3500A406EF /* MyTableViewCell.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -235,6 +244,12 @@
 		04BC5A8422B3AC3600A406EF /* C */ = {
 			isa = PBXGroup;
 			children = (
+				04BC5A8822B3AF3400A406EF /* ModifyNameViewController.h */,
+				04BC5A8922B3AF3400A406EF /* ModifyNameViewController.m */,
+				04BC5A8B22B3B4F000A406EF /* SignatureViewController.h */,
+				04BC5A8C22B3B4F000A406EF /* SignatureViewController.m */,
+				04BC5A8E22B3B8C100A406EF /* ModifyPassViewController.h */,
+				04BC5A8F22B3B8C100A406EF /* ModifyPassViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -494,9 +509,9 @@
 		18F20B9922B352320064DE4C /* COCMine */ = {
 			isa = PBXGroup;
 			children = (
-				04BC5A8422B3AC3600A406EF /* C */,
 				04BC5A8322B3AC3600A406EF /* MineHeader.h */,
 				04BC5A7C22B3AC3500A406EF /* V */,
+				04BC5A8422B3AC3600A406EF /* C */,
 				18F20BA622B352F90064DE4C /* COCMineViewController.h */,
 				18F20BA722B352F90064DE4C /* COCMineViewController.m */,
 			);
@@ -709,6 +724,8 @@
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
+				04BC5A9022B3B8C100A406EF /* ModifyPassViewController.m in Sources */,
+				04BC5A8A22B3AF3400A406EF /* ModifyNameViewController.m in Sources */,
 				18F20AE022B34F340064DE4C /* COCBaseListView.m in Sources */,
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
@@ -717,6 +734,7 @@
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				18F20B9F22B352D70064DE4C /* COCHomeViewController.m in Sources */,
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
+				04BC5A8D22B3B4F000A406EF /* SignatureViewController.m in Sources */,
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,

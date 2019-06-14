@@ -10,6 +10,9 @@
 #import "MyTableViewCell.h"
 #import "MyHeaderView.h"
 #import "MyFooterView.h"
+#import "ModifyNameViewController.h"
+#import "SignatureViewController.h"
+#import "ModifyPassViewController.h"
 @interface COCMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr1, *titleArr2;
@@ -107,9 +110,18 @@
     }else{
         if(indexPath.row == 0){
             NSLog(@"1");
+            ModifyNameViewController *modify = [[ModifyNameViewController alloc]init];
+            modify.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:modify animated:YES];
         }else if(indexPath.row == 1){
+            SignatureViewController *ignature = [[SignatureViewController alloc]init];
+            ignature.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ignature animated:YES];
             NSLog(@"2");
         }else if(indexPath.row == 2){
+            ModifyPassViewController *modify = [[ModifyPassViewController alloc]init];
+            modify.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:modify animated:YES];
             NSLog(@"3");
         }
     }
