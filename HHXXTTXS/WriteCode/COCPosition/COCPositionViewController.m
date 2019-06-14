@@ -27,6 +27,8 @@
     //headerView
     [self addheaderView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self.view addSubview:self.noDataView];
     
 }
