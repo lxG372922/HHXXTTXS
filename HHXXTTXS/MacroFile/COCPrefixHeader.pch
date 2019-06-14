@@ -31,7 +31,7 @@
 #import "COCConstants.h"
 #import "COCLocalStoragePublicKey.h"
 #import "AppDelegate.h"
-
+#import "COCHeader.h"
 
 // ------------- 常用工具类 ------
 #import "ASOHTTPRequest.h"
@@ -44,6 +44,7 @@
 
 
 // ------------- 工具类目 -------------
+#import "NSString+LabelSize.h"
 #import "UIFont+ScaleSize.h"
 #import "NSNumber+digitalValue.h"
 #import "NSString+NumberFormatter.h"
