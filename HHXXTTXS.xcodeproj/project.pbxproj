@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045A4D0E22B3932600EC4C34 /* XSYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D0D22B3932600EC4C34 /* XSYTableView.m */; };
+		045A4D1122B3946C00EC4C34 /* MarketModelHX.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1022B3946C00EC4C34 /* MarketModelHX.m */; };
+		045A4D1422B3963D00EC4C34 /* MarketlistCodeAllHX.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1322B3963D00EC4C34 /* MarketlistCodeAllHX.m */; };
+		045A4D1822B39CE100EC4C34 /* MarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1622B39CE100EC4C34 /* MarketTableViewCell.m */; };
+		045A4D1922B39CE100EC4C34 /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045A4D1722B39CE100EC4C34 /* MarketTableViewCell.xib */; };
+		045A4D1C22B39E1D00EC4C34 /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1A22B39E1D00EC4C34 /* myLabel.m */; };
+		045A4D2822B3B17D00EC4C34 /* MarketDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D2722B3B17D00EC4C34 /* MarketDetailsViewController.m */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -55,6 +62,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045A4D0C22B3932600EC4C34 /* XSYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYTableView.h; sourceTree = "<group>"; };
+		045A4D0D22B3932600EC4C34 /* XSYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYTableView.m; sourceTree = "<group>"; };
+		045A4D0F22B3946C00EC4C34 /* MarketModelHX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketModelHX.h; sourceTree = "<group>"; };
+		045A4D1022B3946C00EC4C34 /* MarketModelHX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketModelHX.m; sourceTree = "<group>"; };
+		045A4D1222B3963D00EC4C34 /* MarketlistCodeAllHX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketlistCodeAllHX.h; sourceTree = "<group>"; };
+		045A4D1322B3963D00EC4C34 /* MarketlistCodeAllHX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketlistCodeAllHX.m; sourceTree = "<group>"; };
+		045A4D1522B39CE100EC4C34 /* MarketTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketTableViewCell.h; sourceTree = "<group>"; };
+		045A4D1622B39CE100EC4C34 /* MarketTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketTableViewCell.m; sourceTree = "<group>"; };
+		045A4D1722B39CE100EC4C34 /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
+		045A4D1A22B39E1D00EC4C34 /* myLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myLabel.m; sourceTree = "<group>"; };
+		045A4D1B22B39E1D00EC4C34 /* myLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLabel.h; sourceTree = "<group>"; };
+		045A4D2622B3B17D00EC4C34 /* MarketDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDetailsViewController.h; sourceTree = "<group>"; };
+		045A4D2722B3B17D00EC4C34 /* MarketDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDetailsViewController.m; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +181,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045A4D0922B392E800EC4C34 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18F20BA022B352EA0064DE4C /* COCQuotesViewController.h */,
+				18F20BA122B352EA0064DE4C /* COCQuotesViewController.m */,
+				045A4D2622B3B17D00EC4C34 /* MarketDetailsViewController.h */,
+				045A4D2722B3B17D00EC4C34 /* MarketDetailsViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		045A4D0A22B392F900EC4C34 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				045A4D0F22B3946C00EC4C34 /* MarketModelHX.h */,
+				045A4D1022B3946C00EC4C34 /* MarketModelHX.m */,
+				045A4D1222B3963D00EC4C34 /* MarketlistCodeAllHX.h */,
+				045A4D1322B3963D00EC4C34 /* MarketlistCodeAllHX.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		045A4D0B22B392FE00EC4C34 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				045A4D1B22B39E1D00EC4C34 /* myLabel.h */,
+				045A4D1A22B39E1D00EC4C34 /* myLabel.m */,
+				045A4D0C22B3932600EC4C34 /* XSYTableView.h */,
+				045A4D0D22B3932600EC4C34 /* XSYTableView.m */,
+				045A4D1522B39CE100EC4C34 /* MarketTableViewCell.h */,
+				045A4D1622B39CE100EC4C34 /* MarketTableViewCell.m */,
+				045A4D1722B39CE100EC4C34 /* MarketTableViewCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		18F20AB822B34E960064DE4C = {
 			isa = PBXGroup;
 			children = (
@@ -430,8 +486,9 @@
 		18F20B9B22B352360064DE4C /* COCQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				18F20BA022B352EA0064DE4C /* COCQuotesViewController.h */,
-				18F20BA122B352EA0064DE4C /* COCQuotesViewController.m */,
+				045A4D0B22B392FE00EC4C34 /* V */,
+				045A4D0A22B392F900EC4C34 /* M */,
+				045A4D0922B392E800EC4C34 /* C */,
 			);
 			path = COCQuotes;
 			sourceTree = "<group>";
@@ -543,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
+				045A4D1922B39CE100EC4C34 /* MarketTableViewCell.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
@@ -614,10 +672,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20B0B22B350010064DE4C /* UIView+CenterLoading.m in Sources */,
+				045A4D1422B3963D00EC4C34 /* MarketlistCodeAllHX.m in Sources */,
 				18F20AE922B34FAE0064DE4C /* COCBaseNaviController.m in Sources */,
+				045A4D1822B39CE100EC4C34 /* MarketTableViewCell.m in Sources */,
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
+				045A4D2822B3B17D00EC4C34 /* MarketDetailsViewController.m in Sources */,
 				18F20AE022B34F340064DE4C /* COCBaseListView.m in Sources */,
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
@@ -633,6 +694,7 @@
 				18F20B7922B351EB0064DE4C /* ASORefreshHeader.m in Sources */,
 				18F20B0E22B350010064DE4C /* UIFont+ScaleSize.m in Sources */,
 				18F20B1222B350010064DE4C /* NSString+Attribute.m in Sources */,
+				045A4D0E22B3932600EC4C34 /* XSYTableView.m in Sources */,
 				18F20B7C22B351EB0064DE4C /* JMBaseButtonConfig.m in Sources */,
 				18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */,
 				18F20ADD22B34F230064DE4C /* COCBaseView.m in Sources */,
@@ -643,10 +705,12 @@
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				18F20B0822B350010064DE4C /* UITextView+Placeholder.m in Sources */,
+				045A4D1122B3946C00EC4C34 /* MarketModelHX.m in Sources */,
 				18F20AE622B34F520064DE4C /* COCBaseViewController.m in Sources */,
 				18F20BA222B352EA0064DE4C /* COCQuotesViewController.m in Sources */,
 				18F20BAB22B353000064DE4C /* COCOpenViewController.m in Sources */,
 				18F20BA822B352F90064DE4C /* COCMineViewController.m in Sources */,
+				045A4D1C22B39E1D00EC4C34 /* myLabel.m in Sources */,
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
 				18F20B1122B350010064DE4C /* NSDictionary+InfoDictionary.m in Sources */,
 				18F20BA522B352F10064DE4C /* COCPositionViewController.m in Sources */,
