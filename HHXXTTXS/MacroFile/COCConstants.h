@@ -24,6 +24,10 @@
 
 // ------ 字体样式 ----------
 #define fFont @"EuphemiaUCAS"
+//字体大小IPH
+#define UiFontIPH(num) [UIFont systemFontOfSize:IPHONEWIDTH(num)]
+//字体大小sys
+#define UiFontSys(num) [UIFont systemFontOfSize:num]
 
 // ------ 公共字符串 -----
 #define NetErrorTipString @"网络繁忙，请稍后重试"
@@ -152,5 +156,29 @@ string = [string stringByAppendingString:@"asjglarghjkasdi12335ljfgl"];\
 }\
 }\
 \
+
+
+// View 圆角
+#define XViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+// View 边框
+#define XViewBord(View, Color, Width)\
+\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:(Color).CGColor]
+
+//阴影
+#define XViewShadow(View,Color,Opacity,Radius)\
+\
+View.layer.shadowColor = Color.CGColor;\
+View.layer.shadowOffset = CGSizeMake(0,0);\
+View.layer.shadowOpacity = Opacity;\
+View.layer.shadowRadius = Radius
+
+
+
 
 #endif /* COCConstants_h */
