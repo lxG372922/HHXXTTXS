@@ -21,6 +21,8 @@
     [super viewDidLoad];
     [self.view addSubview:self.holdPos_tableView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self.holdPos_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).mas_offset(0);
         make.top.equalTo(self.view.mas_top).mas_offset(Status_H + Nav_topH);
