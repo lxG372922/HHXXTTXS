@@ -1,0 +1,68 @@
+
+//
+//  COCPrefixHeader.pch
+//  HHXXTTXS
+//
+//  Created by apple on 2019/6/14.
+//  Copyright © 2019 apple. All rights reserved.
+//
+
+#ifndef COCPrefixHeader_pch
+#define COCPrefixHeader_pch
+
+
+// ------------- 系统框架 ---------
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+
+// ------------- 三方框架 ---------
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <SDWebImage/SDWebImage.h>
+#import <YYModel/YYModel.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <FCUUID/FCUUID.h>
+#import <PYSearch/PYSearch.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
+
+// ------------- 项目常量配置及常用公共类 ------
+#import "COCPublicEnum.h"
+#import "COCConstants.h"
+#import "COCLocalStoragePublicKey.h"
+#import "AppDelegate.h"
+
+
+// ------------- 常用工具类 ------
+#import "ASOHTTPRequest.h"
+#import "ASOServerManager.h"
+#import "ASORefreshHeader.h"
+#import "ASORefreshFooter.h"
+#import "IndentTextField.h"
+#import "JMBaseButton.h"
+#import "NSObject+QWE.h"    // 垃圾代码分类
+
+
+// ------------- 工具类目 -------------
+#import "UIFont+ScaleSize.h"
+#import "NSNumber+digitalValue.h"
+#import "NSString+NumberFormatter.h"
+#import "NSString+Path.h"
+#import "NSString+Verify.h"
+#import "UIView+CenterLoading.h"
+#import "NSDictionary+InfoDictionary.h"
+#import "UITextView+Placeholder.h"
+#import "NSString+GLDate.h"
+#import "NSObject+DrawText.h"
+#import "UIView+Frame.h"
+#import "NSString+Attribute.h"
+#import "UIView+DrawBGColor.h"
+
+
+// ------------ 基类 -------
+#import "COCBaseViewController.h"
+#import "COCBaseView.h"
+#import "COCBaseListView.h"
+#import "COCBaseNaviController.h"
+
+#endif /* COCPrefixHeader_pch */
