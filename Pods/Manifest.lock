@@ -20,6 +20,7 @@ PODS:
   - IQKeyboardManager (6.3.0)
   - JhtMarquee (1.0.5)
   - Masonry (1.1.0)
+  - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
   - PYSearch (0.9.1)
   - QCKJLCWorking (2.0.0):
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JhtMarquee
   - Masonry
+  - MJExtension (~> 3.0.13)
   - MJRefresh
   - PYSearch
   - QCKJLCWorking
@@ -61,6 +63,7 @@ SPEC REPOS:
     - IQKeyboardManager
     - JhtMarquee
     - Masonry
+    - MJExtension
     - MJRefresh
     - PYSearch
     - QCKJLCWorking
@@ -79,6 +82,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   JhtMarquee: 6f1118943062553c35aefea1115bdbeb0c4d7fd7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   PYSearch: 76dee18eea3309b60921a5d6a69390a63a5dda15
   QCKJLCWorking: 22a14f88de977b6b2f85749960d21e8a1353851f
@@ -90,6 +94,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: fc846e72e161baf87c171209c0b6359446522b96
+PODFILE CHECKSUM: 51bd583be009559678235e29b79e708cb24f5933
 
 COCOAPODS: 1.6.1
