@@ -14,7 +14,7 @@
 
 
 @end
-
+static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 @implementation COCPositionHostViewController
 
 - (void)viewDidLoad {
@@ -25,7 +25,7 @@
     
     [self.holdPos_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).mas_offset(0);
-        make.top.equalTo(self.view.mas_top).mas_offset(Status_H + Nav_topH);
+        make.top.equalTo(self.view.mas_top).mas_offset(Nav_topH);
         make.right.equalTo(self.view.mas_right).mas_offset(0);
         make.bottom.equalTo(self.view.mas_bottom).mas_offset(0);
     }];
@@ -46,6 +46,7 @@
         _holdPos_tableView.dataSource = self;
         _holdPos_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _holdPos_tableView.backgroundColor = [UIColor clearColor];
+        [_holdPos_tableView registerClass:[COCHostTableViewCell class] forCellReuseIdentifier:communityReportCell_id_1];
         _holdPos_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [SVProgressHUD show];
             [self performSelector:@selector(reloadDataUI) withObject:self afterDelay:1.5];
@@ -79,31 +80,27 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.holdPosArray.count;
+    return 2;
 }
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    static NSString *cellStr = @"cellStr";
-//    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStr];
-//    if(!cell){
-//        cell = [[NewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
-//    }
-//    cell.backgroundColor = [UIColor clearColor];
-//
-//    //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    NSDictionary *dic = self.newsArr[indexPath.row];
-//
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    COCHostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communityReportCell_id_1];
+    if(!cell){
+        cell = [[COCHostTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:communityReportCell_id_1];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
 //    [cell setNewsTableViewCellControlContentWithModel:dic];
-//
-//    return cell;
-//}
+
+    return cell;
+}
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSDictionary *dic = self.holdPosArray[indexPath.row];
-    NSString *title = [dic objectForKey:@"title"];
-    CGSize titleSize  =[title boundingRectWithSize:CGSizeMake(SCREEN_Width - 30.00, CGFLOAT_MAX) fontSize:16];
-    return titleSize.height + 55;
+//    NSDictionary *dic = self.holdPosArray[indexPath.row];
+//    NSString *title = [dic objectForKey:@"title"];
+//    CGSize titleSize  =[title boundingRectWithSize:CGSizeMake(SCREEN_Width - 30.00, CGFLOAT_MAX) fontSize:16];
+    return 60;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dic = self.holdPosArray[indexPath.row];

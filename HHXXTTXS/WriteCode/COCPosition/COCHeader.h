@@ -11,6 +11,7 @@
 
 #import "COCPositionHostViewController.h"
 #import "PositionModel.h"
+#import "COCHostTableViewCell.h"
 #import "PostHeaderView.h"
 #import "myLabel.h"
 #endif /* COCHeader_h */
