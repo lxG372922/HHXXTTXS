@@ -119,7 +119,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return _holdPosArray;
 }
 
-
 -(UITableView *)holdPos_tableView{
     if(!_holdPos_tableView){
         _holdPos_tableView = [[UITableView alloc]init];
@@ -224,7 +223,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
-    COCHisRecordsViewController *hisVc = [[COCHisRecordsViewController alloc]init];
+    COCPositionDetailViewController *hisVc = [[COCPositionDetailViewController alloc]init];
     hisVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hisVc animated:YES];
 }
