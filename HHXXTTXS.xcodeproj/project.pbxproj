@@ -566,12 +566,12 @@
 		049B976222B3BEEA003D943E /* C */ = {
 			isa = PBXGroup;
 			children = (
-				049B976322B3BEEA003D943E /* MarketDetailsViewController.m */,
 				049B976422B3BEEA003D943E /* COCQuotesViewController.h */,
-				049B976522B3BEEA003D943E /* MarketDetailsViewController.h */,
 				049B976622B3BEEA003D943E /* COCQuotesViewController.m */,
 				049B97B722B74B2D003D943E /* COCTransViewController.h */,
 				049B97B822B74B2D003D943E /* COCTransViewController.m */,
+				049B976522B3BEEA003D943E /* MarketDetailsViewController.h */,
+				049B976322B3BEEA003D943E /* MarketDetailsViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
