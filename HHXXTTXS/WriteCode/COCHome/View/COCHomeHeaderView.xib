@@ -203,6 +203,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="zBannerView" destination="wT4-1q-bI0" id="7dl-Zp-OAd"/>
+                <outlet property="zViewFour" destination="dDj-Ke-eVb" id="yO8-Wp-8jX"/>
+                <outlet property="zViewOne" destination="LZw-XJ-xSF" id="Tjs-it-hdR"/>
+                <outlet property="zViewThree" destination="SGa-zu-6vt" id="Baq-Rb-zv0"/>
+                <outlet property="zViewTwo" destination="mhn-Vb-4XW" id="Awg-hE-i1H"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="53.571428571428569"/>
         </view>
