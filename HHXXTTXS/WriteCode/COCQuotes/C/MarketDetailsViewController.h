@@ -7,11 +7,12 @@
 //
 
 #import "COCBaseViewController.h"
-
+#import "MarketModelHX.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MarketDetailsViewController : COCBaseViewController
-
+@property(nonatomic,strong) MarketModelHX * marketmodel ;
+@property(nonatomic,copy) NSString * marketName;
 @end
 
 NS_ASSUME_NONNULL_END
