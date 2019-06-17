@@ -25,6 +25,14 @@
     return _margin;
 }
 
+- (NSString *)saveIdentifier {
+    
+    if (!_saveIdentifier) {
+        _saveIdentifier = [NSString stringWithFormat:@"%@_%@",self.identifier,[@(self.positionType) stringValue]];
+    }
+    return _saveIdentifier;
+}
+
 - (NSString *)pl {
     
     if (!isStrEmpty(self.avgPrice) && !isStrEmpty(self.totalHands) && !isStrEmpty(self.currentPrice)) {
@@ -71,6 +79,20 @@
     }
     
     return _marketValue;
+}
+
+
+
+/** 从委托订单创建一个持仓模型 */
++ (instancetype)createPositionWithOrderModel:(OrderModel *)orderModel {
+    
+    GLPositionModel *model = nil;
+    
+    if (orderModel) {
+        model = [[GLPositionModel alloc] init];
+        [model updateWithOrderModel:orderModel];
+    }
+    return model;
 }
 
 /**

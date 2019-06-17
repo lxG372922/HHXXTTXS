@@ -19,6 +19,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary <NSString *, GLPositionModel *>*)positionList;
 
+
+/**
+ 委托列表有变化
+ 
+ @param manager 管理器
+ @param hisOrderList 历史委托列表
+ */
+- (void)contractManager:(ContractManager *)manager hisOrderListDidChange:(NSDictionary <NSString *,NSArray *>*)hisOrderList;
+
+
 /**
  资金变化
 
@@ -73,6 +83,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)addOrderWithModel:(OrderModel *)orderModel;
 
+
+/**
+ 获得某个产品的历史委托列表
+
+ @param identifier 唯一标识符
+ */
+- (NSArray <OrderModel *>*)getHisOrderListForIdentifier:(NSString *)identifier;
 
 /**
  更新最新价格

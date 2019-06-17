@@ -156,12 +156,16 @@ static ContractManager *_manager;
     if (isStrEmpty(self.availableCapital)) {
         
         NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
+        if (@available(iOS 11.0, *)) {
+            self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
+        } else {
+            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+        }
         if (!self.availableCapital) {
             self.availableCapital = [SIMULATECAPITAL stringValue];
         }
     }
-
+    
     return self.availableCapital ? : @"0";
 }
 
@@ -169,6 +173,19 @@ static ContractManager *_manager;
 - (NSString *)getCurrentMarketCapital {
     
     return self.marketCapital;
+}
+
+
+/**
+ 获得某个产品的历史委托列表
+ 
+ @param identifier 唯一标识符
+ */
+- (NSArray <OrderModel *>*)getHisOrderListForIdentifier:(NSString *)identifier {
+    
+    NSArray *hisList = [self.hisOrderList objectForKey:identifier];
+    
+    return hisList ? : @[];
 }
 
 /**
@@ -197,10 +214,25 @@ static ContractManager *_manager;
 - (void)addOrderWithModel:(OrderModel *)orderModel {
     
     if (orderModel) {
-    
         
+        [self p_updatePositionListWithOrderModel:orderModel];
         
+        NSMutableArray *tempArray = [self getHisOrderListForIdentifier:orderModel.identifier].mutableCopy;
         
+        [tempArray addObject:orderModel];
+        
+        // 发送代理消息
+        if (self.delegateContainer.count >= 1) {
+            [self.delegateContainer compact];
+            
+            
+            for (id<ContractManagerDelegate>delegate in self.delegateContainer) {
+                
+                if (delegate && [delegate respondsToSelector:@selector(contractManager:hisOrderListDidChange:)]) {
+                    [delegate contractManager:self hisOrderListDidChange:self.hisOrderList];
+                }
+            }
+        }
     }
 }
 
@@ -212,6 +244,18 @@ static ContractManager *_manager;
  */
 - (void)updateNewPrice:(NSString *)newPrice forIdentifier:(NSString *)identifier {
     
+    
+    if (!isStrEmpty(newPrice) && !isStrEmpty(identifier)) {
+        
+        NSArray *array = [self positionForIdentifier:identifier];
+        
+        for (GLPositionModel *tempPosition in array) {
+            tempPosition.currentPrice = newPrice;
+        }
+        
+        [self p_updatePositionListWithOrderModel:nil];
+    }
+    
 }
 
 #pragma mark - 私有方法 --
@@ -219,7 +263,7 @@ static ContractManager *_manager;
 - (void)p_initialize {
     weakSelf(self);
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-       
+        
         [weakSelf p_updateCapitial];
         
     });
@@ -227,7 +271,6 @@ static ContractManager *_manager;
 
 - (void)p_updateCapitial {
     
-//    [self positions];
     [self p_updatePositionListWithOrderModel:nil];
     [self orderList];
     [self hisOrderList];
@@ -259,34 +302,69 @@ static ContractManager *_manager;
     
     if (!isExist) {
         
-        GLPositionModel *newPosition = [[GLPositionModel alloc] init];
-        [newPosition updateWithOrderModel:orderModel];
-//        [self.positions add]
+        GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
+        [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
+        marketValue += [newPosition.marketValue floatValue];
     }
+    
+    self.marketCapital = [@(marketValue) stringValue];
+    
+    // 发送代理消息
+    if (self.delegateContainer.count >= 1) {
+        [self.delegateContainer compact];
+        
+        for (id<ContractManagerDelegate>delegate in self.delegateContainer) {
+            if (orderModel) {
+                if (delegate && [delegate respondsToSelector:@selector(contractManager:positionListDidChange:)]) {
+                    [delegate contractManager:self positionListDidChange:self.positions];
+                }
+            }
+            
+            if (delegate && [delegate respondsToSelector:@selector(contractManager:availableCapitalDidChange:marketCapital:)]) {
+                [delegate contractManager:self availableCapitalDidChange:self.availableCapital marketCapital:self.marketCapital];
+            }
+        }
+    }
+    
 }
 
 /**
  根据id找到指定产品的持仓模型
-
+ 
  @param identifier 唯一标识符
  @return 指定的持仓模型
  */
-- (GLPositionModel * _Nullable)positionForIdentifier:(NSString *)identifier {
+- (NSArray <GLPositionModel *>* _Nullable)positionForIdentifier:(NSString *)identifier {
     
-    GLPositionModel *tempModel = nil;
-
+    NSMutableArray *positionArray = @[].mutableCopy;
+    
     if (!isStrEmpty(identifier) && self.positions.count > 0) {
-        tempModel = [self.positions objectForKey:identifier];
+        
+        GLPositionModel *longPosition = [self.positions objectForKey:[NSString stringWithFormat:@"%@_%@",identifier,@(ContractPositionTypeLong)]];
+        
+        GLPositionModel *shortPosition = [self.positions objectForKey:[NSString stringWithFormat:@"%@_%@",identifier,@(ContractPositionTypeShort)]];
+        
+        if (longPosition) {
+            [positionArray addObject:longPosition];
+        }
+        
+        if (shortPosition) {
+            [positionArray addObject:shortPosition];
+        }
     }
-
-    return tempModel;
+    
+    return positionArray;
 }
 
 - (NSMutableDictionary<NSString *,GLPositionModel *> *)positions {
     if (!_positions) {
         
         NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        if (@available(iOS 11.0, *)) {
+            _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        } else {
+            _positions = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+        }
         
         if (!_positions || !data) {
             _positions = @{}.mutableCopy;
@@ -298,7 +376,11 @@ static ContractManager *_manager;
 - (NSMutableArray<OrderModel *> *)orderList {
     if (!_orderList) {
         NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        if (@available(iOS 11.0, *)) {
+            _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        } else {
+            _orderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+        }
         if (!_orderList || !data) {
             _orderList = @[].mutableCopy;
         }
@@ -310,7 +392,11 @@ static ContractManager *_manager;
     if (!_hisOrderList) {
         
         NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_HisSimulateOrders];
-        _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        if (@available(iOS 11.0, *)) {
+            _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+        } else {
+            _hisOrderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+        }
         if(!_hisOrderList || !data) {
             _hisOrderList = @{}.mutableCopy;
         }

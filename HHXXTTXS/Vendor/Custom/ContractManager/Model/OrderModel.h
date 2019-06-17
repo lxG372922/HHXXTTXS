@@ -44,6 +44,12 @@ typedef enum : NSUInteger {
 /** 杠杆 */
 @property (strong, nonatomic) NSString *lever;
 
+#pragma mark - 扩展属性 --
+
+
+/** save identifier */
+@property (strong, nonatomic) NSString *saveIdentifier;
+
 @end
 
 NS_ASSUME_NONNULL_END
