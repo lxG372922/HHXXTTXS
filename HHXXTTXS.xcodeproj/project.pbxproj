@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0439139622B7C12300E7C4D9 /* YUFoldingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */; };
+		0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */; };
+		0439139822B7C12300E7C4D9 /* YUFolding_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */; };
 		0458099422B7A8D50083A8C8 /* myButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098C22B7A8D40083A8C8 /* myButton.m */; };
 		0458099522B7A8D50083A8C8 /* detailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098D22B7A8D40083A8C8 /* detailsTopView.m */; };
 		0458099622B7A8D50083A8C8 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098F22B7A8D50083A8C8 /* BottomView.m */; };
@@ -123,6 +126,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingTableView.m; sourceTree = "<group>"; };
+		0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingSectionHeader.m; sourceTree = "<group>"; };
+		0439139322B7C12300E7C4D9 /* YUFoldingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingTableView.h; sourceTree = "<group>"; };
+		0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YUFolding_arrow.png; sourceTree = "<group>"; };
+		0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingSectionHeader.h; sourceTree = "<group>"; };
 		0458098C22B7A8D40083A8C8 /* myButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myButton.m; sourceTree = "<group>"; };
 		0458098D22B7A8D40083A8C8 /* detailsTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailsTopView.m; sourceTree = "<group>"; };
 		0458098E22B7A8D50083A8C8 /* detailsTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailsTopView.h; sourceTree = "<group>"; };
@@ -359,6 +367,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0439139022B7C12300E7C4D9 /* YUFoldingTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */,
+				0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */,
+				0439139322B7C12300E7C4D9 /* YUFoldingTableView.h */,
+				0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */,
+				0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */,
+			);
+			path = YUFoldingTableView;
+			sourceTree = "<group>";
+		};
 		0458099922B7A90F0083A8C8 /* lineK */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,12 +538,12 @@
 		049B976222B3BEEA003D943E /* C */ = {
 			isa = PBXGroup;
 			children = (
-				049B976322B3BEEA003D943E /* MarketDetailsViewController.m */,
 				049B976422B3BEEA003D943E /* COCQuotesViewController.h */,
-				049B976522B3BEEA003D943E /* MarketDetailsViewController.h */,
 				049B976622B3BEEA003D943E /* COCQuotesViewController.m */,
 				049B97B722B74B2D003D943E /* COCTransViewController.h */,
 				049B97B822B74B2D003D943E /* COCTransViewController.m */,
+				049B976522B3BEEA003D943E /* MarketDetailsViewController.h */,
+				049B976322B3BEEA003D943E /* MarketDetailsViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -544,22 +564,22 @@
 			children = (
 				0458099022B7A8D50083A8C8 /* BottomView.h */,
 				0458098F22B7A8D50083A8C8 /* BottomView.m */,
+				049B97BA22B77062003D943E /* COCTrasTableViewCell.h */,
+				049B97BB22B77062003D943E /* COCTrasTableViewCell.m */,
+				049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */,
 				0458098E22B7A8D50083A8C8 /* detailsTopView.h */,
 				0458098D22B7A8D40083A8C8 /* detailsTopView.m */,
+				049B977122B3BEEB003D943E /* MarketTableViewCell.h */,
+				049B976E22B3BEEB003D943E /* MarketTableViewCell.m */,
+				049B976D22B3BEEB003D943E /* MarketTableViewCell.xib */,
 				0458099122B7A8D50083A8C8 /* marketViewTools.h */,
 				0458099222B7A8D50083A8C8 /* marketViewTools.m */,
 				0458099322B7A8D50083A8C8 /* myButton.h */,
 				0458098C22B7A8D40083A8C8 /* myButton.m */,
-				049B976D22B3BEEB003D943E /* MarketTableViewCell.xib */,
-				049B976E22B3BEEB003D943E /* MarketTableViewCell.m */,
-				049B976F22B3BEEB003D943E /* myLabel.m */,
-				049B977022B3BEEB003D943E /* XSYTableView.m */,
-				049B977122B3BEEB003D943E /* MarketTableViewCell.h */,
-				049B977222B3BEEB003D943E /* XSYTableView.h */,
 				049B977322B3BEEB003D943E /* myLabel.h */,
-				049B97BA22B77062003D943E /* COCTrasTableViewCell.h */,
-				049B97BB22B77062003D943E /* COCTrasTableViewCell.m */,
-				049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */,
+				049B976F22B3BEEB003D943E /* myLabel.m */,
+				049B977222B3BEEB003D943E /* XSYTableView.h */,
+				049B977022B3BEEB003D943E /* XSYTableView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -576,13 +596,13 @@
 		049B979622B73C50003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				049B979722B73C50003D943E /* COCHomeMarketViewController.xib */,
-				049B979822B73C50003D943E /* COCHomeMarketViewController.m */,
-				049B979922B73C50003D943E /* COCHomeViewController.m */,
-				049B979A22B73C50003D943E /* COCHomePracticeViewController.h */,
 				049B979B22B73C50003D943E /* COCHomeMarketViewController.h */,
-				049B979C22B73C50003D943E /* COCHomeViewController.h */,
+				049B979822B73C50003D943E /* COCHomeMarketViewController.m */,
+				049B979722B73C50003D943E /* COCHomeMarketViewController.xib */,
+				049B979A22B73C50003D943E /* COCHomePracticeViewController.h */,
 				049B979D22B73C50003D943E /* COCHomePracticeViewController.m */,
+				049B979C22B73C50003D943E /* COCHomeViewController.h */,
+				049B979922B73C50003D943E /* COCHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -942,6 +962,7 @@
 		18F20B9C22B3523D0064DE4C /* COCHome */ = {
 			isa = PBXGroup;
 			children = (
+				0439139022B7C12300E7C4D9 /* YUFoldingTableView */,
 				049B979622B73C50003D943E /* Controller */,
 				049B979322B73C4E003D943E /* Model */,
 				049B979E22B73C50003D943E /* View */,
@@ -1055,6 +1076,7 @@
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				049B97AE22B73C51003D943E /* COCHomeMarketTableViewCell.xib in Resources */,
 				049B977822B3BEEB003D943E /* MarketTableViewCell.xib in Resources */,
+				0439139822B7C12300E7C4D9 /* YUFolding_arrow.png in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
 				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
@@ -1159,6 +1181,7 @@
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B97B022B73C51003D943E /* COCHomeHeaderView.m in Sources */,
 				045809CA22B7A90F0083A8C8 /* HSCrossLineView.m in Sources */,
+				0439139622B7C12300E7C4D9 /* YUFoldingTableView.m in Sources */,
 				0458099722B7A8D50083A8C8 /* marketViewTools.m in Sources */,
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				049B979122B7298F003D943E /* COCSetCCViewController.m in Sources */,
@@ -1172,6 +1195,7 @@
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
 				045809CD22B7A90F0083A8C8 /* HSCrossLineModel.m in Sources */,
 				045809C722B7A90F0083A8C8 /* HSScaleBaseView.m in Sources */,
+				0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */,
 				049B977922B3BEEB003D943E /* MarketTableViewCell.m in Sources */,
 				049B97AA22B73C51003D943E /* COCHomeMarketViewController.m in Sources */,
 				18F20B7922B351EB0064DE4C /* ASORefreshHeader.m in Sources */,
