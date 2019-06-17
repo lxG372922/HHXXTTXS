@@ -13,7 +13,6 @@
 		049B973B22B389EA003D943E /* PostHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973A22B389EA003D943E /* PostHeaderView.m */; };
 		049B973E22B38AD1003D943E /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B973D22B38AD1003D943E /* PositionModel.m */; };
 		049B974122B38D27003D943E /* COCHostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974022B38D27003D943E /* COCHostModel.m */; };
-		049B974722B3AE56003D943E /* COCHostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974622B3AE56003D943E /* COCHostTableViewCell.m */; };
 		049B974B22B3B919003D943E /* COCHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B974822B3B917003D943E /* COCHomeHeaderView.m */; };
 		049B974C22B3B919003D943E /* COCHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B974922B3B919003D943E /* COCHomeHeaderView.xib */; };
 		049B975C22B3BECA003D943E /* ModifyPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B975222B3BECA003D943E /* ModifyPassViewController.m */; };
@@ -30,6 +29,7 @@
 		049B977922B3BEEB003D943E /* MarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B976E22B3BEEB003D943E /* MarketTableViewCell.m */; };
 		049B977A22B3BEEB003D943E /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B976F22B3BEEB003D943E /* myLabel.m */; };
 		049B977B22B3BEEB003D943E /* XSYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B977022B3BEEB003D943E /* XSYTableView.m */; };
+<<<<<<< HEAD
 		04A3107722B64DA4000B8B9D /* COCHomeMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107522B64DA4000B8B9D /* COCHomeMarketViewController.m */; };
 		04A3107822B64DA4000B8B9D /* COCHomeMarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3107622B64DA4000B8B9D /* COCHomeMarketViewController.xib */; };
 		04A3107C22B64DE9000B8B9D /* COCHomeMarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107A22B64DE9000B8B9D /* COCHomeMarketTableViewCell.m */; };
@@ -37,6 +37,15 @@
 		04A3108022B6651E000B8B9D /* COCHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107F22B6651E000B8B9D /* COCHomeModel.m */; };
 		04A3108322B69D8B000B8B9D /* COCMarketHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3108222B69D8B000B8B9D /* COCMarketHeaderView.m */; };
 		04A3108522B69D96000B8B9D /* COCMarketHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3108422B69D96000B8B9D /* COCMarketHeaderView.xib */; };
+=======
+		049B977F22B5E806003D943E /* COCPosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B977D22B5E806003D943E /* COCPosTableViewCell.m */; };
+		049B978022B5E806003D943E /* COCPosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B977E22B5E806003D943E /* COCPosTableViewCell.xib */; };
+		049B978422B685D6003D943E /* COCHostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978222B685D6003D943E /* COCHostTableViewCell.m */; };
+		049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B978322B685D6003D943E /* COCHostTableViewCell.xib */; };
+		049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978722B7109B003D943E /* COCHisRecordsModel.m */; };
+		049B978C22B71360003D943E /* COCHisRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978A22B71360003D943E /* COCHisRecordsViewController.m */; };
+		049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B978B22B71360003D943E /* COCHisRecordsViewController.xib */; };
+>>>>>>> a3818766feb072cf41046f1acd43f7e91a4870ea
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -97,8 +106,6 @@
 		049B973D22B38AD1003D943E /* PositionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
 		049B973F22B38D27003D943E /* COCHostModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHostModel.h; sourceTree = "<group>"; };
 		049B974022B38D27003D943E /* COCHostModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHostModel.m; sourceTree = "<group>"; };
-		049B974522B3AE56003D943E /* COCHostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHostTableViewCell.h; sourceTree = "<group>"; };
-		049B974622B3AE56003D943E /* COCHostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHostTableViewCell.m; sourceTree = "<group>"; };
 		049B974822B3B917003D943E /* COCHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCHomeHeaderView.m; sourceTree = "<group>"; };
 		049B974922B3B919003D943E /* COCHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCHomeHeaderView.xib; sourceTree = "<group>"; };
 		049B974A22B3B919003D943E /* COCHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCHomeHeaderView.h; sourceTree = "<group>"; };
@@ -130,6 +137,7 @@
 		049B977122B3BEEB003D943E /* MarketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketTableViewCell.h; sourceTree = "<group>"; };
 		049B977222B3BEEB003D943E /* XSYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYTableView.h; sourceTree = "<group>"; };
 		049B977322B3BEEB003D943E /* myLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLabel.h; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		04A3107422B64DA4000B8B9D /* COCHomeMarketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHomeMarketViewController.h; sourceTree = "<group>"; };
 		04A3107522B64DA4000B8B9D /* COCHomeMarketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeMarketViewController.m; sourceTree = "<group>"; };
 		04A3107622B64DA4000B8B9D /* COCHomeMarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHomeMarketViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +149,19 @@
 		04A3108122B69D8B000B8B9D /* COCMarketHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCMarketHeaderView.h; sourceTree = "<group>"; };
 		04A3108222B69D8B000B8B9D /* COCMarketHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCMarketHeaderView.m; sourceTree = "<group>"; };
 		04A3108422B69D96000B8B9D /* COCMarketHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCMarketHeaderView.xib; sourceTree = "<group>"; };
+=======
+		049B977C22B5E806003D943E /* COCPosTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCPosTableViewCell.h; sourceTree = "<group>"; };
+		049B977D22B5E806003D943E /* COCPosTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCPosTableViewCell.m; sourceTree = "<group>"; };
+		049B977E22B5E806003D943E /* COCPosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCPosTableViewCell.xib; sourceTree = "<group>"; };
+		049B978122B685D6003D943E /* COCHostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHostTableViewCell.h; sourceTree = "<group>"; };
+		049B978222B685D6003D943E /* COCHostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHostTableViewCell.m; sourceTree = "<group>"; };
+		049B978322B685D6003D943E /* COCHostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHostTableViewCell.xib; sourceTree = "<group>"; };
+		049B978622B7109B003D943E /* COCHisRecordsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHisRecordsModel.h; sourceTree = "<group>"; };
+		049B978722B7109B003D943E /* COCHisRecordsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHisRecordsModel.m; sourceTree = "<group>"; };
+		049B978922B71360003D943E /* COCHisRecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHisRecordsViewController.h; sourceTree = "<group>"; };
+		049B978A22B71360003D943E /* COCHisRecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHisRecordsViewController.m; sourceTree = "<group>"; };
+		049B978B22B71360003D943E /* COCHisRecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHisRecordsViewController.xib; sourceTree = "<group>"; };
+>>>>>>> a3818766feb072cf41046f1acd43f7e91a4870ea
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -289,6 +310,9 @@
 			children = (
 				049B973622B38556003D943E /* COCPositionHostViewController.h */,
 				049B973722B38556003D943E /* COCPositionHostViewController.m */,
+				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
+				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
+				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,6 +324,8 @@
 				049B973D22B38AD1003D943E /* PositionModel.m */,
 				049B973F22B38D27003D943E /* COCHostModel.h */,
 				049B974022B38D27003D943E /* COCHostModel.m */,
+				049B978622B7109B003D943E /* COCHisRecordsModel.h */,
+				049B978722B7109B003D943E /* COCHisRecordsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,8 +335,12 @@
 			children = (
 				049B973922B389EA003D943E /* PostHeaderView.h */,
 				049B973A22B389EA003D943E /* PostHeaderView.m */,
-				049B974522B3AE56003D943E /* COCHostTableViewCell.h */,
-				049B974622B3AE56003D943E /* COCHostTableViewCell.m */,
+				049B977C22B5E806003D943E /* COCPosTableViewCell.h */,
+				049B977D22B5E806003D943E /* COCPosTableViewCell.m */,
+				049B977E22B5E806003D943E /* COCPosTableViewCell.xib */,
+				049B978122B685D6003D943E /* COCHostTableViewCell.h */,
+				049B978222B685D6003D943E /* COCHostTableViewCell.m */,
+				049B978322B685D6003D943E /* COCHostTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -769,7 +799,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */,
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
+				049B978022B5E806003D943E /* COCPosTableViewCell.xib in Resources */,
 				049B974C22B3B919003D943E /* COCHomeHeaderView.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				04A3107822B64DA4000B8B9D /* COCHomeMarketViewController.xib in Resources */,
@@ -778,6 +810,7 @@
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				04A3108522B69D96000B8B9D /* COCMarketHeaderView.xib in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
+				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,9 +882,11 @@
 				049B976022B3BECA003D943E /* MyTableViewCell.m in Sources */,
 				049B977B22B3BEEB003D943E /* XSYTableView.m in Sources */,
 				18F20AE922B34FAE0064DE4C /* COCBaseNaviController.m in Sources */,
+				049B978C22B71360003D943E /* COCHisRecordsViewController.m in Sources */,
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
+				049B978422B685D6003D943E /* COCHostTableViewCell.m in Sources */,
 				18F20AE022B34F340064DE4C /* COCBaseListView.m in Sources */,
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
 				04A3107722B64DA4000B8B9D /* COCHomeMarketViewController.m in Sources */,
@@ -868,8 +903,10 @@
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				049B974B22B3B919003D943E /* COCHomeHeaderView.m in Sources */,
+				049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
+				049B977F22B5E806003D943E /* COCPosTableViewCell.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
 				049B977922B3BEEB003D943E /* MarketTableViewCell.m in Sources */,
@@ -884,7 +921,6 @@
 				18F20ADD22B34F230064DE4C /* COCBaseView.m in Sources */,
 				18F20B7722B351EB0064DE4C /* IndentTextField.m in Sources */,
 				18F20B0922B350010064DE4C /* NSObject+QWE.m in Sources */,
-				049B974722B3AE56003D943E /* COCHostTableViewCell.m in Sources */,
 				18F20B1322B350010064DE4C /* NSString+Path.m in Sources */,
 				049B977A22B3BEEB003D943E /* myLabel.m in Sources */,
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,

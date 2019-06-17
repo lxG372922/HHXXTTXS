@@ -46,7 +46,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
         _holdPos_tableView.dataSource = self;
         _holdPos_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _holdPos_tableView.backgroundColor = [UIColor clearColor];
-        [_holdPos_tableView registerClass:[COCHostTableViewCell class] forCellReuseIdentifier:communityReportCell_id_1];
+         [_holdPos_tableView registerNib:[UINib nibWithNibName:@"COCHostTableViewCell" bundle:nil] forCellReuseIdentifier:communityReportCell_id_1];
         _holdPos_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [SVProgressHUD show];
             [self performSelector:@selector(reloadDataUI) withObject:self afterDelay:1.5];
@@ -63,7 +63,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 
 -(NSArray *)holdPosArray{
-    if (_holdPosArray) {
+    if (!_holdPosArray) {
         _holdPosArray = [NSArray array];
     }
     return _holdPosArray;
@@ -100,10 +100,13 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
 //    NSString *title = [dic objectForKey:@"title"];
 //    CGSize titleSize  =[title boundingRectWithSize:CGSizeMake(SCREEN_Width - 30.00, CGFLOAT_MAX) fontSize:16];
-    return 60;
+    return 80;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *dic = self.holdPosArray[indexPath.row];
+//    NSDictionary *dic = self.holdPosArray[indexPath.row];
+    COCHisRecordsViewController *hisVc = [[COCHisRecordsViewController alloc]init];
+    hisVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hisVc animated:YES];
 }
 
 
