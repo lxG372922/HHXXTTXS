@@ -30,6 +30,7 @@
 #import "COCPublicEnum.h"
 #import "COCConstants.h"
 #import "COCLocalStoragePublicKey.h"
+#import "COCOpenHeader.h"
 #import "AppDelegate.h"
 #import "COCHeader.h"
 
@@ -69,5 +70,10 @@
 #import "COCBaseView.h"
 #import "COCBaseListView.h"
 #import "COCBaseNaviController.h"
+
+
+//openClass
+#import "LXBaseView.h"
+
 
 #endif /* COCPrefixHeader_pch */

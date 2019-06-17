@@ -2,9 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface COCHomeHeaderView : UIView
-
--(instancetype)instanceView;
+@interface COCHomePracticeViewController : COCBaseViewController
 
 @end
 

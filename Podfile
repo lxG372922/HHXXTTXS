@@ -18,4 +18,5 @@ target 'HHXXTTXS' do
   pod 'QCKJLCWorking'
   pod 'RTRootNavigationController'
 
+  pod 'TYPagerController'
 end

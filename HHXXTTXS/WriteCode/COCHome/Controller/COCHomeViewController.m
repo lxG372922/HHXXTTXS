@@ -1,5 +1,6 @@
 #import "COCHomeViewController.h"
 #import "COCHomeHeaderView.h"
+#import "COCHomePracticeViewController.h"
 
 @interface COCHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *zTableView;
@@ -10,6 +11,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self configTableView];
 }
 
@@ -20,7 +22,13 @@
     self.zTableView.backgroundColor =[UIColor whiteColor];
     [self.view addSubview:self.zTableView];
     self.zHeadView = [[COCHomeHeaderView alloc] instanceView];
+    weakSelf(self);
     self.zHeadView.frame = CGRectMake(0, 0, SCREEN_Width, 540);
+    self.zHeadView.practiceBlock = ^{
+        COCHomePracticeViewController *practice = [[COCHomePracticeViewController alloc]init];
+//        weakSelf.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:practice animated:YES];
+    };
     self.zTableView.tableHeaderView = self.zHeadView;
     
 }
@@ -52,12 +60,11 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 100)];
-//    footerView.backgroundColor = [UIColor whiteColor];
     UILabel *desLab = [[UILabel alloc]initWithFrame:CGRectMake(8, 0, SCREEN_Width-16, 100)];
     desLab.text = @"投资前请仔细阅读风险披露以及服务条款。市场有风险，投资需谨慎，请根据自身实际情况制定投资计划。";
-    desLab.textColor = [UIColor lightGrayColor];
-    desLab.font = [UIFont systemFontOfSize:14];
     desLab.numberOfLines = 0;
+    desLab.textColor = RGB(151, 151, 151);
+    desLab.font = FONT(13);
     desLab.textAlignment = NSTextAlignmentCenter;
     [footerView addSubview:desLab];
     return footerView;
