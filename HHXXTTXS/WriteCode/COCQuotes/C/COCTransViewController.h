@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface COCTransViewController : COCBaseViewController
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END
