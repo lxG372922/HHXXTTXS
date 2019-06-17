@@ -16,4 +16,7 @@
 #import "COCPosTableViewCell.h"
 #import "PostHeaderView.h"
 #import "myLabel.h"
+#import "PKProgressHUD.h"
+#import "COCSetCCViewController.h"
+#import "COCTransViewController.h"
 #endif /* COCHeader_h */

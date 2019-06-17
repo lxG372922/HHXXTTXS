@@ -10,6 +10,7 @@
 #import "MarketModelHX.h"
 #import <MJExtension.h>
 #import "XSYTableView.h"
+#import "MarketDetailsViewController.h"
 @interface COCQuotesViewController ()<XjhClickTypeDelegate>
 @property(nonatomic,copy)NSArray * xjhDaraArray;
 @property(nonatomic,strong) XSYTableView * xjh_tableview ;
@@ -49,6 +50,7 @@
         }else{
             
             [SVProgressHUD showErrorWithStatus:NoDataAndTouchRefresh];
+            [weakSelf.xjh_tableview UpDateTalbeViewWitharray: @[]];
         }
         
         
@@ -56,12 +58,21 @@
     } faile:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
         [SVProgressHUD showErrorWithStatus:NoDataAndTouchRefresh];
-        
+        [weakSelf.xjh_tableview UpDateTalbeViewWitharray: @[]];
     }];
     
 }
 
 -(void)ClickTableRowWithModel:(id)model{
+    
+    MarketModelHX * mod = model;
+    MarketDetailsViewController * market  = [[MarketDetailsViewController alloc]init];
+    market.hidesBottomBarWhenPushed = YES;
+    market.marketmodel = mod;
+    NSDictionary * dicts = [MarketModelHX codeForName];
+    market.marketName = dicts[mod.product_code];
+    [self.navigationController pushViewController:market animated:YES];
+    
     
     
 }

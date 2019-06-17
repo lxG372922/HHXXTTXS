@@ -11,7 +11,7 @@
 @interface COCPositionHostViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic , strong)NSArray *holdPosArray;
-
+@property (nonatomic,strong) UIView *noDataView;
 
 @end
 static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
@@ -29,16 +29,43 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
         make.right.equalTo(self.view.mas_right).mas_offset(0);
         make.bottom.equalTo(self.view.mas_bottom).mas_offset(0);
     }];
+     [self.view addSubview:self.noDataView];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = NO;
+    if (self.holdPosArray.count > 0) {
+        self.holdPos_tableView.alpha = 1;
+        self.noDataView.alpha = 0;
+    }else{
+        self.holdPos_tableView.alpha = 0;
+        self.noDataView.alpha = 1;
+    }
 }
 
 
 #pragma  -------------lazy----------------
-
+-(UIView *)noDataView{
+    if (!_noDataView) {
+        _noDataView = [[UIView alloc]initWithFrame:CGRectMake((SCREEN_Width - SCALE_Length(80.f))/2, (SCREEN_Height - SCALE_Length(120.f))/2, SCALE_Length(80.f), SCALE_Length(120.f))];
+        _noDataView.backgroundColor = [UIColor clearColor];
+        
+        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fanchuan"]];
+        imageView.frame = CGRectMake(0, 0, SCALE_Length(80), SCALE_Length(80));
+        [_noDataView addSubview:imageView];
+        UIButton *makeOrderBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        makeOrderBtn.frame = CGRectMake(0, CGRectGetMaxY(imageView.frame) + 10, SCALE_Length(80.f), SCALE_Length(28.f));
+        [makeOrderBtn setTitle:@"没有订单数据" forState:UIControlStateNormal];
+//        [makeOrderBtn setBackgroundColor:BTNCOlor];
+//        [makeOrderBtn addTarget:self action:@selector(makeOrderClick) forControlEvents:UIControlEventTouchUpInside];
+        makeOrderBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [makeOrderBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [_noDataView addSubview:makeOrderBtn];
+        
+    }
+    return _noDataView;
+}
 -(UITableView *)holdPos_tableView{
     if(!_holdPos_tableView){
         _holdPos_tableView = [[UITableView alloc]init];
@@ -80,7 +107,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return self.holdPosArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCHostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communityReportCell_id_1];
