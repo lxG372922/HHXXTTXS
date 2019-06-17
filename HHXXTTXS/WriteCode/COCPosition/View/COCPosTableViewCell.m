@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
     self.setYSButton.layer.cornerRadius = 5;
     self.setYSButton.layer.borderColor = UIColor.blackColor.CGColor;
     self.setYSButton.layer.borderWidth = 1;
@@ -19,6 +20,7 @@
     self.marketDetailBtn.layer.cornerRadius = 5;
     self.marketDetailBtn.layer.borderColor = UIColor.blackColor.CGColor;
     self.marketDetailBtn.layer.borderWidth = 1;
+    [self.pingCButton setBackgroundColor:BTNCOlor];
     // Initialization code
 }
 

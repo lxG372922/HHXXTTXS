@@ -89,6 +89,7 @@
 // 随机色
 #define RandomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+
 // 项目中主要颜色的定义
 #define COCColorTheme                           HexColor(0xA35128)     // 主题颜色
 #define COCColorLong                            HexColor(0xcc3366)     // 上涨颜色(红色)
@@ -106,6 +107,8 @@
 #define COCColorAlert_f8f8f8                    HexColor(0xf8f8f8)     // 首页收藏视图弹框颜色
 #define COCColorWarning                         HexColor(0xFA0000)     // 警告颜色
 #define COCColorMarketDetail                    HexColor(0xffffff)      // 行情详情页背景
+
+#define BTNCOlor RGBColor(20, 44, 51)
 //背景透明色
 #define COCColorAlert_BGColor                   HexAlphaColor(0x000000,0.4)
 #define Colorblack [UIColor colorWithHexString:@"#333333"]

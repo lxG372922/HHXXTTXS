@@ -13,7 +13,7 @@
 @property (nonatomic,strong) UIImageView *noDataImageView;
 @property (nonatomic,strong)UIButton *makeOrderBtn;
 @property (nonatomic,strong) PostHeaderView *headerView;
-@property (nonatomic,strong) PositionModel *model;
+@property (nonatomic,strong) COCHostModel *model;
 @property (nonatomic,strong) UIView *tableHearderView;
 @property (nonatomic,strong) UIView *noDataView;
 @property (nonatomic , strong)NSArray *holdPosArray;
@@ -102,7 +102,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         UIButton *makeOrderBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         makeOrderBtn.frame = CGRectMake(0, CGRectGetMaxY(imageView.frame) + 10, SCALE_Length(80.f), SCALE_Length(28.f));
         [makeOrderBtn setTitle:@"马上下单" forState:UIControlStateNormal];
-        [makeOrderBtn setBackgroundColor:RGBColor(20,44, 51)];
+        [makeOrderBtn setBackgroundColor:BTNCOlor];
         [makeOrderBtn addTarget:self action:@selector(makeOrderClick) forControlEvents:UIControlEventTouchUpInside];
         makeOrderBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         [makeOrderBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
@@ -157,7 +157,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
         UIButton *yjpcBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         yjpcBtn.frame = CGRectMake(SCREEN_Width -SCALE_Length(120.f) - 20 ,10, SCALE_Length(120.f), SCALE_Length(30.f));
-        [yjpcBtn setTitle:@"一健平仓" forState:UIControlStateNormal];
+        [yjpcBtn setTitle:@"一键平仓" forState:UIControlStateNormal];
         [yjpcBtn setBackgroundColor:RGBColor(20,44, 51)];
         yjpcBtn.layer.cornerRadius = 5;
         [yjpcBtn addTarget:self action:@selector(showAllClick) forControlEvents:UIControlEventTouchUpInside];

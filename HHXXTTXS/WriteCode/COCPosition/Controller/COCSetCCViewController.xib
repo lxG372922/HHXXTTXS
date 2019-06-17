@@ -12,7 +12,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="COCSetCCViewController">
             <connections>
+                <outlet property="baoZLabel" destination="Hgy-Ii-I0l" id="zWv-HM-mF5"/>
+                <outlet property="dOrKongLabel" destination="X7B-cv-Is2" id="e7c-Cj-RG5"/>
+                <outlet property="numberLabel" destination="P5L-FX-oEU" id="dt4-oM-XLX"/>
+                <outlet property="proNameLabel" destination="BOX-IL-ZgH" id="PxC-3x-m4S"/>
+                <outlet property="setZhiSTF" destination="JLm-Rk-amF" id="l1a-f5-cga"/>
+                <outlet property="setZhiYTF" destination="l4V-HK-URN" id="Ujn-kh-8N5"/>
+                <outlet property="shouxuZLabel" destination="5qq-KI-Um6" id="yqr-QB-yqU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhiSLabel" destination="Zmg-4E-sUD" id="Ad4-2h-re4"/>
+                <outlet property="zhiYLabel" destination="SDS-0o-elW" id="hye-0n-EvU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -206,6 +215,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="queDingBtnClick:" destination="-1" eventType="touchUpInside" id="gIL-Uv-k4K"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
