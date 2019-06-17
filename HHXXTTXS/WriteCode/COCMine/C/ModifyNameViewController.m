@@ -37,7 +37,7 @@
 }
 
 -(void)clickSaveBtn:(UIButton *)sender{
-    
+    LoginAndSaveUid(self.textTF.text);
     [self.navigationController popViewControllerAnimated:YES];
     
 }

@@ -9,6 +9,9 @@
 #ifndef MineHeader_h
 #define MineHeader_h
 
+
+#import "UITextField+PlaceHolder.h"
+
 //获取应用程序窗口的宏
 #define G_Window [UIApplication sharedApplication].delegate.window
 
@@ -47,6 +50,20 @@
 
 //退出登录，或uid失效，将持久化的uid删除
 #define LogOutRemoveUid [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"uid"]
+
+
+
+//用于登录，退出登录的宏
+//判断有没有登录的宏，如果是YES表示登录了，如果是NO表示没有登录
+#define Has_Login [[NSUserDefaults standardUserDefaults] objectForKey:@"uid"]
+//登录成功，持久化手机号
+#define LoginAndSaveUid(uid) [[NSUserDefaults standardUserDefaults] setObject:uid forKey:@"uid"];[[NSUserDefaults standardUserDefaults] synchronize];
+//获取手机号
+#define UserId (Has_Login ? [[NSUserDefaults standardUserDefaults] objectForKey:@"uid"] : @"")
+
+//退出登录，或uid失效，将持久化的uid删除
+#define LogOutRemoveUid [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"uid"]
+
 
 
 

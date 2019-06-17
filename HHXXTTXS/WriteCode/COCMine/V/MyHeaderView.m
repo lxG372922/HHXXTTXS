@@ -7,8 +7,15 @@
 //
 
 #import "MyHeaderView.h"
+#import "SelectPhotoManager.h"
 
+@interface  MyHeaderView()
+
+@property (nonatomic, strong)SelectPhotoManager *photoManager;
+
+@end
 @implementation MyHeaderView
+
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -41,8 +48,29 @@
         _headerImage.layer.cornerRadius = 25;
         _headerImage.layer.masksToBounds =YES;
         _headerImage.backgroundColor = [UIColor redColor];
+        UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGRActionChangeHeaderImg)];
+        //为View标签添加手势
+        self.headerImage.userInteractionEnabled=YES;
+        [self.headerImage addGestureRecognizer:gesture];
     }
     return _headerImage;
+}
+- (void)tapGRActionChangeHeaderImg{
+    
+    if (!_photoManager) {
+        _photoManager =[[SelectPhotoManager alloc]init];
+    }
+    [_photoManager startSelectPhotoWithImageName:@"选择头像"];
+    __weak typeof(self)mySelf=self;
+    
+    //选取照片成功
+    _photoManager.successHandle=^(SelectPhotoManager *manager,UIImage *image){
+        mySelf.headerImage.image = image;
+        //保存到本地
+    NSData *data = UIImagePNGRepresentation(image);
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"headerImage"];
+    };
+    
 }
 - (UILabel *)nameLab{
     if(!_nameLab){
@@ -92,6 +120,8 @@
     }
     return _integralLab;
 }
+
+
 -(void)createHeaderViewFrame{
     
     [_bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
