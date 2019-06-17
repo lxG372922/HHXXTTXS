@@ -1,5 +1,6 @@
 #import "COCHomeViewController.h"
 #import "COCHomeHeaderView.h"
+#import "COCHomePracticeViewController.h"
 
 @interface COCHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *zTableView;
@@ -10,6 +11,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self configTableView];
 }
 
@@ -20,7 +22,13 @@
     self.zTableView.backgroundColor =[UIColor whiteColor];
     [self.view addSubview:self.zTableView];
     self.zHeadView = [[COCHomeHeaderView alloc] instanceView];
+    weakSelf(self);
     self.zHeadView.frame = CGRectMake(0, 0, SCREEN_Width, 540);
+    self.zHeadView.practiceBlock = ^{
+        COCHomePracticeViewController *practice = [[COCHomePracticeViewController alloc]init];
+//        weakSelf.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:practice animated:YES];
+    };
     self.zTableView.tableHeaderView = self.zHeadView;
     
 }

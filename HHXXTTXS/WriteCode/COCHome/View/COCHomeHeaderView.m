@@ -44,15 +44,28 @@
     self.zViewTwo.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapzViewTwo = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickzViewTwo)];
     [self.zViewTwo addGestureRecognizer:tapzViewTwo];
-    
+    self.zViewThree.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapzViewThree = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickzViewThree)];
+    [self.zViewThree addGestureRecognizer:tapzViewThree];
+    self.zViewFour.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapzViewFoure = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickzViewFour)];
+    [self.zViewFour addGestureRecognizer:tapzViewFoure];
 }
 
 - (void)clickzViewOne{
-    
+    self.practiceBlock();
 }
 
 - (void)clickzViewTwo{
     [self replySuccess];
+}
+
+- (void)clickzViewThree{
+    
+}
+
+- (void)clickzViewFour{
+    
 }
 
 // 拨打客服电话
