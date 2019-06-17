@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		0439139622B7C12300E7C4D9 /* YUFoldingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */; };
 		0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */; };
 		0439139822B7C12300E7C4D9 /* YUFolding_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */; };
-=======
 		043D117022B3836300E7E29C /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D116822B3836300E7E29C /* ContractManager.m */; };
->>>>>>> 4157b85c2f4ce65d2d60bfee01378d8ae1e0e992
 		0458099422B7A8D50083A8C8 /* myButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098C22B7A8D40083A8C8 /* myButton.m */; };
 		0458099522B7A8D50083A8C8 /* detailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098D22B7A8D40083A8C8 /* detailsTopView.m */; };
 		0458099622B7A8D50083A8C8 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098F22B7A8D50083A8C8 /* BottomView.m */; };
@@ -135,17 +132,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingTableView.m; sourceTree = "<group>"; };
 		0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingSectionHeader.m; sourceTree = "<group>"; };
 		0439139322B7C12300E7C4D9 /* YUFoldingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingTableView.h; sourceTree = "<group>"; };
 		0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YUFolding_arrow.png; sourceTree = "<group>"; };
 		0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingSectionHeader.h; sourceTree = "<group>"; };
-=======
 		043D116722B3836300E7E29C /* ContractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractManager.h; sourceTree = "<group>"; };
 		043D116822B3836300E7E29C /* ContractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractManager.m; sourceTree = "<group>"; };
 		043D116F22B3836300E7E29C /* ContractHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractHeader.h; sourceTree = "<group>"; };
->>>>>>> 4157b85c2f4ce65d2d60bfee01378d8ae1e0e992
 		0458098C22B7A8D40083A8C8 /* myButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myButton.m; sourceTree = "<group>"; };
 		0458098D22B7A8D40083A8C8 /* detailsTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailsTopView.m; sourceTree = "<group>"; };
 		0458098E22B7A8D50083A8C8 /* detailsTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailsTopView.h; sourceTree = "<group>"; };
@@ -391,7 +385,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		0439139022B7C12300E7C4D9 /* YUFoldingTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,7 +395,8 @@
 				0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */,
 			);
 			path = YUFoldingTableView;
-=======
+			sourceTree = "<group>";
+		};
 		043D116522B3836300E7E29C /* ContractManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,7 +422,6 @@
 				043D116F22B3836300E7E29C /* ContractHeader.h */,
 			);
 			path = HeaderFile;
->>>>>>> 4157b85c2f4ce65d2d60bfee01378d8ae1e0e992
 			sourceTree = "<group>";
 		};
 		0458099922B7A90F0083A8C8 /* lineK */ = {
