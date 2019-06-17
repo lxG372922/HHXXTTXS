@@ -48,6 +48,8 @@
 		049B97B222B73C51003D943E /* COCMarketHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97A622B73C51003D943E /* COCMarketHeaderView.m */; };
 		049B97B622B743AE003D943E /* PKProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97B422B743AE003D943E /* PKProgressHUD.m */; };
 		049B97B922B74B2D003D943E /* COCTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97B822B74B2D003D943E /* COCTransViewController.m */; };
+		049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97BB22B77062003D943E /* COCTrasTableViewCell.m */; };
+		049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -169,6 +171,9 @@
 		049B97B522B743AE003D943E /* PKProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKProgressHUD.h; sourceTree = "<group>"; };
 		049B97B722B74B2D003D943E /* COCTransViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCTransViewController.h; sourceTree = "<group>"; };
 		049B97B822B74B2D003D943E /* COCTransViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCTransViewController.m; sourceTree = "<group>"; };
+		049B97BA22B77062003D943E /* COCTrasTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCTrasTableViewCell.h; sourceTree = "<group>"; };
+		049B97BB22B77062003D943E /* COCTrasTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCTrasTableViewCell.m; sourceTree = "<group>"; };
+		049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCTrasTableViewCell.xib; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -374,6 +379,9 @@
 				049B977122B3BEEB003D943E /* MarketTableViewCell.h */,
 				049B977222B3BEEB003D943E /* XSYTableView.h */,
 				049B977322B3BEEB003D943E /* myLabel.h */,
+				049B97BA22B77062003D943E /* COCTrasTableViewCell.h */,
+				049B97BB22B77062003D943E /* COCTrasTableViewCell.m */,
+				049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -832,6 +840,7 @@
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
 				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
 				049B97B122B73C51003D943E /* COCMarketHeaderView.xib in Resources */,
+				049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +939,7 @@
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				049B977F22B5E806003D943E /* COCPosTableViewCell.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
+				049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
 				049B977922B3BEEB003D943E /* MarketTableViewCell.m in Sources */,
 				049B97AA22B73C51003D943E /* COCHomeMarketViewController.m in Sources */,

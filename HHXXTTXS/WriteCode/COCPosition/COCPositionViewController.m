@@ -176,7 +176,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     self.tabBarController.selectedIndex = 1;
 }
 -(void)showAllClick{
-    
+    COCTransViewController *transVC = [[COCTransViewController alloc]init];
+    transVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:transVC animated:YES];
 }
 
 #pragma ------------------tableviewDelegate---------------
@@ -185,7 +187,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return self.holdPosArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
