@@ -224,7 +224,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
     }
 //    写个动画
-    [UIView animateWithDuration:0.1 animations:^{[tableView beginUpdates];[tableView endUpdates];}];
+    [UIView animateWithDuration:0.1 animations:^{[tableView beginUpdates];
+        [tableView endUpdates];
+    }];
 
 }
 

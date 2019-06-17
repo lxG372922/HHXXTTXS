@@ -174,8 +174,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         yjpcBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         [yjpcBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
         [_tableHearderView addSubview:yjpcBtn];
-        
-        
     }
     return _tableHearderView;
 }
