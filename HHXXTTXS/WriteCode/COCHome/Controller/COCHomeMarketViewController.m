@@ -37,7 +37,7 @@
     self.zHeadView = [[COCMarketHeaderView alloc] instanceView];
     self.zHeadView.frame = CGRectMake(0, 0, SCREEN_Width, 100);
     self.zTableView.tableHeaderView = self.zHeadView;
-    
+    self.zTableView.showsVerticalScrollIndicator = NO;
     [self.zTableView registerNib:[UINib nibWithNibName:@"COCHomeMarketTableViewCell" bundle:nil] forCellReuseIdentifier:@"COCHomeMarketTableViewCell"];
     [self.view addSubview:self.zTableView];
     [self.zTableView mas_makeConstraints:^(MASConstraintMaker *make) {
