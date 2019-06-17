@@ -194,7 +194,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
     }
     cell.setZYZSblock = ^{
-        NSLog(@"");
+        COCSetCCViewController *setVC = [[COCSetCCViewController alloc]init];
+        setVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:setVC animated:YES];
     };
     cell.Marketblock = ^{
         
@@ -219,7 +221,10 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 150;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *dic = self.holdPosArray[indexPath.row];
+//    NSDictionary *dic = self.holdPosArray[indexPath.row];
+    COCHisRecordsViewController *hisVc = [[COCHisRecordsViewController alloc]init];
+    hisVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hisVc animated:YES];
 }
 
 @end

@@ -1,22 +1,23 @@
 //
-//  COCHisRecordsViewController.m
+//  COCSetCCViewController.m
 //  HHXXTTXS
 //
 //  Created by mac on 2019/6/17.
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#import "COCHisRecordsViewController.h"
+#import "COCSetCCViewController.h"
 
-@interface COCHisRecordsViewController ()
+@interface COCSetCCViewController ()
 
 @end
 
-@implementation COCHisRecordsViewController
+@implementation COCSetCCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"订单详情";
+    self.title =@"编辑持仓";
+    
     // Do any additional setup after loading the view from its nib.
 }
 

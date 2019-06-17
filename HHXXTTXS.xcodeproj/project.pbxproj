@@ -35,6 +35,8 @@
 		049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978722B7109B003D943E /* COCHisRecordsModel.m */; };
 		049B978C22B71360003D943E /* COCHisRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978A22B71360003D943E /* COCHisRecordsViewController.m */; };
 		049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B978B22B71360003D943E /* COCHisRecordsViewController.xib */; };
+		049B979122B7298F003D943E /* COCSetCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978F22B7298F003D943E /* COCSetCCViewController.m */; };
+		049B979222B7298F003D943E /* COCSetCCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B979022B7298F003D943E /* COCSetCCViewController.xib */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -135,6 +137,9 @@
 		049B978922B71360003D943E /* COCHisRecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHisRecordsViewController.h; sourceTree = "<group>"; };
 		049B978A22B71360003D943E /* COCHisRecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHisRecordsViewController.m; sourceTree = "<group>"; };
 		049B978B22B71360003D943E /* COCHisRecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHisRecordsViewController.xib; sourceTree = "<group>"; };
+		049B978E22B7298F003D943E /* COCSetCCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCSetCCViewController.h; sourceTree = "<group>"; };
+		049B978F22B7298F003D943E /* COCSetCCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCSetCCViewController.m; sourceTree = "<group>"; };
+		049B979022B7298F003D943E /* COCSetCCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCSetCCViewController.xib; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -247,6 +252,9 @@
 				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
 				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
 				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
+				049B978E22B7298F003D943E /* COCSetCCViewController.h */,
+				049B978F22B7298F003D943E /* COCSetCCViewController.m */,
+				049B979022B7298F003D943E /* COCSetCCViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -738,6 +746,7 @@
 				049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */,
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
 				049B978022B5E806003D943E /* COCPosTableViewCell.xib in Resources */,
+				049B979222B7298F003D943E /* COCSetCCViewController.xib in Resources */,
 				049B974C22B3B919003D943E /* COCHomeHeaderView.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				049B977822B3BEEB003D943E /* MarketTableViewCell.xib in Resources */,
@@ -832,6 +841,7 @@
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
+				049B979122B7298F003D943E /* COCSetCCViewController.m in Sources */,
 				049B974B22B3B919003D943E /* COCHomeHeaderView.m in Sources */,
 				049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,

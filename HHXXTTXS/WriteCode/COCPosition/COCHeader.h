@@ -16,4 +16,5 @@
 #import "COCPosTableViewCell.h"
 #import "PostHeaderView.h"
 #import "myLabel.h"
+#import "COCSetCCViewController.h"
 #endif /* COCHeader_h */

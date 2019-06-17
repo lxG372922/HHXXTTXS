@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak)IBOutlet UILabel *kcTimeLabel;//开仓时间
 @property (nonatomic,weak)IBOutlet UILabel *pcTimeLabel;//平仓时间
 @property (nonatomic,weak)IBOutlet UILabel *orderLabel;//订单编号
+
+
 @end
 
 NS_ASSUME_NONNULL_END
