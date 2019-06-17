@@ -23,7 +23,4 @@
 /** 关注列表 */
 #define ASO_ArchiverPath_WatchList          [@"ASO_ArchiverPath_WatchList" pathInDocumentDirectory]
 
-/** 模拟炒股持仓列表 */
-#define ASO_ArchiverPath_SimulatePostion    [@"ASO_ArchiverPath_SimulatePostion" pathInDocumentDirectory]
-
 #endif /* COCLocalStoragePublicKey_h */

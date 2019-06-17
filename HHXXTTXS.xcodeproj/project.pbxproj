@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043D117022B3836300E7E29C /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D116822B3836300E7E29C /* ContractManager.m */; };
+		043D117122B3836300E7E29C /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D116B22B3836300E7E29C /* OrderModel.m */; };
+		043D117222B3836300E7E29C /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D116C22B3836300E7E29C /* PositionModel.m */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -55,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043D116722B3836300E7E29C /* ContractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractManager.h; sourceTree = "<group>"; };
+		043D116822B3836300E7E29C /* ContractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractManager.m; sourceTree = "<group>"; };
+		043D116A22B3836300E7E29C /* PositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionModel.h; sourceTree = "<group>"; };
+		043D116B22B3836300E7E29C /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		043D116C22B3836300E7E29C /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
+		043D116D22B3836300E7E29C /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		043D116F22B3836300E7E29C /* ContractHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractHeader.h; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +171,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043D116522B3836300E7E29C /* ContractManager */ = {
+			isa = PBXGroup;
+			children = (
+				043D116622B3836300E7E29C /* Manager */,
+				043D116922B3836300E7E29C /* Model */,
+				043D116E22B3836300E7E29C /* HeaderFile */,
+			);
+			path = ContractManager;
+			sourceTree = "<group>";
+		};
+		043D116622B3836300E7E29C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				043D116722B3836300E7E29C /* ContractManager.h */,
+				043D116822B3836300E7E29C /* ContractManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		043D116922B3836300E7E29C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				043D116A22B3836300E7E29C /* PositionModel.h */,
+				043D116C22B3836300E7E29C /* PositionModel.m */,
+				043D116D22B3836300E7E29C /* OrderModel.h */,
+				043D116B22B3836300E7E29C /* OrderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		043D116E22B3836300E7E29C /* HeaderFile */ = {
+			isa = PBXGroup;
+			children = (
+				043D116F22B3836300E7E29C /* ContractHeader.h */,
+			);
+			path = HeaderFile;
+			sourceTree = "<group>";
+		};
 		18F20AB822B34E960064DE4C = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +331,7 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				043D116522B3836300E7E29C /* ContractManager */,
 				18F20B2022B351EB0064DE4C /* KeyBoardManager */,
 				18F20B2322B351EB0064DE4C /* ServerManager */,
 				18F20B2622B351EB0064DE4C /* ReachabilityManager */,
@@ -297,8 +346,8 @@
 		18F20B2022B351EB0064DE4C /* KeyBoardManager */ = {
 			isa = PBXGroup;
 			children = (
-				18F20B2122B351EB0064DE4C /* KeyBoardManager.m */,
 				18F20B2222B351EB0064DE4C /* KeyBoardManager.h */,
+				18F20B2122B351EB0064DE4C /* KeyBoardManager.m */,
 			);
 			path = KeyBoardManager;
 			sourceTree = "<group>";
@@ -639,15 +688,18 @@
 				18F20B7722B351EB0064DE4C /* IndentTextField.m in Sources */,
 				18F20B0922B350010064DE4C /* NSObject+QWE.m in Sources */,
 				18F20B1322B350010064DE4C /* NSString+Path.m in Sources */,
+				043D117022B3836300E7E29C /* ContractManager.m in Sources */,
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				18F20B0822B350010064DE4C /* UITextView+Placeholder.m in Sources */,
 				18F20AE622B34F520064DE4C /* COCBaseViewController.m in Sources */,
 				18F20BA222B352EA0064DE4C /* COCQuotesViewController.m in Sources */,
+				043D117222B3836300E7E29C /* PositionModel.m in Sources */,
 				18F20BAB22B353000064DE4C /* COCOpenViewController.m in Sources */,
 				18F20BA822B352F90064DE4C /* COCMineViewController.m in Sources */,
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
+				043D117122B3836300E7E29C /* OrderModel.m in Sources */,
 				18F20B1122B350010064DE4C /* NSDictionary+InfoDictionary.m in Sources */,
 				18F20BA522B352F10064DE4C /* COCPositionViewController.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
