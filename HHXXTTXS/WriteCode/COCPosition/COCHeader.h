@@ -8,9 +8,10 @@
 
 #ifndef COCHeader_h
 #define COCHeader_h
-
+#import "NetCheck.h"
 #import "COCPositionHostViewController.h"
 #import "COCHisRecordsViewController.h"
+#import "COCPositionDetailViewController.h"
 #import "PositionModel.h"
 #import "COCHostTableViewCell.h"
 #import "COCPosTableViewCell.h"

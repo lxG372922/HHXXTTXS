@@ -19,8 +19,11 @@
 #define APIKey_jisu                                 [COCServerManager manager].optimalServer.appkey_jisu
 
 /// ----- 测试账号 ----
-#define TestAccount                                 @"13212341234"
-#define TestPsd                                     @"123456"
+#define Account                                 @"13212341234"
+#define Psd                                     @"123456"
+
+// --- 模拟账号资金 ---
+#define SIMULATECAPITAL                         @(500000)
 
 // ------ 字体样式 ----------
 #define fFont @"EuphemiaUCAS"
@@ -52,6 +55,8 @@
 
 /** 是否是竖屏 */
 #define IS_PORTRAIT (([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown))
+
+#define isReachability [NetCheck isNetWorkReachable]
 
 // -- 导航栏和Tabbar针对iPhone X 的适配  --
 #define Nav_topH (IS_HETERO_SCREEN ? 88.0 : 64.0)

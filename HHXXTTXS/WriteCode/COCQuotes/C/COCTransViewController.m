@@ -25,6 +25,10 @@
 @property (nonatomic,strong)UITableView *tableView;
 @property  (nonatomic,strong) UIView *footView;
 @property (nonatomic,strong) UIButton *commitBtn;
+@property (nonatomic,strong)  UILabel *kongORDuoLabel;
+@property (nonatomic,strong)  UILabel *priceLabel;
+@property (nonatomic,strong)  UILabel *baoZJinlabel;
+@property (nonatomic,strong)  UILabel * shouxulabel;
 @end
 static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 @implementation COCTransViewController
@@ -49,6 +53,24 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     
 }
 
+-(void)creatDataWith:(NSDictionary *)dic{
+    self.kongORDuoLabel.text = [dic objectForKey:@"KongOrDuo"];//买多或卖空
+    self.priceLabel.text = [dic objectForKey:@"price"];//价格
+    self.baoZJinlabel.text = [dic objectForKey:@"BaoZJin"];//保证金
+    self.shouxulabel.text = [dic objectForKey:@"shouxuFei"];//手续费
+    
+    NSString *  isJiaoY = [dic objectForKey:@"isSelectedJY"];
+    if ([isJiaoY isEqualToString:@"1"]) {
+        [self.commitBtn setTitle:@"请开启" forState:UIControlStateNormal];
+        [self.commitBtn setBackgroundColor:RGB(20, 44, 51)];
+        self.kongORDuoLabel.alpha = 0;
+        self.priceLabel.alpha = 0;
+    }else{
+        [self.commitBtn setTitle:@"" forState:UIControlStateNormal];
+        self.kongORDuoLabel.alpha = 1;
+        self.priceLabel.alpha = 1;
+    }
+}
 
 //懒加载
 
@@ -67,6 +89,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         kongORDuoLabel.font = FONT(12);
         kongORDuoLabel.textAlignment = NSTextAlignmentCenter;
         kongORDuoLabel.text = @"买多";
+        self.kongORDuoLabel = kongORDuoLabel;
         [_commitBtn addSubview:kongORDuoLabel];
         
         UILabel *priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(kongORDuoLabel.frame) +5, SCREEN_WIDTH - 40, 20)];
@@ -74,6 +97,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         priceLabel.font = FONT(14);
         priceLabel.textAlignment = NSTextAlignmentCenter;
         priceLabel.text = @"27123";
+        self.priceLabel = priceLabel;
         [_commitBtn addSubview:priceLabel];
         
     }
@@ -99,6 +123,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
         UILabel *baoZJinlabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - SCREEN_WIDTH/3 - 10 , 10, SCREEN_WIDTH/3, 20)];
         baoZJinlabel.font = FONT(12);
+        self.baoZJinlabel = baoZJinlabel;
         baoZJinlabel.textAlignment = NSTextAlignmentRight;
         baoZJinlabel.textColor = [UIColor  grayColor];
         baoZJinlabel.text = @"$150.0";
@@ -115,6 +140,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         shouxulabel.font = FONT(12);
         shouxulabel.textAlignment = NSTextAlignmentRight;
         shouxulabel.textColor = [UIColor  grayColor];
+        self.shouxulabel = shouxulabel;
         shouxulabel.text = @"$20.0";
         [footView addSubview:shouxulabel];
         
@@ -124,34 +150,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return _tableView;
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 3;
-//}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 3;
 }
-//- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView{
-//    return dataArray.count;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 50;
-//}
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-//    view.backgroundColor = [UIColor blueColor];
-//    UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, view.frame.size.width, view.frame.size.height)];
-//    titleLab.text = sectionArr[section];
-//    titleLab.textColor = [UIColor blackColor];
-//    titleLab.userInteractionEnabled = true;
-//    [view addSubview:titleLab];
-//    //创建一个手势进行点击，这里可以换成button
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(action_tap:)];
-//    view.tag = 300 + section;
-//    [view addGestureRecognizer:tap];
-//    return view;
-//}
 
 - (void)action_tap:(UIGestureRecognizer *)tap{
     NSString *str = [NSString stringWithFormat:@"%ld",tap.view.tag - 300];
@@ -163,16 +164,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:[str integerValue]]withRowAnimation:UITableViewRowAnimationFade];//有动画的刷新
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    NSString *string = [NSString stringWithFormat:@"%ld",section];
-//    if ([dic[string] integerValue] == 1 ) {  //打开cell返回数组的count
-//        NSArray *array = [NSArray arrayWithArray:dataArray[section]];
-//        return array.count;
-//    }else{
-//        return 0;
-//    }
-//
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    return 60;
@@ -236,14 +227,5 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     [UIView animateWithDuration:0.1 animations:^{[tableView beginUpdates];[tableView endUpdates];}];
 
 }
-/*
-#pragma mark - Navigation
-q
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

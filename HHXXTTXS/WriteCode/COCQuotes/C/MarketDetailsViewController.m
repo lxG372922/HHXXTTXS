@@ -12,6 +12,7 @@
 #import "HSStockChartView.h"
 #import "HSStockChartModelGroup.h"
 #import "HSStockChartModel.h"
+#import "COCTransViewController.h"
 @interface MarketDetailsViewController ()<HSStockChartViewDelegate>
 @property(nonatomic,strong)detailsTopView * topView;
 @property(nonatomic,strong) BottomView * bottomView ;
@@ -39,12 +40,15 @@
     
     
     //尾
+    weakSelf(self);
     _bottomView =[[BottomView alloc] initWithPrince:_marketmodel.current maneyALl:@"789890" buyAction:^{
         
+        [weakSelf clickType:1];
+        
     } clickCenBtn:^{
-        
+         [weakSelf clickType:2];
     } sellAction:^{
-        
+         [weakSelf clickType:3];
     }];
     
     [self.view addSubview:_bottomView];
@@ -57,7 +61,33 @@
    
     [self getModelArray];
     
-   
+}
+-(void)clickType:(int)type{
+    /*
+     *
+     ** KongOrDuo 买空或买多
+     ** price 价格
+     ** BaoZJin 保证金
+     ** shouxuFei 手续费
+     ** isSelectedJY  是否点击交易
+     */
+    
+    NSDictionary * dict;
+    if(type == 1){
+        dict = @{@"KongOrDuo":@"Duo",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
+    }else if(type == 2){
+          dict = @{@"KongOrDuo":@"",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"1"};
+    }else{
+          dict = @{@"KongOrDuo":@"Kong",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
+        
+    }
+    
+    COCTransViewController * sub  = [[COCTransViewController alloc]init];
+    sub.hidesBottomBarWhenPushed = YES;
+    [sub creatDataWith:dict];
+    [self.navigationController pushViewController:sub animated:YES];
+    
+
     
 }
 - (void)chartViewNeedLoadNewData:(HSStockChartView *)chartView complete:(void (^)(NSArray * array))complete{
@@ -91,7 +121,6 @@
             
             
         }
-        
         
         
     } faile:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
