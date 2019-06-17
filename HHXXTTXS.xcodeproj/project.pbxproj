@@ -29,7 +29,6 @@
 		049B977922B3BEEB003D943E /* MarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B976E22B3BEEB003D943E /* MarketTableViewCell.m */; };
 		049B977A22B3BEEB003D943E /* myLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B976F22B3BEEB003D943E /* myLabel.m */; };
 		049B977B22B3BEEB003D943E /* XSYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B977022B3BEEB003D943E /* XSYTableView.m */; };
-<<<<<<< HEAD
 		04A3107722B64DA4000B8B9D /* COCHomeMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107522B64DA4000B8B9D /* COCHomeMarketViewController.m */; };
 		04A3107822B64DA4000B8B9D /* COCHomeMarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3107622B64DA4000B8B9D /* COCHomeMarketViewController.xib */; };
 		04A3107C22B64DE9000B8B9D /* COCHomeMarketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107A22B64DE9000B8B9D /* COCHomeMarketTableViewCell.m */; };
@@ -37,7 +36,6 @@
 		04A3108022B6651E000B8B9D /* COCHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3107F22B6651E000B8B9D /* COCHomeModel.m */; };
 		04A3108322B69D8B000B8B9D /* COCMarketHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3108222B69D8B000B8B9D /* COCMarketHeaderView.m */; };
 		04A3108522B69D96000B8B9D /* COCMarketHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3108422B69D96000B8B9D /* COCMarketHeaderView.xib */; };
-=======
 		049B977F22B5E806003D943E /* COCPosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B977D22B5E806003D943E /* COCPosTableViewCell.m */; };
 		049B978022B5E806003D943E /* COCPosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B977E22B5E806003D943E /* COCPosTableViewCell.xib */; };
 		049B978422B685D6003D943E /* COCHostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978222B685D6003D943E /* COCHostTableViewCell.m */; };
@@ -45,7 +43,6 @@
 		049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978722B7109B003D943E /* COCHisRecordsModel.m */; };
 		049B978C22B71360003D943E /* COCHisRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B978A22B71360003D943E /* COCHisRecordsViewController.m */; };
 		049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B978B22B71360003D943E /* COCHisRecordsViewController.xib */; };
->>>>>>> a3818766feb072cf41046f1acd43f7e91a4870ea
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -137,7 +134,6 @@
 		049B977122B3BEEB003D943E /* MarketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketTableViewCell.h; sourceTree = "<group>"; };
 		049B977222B3BEEB003D943E /* XSYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYTableView.h; sourceTree = "<group>"; };
 		049B977322B3BEEB003D943E /* myLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myLabel.h; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		04A3107422B64DA4000B8B9D /* COCHomeMarketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHomeMarketViewController.h; sourceTree = "<group>"; };
 		04A3107522B64DA4000B8B9D /* COCHomeMarketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeMarketViewController.m; sourceTree = "<group>"; };
 		04A3107622B64DA4000B8B9D /* COCHomeMarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHomeMarketViewController.xib; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 		04A3108122B69D8B000B8B9D /* COCMarketHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCMarketHeaderView.h; sourceTree = "<group>"; };
 		04A3108222B69D8B000B8B9D /* COCMarketHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCMarketHeaderView.m; sourceTree = "<group>"; };
 		04A3108422B69D96000B8B9D /* COCMarketHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCMarketHeaderView.xib; sourceTree = "<group>"; };
-=======
 		049B977C22B5E806003D943E /* COCPosTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCPosTableViewCell.h; sourceTree = "<group>"; };
 		049B977D22B5E806003D943E /* COCPosTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCPosTableViewCell.m; sourceTree = "<group>"; };
 		049B977E22B5E806003D943E /* COCPosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCPosTableViewCell.xib; sourceTree = "<group>"; };
@@ -161,7 +156,6 @@
 		049B978922B71360003D943E /* COCHisRecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHisRecordsViewController.h; sourceTree = "<group>"; };
 		049B978A22B71360003D943E /* COCHisRecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHisRecordsViewController.m; sourceTree = "<group>"; };
 		049B978B22B71360003D943E /* COCHisRecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCHisRecordsViewController.xib; sourceTree = "<group>"; };
->>>>>>> a3818766feb072cf41046f1acd43f7e91a4870ea
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
