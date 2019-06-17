@@ -1,22 +1,23 @@
 //
-//  COCQuotesViewController.m
+//  COCHisRecordsViewController.m
 //  HHXXTTXS
 //
-//  Created by apple on 2019/6/14.
+//  Created by mac on 2019/6/17.
 //  Copyright © 2019 apple. All rights reserved.
 //
 
-#import "COCQuotesViewController.h"
+#import "COCHisRecordsViewController.h"
 
-@interface COCQuotesViewController ()
+@interface COCHisRecordsViewController ()
 
 @end
 
-@implementation COCQuotesViewController
+@implementation COCHisRecordsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"订单详情";
+    // Do any additional setup after loading the view from its nib.
 }
 
 /*

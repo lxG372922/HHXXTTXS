@@ -120,15 +120,15 @@ static COCMainViewController *_instance;
     COCBaseNaviController *newsNV = [[COCBaseNaviController alloc] initWithRootViewController:newsVC];
     
     
-//    COCMineViewController *meVC = [[COCMineViewController alloc] init];
-//    meVC.title = @"我的";
-//    meVC.hidesBottomBarWhenPushed = NO;
-//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
-    
-    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
+    COCMineViewController *meVC = [[COCMineViewController alloc] init];
     meVC.title = @"我的";
     meVC.hidesBottomBarWhenPushed = NO;
     COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
+    
+//    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
+//    meVC.title = @"我的";
+//    meVC.hidesBottomBarWhenPushed = NO;
+//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
     
     [self.VCArray addObject:homeNV];
     [self.VCArray addObject:marketNV];

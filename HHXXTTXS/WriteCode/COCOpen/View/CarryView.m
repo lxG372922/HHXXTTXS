@@ -53,7 +53,7 @@
         
         _srueBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width*0.08, CGRectGetMaxY(contenL.frame), SCREEN_Width*0.84, SCREEN_Width*0.1)];
         LXViewRadius(_srueBtn, 5);
-        _srueBtn.backgroundColor = RandomColor;
+        _srueBtn.backgroundColor = RGBColor(50, 50, 50);
         [_srueBtn setTitle:@"确定" forState:UIControlStateNormal];
         [_srueBtn addTarget:self action:@selector(backController) forControlEvents:UIControlEventTouchUpInside];
     }

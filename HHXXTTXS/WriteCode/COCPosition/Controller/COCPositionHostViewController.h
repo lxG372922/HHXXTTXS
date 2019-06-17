@@ -1,8 +1,8 @@
 //
-//  COCHomeViewController.h
+//  COCPositionHostViewController.h
 //  HHXXTTXS
 //
-//  Created by apple on 2019/6/14.
+//  Created by mac on 2019/6/14.
 //  Copyright © 2019 apple. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface COCHomeViewController : COCBaseViewController
+@interface COCPositionHostViewController : COCBaseViewController
 
 @end
 

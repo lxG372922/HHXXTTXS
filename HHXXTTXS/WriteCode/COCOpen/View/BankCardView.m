@@ -222,7 +222,7 @@
         
         _lastBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width*0.08, CGRectGetMaxY(nameBack.frame)+SCREEN_Width*0.2, SCREEN_Width*0.84, SCREEN_Width*0.1)];
         LXViewRadius(_lastBtn, 5);
-        _lastBtn.backgroundColor = RandomColor;
+        _lastBtn.backgroundColor = RGBColor(50, 50, 50);
         [_lastBtn setTitle:@"申请开户" forState:UIControlStateNormal];
         
     }

@@ -24,6 +24,10 @@
 
 // ------ 字体样式 ----------
 #define fFont @"EuphemiaUCAS"
+//字体大小IPH
+#define UiFontIPH(num) [UIFont systemFontOfSize:IPHONEWIDTH(num)]
+//字体大小sys
+#define UiFontSys(num) [UIFont systemFontOfSize:num]
 
 // ------ 公共字符串 -----
 #define NetErrorTipString @"网络繁忙，请稍后重试"
@@ -59,6 +63,10 @@
 #define COCStatue_Height (float)([[UIApplication sharedApplication] statusBarFrame].size.height)
 #define COCNavBar_height (float)(COCStatue_Height +44.0f)
 
+//比例适配 返回整数 应对 label有小数时会有边框
+#define IPHONEHIGHT(b) (int)([UIScreen mainScreen].bounds.size.height*((b)/1294.0))
+#define IPHONEWIDTH(a) (int)([UIScreen mainScreen].bounds.size.width*((a)/750.0))
+
 // 防空判断 ------------
 /** 字符串防空判断 */
 #define isStrEmpty(string) (string == nil || string == NULL || (![string isKindOfClass:[NSString class]]) || ([string isEqual:@""]) || [string isEqualToString:@""] || [string isEqualToString:@" "] || ([string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0))
@@ -81,12 +89,13 @@
 // 随机色
 #define RandomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+
 // 项目中主要颜色的定义
 #define COCColorTheme                           HexColor(0xA35128)     // 主题颜色
-#define COCColorLong                            HexColor(0x28A351)     // 上涨颜色(绿色)
-#define COCColorShort                           HexColor(0xcc3366)     // 下跌颜色(红色)
-#define COCColorLongBG                          HexColor(0xEDF7EB)     // 上涨背景颜色(绿色背景)
-#define COCColorShortBG                         HexColor(0xFDE7EE)     // 下跌背景颜色(红色背景)
+#define COCColorLong                            HexColor(0xcc3366)     // 上涨颜色(红色)
+#define COCColorShort                           HexColor(0x28A351)     // 下跌颜色(绿色)
+#define COCColorLongBG                          HexColor(0xFDE7EE)     // 上涨背景颜色(红色背景)
+#define COCColorShortBG                         HexColor(0xEDF7EB)     // 下跌背景颜色(绿色背景)
 #define COCColorTitle                           HexColor(0x333333)     // 用于主要文字提示，标题，重要文字
 #define COCColorNormalText                      HexColor(0x666666)     // 正常字体颜色，二级文字，标签栏
 #define COCColorTipText                         HexColor(0xB4B4B4)     // 提示文字，提示性文字，重要级别较低的文字信息
@@ -98,8 +107,31 @@
 #define COCColorAlert_f8f8f8                    HexColor(0xf8f8f8)     // 首页收藏视图弹框颜色
 #define COCColorWarning                         HexColor(0xFA0000)     // 警告颜色
 #define COCColorMarketDetail                    HexColor(0xffffff)      // 行情详情页背景
+
+#define BTNCOlor RGBColor(20, 44, 51)
 //背景透明色
 #define COCColorAlert_BGColor                   HexAlphaColor(0x000000,0.4)
+#define Colorblack [UIColor colorWithHexString:@"#333333"]
+#define ColorWhite  [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1/1.0]
+#define ColorGrayYinHui [UIColor colorsWithRed:221 green:221 blue:221]
+#define ColorGrayQian [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1/1.0]
+#define ColorClear [UIColor clearColor]
+#define ColorCellLine [UIColor colorWithHexString:@"#d8d8d8" ]
+
+// View 圆角
+#define XViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+// View 边框
+#define XViewBord(View, Color, Width)\
+\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:(Color).CGColor]
+
+
+
 
 // 手机尺寸型号
 #define COC_iPhone_4x        (SCREEN_Width == 320 && SCREEN_Height == 480)
@@ -127,5 +159,29 @@ string = [string stringByAppendingString:@"asjglarghjkasdi12335ljfgl"];\
 }\
 }\
 \
+
+
+// View 圆角
+#define XViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+// View 边框
+#define XViewBord(View, Color, Width)\
+\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:(Color).CGColor]
+
+//阴影
+#define XViewShadow(View,Color,Opacity,Radius)\
+\
+View.layer.shadowColor = Color.CGColor;\
+View.layer.shadowOffset = CGSizeMake(0,0);\
+View.layer.shadowOpacity = Opacity;\
+View.layer.shadowRadius = Radius
+
+
+
 
 #endif /* COCConstants_h */

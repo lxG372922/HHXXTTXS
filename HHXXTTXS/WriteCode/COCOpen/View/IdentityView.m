@@ -232,7 +232,7 @@
     if (!_nextView) {
         _nextView = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width*0.08, CGRectGetMaxY(_nextIamge.frame)+SCREEN_Width*0.2, SCREEN_Width*0.84, SCREEN_Width*0.1)];
         LXViewRadius(_nextView, 5);
-        _nextView.backgroundColor = RandomColor;
+        _nextView.backgroundColor = RGBColor(50, 50, 50);
         [_nextView setTitle:@"下一步" forState:UIControlStateNormal];
     }
     return _nextView;

@@ -102,7 +102,7 @@
         
         _nextBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width*0.08, CGRectGetMaxY(numBackV.frame)+SCREEN_Width*0.2, SCREEN_Width*0.84, SCREEN_Width*0.1)];
         LXViewRadius(_nextBtn, 5);
-        _nextBtn.backgroundColor = RandomColor;
+        _nextBtn.backgroundColor = RGBColor(50, 50, 50);
         [_nextBtn setTitle:@"下一步" forState:UIControlStateNormal];
         
     }
