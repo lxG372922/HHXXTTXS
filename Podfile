@@ -4,6 +4,7 @@
 target 'HHXXTTXS' do
 
   pod 'AFNetworking'
+  pod 'MJExtension', '~> 3.0.13'
   pod 'SDWebImage'
   pod 'MJRefresh'
   pod 'YYModel'
@@ -17,4 +18,5 @@ target 'HHXXTTXS' do
   pod 'QCKJLCWorking'
   pod 'RTRootNavigationController'
 
+  pod 'TYPagerController'
 end

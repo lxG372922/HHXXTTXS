@@ -14,6 +14,8 @@
 #import "COCMineViewController.h"
 #import "COCSimulationViewController.h"
 
+#import "COCOpenViewController.h"
+
 @interface COCMainViewController ()<UITabBarControllerDelegate>
 
 /** viewControllers */
@@ -128,6 +130,10 @@ static COCMainViewController *_instance;
     simulationVC.title = @"模拟";
     simulationVC.hidesBottomBarWhenPushed = NO;
     COCBaseNaviController *simulateNV = [[COCBaseNaviController alloc] initWithRootViewController:simulationVC];
+//    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
+//    meVC.title = @"我的";
+//    meVC.hidesBottomBarWhenPushed = NO;
+//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
     
     [self.VCArray addObject:homeNV];
     [self.VCArray addObject:marketNV];

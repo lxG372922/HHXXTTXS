@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class ContractManager,PositionModel,OrderModel;
+@class ContractManager,GLPositionModel,OrderModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ContractManagerDelegate <NSObject>
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param manager 管理器
  @param positionList 持仓列表
  */
-- (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary <NSString *, PositionModel *>*)positionList;
+- (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary <NSString *, GLPositionModel *>*)positionList;
 
 /**
  资金变化
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ContractManager : NSObject
 
 /** 持仓列表 */
-@property (strong, nonatomic) NSMutableDictionary <NSString *, PositionModel *>*positions;
+@property (strong, nonatomic) NSMutableDictionary <NSString *, GLPositionModel *>*positions;
 
 /** 委托列表 */
 @property (strong, nonatomic) NSMutableArray <OrderModel *>*orderList;

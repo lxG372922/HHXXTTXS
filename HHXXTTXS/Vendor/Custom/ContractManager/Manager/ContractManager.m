@@ -7,7 +7,7 @@
 //
 
 #import "ContractManager.h"
-#import "PositionModel.h"
+#import "GLPositionModel.h"
 #import "OrderModel.h"
 #import "NSString+Path.h"
 /** 模拟持仓列表 */
@@ -241,7 +241,7 @@ static ContractManager *_manager;
     CGFloat marketValue = 0.0f;
     BOOL isExist = NO;
     for (NSString *tempKey in [self.positions allKeys]) {
-        PositionModel *tempModel = [self.positions objectForKey:tempKey];
+        GLPositionModel *tempModel = [self.positions objectForKey:tempKey];
         CGFloat tempMarketValue = [tempModel.marketValue floatValue];
         
         if (tempMarketValue <= 0) {
@@ -259,7 +259,7 @@ static ContractManager *_manager;
     
     if (!isExist) {
         
-        PositionModel *newPosition = [[PositionModel alloc] init];
+        GLPositionModel *newPosition = [[GLPositionModel alloc] init];
         [newPosition updateWithOrderModel:orderModel];
 //        [self.positions add]
     }
@@ -271,9 +271,9 @@ static ContractManager *_manager;
  @param identifier 唯一标识符
  @return 指定的持仓模型
  */
-- (PositionModel * _Nullable)positionForIdentifier:(NSString *)identifier {
+- (GLPositionModel * _Nullable)positionForIdentifier:(NSString *)identifier {
     
-    PositionModel *tempModel = nil;
+    GLPositionModel *tempModel = nil;
 
     if (!isStrEmpty(identifier) && self.positions.count > 0) {
         tempModel = [self.positions objectForKey:identifier];
@@ -282,7 +282,7 @@ static ContractManager *_manager;
     return tempModel;
 }
 
-- (NSMutableDictionary<NSString *,PositionModel *> *)positions {
+- (NSMutableDictionary<NSString *,GLPositionModel *> *)positions {
     if (!_positions) {
         
         NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
