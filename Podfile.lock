@@ -20,6 +20,8 @@ PODS:
   - IQKeyboardManager (6.3.0)
   - JhtMarquee (1.0.5)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.17)
   - MJRefresh (3.2.0)
   - PYSearch (0.9.1)
   - QCKJLCWorking (2.0.0):
@@ -34,6 +36,7 @@ PODS:
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
   - SVProgressHUD (2.2.5)
+  - TYPagerController (2.1.2)
   - UICKeyChainStore (2.1.2)
   - WebViewJavascriptBridge (6.0.3)
   - YYModel (1.0.4)
@@ -44,6 +47,8 @@ DEPENDENCIES:
   - IQKeyboardManager
   - JhtMarquee
   - Masonry
+  - MBProgressHUD
+  - MJExtension (~> 3.0.13)
   - MJRefresh
   - PYSearch
   - QCKJLCWorking
@@ -51,6 +56,7 @@ DEPENDENCIES:
   - SDCycleScrollView
   - SDWebImage
   - SVProgressHUD
+  - TYPagerController
   - YYModel
 
 SPEC REPOS:
@@ -61,6 +67,8 @@ SPEC REPOS:
     - IQKeyboardManager
     - JhtMarquee
     - Masonry
+    - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - PYSearch
     - QCKJLCWorking
@@ -68,6 +76,7 @@ SPEC REPOS:
     - SDCycleScrollView
     - SDWebImage
     - SVProgressHUD
+    - TYPagerController
     - UICKeyChainStore
     - WebViewJavascriptBridge
     - YYModel
@@ -79,6 +88,8 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   JhtMarquee: 6f1118943062553c35aefea1115bdbeb0c4d7fd7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   PYSearch: 76dee18eea3309b60921a5d6a69390a63a5dda15
   QCKJLCWorking: 22a14f88de977b6b2f85749960d21e8a1353851f
@@ -86,10 +97,11 @@ SPEC CHECKSUMS:
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: fc846e72e161baf87c171209c0b6359446522b96
+PODFILE CHECKSUM: be6229426ddb98140b501f59561a44517509be05
 
 COCOAPODS: 1.6.1

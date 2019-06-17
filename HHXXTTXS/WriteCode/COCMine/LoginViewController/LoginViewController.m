@@ -43,22 +43,32 @@
 //登录
 -(void)clickLoginBtn:(UIButton *)sender
 {
-    if([_loginV.userTF.text isEqualToString:@"15018320041"] && [_loginV.passTF.text isEqualToString:@"1234"]){
-//        [G_Window showMBHUDAlertWithMessage:@"登录成功" hide:2.0];
+    BOOL isOne = [_loginV.userTF.text isEqualToString:@"15018320041"] && [_loginV.passTF.text isEqualToString:@"1234"];
+    BOOL isTwo = [_loginV.userTF.text isEqualToString:UserRegis] && [_loginV.passTF.text isEqualToString:UserMiMa];
+    
+    NSLog(@"%@   %@",UserRegis,UserMiMa);
+    if(isOne || isTwo){
+        [G_Window showMBHUDAlertWithMessage:@"登录成功" hide:2.0];
         [self.navigationController popViewControllerAnimated:YES];
         LoginAndSaveUid(_loginV.userTF.text);
         NSLog(@"---%@",UserId);
     }else{
-        [SVProgressHUD show];
-        [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
-        // 弹出“请检查用户名和密码是否为空！”对话框
+        
+//       弹出“请检查用户名和密码是否为空！”对话框
+        [G_Window showMBHUDAlertWithMessage:@"请检查输入的账号或密码是否正确!" hide:2.0];
 //        [self showError:@"请检查输入的账号或密码是否正确!"];
     }
+//    if(){
+//        [G_Window showMBHUDAlertWithMessage:@"登录成功" hide:2.0];
+//        [self.navigationController popViewControllerAnimated:YES];
+//        LoginAndSaveRegis(_loginV.userTF.text);
+//
+//    }else{
+//        [G_Window showMBHUDAlertWithMessage:@"请检查输入的账号或密码是否正确!" hide:2.0];
+//    }
     
 }
--(void)progressHUDdismiss{
-    [SVProgressHUD dismiss];
-}
+
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

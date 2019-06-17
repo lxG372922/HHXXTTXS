@@ -17,6 +17,7 @@
 @interface COCMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr1, *titleArr2;
+    NSArray *titleArrM1 , *titleArrM2;
 }
 @property (nonatomic , strong)MyHeaderView *headerV;
 @property (nonatomic , strong)MyFooterView *footerV;
@@ -29,15 +30,18 @@
 @implementation COCMineViewController
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self.mytableView reloadData];
+    [self headerViewWithData];
     self.tabBarController.tabBar.hidden = NO;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     titleArr1 = @[@"交易明细",@"资金明细",@"银行卡",@"账户认证"];
+    titleArrM1 = @[@"icon_1",@"icon_2",@"icon_3",@"icon_4"];
     
     titleArr2 = @[@"昵称",@"个性签名",@"修改密码"];
+    titleArrM2 = @[@"icon_5",@"形状",@"icon_7"];
   
     [self mytableView];
 }
@@ -60,7 +64,7 @@
         }];
         
         _headerV = [[MyHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
-        
+        [self headerViewWithData];
         self.mytableView.tableHeaderView = self.headerV;
         
         _footerV = [[MyFooterView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160)];
@@ -71,6 +75,18 @@
         
     }
     return _mytableView;
+}
+-(void)headerViewWithData{
+    if(Has_Name){
+        _headerV.nameLab.text = UserName;
+    }else{
+        _headerV.nameLab.text = @"天下无双";
+    }
+    if(Has_QM){
+        _headerV.signatureLab.text = UserQM;
+    }else{
+        _headerV.signatureLab.text = @"个性签名";
+    }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -88,13 +104,53 @@
     if(!cell){
         cell = [[MyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if(indexPath.section == 0){
         [cell refreashLayoutWithFrame:1];
         cell.titleLab.text = titleArr1[indexPath.row];
+        cell.imgV.image = [UIImage imageNamed:titleArrM1[indexPath.row]];
     }else{
         [cell refreashLayoutWithFrame:2];
         cell.titleLab.text = titleArr2[indexPath.row];
+        if(Has_Name){
+            if(indexPath.row == 0){
+                cell.detailsLab.text = UserName;
+            }else if(indexPath.row == 1){
+                
+            }else{
+                
+            }
+            
+        }else{
+            if(indexPath.row == 0){
+                cell.detailsLab.text = @"天下无双";
+            }else if(indexPath.row == 1){
+                
+            }else{
+                
+            }
+            
+        }
+        if(Has_QM){
+            if(indexPath.row == 0){
+                
+            }else if(indexPath.row == 1){
+                cell.detailsLab.text = UserQM;
+            }else{
+                
+            }
+            
+        }else{
+            if(indexPath.row == 0){
+                
+            }else if(indexPath.row == 1){
+                cell.detailsLab.text = @"个性签名";
+            }else{
+                
+            }
+        }
+        cell.imgV.image = [UIImage imageNamed:titleArrM2[indexPath.row]];
     }
     
     return cell;
@@ -136,8 +192,7 @@
 -(void)clickOutBtn:(UIButton *)sender{
     if([UserId isEqualToString:@""]){
 //        [G_Window showMBHUDAlertWithMessage:@"请登录" hide:2.0];
-        [SVProgressHUD showWithStatus:@"请登录"];
-        [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
+        
         LoginViewController *login = [[LoginViewController alloc]init];
         [self.navigationController pushViewController:login animated:YES];
     }else{
@@ -147,8 +202,6 @@
         // 确定注销
         _okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
             // 1.清除用户名、密码的存储
-            [SVProgressHUD showWithStatus:@"退出成功"];
-             [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
             LogOutRemoveUid;
             [self.mytableView reloadData];
             // 2.跳转到登录界面
@@ -166,9 +219,7 @@
     }
     
 }
--(void)progressHUDdismiss{
-    [SVProgressHUD dismiss];
-}
+
 
 
 @end

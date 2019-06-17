@@ -37,7 +37,8 @@
 - (UIImageView *)bgImage{
     if(!_bgImage){
         _bgImage = [[UIImageView alloc]init];
-        _bgImage.backgroundColor = RGB(222, 222, 222);
+//        _bgImage.backgroundColor = RGB(222, 222, 222);
+        _bgImage.image = [UIImage imageNamed:@"bg"];
     }
     return _bgImage;
 }

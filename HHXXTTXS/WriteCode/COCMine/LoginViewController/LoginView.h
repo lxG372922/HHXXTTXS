@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginView : UIView
 
+@property (nonatomic , strong)UIImageView *bgImage;
+
 @property (nonatomic , strong)UIImageView *logoImage;
 
 @property (nonatomic , strong)UIButton *phoneBtn;

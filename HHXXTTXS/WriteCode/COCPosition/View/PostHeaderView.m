@@ -7,7 +7,7 @@
 //
 
 #import "PostHeaderView.h"
-
+#import "COCHostModel.h"
 @interface PostHeaderView ()
 
 @property (nonatomic,strong) UILabel *totailLabel;//浮动动盈亏
@@ -23,7 +23,7 @@
 
 @implementation PostHeaderView
 
--(instancetype)initWithDataModel:(PositionModel*)model oiginY:(CGFloat)oiginY{
+-(instancetype)initWithDataModel:(COCHostModel*)model oiginY:(CGFloat)oiginY{
     if (self = [super initWithFrame:CGRectMake(0, oiginY, SCREEN_Width, 100)]) {
         
         self.totailLabel =[[UILabel alloc] initWithFrame:CGRectMake(10, 20, SCREEN_Width/2 - 20, 20)];

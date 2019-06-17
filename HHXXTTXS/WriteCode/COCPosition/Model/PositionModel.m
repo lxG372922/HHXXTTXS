@@ -28,10 +28,14 @@
     PositionModel *model = nil;
     if (dataDict && [dataDict isKindOfClass:[NSDictionary class]]) {
         model = [[PositionModel alloc] init];
-        model.totailCapital = [self changeDoubleToString:[dataDict objectForKey:@"totailCapital"]];
-        model.avaiCapital = [self changeDoubleToString:[dataDict objectForKey:@"avaiCapital"]];
-        model.bondCapital = [self changeDoubleToString:[dataDict objectForKey:@"bondCapital"]];
-        model.netCapital = [self changeDoubleToString:[dataDict objectForKey:@"netCapital"]];;
+        model.pro_Name = [dataDict objectForKey:@"pro_Name"];
+        model.pro_shou = [dataDict objectForKey:@"pro_shou"];
+        model.pro_duoOrKong = [dataDict objectForKey:@"pro_duoOrKong"];
+        model.pro_Price = [dataDict objectForKey:@"pro_Price"];
+        model.pro_KCPrice = [dataDict objectForKey:@"pro_KCPrice"];
+        model.pro_nowPrice = [dataDict objectForKey:@"pro_nowPrice"];
+        model.pro_zhiyPrice = [dataDict objectForKey:@"pro_zhiyPrice"];
+        model.pro_zhisPrice = [dataDict objectForKey:@"pro_zhisPrice"];
     }
     return model;
 }

@@ -8,45 +8,67 @@
 
 #import "COCPositionViewController.h"
 
-@interface COCPositionViewController ()
+@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic,strong) UIImageView *noDataImageView;
 @property (nonatomic,strong)UIButton *makeOrderBtn;
 @property (nonatomic,strong) PostHeaderView *headerView;
 @property (nonatomic,strong) PositionModel *model;
+@property (nonatomic,strong) UIView *tableHearderView;
 @property (nonatomic,strong) UIView *noDataView;
-
+@property (nonatomic , strong)NSArray *holdPosArray;
 
 @end
-
+static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 @implementation COCPositionViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     //历史记录
     [self creatRightBarButton];
-    //headerView
-    [self addheaderView];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    [self.view addSubview:self.noDataView];
+    [self configUI];
+   
     
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+    if (self.holdPosArray.count > 0) {
+        self.holdPos_tableView.alpha = 1;
+        self.noDataView.alpha = 0;
+    }else{
+        self.holdPos_tableView.alpha = 0;
+        self.noDataView.alpha = 1;
+    }
     [SVProgressHUD show];
     [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
 }
 
 
 -(void)progressHUDdismiss{
+    
+    [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
+    [self.holdPos_tableView reloadData];
 }
 
--(void)addheaderView{
+-(void)configUI{
     self.headerView  = [[PostHeaderView alloc]initWithDataModel:self.model oiginY:Nav_topH];
 //    self.headerView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.headerView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.holdPos_tableView];
+    
+    [self.holdPos_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).mas_offset(0);
+        make.top.equalTo(self.headerView.mas_bottom).mas_offset(0);
+        make.right.equalTo(self.view.mas_right).mas_offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).mas_offset(0);
+    }];
+    [self.view addSubview:self.noDataView];
+ 
 }
 -(void)creatRightBarButton{
     UIButton *hostBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -89,9 +111,115 @@
     }
     return _noDataView;
 }
+-(NSArray *)holdPosArray{
+    if (!_holdPosArray) {
+//        _holdPosArray = [NSArray array];
+        _holdPosArray = @[@"2"];
+    }
+    return _holdPosArray;
+}
+
+
+-(UITableView *)holdPos_tableView{
+    if(!_holdPos_tableView){
+        _holdPos_tableView = [[UITableView alloc]init];
+        _holdPos_tableView.delegate = self;
+        _holdPos_tableView.dataSource = self;
+        _holdPos_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _holdPos_tableView.backgroundColor = RGBColor(247, 247, 247);
+        [_holdPos_tableView registerNib:[UINib nibWithNibName:@"COCPosTableViewCell" bundle:nil] forCellReuseIdentifier:communitypostionCell_id];
+        
+        self.holdPos_tableView.tableHeaderView = self.tableHearderView;
+        _holdPos_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [SVProgressHUD show];
+            [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
+            
+        }];
+        
+        _holdPos_tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+            
+            [SVProgressHUD show];
+            
+        }];
+    }
+    return _holdPos_tableView;
+}
+
+-(UIView *)tableHearderView{
+    if (!_tableHearderView) {
+        _tableHearderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCALE_Length(50))];
+        _tableHearderView.backgroundColor =RGBColor(247, 247, 247);
+        UILabel *rnLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 15, 120, 20)];
+        rnLabel.text =@"日内持仓";
+        rnLabel.font = FONT(12);
+        rnLabel.textColor = RGBColor(55, 13, 74);
+        [_tableHearderView addSubview:rnLabel];
+        
+        UIButton *yjpcBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        yjpcBtn.frame = CGRectMake(SCREEN_Width -SCALE_Length(120.f) - 20 ,10, SCALE_Length(120.f), SCALE_Length(30.f));
+        [yjpcBtn setTitle:@"一健平仓" forState:UIControlStateNormal];
+        [yjpcBtn setBackgroundColor:RGBColor(20,44, 51)];
+        yjpcBtn.layer.cornerRadius = 5;
+        [yjpcBtn addTarget:self action:@selector(showAllClick) forControlEvents:UIControlEventTouchUpInside];
+        yjpcBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [yjpcBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
+        [_tableHearderView addSubview:yjpcBtn];
+        
+        
+    }
+    return _tableHearderView;
+}
+
+#pragma ---------------按钮点击事件
 
 -(void)makeOrderClick{
     self.tabBarController.selectedIndex = 1;
+}
+-(void)showAllClick{
+    
+}
+
+#pragma ------------------tableviewDelegate---------------
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
+    if(!cell){
+        cell = [[COCPosTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:communitypostionCell_id];
+        
+    }
+    cell.setZYZSblock = ^{
+        NSLog(@"");
+    };
+    cell.Marketblock = ^{
+        
+    };
+    cell.pingCblock = ^(NSNumber * _Nonnull index) {
+        
+    };
+    cell.backgroundColor = UIColor.clearColor;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    //    [cell setNewsTableViewCellControlContentWithModel:dic];
+    
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //    NSDictionary *dic = self.holdPosArray[indexPath.row];
+    //    NSString *title = [dic objectForKey:@"title"];
+    //    CGSize titleSize  =[title boundingRectWithSize:CGSizeMake(SCREEN_Width - 30.00, CGFLOAT_MAX) fontSize:16];
+    return 150;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dic = self.holdPosArray[indexPath.row];
 }
 
 @end

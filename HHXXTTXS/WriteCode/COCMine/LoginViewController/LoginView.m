@@ -26,6 +26,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.bgImage];
         [self addSubview:self.logoImage];
         [self addSubview:self.phoneBtn];
         [self addSubview:self.passBtn];
@@ -33,11 +34,18 @@
         [self addSubview:self.passTF];
         [self addSubview:self.loginBtn];
         [self addSubview:self.regisBtn];
-        [self addSubview:self.forgetBtn];
+//        [self addSubview:self.forgetBtn];
         [self addSubview:self.userLine];
         [self addSubview:self.passLine];
     }
     return self;
+}
+- (UIImageView *)bgImage{
+    if(!_bgImage){
+        _bgImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+        _bgImage.image = [UIImage imageNamed:@"bg-1"];
+    }
+    return _bgImage;
 }
 
 - (UIImageView *)logoImage{
@@ -53,7 +61,7 @@
         [_phoneBtn setTitle:@"手机号" forState:UIControlStateNormal];
         _phoneBtn.titleLabel.font = FONT(15);
         _phoneBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        [_phoneBtn setImage:[UIImage imageNamed:@"tel"] forState:UIControlStateNormal];
+        [_phoneBtn setImage:[UIImage imageNamed:@"qqq"] forState:UIControlStateNormal];
 //        _phoneBtn.backgroundColor = [UIColor redColor];
         
         
@@ -67,7 +75,7 @@
         [_passBtn setTitle:@"密码" forState:UIControlStateNormal];
         _passBtn.titleLabel.font = FONT(15);
         _passBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        [_passBtn setImage:[UIImage imageNamed:@"suo"] forState:UIControlStateNormal];
+        [_passBtn setImage:[UIImage imageNamed:@"www"] forState:UIControlStateNormal];
 //        _passBtn.backgroundColor = [UIColor redColor];
        
         
@@ -116,7 +124,7 @@
         _loginBtn  = [[UIButton alloc]init];
         _loginBtn.layer.masksToBounds = YES;
         _loginBtn.layer.cornerRadius = 20;
-        _loginBtn.backgroundColor = [UIColor redColor];
+        _loginBtn.backgroundColor = RGB(51, 51, 51);
     }
     return _loginBtn;
 }
@@ -202,7 +210,7 @@
         [_regisBtn setTitle:@"注册账户" forState:UIControlStateNormal];
         _regisBtn.titleLabel.font = FONT(14);
         [_regisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.mas_left).mas_offset(30);
+            make.right.equalTo(self.mas_right).mas_offset(-30);
             make.top.equalTo(self.mas_top).mas_offset(440);
             make.width.mas_equalTo(80);
             make.height.mas_equalTo(20);
