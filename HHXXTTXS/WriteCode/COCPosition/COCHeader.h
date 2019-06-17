@@ -10,8 +10,10 @@
 #define COCHeader_h
 
 #import "COCPositionHostViewController.h"
+#import "COCHisRecordsViewController.h"
 #import "PositionModel.h"
 #import "COCHostTableViewCell.h"
+#import "COCPosTableViewCell.h"
 #import "PostHeaderView.h"
 #import "myLabel.h"
 #endif /* COCHeader_h */
