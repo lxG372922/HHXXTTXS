@@ -53,6 +53,8 @@
 /** 是否是竖屏 */
 #define IS_PORTRAIT (([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown))
 
+#define isReachability [NetCheck isNetWorkReachable]
+
 // -- 导航栏和Tabbar针对iPhone X 的适配  --
 #define Nav_topH (IS_HETERO_SCREEN ? 88.0 : 64.0)
 #define Tab_H (IS_HETERO_SCREEN ? 83.0 : 49.0)

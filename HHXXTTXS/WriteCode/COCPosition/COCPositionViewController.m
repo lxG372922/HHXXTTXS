@@ -27,11 +27,22 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     //历史记录
     [self creatRightBarButton];
     [self configUI];
+    if (!isReachability) {
+        [PKProgressHUD pkShowErrorWithStatueTitle:@"无网络，请稍后重试!"];
+        [self.holdPos_tableView.mj_header endRefreshing];
+        return;
+    }
+   
    
     
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if (!isReachability) {
+        [PKProgressHUD pkShowErrorWithStatueTitle:@"无网络，请稍后重试!"];
+        [self.holdPos_tableView.mj_header endRefreshing];
+        return;
+    }
     self.tabBarController.tabBar.hidden = NO;
     if (self.holdPosArray.count > 0) {
         self.holdPos_tableView.alpha = 1;
@@ -113,12 +124,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 -(NSArray *)holdPosArray{
     if (!_holdPosArray) {
-//        _holdPosArray = [NSArray array];
-        _holdPosArray = @[@"2"];
+        _holdPosArray = [NSArray array];
+//        _holdPosArray = @[@"2"];
     }
     return _holdPosArray;
 }
-
 
 -(UITableView *)holdPos_tableView{
     if(!_holdPos_tableView){
@@ -176,9 +186,14 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     self.tabBarController.selectedIndex = 1;
 }
 -(void)showAllClick{
-    COCTransViewController *transVC = [[COCTransViewController alloc]init];
-    transVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:transVC animated:YES];
+    if (!isReachability) {
+        [PKProgressHUD pkShowErrorWithStatueTitle:@"无网络，请稍后重试!"];
+        [self.holdPos_tableView.mj_header endRefreshing];
+        return;
+    }
+//    COCTransViewController *transVC = [[COCTransViewController alloc]init];
+//    transVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:transVC animated:YES];
 }
 
 #pragma ------------------tableviewDelegate---------------
@@ -224,7 +239,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
-    COCHisRecordsViewController *hisVc = [[COCHisRecordsViewController alloc]init];
+    COCPositionDetailViewController *hisVc = [[COCPositionDetailViewController alloc]init];
     hisVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hisVc animated:YES];
 }

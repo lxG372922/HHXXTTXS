@@ -70,6 +70,9 @@
 		049B97B922B74B2D003D943E /* COCTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97B822B74B2D003D943E /* COCTransViewController.m */; };
 		049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97BB22B77062003D943E /* COCTrasTableViewCell.m */; };
 		049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */; };
+		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
+		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
+		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
 		185B0FA822B7A34000491D58 /* BankCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F9822B7A33F00491D58 /* BankCardView.m */; };
 		185B0FA922B7A34000491D58 /* XDSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F9D22B7A33F00491D58 /* XDSDropDownMenu.m */; };
 		185B0FAA22B7A34000491D58 /* FillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F9F22B7A33F00491D58 /* FillView.m */; };
@@ -242,6 +245,11 @@
 		049B97BA22B77062003D943E /* COCTrasTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCTrasTableViewCell.h; sourceTree = "<group>"; };
 		049B97BB22B77062003D943E /* COCTrasTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCTrasTableViewCell.m; sourceTree = "<group>"; };
 		049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCTrasTableViewCell.xib; sourceTree = "<group>"; };
+		04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCPositionDetailViewController.m; sourceTree = "<group>"; };
+		04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCPositionDetailViewController.xib; sourceTree = "<group>"; };
+		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
+		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
+		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
 		185B0F9722B7A33F00491D58 /* FillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillView.h; sourceTree = "<group>"; };
 		185B0F9822B7A33F00491D58 /* BankCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardView.m; sourceTree = "<group>"; };
@@ -449,6 +457,9 @@
 		049B972F22B38268003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */,
+				04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */,
+				04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */,
 				049B973622B38556003D943E /* COCPositionHostViewController.h */,
 				049B973722B38556003D943E /* COCPositionHostViewController.m */,
 				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
@@ -774,6 +785,8 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				04ED940E22B7B7A200598327 /* NetCheck.h */,
+				04ED940D22B7B7A200598327 /* NetCheck.m */,
 				0458099922B7A90F0083A8C8 /* lineK */,
 				18F20B2022B351EB0064DE4C /* KeyBoardManager */,
 				18F20B2322B351EB0064DE4C /* ServerManager */,
@@ -1060,6 +1073,7 @@
 				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
 				049B97B122B73C51003D943E /* COCMarketHeaderView.xib in Resources */,
 				049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */,
+				04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1145,6 +1159,7 @@
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
 				18F20B1422B350010064DE4C /* NSString+Verify.m in Sources */,
 				049B973822B38556003D943E /* COCPositionHostViewController.m in Sources */,
+				04ED940F22B7B7A200598327 /* NetCheck.m in Sources */,
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				049B976122B3BECA003D943E /* MyFooterView.m in Sources */,
 				049B975C22B3BECA003D943E /* ModifyPassViewController.m in Sources */,
@@ -1163,6 +1178,7 @@
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				049B979122B7298F003D943E /* COCSetCCViewController.m in Sources */,
 				049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */,
+				04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				049B977F22B5E806003D943E /* COCPosTableViewCell.m in Sources */,
