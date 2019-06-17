@@ -46,7 +46,7 @@
 #import "JMBaseButton.h"
 #import "NSObject+QWE.h"    // 垃圾代码分类
 #import "myLabel.h"
-
+#import "myButton.h"
 // ------------- 工具类目 -------------
 #import "NSString+LabelSize.h"
 #import "UIFont+ScaleSize.h"

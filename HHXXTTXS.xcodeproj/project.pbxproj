@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401174D22B7426200EBDF3D /* myButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401174C22B7426200EBDF3D /* myButton.m */; };
+		0401175022B747DA00EBDF3D /* marketViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401174F22B747DA00EBDF3D /* marketViewTools.m */; };
+		0401175322B748F200EBDF3D /* detailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401175222B748F200EBDF3D /* detailsTopView.m */; };
+		0458094722B783CB0083A8C8 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458094622B783CB0083A8C8 /* BottomView.m */; };
+		0458097B22B793C50083A8C8 /* HSStockChartColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458095822B793C50083A8C8 /* HSStockChartColor.m */; };
+		0458097C22B793C50083A8C8 /* HSStockChartViewVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458095922B793C50083A8C8 /* HSStockChartViewVariable.m */; };
+		0458097D22B793C50083A8C8 /* HSStockChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458095A22B793C50083A8C8 /* HSStockChartView.m */; };
+		0458097E22B793C50083A8C8 /* HSDateScaleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458095C22B793C50083A8C8 /* HSDateScaleInfoView.m */; };
+		0458097F22B793C50083A8C8 /* HSKLineScaleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458095E22B793C50083A8C8 /* HSKLineScaleInfoView.m */; };
+		0458098022B793C50083A8C8 /* HSVolumeScaleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096222B793C50083A8C8 /* HSVolumeScaleInfoView.m */; };
+		0458098122B793C50083A8C8 /* HSDetailInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096422B793C50083A8C8 /* HSDetailInfoView.m */; };
+		0458098222B793C50083A8C8 /* HSScaleBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096522B793C50083A8C8 /* HSScaleBaseView.m */; };
+		0458098322B793C50083A8C8 /* HSBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096722B793C50083A8C8 /* HSBarChartView.m */; };
+		0458098422B793C50083A8C8 /* HSBarChartSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096A22B793C50083A8C8 /* HSBarChartSegmentView.m */; };
+		0458098522B793C50083A8C8 /* HSCrossLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096C22B793C50083A8C8 /* HSCrossLineView.m */; };
+		0458098622B793C50083A8C8 /* HSStockChartModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458096F22B793C50083A8C8 /* HSStockChartModelGroup.m */; };
+		0458098722B793C50083A8C8 /* HSStockChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458097122B793C50083A8C8 /* HSStockChartModel.m */; };
+		0458098822B793C50083A8C8 /* HSCrossLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458097422B793C50083A8C8 /* HSCrossLineModel.m */; };
+		0458098922B793C50083A8C8 /* HSKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458097822B793C50083A8C8 /* HSKLineView.m */; };
+		0458098A22B793C50083A8C8 /* HSKLineSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458097A22B793C50083A8C8 /* HSKLineSegmentView.m */; };
 		045A4D0E22B3932600EC4C34 /* XSYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D0D22B3932600EC4C34 /* XSYTableView.m */; };
 		045A4D1122B3946C00EC4C34 /* MarketModelHX.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1022B3946C00EC4C34 /* MarketModelHX.m */; };
 		045A4D1422B3963D00EC4C34 /* MarketlistCodeAllHX.m in Sources */ = {isa = PBXBuildFile; fileRef = 045A4D1322B3963D00EC4C34 /* MarketlistCodeAllHX.m */; };
@@ -75,6 +95,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0401174B22B7426200EBDF3D /* myButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myButton.h; sourceTree = "<group>"; };
+		0401174C22B7426200EBDF3D /* myButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myButton.m; sourceTree = "<group>"; };
+		0401174E22B747DA00EBDF3D /* marketViewTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marketViewTools.h; sourceTree = "<group>"; };
+		0401174F22B747DA00EBDF3D /* marketViewTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marketViewTools.m; sourceTree = "<group>"; };
+		0401175122B748F200EBDF3D /* detailsTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = detailsTopView.h; sourceTree = "<group>"; };
+		0401175222B748F200EBDF3D /* detailsTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = detailsTopView.m; sourceTree = "<group>"; };
+		0458094522B783CB0083A8C8 /* BottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
+		0458094622B783CB0083A8C8 /* BottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
+		0458095622B793C50083A8C8 /* HSStockChartColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStockChartColor.h; sourceTree = "<group>"; };
+		0458095722B793C50083A8C8 /* HSStockChartViewVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStockChartViewVariable.h; sourceTree = "<group>"; };
+		0458095822B793C50083A8C8 /* HSStockChartColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStockChartColor.m; sourceTree = "<group>"; };
+		0458095922B793C50083A8C8 /* HSStockChartViewVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStockChartViewVariable.m; sourceTree = "<group>"; };
+		0458095A22B793C50083A8C8 /* HSStockChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStockChartView.m; sourceTree = "<group>"; };
+		0458095C22B793C50083A8C8 /* HSDateScaleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDateScaleInfoView.m; sourceTree = "<group>"; };
+		0458095D22B793C50083A8C8 /* HSDetailInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDetailInfoView.h; sourceTree = "<group>"; };
+		0458095E22B793C50083A8C8 /* HSKLineScaleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKLineScaleInfoView.m; sourceTree = "<group>"; };
+		0458095F22B793C50083A8C8 /* HSVolumeScaleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVolumeScaleInfoView.h; sourceTree = "<group>"; };
+		0458096022B793C50083A8C8 /* HSScaleBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSScaleBaseView.h; sourceTree = "<group>"; };
+		0458096122B793C50083A8C8 /* HSDateScaleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDateScaleInfoView.h; sourceTree = "<group>"; };
+		0458096222B793C50083A8C8 /* HSVolumeScaleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVolumeScaleInfoView.m; sourceTree = "<group>"; };
+		0458096322B793C50083A8C8 /* HSKLineScaleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSKLineScaleInfoView.h; sourceTree = "<group>"; };
+		0458096422B793C50083A8C8 /* HSDetailInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDetailInfoView.m; sourceTree = "<group>"; };
+		0458096522B793C50083A8C8 /* HSScaleBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSScaleBaseView.m; sourceTree = "<group>"; };
+		0458096722B793C50083A8C8 /* HSBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBarChartView.m; sourceTree = "<group>"; };
+		0458096822B793C50083A8C8 /* HSBarChartSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBarChartSegmentView.h; sourceTree = "<group>"; };
+		0458096922B793C50083A8C8 /* HSBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSBarChartView.h; sourceTree = "<group>"; };
+		0458096A22B793C50083A8C8 /* HSBarChartSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSBarChartSegmentView.m; sourceTree = "<group>"; };
+		0458096C22B793C50083A8C8 /* HSCrossLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCrossLineView.m; sourceTree = "<group>"; };
+		0458096D22B793C50083A8C8 /* HSCrossLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCrossLineView.h; sourceTree = "<group>"; };
+		0458096F22B793C50083A8C8 /* HSStockChartModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStockChartModelGroup.m; sourceTree = "<group>"; };
+		0458097022B793C50083A8C8 /* HSCrossLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCrossLineModel.h; sourceTree = "<group>"; };
+		0458097122B793C50083A8C8 /* HSStockChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSStockChartModel.m; sourceTree = "<group>"; };
+		0458097222B793C50083A8C8 /* HSStockChartModelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStockChartModelGroup.h; sourceTree = "<group>"; };
+		0458097322B793C50083A8C8 /* HSStockChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStockChartModel.h; sourceTree = "<group>"; };
+		0458097422B793C50083A8C8 /* HSCrossLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCrossLineModel.m; sourceTree = "<group>"; };
+		0458097522B793C50083A8C8 /* HSStockChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSStockChartView.h; sourceTree = "<group>"; };
+		0458097722B793C50083A8C8 /* HSKLineSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSKLineSegmentView.h; sourceTree = "<group>"; };
+		0458097822B793C50083A8C8 /* HSKLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKLineView.m; sourceTree = "<group>"; };
+		0458097922B793C50083A8C8 /* HSKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSKLineView.h; sourceTree = "<group>"; };
+		0458097A22B793C50083A8C8 /* HSKLineSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKLineSegmentView.m; sourceTree = "<group>"; };
 		045A4D0C22B3932600EC4C34 /* XSYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSYTableView.h; sourceTree = "<group>"; };
 		045A4D0D22B3932600EC4C34 /* XSYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSYTableView.m; sourceTree = "<group>"; };
 		045A4D0F22B3946C00EC4C34 /* MarketModelHX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketModelHX.h; sourceTree = "<group>"; };
@@ -221,6 +281,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0458095422B793C50083A8C8 /* lineK */ = {
+			isa = PBXGroup;
+			children = (
+				0458096622B793C50083A8C8 /* BarChartView */,
+				0458095522B793C50083A8C8 /* Configuration */,
+				0458096B22B793C50083A8C8 /* CrossLineView */,
+				0458097522B793C50083A8C8 /* HSStockChartView.h */,
+				0458095A22B793C50083A8C8 /* HSStockChartView.m */,
+				0458097622B793C50083A8C8 /* KLineChartView */,
+				0458096E22B793C50083A8C8 /* Models */,
+				0458095B22B793C50083A8C8 /* ScaleInfoView */,
+			);
+			path = lineK;
+			sourceTree = "<group>";
+		};
+		0458095522B793C50083A8C8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0458095622B793C50083A8C8 /* HSStockChartColor.h */,
+				0458095722B793C50083A8C8 /* HSStockChartViewVariable.h */,
+				0458095822B793C50083A8C8 /* HSStockChartColor.m */,
+				0458095922B793C50083A8C8 /* HSStockChartViewVariable.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		0458095B22B793C50083A8C8 /* ScaleInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				0458095C22B793C50083A8C8 /* HSDateScaleInfoView.m */,
+				0458095D22B793C50083A8C8 /* HSDetailInfoView.h */,
+				0458095E22B793C50083A8C8 /* HSKLineScaleInfoView.m */,
+				0458095F22B793C50083A8C8 /* HSVolumeScaleInfoView.h */,
+				0458096022B793C50083A8C8 /* HSScaleBaseView.h */,
+				0458096122B793C50083A8C8 /* HSDateScaleInfoView.h */,
+				0458096222B793C50083A8C8 /* HSVolumeScaleInfoView.m */,
+				0458096322B793C50083A8C8 /* HSKLineScaleInfoView.h */,
+				0458096422B793C50083A8C8 /* HSDetailInfoView.m */,
+				0458096522B793C50083A8C8 /* HSScaleBaseView.m */,
+			);
+			path = ScaleInfoView;
+			sourceTree = "<group>";
+		};
+		0458096622B793C50083A8C8 /* BarChartView */ = {
+			isa = PBXGroup;
+			children = (
+				0458096822B793C50083A8C8 /* HSBarChartSegmentView.h */,
+				0458096A22B793C50083A8C8 /* HSBarChartSegmentView.m */,
+				0458096922B793C50083A8C8 /* HSBarChartView.h */,
+				0458096722B793C50083A8C8 /* HSBarChartView.m */,
+			);
+			path = BarChartView;
+			sourceTree = "<group>";
+		};
+		0458096B22B793C50083A8C8 /* CrossLineView */ = {
+			isa = PBXGroup;
+			children = (
+				0458096C22B793C50083A8C8 /* HSCrossLineView.m */,
+				0458096D22B793C50083A8C8 /* HSCrossLineView.h */,
+			);
+			path = CrossLineView;
+			sourceTree = "<group>";
+		};
+		0458096E22B793C50083A8C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0458097022B793C50083A8C8 /* HSCrossLineModel.h */,
+				0458097422B793C50083A8C8 /* HSCrossLineModel.m */,
+				0458097322B793C50083A8C8 /* HSStockChartModel.h */,
+				0458097122B793C50083A8C8 /* HSStockChartModel.m */,
+				0458097222B793C50083A8C8 /* HSStockChartModelGroup.h */,
+				0458096F22B793C50083A8C8 /* HSStockChartModelGroup.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0458097622B793C50083A8C8 /* KLineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				0458097722B793C50083A8C8 /* HSKLineSegmentView.h */,
+				0458097A22B793C50083A8C8 /* HSKLineSegmentView.m */,
+				0458097922B793C50083A8C8 /* HSKLineView.h */,
+				0458097822B793C50083A8C8 /* HSKLineView.m */,
+			);
+			path = KLineChartView;
+			sourceTree = "<group>";
+		};
 		045A4D0922B392E800EC4C34 /* C */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +393,8 @@
 		045A4D0B22B392FE00EC4C34 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0401174B22B7426200EBDF3D /* myButton.h */,
+				0401174C22B7426200EBDF3D /* myButton.m */,
 				045A4D1B22B39E1D00EC4C34 /* myLabel.h */,
 				045A4D1A22B39E1D00EC4C34 /* myLabel.m */,
 				045A4D0C22B3932600EC4C34 /* XSYTableView.h */,
@@ -253,6 +402,12 @@
 				045A4D1522B39CE100EC4C34 /* MarketTableViewCell.h */,
 				045A4D1622B39CE100EC4C34 /* MarketTableViewCell.m */,
 				045A4D1722B39CE100EC4C34 /* MarketTableViewCell.xib */,
+				0401174E22B747DA00EBDF3D /* marketViewTools.h */,
+				0401174F22B747DA00EBDF3D /* marketViewTools.m */,
+				0401175122B748F200EBDF3D /* detailsTopView.h */,
+				0401175222B748F200EBDF3D /* detailsTopView.m */,
+				0458094522B783CB0083A8C8 /* BottomView.h */,
+				0458094622B783CB0083A8C8 /* BottomView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -436,6 +591,7 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				0458095422B793C50083A8C8 /* lineK */,
 				18F20B2022B351EB0064DE4C /* KeyBoardManager */,
 				18F20B2322B351EB0064DE4C /* ServerManager */,
 				18F20B2622B351EB0064DE4C /* ReachabilityManager */,
@@ -780,29 +936,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20B0B22B350010064DE4C /* UIView+CenterLoading.m in Sources */,
+				0458098122B793C50083A8C8 /* HSDetailInfoView.m in Sources */,
+				0458094722B783CB0083A8C8 /* BottomView.m in Sources */,
 				045A4D1422B3963D00EC4C34 /* MarketlistCodeAllHX.m in Sources */,
 				18F20AE922B34FAE0064DE4C /* COCBaseNaviController.m in Sources */,
 				045A4D1822B39CE100EC4C34 /* MarketTableViewCell.m in Sources */,
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				045A4D3822B3BCF900EC4C34 /* PostHeaderView.m in Sources */,
+				0458097C22B793C50083A8C8 /* HSStockChartViewVariable.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
+				0458098522B793C50083A8C8 /* HSCrossLineView.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
 				045A4D5722B3BE3A00EC4C34 /* COCHomeHeaderView.m in Sources */,
 				045A4D2822B3B17D00EC4C34 /* MarketDetailsViewController.m in Sources */,
 				045A4D4922B3BD1C00EC4C34 /* MyTableViewCell.m in Sources */,
 				18F20AE022B34F340064DE4C /* COCBaseListView.m in Sources */,
+				0401175022B747DA00EBDF3D /* marketViewTools.m in Sources */,
 				18F20B1D22B351400064DE4C /* COCMainViewController.m in Sources */,
+				0458098022B793C50083A8C8 /* HSVolumeScaleInfoView.m in Sources */,
+				0458098822B793C50083A8C8 /* HSCrossLineModel.m in Sources */,
+				0401175322B748F200EBDF3D /* detailsTopView.m in Sources */,
+				0458098222B793C50083A8C8 /* HSScaleBaseView.m in Sources */,
 				045A4D5322B3BE0500EC4C34 /* COCPositionViewController.m in Sources */,
 				18F20B7522B351EB0064DE4C /* ReachabilityManager.m in Sources */,
 				045A4D4B22B3BD1C00EC4C34 /* ModifyPassViewController.m in Sources */,
 				045A4D4C22B3BD1C00EC4C34 /* SignatureViewController.m in Sources */,
+				0458098322B793C50083A8C8 /* HSBarChartView.m in Sources */,
 				18F20B1422B350010064DE4C /* NSString+Verify.m in Sources */,
 				18F20B0F22B350010064DE4C /* NSString+NumberFormatter.m in Sources */,
 				18F20B9F22B352D70064DE4C /* COCHomeViewController.m in Sources */,
 				18F20B7822B351EB0064DE4C /* ASORefreshFooter.m in Sources */,
 				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
+				0458098722B793C50083A8C8 /* HSStockChartModel.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
+				0458097B22B793C50083A8C8 /* HSStockChartColor.m in Sources */,
 				045A4D4D22B3BD1C00EC4C34 /* ModifyNameViewController.m in Sources */,
+				0458098622B793C50083A8C8 /* HSStockChartModelGroup.m in Sources */,
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
@@ -812,6 +981,7 @@
 				045A4D0E22B3932600EC4C34 /* XSYTableView.m in Sources */,
 				18F20B7C22B351EB0064DE4C /* JMBaseButtonConfig.m in Sources */,
 				18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */,
+				0401174D22B7426200EBDF3D /* myButton.m in Sources */,
 				045A4D3722B3BCF900EC4C34 /* COCHostModel.m in Sources */,
 				18F20ADD22B34F230064DE4C /* COCBaseView.m in Sources */,
 				18F20B7722B351EB0064DE4C /* IndentTextField.m in Sources */,
@@ -819,11 +989,13 @@
 				18F20B1322B350010064DE4C /* NSString+Path.m in Sources */,
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
+				0458097D22B793C50083A8C8 /* HSStockChartView.m in Sources */,
 				045A4D3622B3BCF900EC4C34 /* PositionModel.m in Sources */,
 				045A4D5022B3BD6700EC4C34 /* NSString+LabelSize.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				18F20B0822B350010064DE4C /* UITextView+Placeholder.m in Sources */,
 				045A4D1122B3946C00EC4C34 /* MarketModelHX.m in Sources */,
+				0458097F22B793C50083A8C8 /* HSKLineScaleInfoView.m in Sources */,
 				18F20AE622B34F520064DE4C /* COCBaseViewController.m in Sources */,
 				18F20BA222B352EA0064DE4C /* COCQuotesViewController.m in Sources */,
 				045A4D4A22B3BD1C00EC4C34 /* MyFooterView.m in Sources */,
@@ -832,10 +1004,14 @@
 				045A4D3522B3BCF900EC4C34 /* COCPositionHostViewController.m in Sources */,
 				045A4D1C22B39E1D00EC4C34 /* myLabel.m in Sources */,
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
+				0458098922B793C50083A8C8 /* HSKLineView.m in Sources */,
 				045A4D4822B3BD1C00EC4C34 /* MyHeaderView.m in Sources */,
+				0458098A22B793C50083A8C8 /* HSKLineSegmentView.m in Sources */,
+				0458098422B793C50083A8C8 /* HSBarChartSegmentView.m in Sources */,
 				18F20B1122B350010064DE4C /* NSDictionary+InfoDictionary.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
 				18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */,
+				0458097E22B793C50083A8C8 /* HSDateScaleInfoView.m in Sources */,
 				18F20BBE22B354E60064DE4C /* ASORequestSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,7 +1089,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -966,7 +1142,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -980,16 +1156,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TCJ9QY6H47;
+				DEVELOPMENT_TEAM = 5THF8E8SHG;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baby.HHXXTTXS;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.xujiahui.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -999,16 +1176,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TCJ9QY6H47;
+				DEVELOPMENT_TEAM = 5THF8E8SHG;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = baby.HHXXTTXS;
+				PRODUCT_BUNDLE_IDENTIFIER = baby.xujiahui.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
