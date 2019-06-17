@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185B0F6022B3896100491D58 /* IdentityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F5F22B3896100491D58 /* IdentityView.m */; };
+		185B0F6322B391EA00491D58 /* BankCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F6222B391EA00491D58 /* BankCardView.m */; };
+		185B0F6522B3930B00491D58 /* bank.json in Resources */ = {isa = PBXBuildFile; fileRef = 185B0F6422B3930B00491D58 /* bank.json */; };
+		185B0F6A22B396F800491D58 /* UIImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F6822B396F800491D58 /* UIImageExt.m */; };
+		185B0F6D22B3980100491D58 /* LXBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F6C22B3980100491D58 /* LXBaseView.m */; };
+		185B0F8022B7304E00491D58 /* FillView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F7F22B7304E00491D58 /* FillView.m */; };
+		185B0F8A22B770ED00491D58 /* XDSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F8922B770ED00491D58 /* XDSDropDownMenu.m */; };
+		185B0F9522B7940D00491D58 /* CarryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F9422B7940D00491D58 /* CarryView.m */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -56,6 +64,23 @@
 
 /* Begin PBXFileReference section */
 		136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHXXTTXS.debug.xcconfig"; path = "Target Support Files/Pods-HHXXTTXS/Pods-HHXXTTXS.debug.xcconfig"; sourceTree = "<group>"; };
+		185B0F5E22B3896100491D58 /* IdentityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentityView.h; sourceTree = "<group>"; };
+		185B0F5F22B3896100491D58 /* IdentityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdentityView.m; sourceTree = "<group>"; };
+		185B0F6122B391EA00491D58 /* BankCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankCardView.h; sourceTree = "<group>"; };
+		185B0F6222B391EA00491D58 /* BankCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankCardView.m; sourceTree = "<group>"; };
+		185B0F6422B3930B00491D58 /* bank.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bank.json; sourceTree = "<group>"; };
+		185B0F6822B396F800491D58 /* UIImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExt.m; sourceTree = "<group>"; };
+		185B0F6922B396F800491D58 /* UIImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExt.h; sourceTree = "<group>"; };
+		185B0F6B22B3980000491D58 /* LXBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBaseView.h; sourceTree = "<group>"; };
+		185B0F6C22B3980100491D58 /* LXBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBaseView.m; sourceTree = "<group>"; };
+		185B0F6E22B39BF500491D58 /* COCOpenHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCOpenHeader.h; sourceTree = "<group>"; };
+		185B0F7D22B729E100491D58 /* OpenString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenString.h; sourceTree = "<group>"; };
+		185B0F7E22B7304E00491D58 /* FillView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FillView.h; sourceTree = "<group>"; };
+		185B0F7F22B7304E00491D58 /* FillView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FillView.m; sourceTree = "<group>"; };
+		185B0F8822B770ED00491D58 /* XDSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDSDropDownMenu.h; sourceTree = "<group>"; };
+		185B0F8922B770ED00491D58 /* XDSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDSDropDownMenu.m; sourceTree = "<group>"; };
+		185B0F9322B7940D00491D58 /* CarryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarryView.h; sourceTree = "<group>"; };
+		185B0F9422B7940D00491D58 /* CarryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarryView.m; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18F20AC522B34E960064DE4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +186,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185B0F5D22B3893400491D58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185B0F8722B770ED00491D58 /* XDSDropDownMenu */,
+				185B0F6B22B3980000491D58 /* LXBaseView.h */,
+				185B0F6C22B3980100491D58 /* LXBaseView.m */,
+				185B0F5E22B3896100491D58 /* IdentityView.h */,
+				185B0F5F22B3896100491D58 /* IdentityView.m */,
+				185B0F7E22B7304E00491D58 /* FillView.h */,
+				185B0F7F22B7304E00491D58 /* FillView.m */,
+				185B0F6122B391EA00491D58 /* BankCardView.h */,
+				185B0F6222B391EA00491D58 /* BankCardView.m */,
+				185B0F9322B7940D00491D58 /* CarryView.h */,
+				185B0F9422B7940D00491D58 /* CarryView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185B0F6622B396A500491D58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185B0F6922B396F800491D58 /* UIImageExt.h */,
+				185B0F6822B396F800491D58 /* UIImageExt.m */,
+				185B0F7D22B729E100491D58 /* OpenString.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185B0F8722B770ED00491D58 /* XDSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				185B0F8822B770ED00491D58 /* XDSDropDownMenu.h */,
+				185B0F8922B770ED00491D58 /* XDSDropDownMenu.m */,
+			);
+			path = XDSDropDownMenu;
+			sourceTree = "<group>";
+		};
 		18F20AB822B34E960064DE4C = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +253,7 @@
 				18F20BAF22B354E60064DE4C /* Resource */,
 				18F20B1A22B3510D0064DE4C /* Root */,
 				18F20B1E22B351EB0064DE4C /* Vendor */,
+				185B0F6422B3930B00491D58 /* bank.json */,
 			);
 			path = HHXXTTXS;
 			sourceTree = "<group>";
@@ -252,6 +315,7 @@
 				18F20B1722B350800064DE4C /* COCLocalStoragePublicKey.h */,
 				18F20B1822B3508F0064DE4C /* COCPrefixHeader.pch */,
 				18F20B1922B3509F0064DE4C /* COCPublicEnum.h */,
+				185B0F6E22B39BF500491D58 /* COCOpenHeader.h */,
 			);
 			path = MacroFile;
 			sourceTree = "<group>";
@@ -405,6 +469,8 @@
 			children = (
 				18F20BA922B353000064DE4C /* COCOpenViewController.h */,
 				18F20BAA22B353000064DE4C /* COCOpenViewController.m */,
+				185B0F6622B396A500491D58 /* Model */,
+				185B0F5D22B3893400491D58 /* View */,
 			);
 			path = COCOpen;
 			sourceTree = "<group>";
@@ -542,6 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185B0F6522B3930B00491D58 /* bank.json in Resources */,
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
@@ -614,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F20B0B22B350010064DE4C /* UIView+CenterLoading.m in Sources */,
+				185B0F6D22B3980100491D58 /* LXBaseView.m in Sources */,
 				18F20AE922B34FAE0064DE4C /* COCBaseNaviController.m in Sources */,
 				18F20B0C22B350010064DE4C /* NSNumber+digitalValue.m in Sources */,
 				18F20B0722B350010064DE4C /* UIView+DrawBGColor.m in Sources */,
@@ -630,6 +698,7 @@
 				18F20AD422B34E960064DE4C /* main.m in Sources */,
 				18F20B7B22B351EB0064DE4C /* JMBaseButton.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
+				185B0F9522B7940D00491D58 /* CarryView.m in Sources */,
 				18F20B7922B351EB0064DE4C /* ASORefreshHeader.m in Sources */,
 				18F20B0E22B350010064DE4C /* UIFont+ScaleSize.m in Sources */,
 				18F20B1222B350010064DE4C /* NSString+Attribute.m in Sources */,
@@ -641,16 +710,21 @@
 				18F20B1322B350010064DE4C /* NSString+Path.m in Sources */,
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
+				185B0F6A22B396F800491D58 /* UIImageExt.m in Sources */,
+				185B0F8022B7304E00491D58 /* FillView.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				18F20B0822B350010064DE4C /* UITextView+Placeholder.m in Sources */,
 				18F20AE622B34F520064DE4C /* COCBaseViewController.m in Sources */,
 				18F20BA222B352EA0064DE4C /* COCQuotesViewController.m in Sources */,
+				185B0F6322B391EA00491D58 /* BankCardView.m in Sources */,
 				18F20BAB22B353000064DE4C /* COCOpenViewController.m in Sources */,
 				18F20BA822B352F90064DE4C /* COCMineViewController.m in Sources */,
+				185B0F6022B3896100491D58 /* IdentityView.m in Sources */,
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
 				18F20B1122B350010064DE4C /* NSDictionary+InfoDictionary.m in Sources */,
 				18F20BA522B352F10064DE4C /* COCPositionViewController.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
+				185B0F8A22B770ED00491D58 /* XDSDropDownMenu.m in Sources */,
 				18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */,
 				18F20BBE22B354E60064DE4C /* ASORequestSerializer.m in Sources */,
 			);

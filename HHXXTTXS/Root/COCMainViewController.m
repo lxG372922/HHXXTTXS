@@ -13,6 +13,8 @@
 #import "COCPositionViewController.h"
 #import "COCMineViewController.h"
 
+#import "COCOpenViewController.h"
+
 @interface COCMainViewController ()<UITabBarControllerDelegate>
 
 /** viewControllers */
@@ -118,7 +120,12 @@ static COCMainViewController *_instance;
     COCBaseNaviController *newsNV = [[COCBaseNaviController alloc] initWithRootViewController:newsVC];
     
     
-    COCMineViewController *meVC = [[COCMineViewController alloc] init];
+//    COCMineViewController *meVC = [[COCMineViewController alloc] init];
+//    meVC.title = @"我的";
+//    meVC.hidesBottomBarWhenPushed = NO;
+//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
+    
+    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
     meVC.title = @"我的";
     meVC.hidesBottomBarWhenPushed = NO;
     COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];

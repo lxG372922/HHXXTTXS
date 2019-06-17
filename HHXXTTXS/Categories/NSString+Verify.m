@@ -121,7 +121,7 @@
         return isLegal;
     }
     
-    NSString *regex = [NSString stringWithFormat:@"^\\d{%d}$",digit];
+    NSString *regex = [NSString stringWithFormat:@"^\\d{%ld}$",(long)digit];
     NSPredicate *regexPreDicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     isLegal = [regexPreDicate evaluateWithObject:figure];
     return isLegal;
