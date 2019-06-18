@@ -54,13 +54,13 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 
 -(void)creatDataWith:(NSDictionary *)dic{
-    self.kongORDuoLabel.text = [dic objectForKey:@"KongOrDuo"];//买多或买空
+    self.kongORDuoLabel.text = [dic objectForKey:@"KongOrDuo"];//买多或卖空
     self.priceLabel.text = [dic objectForKey:@"price"];//价格
     self.baoZJinlabel.text = [dic objectForKey:@"BaoZJin"];//保证金
     self.shouxulabel.text = [dic objectForKey:@"shouxuFei"];//手续费
     
-    BOOL isJiaoY = [dic objectForKey:@"isSelectedJY"];
-    if (isJiaoY) {
+    NSString *  isJiaoY = [dic objectForKey:@"isSelectedJY"];
+    if ([isJiaoY isEqualToString:@"1"]) {
         [self.commitBtn setTitle:@"请开启" forState:UIControlStateNormal];
         [self.commitBtn setBackgroundColor:RGB(20, 44, 51)];
         self.kongORDuoLabel.alpha = 0;

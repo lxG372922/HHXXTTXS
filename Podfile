@@ -19,4 +19,5 @@ target 'HHXXTTXS' do
   pod 'RTRootNavigationController'
 
   pod 'TYPagerController'
+  pod 'MBProgressHUD'
 end

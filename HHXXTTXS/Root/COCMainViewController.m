@@ -12,6 +12,7 @@
 #import "COCQuotesViewController.h"
 #import "COCPositionViewController.h"
 #import "COCMineViewController.h"
+#import "COCSimulationViewController.h"
 
 #import "COCOpenViewController.h"
 
@@ -125,6 +126,10 @@ static COCMainViewController *_instance;
     meVC.hidesBottomBarWhenPushed = NO;
     COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
     
+    COCSimulationViewController *simulationVC = [[COCSimulationViewController alloc] init];
+    simulationVC.title = @"模拟";
+    simulationVC.hidesBottomBarWhenPushed = NO;
+    COCBaseNaviController *simulateNV = [[COCBaseNaviController alloc] initWithRootViewController:simulationVC];
 //    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
 //    meVC.title = @"我的";
 //    meVC.hidesBottomBarWhenPushed = NO;
@@ -134,6 +139,7 @@ static COCMainViewController *_instance;
     [self.VCArray addObject:marketNV];
     [self.VCArray addObject:newsNV];
     [self.VCArray addObject:meNV];
+//    [self.VCArray addObject:simulateNV];
     [self setViewControllers:self.VCArray];
 }
 
@@ -145,12 +151,13 @@ static COCMainViewController *_instance;
     
     weakSelf(self)
     [self.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *item, NSUInteger idx, BOOL *stop) {
-        UIImage *image = [UIImage imageNamed:weakSelf.unSelectedImgNames[idx]];
-        UIImage *imageSelected = [UIImage imageNamed:weakSelf.selectedImgNames[idx]];
-        item.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        item.selectedImage = [imageSelected imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        if (idx < self.selectedImgNames.count) {
+            UIImage *image = [UIImage imageNamed:weakSelf.unSelectedImgNames[idx]];
+            UIImage *imageSelected = [UIImage imageNamed:weakSelf.selectedImgNames[idx]];
+            item.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            item.selectedImage = [imageSelected imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
     }];
-    
 }
 
 
@@ -173,11 +180,11 @@ static COCMainViewController *_instance;
 
 - (void)p_needLogOut {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tabBarController setSelectedIndex:0];
-        UINavigationController *meNav = [[self.tabBarController viewControllers] objectAtIndex:3];
-        [meNav popToRootViewControllerAnimated:NO];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.tabBarController setSelectedIndex:0];
+//        UINavigationController *meNav = [[self.tabBarController viewControllers] objectAtIndex:3];
+//        [meNav popToRootViewControllerAnimated:NO];
+//    });
 }
 
 - (void)p_didLogOut {
