@@ -59,7 +59,8 @@
         self.pro_duoOrKong.text = @"买空";
         self.pro_duoOrKong.backgroundColor = COCColorShort;
     }
-     self.pro_Price.text = dataModel.pl;
+    CGFloat plValue = ([dataModel.currentPrice floatValue] - [dataModel.avgPrice floatValue]);
+     self.pro_Price.text = [NSString stringWithFormat:@"%.2f",plValue];
      self.pro_KCPrice.text = dataModel.avgPrice;
      self.pro_nowPrice.text = dataModel.currentPrice;
      self.pro_zhiyPrice.text = dataModel.zhiYPrice;
