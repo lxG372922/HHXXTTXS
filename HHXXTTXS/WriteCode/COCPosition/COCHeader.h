@@ -20,4 +20,5 @@
 #import "PKProgressHUD.h"
 #import "COCSetCCViewController.h"
 #import "COCTransViewController.h"
+#import "ContractManager.h"
 #endif /* COCHeader_h */

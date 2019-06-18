@@ -61,11 +61,11 @@
 }
 
 - (void)clickzViewThree{
-    
+    self.openBlock();
 }
 
 - (void)clickzViewFour{
-    
+    self.aboutUsBlock();
 }
 
 // 拨打客服电话

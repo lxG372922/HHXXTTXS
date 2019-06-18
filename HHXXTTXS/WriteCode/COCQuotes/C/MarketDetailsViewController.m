@@ -14,6 +14,7 @@
 #import "HSStockChartModel.h"
 #import "COCTransViewController.h"
 #import "ContractManager.h"
+#import "UIViewPopAlert.h"
 @interface MarketDetailsViewController ()<HSStockChartViewDelegate>
 @property(nonatomic,strong)detailsTopView * topView;
 @property(nonatomic,strong) BottomView * bottomView ;
@@ -81,7 +82,7 @@
 -(void)clickType:(int)type{
     
     
-    
+    weakSelf(self);
     if(!Has_Login){
         
         [SVProgressHUD showErrorWithStatus:@"请登录"];
@@ -99,16 +100,30 @@
     
     NSDictionary * dict;
     if(type == 1){
-        dict = @{@"KongOrDuo":@"Duo",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
+        dict = @{@"KongOrDuo":@"Duo",@"price":_marketmodel.current,@"BaoZJin":@"10000",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
     }else if(type == 2){
-          dict = @{@"KongOrDuo":@"",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"1"};
+          //dict = @{@"KongOrDuo":@"",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"1"};
+        //选择多=空
+        [UIViewPopAlert pushAlertSheetTarget:self title:@"选择交易类型" actions:@[@"买多",@"卖空",@"取消"] lastActionType:2 ActionTag:^(int tag) {
+            
+            if (tag!=2) {
+                [weakSelf clickType:(tag==0?1:3)];
+            }
+            
+            
+        }];
+        
     }else{
+        
+
           dict = @{@"KongOrDuo":@"Kong",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
         
     }
     
     COCTransViewController * sub  = [[COCTransViewController alloc]init];
     sub.hidesBottomBarWhenPushed = YES;
+    sub.marketmodel = _marketmodel;
+    sub.marketName= _marketName;
     [sub creatDataWith:dict];
     [self.navigationController pushViewController:sub animated:YES];
     

@@ -14,6 +14,18 @@
     }];
 }
 
++(void)requestAnnouncementDataSuccessBlock:(successBlock)successBlock{
+    [SVProgressHUD showWithStatus:nil];
+    [[ASOHTTPRequest sharedInstance] oneGet:@"https://raw.githubusercontent.com/13511029398/HHXXJSON/master/Announ.json" path:nil parameters:[NSDictionary dictionary] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } faile:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self requestFaile];
+    }];
+}
+
 + (void)requestFaile
 {
     [SVProgressHUD dismiss];
