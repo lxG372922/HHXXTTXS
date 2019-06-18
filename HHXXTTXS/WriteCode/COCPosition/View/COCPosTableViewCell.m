@@ -52,10 +52,12 @@
     
      self.pro_Name.text = dataModel.name;
      self.pro_shou.text = dataModel.totalHands;
-    if ((dataModel.positionType = ContractPositionTypeLong)) {
+    if (dataModel.positionType == ContractPositionTypeLong) {
         self.pro_duoOrKong.text = @"买多";
+        self.pro_duoOrKong.backgroundColor = COCColorLong;
     }else{
         self.pro_duoOrKong.text = @"买空";
+        self.pro_duoOrKong.backgroundColor = COCColorShort;
     }
      self.pro_Price.text = dataModel.pl;
      self.pro_KCPrice.text = dataModel.avgPrice;
