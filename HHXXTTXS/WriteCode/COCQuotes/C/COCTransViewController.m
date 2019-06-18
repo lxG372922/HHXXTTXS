@@ -78,6 +78,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     mode.tradePrice = _marketmodel.current;
     mode.tradeHands = cell1.infoTextTF.text;
     mode.identifier = _marketmodel.product_code;
+    mode.tradeAmount =[NSString stringWithFormat:@"%0.02f",jine*shu];
     NSString * show;
     
     if ([kongorDuo isEqualToString:@"Duo"]  ) {
@@ -90,7 +91,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
     
      [[ContractManager manager]addOrderWithModel:mode];
-    
+
     [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@交易成功",show]];
     
 }

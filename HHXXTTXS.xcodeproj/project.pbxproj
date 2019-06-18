@@ -551,14 +551,14 @@
 		049B972F22B38268003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
+				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
+				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */,
 				04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */,
 				04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */,
 				049B973622B38556003D943E /* COCPositionHostViewController.h */,
 				049B973722B38556003D943E /* COCPositionHostViewController.m */,
-				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
-				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
-				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				049B978E22B7298F003D943E /* COCSetCCViewController.h */,
 				049B978F22B7298F003D943E /* COCSetCCViewController.m */,
 				049B979022B7298F003D943E /* COCSetCCViewController.xib */,
