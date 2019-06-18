@@ -52,6 +52,7 @@
     if(!_logoImage){
         _logoImage = [[UIImageView alloc]init];
         _logoImage.backgroundColor = [UIColor redColor];
+        _logoImage.image = [UIImage imageNamed:@"logostore_1024pt"];
     }
     return _logoImage;
 }
