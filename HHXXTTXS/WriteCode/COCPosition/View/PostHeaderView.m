@@ -55,7 +55,7 @@
         if(Has_Login){
             self.aviablejinE.text  = avaiCaptital;
         }else{
-            self.aviablejinE.text  = @"0.00";
+            self.aviablejinE.text  = @"00.00";
         }
         
         self.aviablejinE.textColor = RGBColor(249, 115, 84);
