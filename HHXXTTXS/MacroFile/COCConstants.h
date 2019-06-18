@@ -19,8 +19,11 @@
 #define APIKey_jisu                                 [COCServerManager manager].optimalServer.appkey_jisu
 
 /// ----- 测试账号 ----
-#define TestAccount                                 @"13212341234"
-#define TestPsd                                     @"123456"
+#define Account                                 @"13212341234"
+#define Psd                                     @"123456"
+
+// --- 模拟账号资金 ---
+#define SIMULATECAPITAL                         @(500000)
 
 // ------ 字体样式 ----------
 #define fFont @"EuphemiaUCAS"

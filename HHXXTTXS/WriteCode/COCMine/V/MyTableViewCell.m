@@ -26,14 +26,14 @@
 - (UIImageView *)imgV{
     if(!_imgV){
         _imgV = [[UIImageView alloc]init];
-        _imgV.backgroundColor = [UIColor redColor];
+//        _imgV.backgroundColor = [UIColor redColor];
     }
     return _imgV;
 }
 - (UILabel *)titleLab{
     if(!_titleLab){
         _titleLab = [[UILabel alloc]init];
-        _titleLab.text = @"全天我是";
+        
         _titleLab.textColor = RGB(100, 100, 100);
         _titleLab.font = FONT(16);
         
@@ -43,7 +43,7 @@
 - (UILabel *)detailsLab{
     if(!_detailsLab){
         _detailsLab = [[UILabel alloc]init];
-        _detailsLab.text = @"全天下最";
+        
         _detailsLab.textColor = RGB(100, 100, 100);
         _detailsLab.textAlignment = NSTextAlignmentRight;
         _detailsLab.font = FONT(14);

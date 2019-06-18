@@ -9,6 +9,10 @@
 #ifndef MineHeader_h
 #define MineHeader_h
 
+
+#import "UITextField+PlaceHolder.h"
+#import "UIView+Alert.h"                    //HUD
+#import "MBProgressHUD.h"                   //加载菊花
 //获取应用程序窗口的宏
 #define G_Window [UIApplication sharedApplication].delegate.window
 
@@ -35,6 +39,16 @@
 
 #define RGB(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1.0]
 
+//注册账号
+#define Has_Regis [[NSUserDefaults standardUserDefaults] objectForKey:@"regis"]
+#define LoginAndSaveRegis(regis) [[NSUserDefaults standardUserDefaults] setObject:regis forKey:@"regis"];[[NSUserDefaults standardUserDefaults] synchronize];
+#define UserRegis (Has_Regis ? [[NSUserDefaults standardUserDefaults] objectForKey:@"regis"] : @"")
+#define LogOutRemoveRegis [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"regis"]
+//注册密码
+#define Has_MiMa [[NSUserDefaults standardUserDefaults] objectForKey:@"MiMa"]
+#define LoginAndSaveMiMa(mima) [[NSUserDefaults standardUserDefaults] setObject:mima forKey:@"MiMa"];[[NSUserDefaults standardUserDefaults] synchronize];
+#define UserMiMa (Has_MiMa ? [[NSUserDefaults standardUserDefaults] objectForKey:@"MiMa"] : @"")
+#define LogOutRemoveMiMa [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"MiMa"]
 
 
 //用于登录，退出登录的宏
@@ -48,6 +62,27 @@
 //退出登录，或uid失效，将持久化的uid删除
 #define LogOutRemoveUid [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"uid"]
 
+
+
+//用于昵称，退出登录的宏
+//判断有没有登录的宏，如果是YES表示登录了，如果是NO表示没有登录
+#define Has_Name [[NSUserDefaults standardUserDefaults] objectForKey:@"name"]
+//昵称成功，持久化手机号
+#define LoginAndSaveName(name) [[NSUserDefaults standardUserDefaults] setObject:name forKey:@"name"];[[NSUserDefaults standardUserDefaults] synchronize];
+//获取手机号
+#define UserName (Has_Name ? [[NSUserDefaults standardUserDefaults] objectForKey:@"name"] : @"")
+
+//昵称，或uid失效，将持久化的uid删除
+#define LogOutRemoveName [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"name"]
+
+
+
+//判断有没有登录的宏，如果是YES表示登录了，如果是NO表示没有登录
+#define Has_QM [[NSUserDefaults standardUserDefaults] objectForKey:@"QM"]
+//昵称成功，持久化手机号
+#define LoginAndSaveQM(qm) [[NSUserDefaults standardUserDefaults] setObject:qm forKey:@"QM"];[[NSUserDefaults standardUserDefaults] synchronize];
+//获取手机号
+#define UserQM (Has_QM ? [[NSUserDefaults standardUserDefaults] objectForKey:@"QM"] : @"")
 
 
 

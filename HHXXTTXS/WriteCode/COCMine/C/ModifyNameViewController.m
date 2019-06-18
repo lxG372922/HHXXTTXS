@@ -21,10 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"昵称";
+    
     self.view.backgroundColor = RGB(245, 245, 245);
     self.textTF = [[UITextField alloc]initWithFrame:CGRectMake(0, 20 + TOP_BAR_HEIGHT, SCREEN_WIDTH, 50)];
     self.textTF.textAlignment = NSTextAlignmentCenter;
     self.textTF.backgroundColor = RGB(255, 255, 255);
+    self.textTF.placeholder = @"请输入新昵称";
     [self.view addSubview:self.textTF];
     
     self.saveBtn = [[UIButton alloc]initWithFrame:CGRectMake(25, TOP_BAR_HEIGHT + 100, SCREEN_WIDTH - 50, 45)];
@@ -37,7 +40,7 @@
 }
 
 -(void)clickSaveBtn:(UIButton *)sender{
-    
+    LoginAndSaveName(self.textTF.text)
     [self.navigationController popViewControllerAnimated:YES];
     
 }
