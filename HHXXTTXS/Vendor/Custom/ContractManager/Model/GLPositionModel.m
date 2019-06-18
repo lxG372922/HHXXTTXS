@@ -117,7 +117,9 @@
 - (void)updateWithOrderModel:(OrderModel *)orderModel {
     
     if (orderModel) {
-        
+        self.zhiYPrice =orderModel.zhiYPrice;
+        self.zhiSPrice =orderModel.zhiSPrice;
+        self.avgTime =orderModel.avgTime;
         self.identifier = orderModel.identifier;
         self.name = orderModel.name;
         self.lever = orderModel.lever;

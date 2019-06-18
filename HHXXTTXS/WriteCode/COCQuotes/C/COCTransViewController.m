@@ -55,6 +55,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     //
     
     COCTrasTableViewCell * cell1 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+     COCTrasTableViewCell * cell2 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+     COCTrasTableViewCell * cell3 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
     
     //判读金额 是否可以买入卖出
     NSString * jinestr = [[ContractManager manager] getCurrentAvailCaptital];
@@ -78,7 +80,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     mode.tradePrice = _marketmodel.current;
     mode.tradeHands = cell1.infoTextTF.text;
     mode.identifier = _marketmodel.product_code;
-    mode.tradeAmount =[NSString stringWithFormat:@"%0.02f",jine*shu];
+//    mode.tradeAmount =[NSString stringWithFormat:@"%0.02f",jine*shu];
+    mode.zhiYPrice = cell2.infoTextTF.text;
+    mode.zhiSPrice = cell3.infoTextTF.text;
+    mode.avgTime =[FAPHelp getNowTime1];
+
     NSString * show;
     
     if ([kongorDuo isEqualToString:@"Duo"]  ) {
