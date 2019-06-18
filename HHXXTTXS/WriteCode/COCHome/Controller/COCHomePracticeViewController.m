@@ -114,7 +114,7 @@
         return market;
     }else{
         COCPositionViewController *position = [[COCPositionViewController alloc]init];
-        
+        position.type = @"1";
         return position;
     }
 }
