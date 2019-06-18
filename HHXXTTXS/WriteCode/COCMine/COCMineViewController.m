@@ -119,6 +119,7 @@
     if(Has_Login){
         _headerV.nameLab.userInteractionEnabled = NO;
         self.headerV.signatureLab.hidden = NO;
+        [self.footerV.outBtn setTitle:@"退出登录" forState:UIControlStateNormal];
         if(Has_Name){
             _headerV.nameLab.text = UserName;
         }else{
@@ -131,6 +132,7 @@
         }
 
     }else{
+        [self.footerV.outBtn setTitle:@"去登录" forState:UIControlStateNormal];
         self.headerV.signatureLab.hidden = YES;
         UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGRActionChangeHeaderImg)];
         //为View标签添加手势

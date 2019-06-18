@@ -72,8 +72,8 @@
     if (!isStrEmpty(self.pl)) {
         
         CGFloat plRate = [self.pl floatValue] / [self.margin floatValue];
-        
-        _pl_Rate = [@(plRate) stringValue];
+        _pl_Rate = [NSString stringWithFormat:@"%.2f",plRate];
+//        _pl_Rate = [@(plRate) stringValue];
     }
     
     return _pl_Rate;
