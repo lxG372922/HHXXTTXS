@@ -72,14 +72,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
     }
     
-    
     OrderModel * mode = [OrderModel new];
     mode.name = _marketName;
     mode.symbol = _marketmodel.product_code;
     mode.tradePrice = _marketmodel.current;
     mode.tradeHands = cell1.infoTextTF.text;
     mode.identifier = _marketmodel.product_code;
-    
     NSString * show;
     
     if ([kongorDuo isEqualToString:@"Duo"]  ) {

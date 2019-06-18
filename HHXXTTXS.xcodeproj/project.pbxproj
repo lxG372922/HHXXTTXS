@@ -78,14 +78,10 @@
 		04DAFC3B22B892FE00EF35D3 /* COCHomeAboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */; };
 		04DAFC3E22B8934A00EF35D3 /* COCHomeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */; };
 		04E57F9D22B7BF3F007BF39A /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57F9622B7BEC9007BF39A /* OrderModel.m */; };
-		04E57FA022B7BF85007BF39A /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57F9E22B7BF85007BF39A /* PositionModel.m */; };
 		04E57FA322B7C0E3007BF39A /* GLPositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57FA222B7C0E3007BF39A /* GLPositionModel.m */; };
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
 		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
 		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
-		04ED941722B89BBE00598327 /* NSObject+XsyCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */; };
-		04ED941822B89BBE00598327 /* XsyModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941222B89BBD00598327 /* XsyModelManager.m */; };
-		04ED941922B89BBE00598327 /* XsyFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941622B89BBD00598327 /* XsyFileManager.m */; };
 		04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */; };
 		04F7DAF022B7C6FB00EBBE07 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */; };
 		04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE722B7C6FB00EBBE07 /* LoginViewController.m */; };
@@ -284,8 +280,6 @@
 		04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeServiceViewController.m; sourceTree = "<group>"; };
 		04E57F9622B7BEC9007BF39A /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		04E57F9822B7BEC9007BF39A /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
-		04E57F9E22B7BF85007BF39A /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
-		04E57F9F22B7BF85007BF39A /* PositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionModel.h; sourceTree = "<group>"; };
 		04E57FA122B7C0E3007BF39A /* GLPositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPositionModel.h; sourceTree = "<group>"; };
 		04E57FA222B7C0E3007BF39A /* GLPositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLPositionModel.m; sourceTree = "<group>"; };
 		04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCPositionDetailViewController.m; sourceTree = "<group>"; };
@@ -293,12 +287,6 @@
 		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
 		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
 		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
-		04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XsyCoding.m"; sourceTree = "<group>"; };
-		04ED941222B89BBD00598327 /* XsyModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XsyModelManager.m; sourceTree = "<group>"; };
-		04ED941322B89BBD00598327 /* XsyFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XsyFileManager.h; sourceTree = "<group>"; };
-		04ED941422B89BBD00598327 /* XsyModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XsyModelManager.h; sourceTree = "<group>"; };
-		04ED941522B89BBD00598327 /* NSObject+XsyCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XsyCoding.h"; sourceTree = "<group>"; };
-		04ED941622B89BBD00598327 /* XsyFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XsyFileManager.m; sourceTree = "<group>"; };
 		04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewPopAlert.m; sourceTree = "<group>"; };
 		04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPopAlert.h; sourceTree = "<group>"; };
 		04F7DAE422B7C6FB00EBBE07 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -581,8 +569,6 @@
 		049B973022B38268003D943E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04E57F9F22B7BF85007BF39A /* PositionModel.h */,
-				04E57F9E22B7BF85007BF39A /* PositionModel.m */,
 				049B973F22B38D27003D943E /* COCHostModel.h */,
 				049B974022B38D27003D943E /* COCHostModel.m */,
 				049B978622B7109B003D943E /* COCHisRecordsModel.h */,
@@ -752,19 +738,6 @@
 				04E57F9622B7BEC9007BF39A /* OrderModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		04ED941022B89BBD00598327 /* Coding */ = {
-			isa = PBXGroup;
-			children = (
-				04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */,
-				04ED941222B89BBD00598327 /* XsyModelManager.m */,
-				04ED941322B89BBD00598327 /* XsyFileManager.h */,
-				04ED941422B89BBD00598327 /* XsyModelManager.h */,
-				04ED941522B89BBD00598327 /* NSObject+XsyCoding.h */,
-				04ED941622B89BBD00598327 /* XsyFileManager.m */,
-			);
-			path = Coding;
 			sourceTree = "<group>";
 		};
 		04F7DAE322B7C6FB00EBBE07 /* LoginViewController */ = {
@@ -957,7 +930,6 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				04ED941022B89BBD00598327 /* Coding */,
 				043D116522B3836300E7E29C /* ContractManager */,
 				04ED940E22B7B7A200598327 /* NetCheck.h */,
 				04ED940D22B7B7A200598327 /* NetCheck.m */,
@@ -1365,7 +1337,6 @@
 				049B973B22B389EA003D943E /* PostHeaderView.m in Sources */,
 				049B979122B7298F003D943E /* COCSetCCViewController.m in Sources */,
 				049B978822B7109B003D943E /* COCHisRecordsModel.m in Sources */,
-				04E57FA022B7BF85007BF39A /* PositionModel.m in Sources */,
 				04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */,
 				04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */,
 				18F20B7A22B351EB0064DE4C /* TabControlView.m in Sources */,
@@ -1392,7 +1363,6 @@
 				18F20B1222B350010064DE4C /* NSString+Attribute.m in Sources */,
 				18F20B7C22B351EB0064DE4C /* JMBaseButtonConfig.m in Sources */,
 				18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */,
-				04ED941922B89BBE00598327 /* XsyFileManager.m in Sources */,
 				18F20ADD22B34F230064DE4C /* COCBaseView.m in Sources */,
 				18F20B7722B351EB0064DE4C /* IndentTextField.m in Sources */,
 				049B97AB22B73C51003D943E /* COCHomeViewController.m in Sources */,
@@ -1404,7 +1374,6 @@
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				185B0FA822B7A34000491D58 /* BankCardView.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
-				04ED941722B89BBE00598327 /* NSObject+XsyCoding.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				045809C522B7A90F0083A8C8 /* HSVolumeScaleInfoView.m in Sources */,
 				049B977622B3BEEB003D943E /* MarketlistCodeAllHX.m in Sources */,
@@ -1432,7 +1401,6 @@
 				045809CE22B7A90F0083A8C8 /* HSKLineView.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
 				045809CF22B7A90F0083A8C8 /* HSKLineSegmentView.m in Sources */,
-				04ED941822B89BBE00598327 /* XsyModelManager.m in Sources */,
 				045809C322B7A90F0083A8C8 /* HSDateScaleInfoView.m in Sources */,
 				049B974122B38D27003D943E /* COCHostModel.m in Sources */,
 				18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */,
