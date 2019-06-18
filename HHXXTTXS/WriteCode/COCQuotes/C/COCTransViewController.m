@@ -97,9 +97,10 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
     
      [[ContractManager manager]addOrderWithModel:mode];
-
-    [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@交易成功",show]];
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@交易成功",show]];
+    });
 }
 
 -(void)creatDataWith:(NSDictionary *)dic{
