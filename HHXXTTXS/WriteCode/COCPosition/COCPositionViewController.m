@@ -235,7 +235,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         mode.identifier = self.postionModel.identifier;
         NSString * show;
         if ((self.postionModel.positionType = ContractTradeTypeOpenLong)  ) {
-
             mode.tradeType = ContractTradeTypeCloseLong;
         }else{
             show = @"卖空";

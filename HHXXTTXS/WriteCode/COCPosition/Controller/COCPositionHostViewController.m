@@ -143,6 +143,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
     COCHisRecordsViewController *hisVc = [[COCHisRecordsViewController alloc]init];
     hisVc.hidesBottomBarWhenPushed = YES;
+    [hisVc updatelabelDataWith:dicArray[dicArray.allKeys[indexPath.row]]];
     [self.navigationController pushViewController:hisVc animated:YES];
 }
 
