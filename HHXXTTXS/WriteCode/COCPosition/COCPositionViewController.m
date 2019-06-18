@@ -85,7 +85,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 
 -(void)configUI{
-    self.headerView  = [[PostHeaderView alloc]initWithDataModel:self.model oiginY:Nav_topH];
+    if ([self.type isEqualToString:@"1"]) {
+        self.headerView  = [[PostHeaderView alloc]initWithDataModel:self.model oiginY:0];
+    }else{
+        self.headerView  = [[PostHeaderView alloc]initWithDataModel:self.model oiginY:TOP_BAR_HEIGHT];
+    }
 //    self.headerView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.headerView];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -100,7 +104,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         make.bottom.equalTo(self.view.mas_bottom).mas_offset(0);
     }];
     [self.view addSubview:self.noDataView];
- 
+//    [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.view).mas_offset(0);
+//    }];
 }
 -(void)creatRightBarButton{
     UIButton *hostBtn = [UIButton buttonWithType:UIButtonTypeCustom];
