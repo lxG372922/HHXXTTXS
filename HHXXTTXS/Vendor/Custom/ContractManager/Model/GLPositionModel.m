@@ -25,6 +25,7 @@
 }
 
 
+
 - (NSString *)margin {
     
     if (!isStrEmpty(self.lever) && !isStrEmpty(self.totalHands) && !isStrEmpty(self.avgPrice)) {

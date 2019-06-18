@@ -48,7 +48,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         [self.holdPos_tableView.mj_header endRefreshing];
         return;
     }
-    self.tabBarController.tabBar.hidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
    
     [SVProgressHUD show];
     [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
@@ -58,8 +58,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 -(void)progressHUDdismiss{
     //l可用资金
   dic  =  [[ContractManager manager] positions];
-    if (dic.count > 0) {
-        self.postionModel =dic[dic.allKeys[0]];
+    NSArray *dataSource = [dic allValues];
+    self.holdPosArray = [dataSource mutableCopy];
+
+    if (self.holdPosArray.count > 0) {
+        self.postionModel = dic[dic.allKeys[0]];
         self.holdPos_tableView.alpha = 1;
         self.noDataView.alpha = 0;
     }else{
@@ -67,7 +70,13 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         self.noDataView.alpha = 1;
     }
   
-    self.headerView.bondjinE.text =self.postionModel.margin;
+    
+    
+    self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
+    self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
+    self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
+    
+    
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -136,7 +145,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 -(NSMutableArray *)holdPosArray{
     if (!_holdPosArray) {
         _holdPosArray = [NSMutableArray array];
-//        _holdPosArray = @[@"2"];
     }
     return _holdPosArray;
 }
@@ -212,9 +220,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 #pragma -------------------ContractManagerDelegate -------------
 
-//-(void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList{
-//    NSLog(@"positionList = %@",positionList);
-//}
+- (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList {
+    
+    [self progressHUDdismiss];
+    
+}
+
 
 #pragma ------------------tableviewDelegate---------------
 
@@ -244,8 +255,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     cell.backgroundColor = UIColor.clearColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
-    
+//    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
+    GLPositionModel *glPosition = [self.holdPosArray objectAtIndex:indexPath.row];
+    [cell setPositionTableViewCellControlContentWithModel:glPosition];
     
 //
     return cell;

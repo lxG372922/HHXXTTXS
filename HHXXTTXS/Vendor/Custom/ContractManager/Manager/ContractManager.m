@@ -35,6 +35,12 @@
 /** maketCapital */
 @property (strong, nonatomic) NSString *marketCapital;
 
+/** 总占用保证金 */
+@property (strong, nonatomic) NSString *occMargin;
+
+/** 浮动盈亏 */
+@property (strong, nonatomic) NSString *pl;
+
 @end
 
 @implementation ContractManager
@@ -155,12 +161,15 @@ static ContractManager *_manager;
     
     if (isStrEmpty(self.availableCapital)) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
+//        if (@available(iOS 11.0, *)) {
+//            self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+//            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+//        }
+        
+        self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_CurrentCapital];
+        
         if (!self.availableCapital) {
             self.availableCapital = [SIMULATECAPITAL stringValue];
         }
@@ -175,6 +184,38 @@ static ContractManager *_manager;
     return self.marketCapital;
 }
 
+/**
+ 总占用保证金
+ */
+- (NSString *)getAllOCCMargin {
+    
+    return self.occMargin;
+}
+
+
+/**
+ 总浮动盈亏
+ */
+- (NSString *)getAllPL {
+    return self.pl;
+}
+
+
+/**
+ 获得当前总资产
+ */
+- (NSString *)getCurrentAllCapital {
+    
+    CGFloat capital = [self.availableCapital floatValue] + [self.marketCapital floatValue];
+    
+    if (capital <= 0) {
+        capital = 0.0f;
+    }
+    
+    NSString *capitalString = [@(capital) stringValue];
+    
+    return capitalString;
+}
 
 /**
  获得某个产品的历史委托列表
@@ -282,7 +323,6 @@ static ContractManager *_manager;
         
         [self p_updatePositionListWithOrderModel:nil];
     }
-    
 }
 
 #pragma mark - 私有方法 --
@@ -309,6 +349,9 @@ static ContractManager *_manager;
 - (void)p_updatePositionListWithOrderModel:(OrderModel *)orderModel {
     
     CGFloat marketValue = 0.0f;
+    CGFloat occMargin = 0.0f;
+    CGFloat pl = 0.0f;
+    
     BOOL isExist = NO;
     for (NSString *tempKey in [self.positions allKeys]) {
         GLPositionModel *tempModel = [self.positions objectForKey:tempKey];
@@ -325,19 +368,27 @@ static ContractManager *_manager;
         }
         
         marketValue += [tempModel.marketValue floatValue];
+        occMargin += [tempModel.margin floatValue];
+        pl += [tempModel.pl floatValue];
     }
 
     if (!isExist && orderModel) {
         GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
         [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
         marketValue += [newPosition.marketValue floatValue];
+        occMargin += [newPosition.margin floatValue];
+        pl += [newPosition.pl floatValue];
     }
     
     self.marketCapital = [@(marketValue) stringValue];
+    self.occMargin = [@(occMargin) stringValue];
+    self.pl = [@(pl) stringValue];
+    
     
     [NSKeyedArchiver archiveRootObject:self.positions toFile:COC_ArchiverPath_SimulatePostion];
     
     [NSKeyedArchiver archiveRootObject:self.availableCapital toFile:COC_ArchiverPath_CurrentCapital];
+    
     // 发送代理消息
     if (self.delegateContainer.count >= 1) {
         [self.delegateContainer compact];
@@ -388,14 +439,14 @@ static ContractManager *_manager;
 - (NSMutableDictionary<NSString *,GLPositionModel *> *)positions {
     if (!_positions) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _positions = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
+//        if (@available(iOS 11.0, *)) {
+//            _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _positions = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulatePostion];
+//        }
         
-        if (!_positions || !data) {
+        if (!_positions) {
             _positions = @{}.mutableCopy;
         }
     }
@@ -404,13 +455,13 @@ static ContractManager *_manager;
 
 - (NSMutableArray<OrderModel *> *)orderList {
     if (!_orderList) {
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _orderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
-        if (!_orderList || !data) {
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulateOrders];
+//        if (@available(iOS 11.0, *)) {
+//            _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _orderList = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulateOrders];
+//        }
+        if (!_orderList) {
             _orderList = @[].mutableCopy;
         }
     }
@@ -420,13 +471,13 @@ static ContractManager *_manager;
 - (NSMutableDictionary<NSString *,NSArray<OrderModel *> *> *)hisOrderList {
     if (!_hisOrderList) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_HisSimulateOrders];
-        if (@available(iOS 11.0, *)) {
-            _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _hisOrderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
-        if(!_hisOrderList || !data) {
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_HisSimulateOrders];
+//        if (@available(iOS 11.0, *)) {
+//            _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _hisOrderList = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_HisSimulateOrders];
+//        }
+        if(!_hisOrderList) {
             _hisOrderList = @{}.mutableCopy;
         }
     }
