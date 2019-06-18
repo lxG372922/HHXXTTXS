@@ -24,10 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     
-    _loginV = [[LoginView alloc]initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, SCREEN_Width, SCREEN_HEIGHT-TOP_BAR_HEIGHT)];
+    
+    _loginV = [[LoginView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_HEIGHT)];
     _loginV.backgroundColor = RGB(150, 150, 151);
     [self.loginV.loginBtn addTarget:self action:@selector(clickRegisteBtn:) forControlEvents:UIControlEventTouchUpInside];
+      [self.loginV.forgetBtn addTarget:self action:@selector(clickForgetBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_loginV getcreateWithViewFrame:2];
     [self.view addSubview:_loginV];
     
@@ -52,5 +55,11 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)clickForgetBtn:(UIButton *)sender
+{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
 @end
