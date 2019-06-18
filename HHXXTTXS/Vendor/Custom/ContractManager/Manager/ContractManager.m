@@ -325,6 +325,48 @@ static ContractManager *_manager;
     }
 }
 
+/** 重置模拟资金 */
+- (void)resetSimulateCapitail {
+    
+    self.positions = @{}.mutableCopy;
+    self.orderList = @[].mutableCopy;
+    self.availableCapital = @"";
+    self.hisOrderList = @[].mutableCopy;
+    self.marketCapital = @"";
+    self.occMargin = @"";
+    self.pl = @"";
+    
+    
+    [NSKeyedArchiver archiveRootObject:self.hisOrderList toFile:COC_ArchiverPath_HisSimulateOrders];
+    [NSKeyedArchiver archiveRootObject:self.positions toFile:COC_ArchiverPath_SimulatePostion];
+    
+    [NSKeyedArchiver archiveRootObject:self.availableCapital toFile:COC_ArchiverPath_CurrentCapital];
+    
+    [NSKeyedArchiver archiveRootObject:self.orderList toFile:COC_ArchiverPath_SimulateOrders];
+    
+    // 发送代理消息
+    if (self.delegateContainer.count >= 1) {
+        [self.delegateContainer compact];
+        
+        
+        for (id<ContractManagerDelegate>delegate in self.delegateContainer) {
+            
+            if (delegate && [delegate respondsToSelector:@selector(contractManager:hisOrderListDidChange:)]) {
+                [delegate contractManager:self hisOrderListDidChange:self.hisOrderList];
+            }
+            
+            if (delegate && [delegate respondsToSelector:@selector(contractManager:positionListDidChange:)]) {
+                [delegate contractManager:self positionListDidChange:self.positions];
+            }
+            
+            if (delegate && [delegate respondsToSelector:@selector(contractManager:availableCapitalDidChange:marketCapital:)]) {
+                [delegate contractManager:self availableCapitalDidChange:self.availableCapital marketCapital:self.marketCapital];
+            }
+        }
+    }
+}
+
+
 #pragma mark - 私有方法 --
 
 - (void)p_initialize {
