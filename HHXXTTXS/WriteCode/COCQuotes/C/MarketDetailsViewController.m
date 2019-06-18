@@ -17,6 +17,7 @@
 @property(nonatomic,strong)detailsTopView * topView;
 @property(nonatomic,strong) BottomView * bottomView ;
 @property(nonatomic,strong) HSStockChartView * chartView ;
+@property(nonatomic,strong) UISegmentedControl * clickTimeSegement ;
 
 @property(nonatomic,copy) NSArray * dataArray;
 @end
@@ -52,6 +53,10 @@
     }];
     
     [self.view addSubview:_bottomView];
+    
+//    //sege
+//    _clickTimeSegement = [[UISegmentedControl alloc] initWithFrame:CGRectMake(20, _topView.height+Nav_topH, SCREEN_WIDTH-40, 40)];
+//    _clickTimeSegement.
     
     //line
     _chartView = [[HSStockChartView alloc] initWithFrame:CGRectMake(0, _topView.height+Nav_topH, SCREEN_WIDTH, SCREEN_HEIGHT-Nav_topH-_topView.height-_bottomView.height)];
