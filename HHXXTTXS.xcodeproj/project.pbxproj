@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -195,6 +195,7 @@
 		045809BD22B7A90F0083A8C8 /* HSKLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKLineView.m; sourceTree = "<group>"; };
 		045809BE22B7A90F0083A8C8 /* HSKLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSKLineView.h; sourceTree = "<group>"; };
 		045809BF22B7A90F0083A8C8 /* HSKLineSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSKLineSegmentView.m; sourceTree = "<group>"; };
+		04883B1622B9120D00B92F2C /* HHXXTTXS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HHXXTTXS.entitlements; sourceTree = "<group>"; };
 		049B973222B3841B003D943E /* NSString+LabelSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelSize.m"; sourceTree = "<group>"; };
 		049B973322B3841B003D943E /* NSString+LabelSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelSize.h"; sourceTree = "<group>"; };
 		049B973522B3844A003D943E /* COCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHeader.h; sourceTree = "<group>"; };
@@ -831,6 +832,7 @@
 		18F20AC322B34E960064DE4C /* HHXXTTXS */ = {
 			isa = PBXGroup;
 			children = (
+				04883B1622B9120D00B92F2C /* HHXXTTXS.entitlements */,
 				18F20AD222B34E960064DE4C /* Info.plist */,
 				18F20B9622B352140064DE4C /* WriteCode */,
 				18F20ADA22B34F080064DE4C /* BaseFile */,
@@ -1190,6 +1192,14 @@
 				TargetAttributes = {
 					18F20AC022B34E960064DE4C = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1546,6 +1556,8 @@
 			baseConfigurationReference = 136C5233231564AD0156452C /* Pods-HHXXTTXS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HHXXTTXS/HHXXTTXS.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2X4ZQJ7S47;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
@@ -1620,6 +1632,8 @@
 			baseConfigurationReference = AA390CD69122A19186E26E50 /* Pods-HHXXTTXS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HHXXTTXS/HHXXTTXS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2X4ZQJ7S47;

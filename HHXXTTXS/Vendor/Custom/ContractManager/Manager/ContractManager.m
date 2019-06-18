@@ -211,8 +211,8 @@ static ContractManager *_manager;
         capital = 0.0f;
     }
     
-    NSString *capitalString = [@(capital) stringValue];
-    
+//    NSString *capitalString = [@(capital) stringValue];
+    NSString *capitalString = [NSString stringWithFormat:@"%.2f",capital];
     return capitalString;
 }
 

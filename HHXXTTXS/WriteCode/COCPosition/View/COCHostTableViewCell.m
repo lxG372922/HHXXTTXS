@@ -27,7 +27,7 @@
     self.pro_Name.text = dataModel.name;
     self.pro_Time.text = dataModel.avgTime;
     self.pro_Shou.text = dataModel.totalHands;
-    self.pro_roatePoint.text = dataModel.margin;
+    self.pro_roatePoint.text = [NSString stringWithFormat:@"%0.2f",[dataModel.margin floatValue]];
     
 //    self.pro_JSYKSPrice.text = dataModel.name;
     CGFloat plValue = ([dataModel.currentPrice floatValue] - [dataModel.avgPrice floatValue]);

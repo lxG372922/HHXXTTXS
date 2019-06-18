@@ -41,8 +41,10 @@
 	<string>”国际原油期货”访问相册以添加图片到您的相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>”国际原油期货”访问相册以选择图片用来改变用户信息</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

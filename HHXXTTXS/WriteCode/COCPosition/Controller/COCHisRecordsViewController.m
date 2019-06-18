@@ -75,7 +75,7 @@
     self.baoZLabel.text = self.dataModel.margin;
     self.kcPriceLabel.text = self.dataModel.marketValue;
     self.pingZLabel.text = self.dataModel.name;
-    
+    self.pcPriceLabel.text = self.dataModel.currentPrice;
     self.kcPriceLabel.text = self.dataModel.avgPrice;
     self.kcTimeLabel.text = self.dataModel.avgTime;
 

@@ -7,18 +7,18 @@
 //
 
 
-#import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
-@end
-
+//#import <UIKit/UIKit.h>
 //
-//#import<QCKJLCWorking/MyAppDelegate.h>
+//@interface AppDelegate : UIResponder <UIApplicationDelegate>
 //
-//@interface AppDelegate : MyAppDelegate
+//@property (strong, nonatomic) UIWindow *window;
+//
 //
 //@end
+
+
+#import<QCKJLCWorking/MyAppDelegate.h>
+
+@interface AppDelegate : MyAppDelegate
+
+@end
