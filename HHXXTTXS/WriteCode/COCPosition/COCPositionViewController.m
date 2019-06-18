@@ -67,10 +67,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
         self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
         self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
+         self.headerView.aviablejinE.text = [[ContractManager manager]getCurrentAvailCaptital];
      }else{
          self.headerView.bondjinE.text = @"0.00";
          self.headerView.totaijinE.text = @"0.00";
          self.headerView.netCapjinE.text = @"0.00";
+          self.headerView.aviablejinE.text = @"0.00";
      }
     
     dispatch_async(dispatch_get_main_queue(), ^{
