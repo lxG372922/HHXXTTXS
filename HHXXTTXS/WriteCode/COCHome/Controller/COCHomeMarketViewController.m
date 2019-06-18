@@ -17,9 +17,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
     [self xjh_CreatMarketUi];
     [self xjh_getDataMarket];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    self.hidesBottomBarWhenPushed = YES;
+}
+
 -(void)xjh_CreatMarketUi{
     
     _xjh_tableview = [[XSYTableView alloc] initWithCustomFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_Height-Nav_topH-Tab_H)];

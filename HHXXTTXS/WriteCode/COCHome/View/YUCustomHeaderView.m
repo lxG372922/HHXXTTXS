@@ -29,14 +29,14 @@
     UILabel *titleLabel = [[UILabel alloc] init];
     [self.contentView addSubview:titleLabel];
     _titleLabel = titleLabel;
-    titleLabel.font = [UIFont systemFontOfSize:17];
+    titleLabel.font = [UIFont systemFontOfSize:16];
     titleLabel.textColor = [UIColor blackColor];
     
     // descriptionLabel
     UILabel *descriptionLabel = [[UILabel alloc] init];
     [self.contentView addSubview:descriptionLabel];
     _descriptionLabel = descriptionLabel;
-    descriptionLabel.font = [UIFont systemFontOfSize:15];
+    descriptionLabel.font = [UIFont systemFontOfSize:14];
     descriptionLabel.textColor = [UIColor grayColor];
 }
 

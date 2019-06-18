@@ -34,14 +34,16 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
         make.bottom.equalTo(self.view.mas_bottom).mas_offset(0);
     }];
      [self.view addSubview:self.noDataView];
-    // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
+
    
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+//    self.tabBarController.tabBar.hidden = NO;
+}
 
 #pragma  -------------lazy----------------
 -(UIView *)noDataView{
