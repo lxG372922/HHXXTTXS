@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class COCHisRecordsModel;
+@class OrderModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface COCHostTableViewCell : UITableViewCell
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) IBOutlet UILabel *pro_roatePoint;//结算盈亏比例
 @property (nonatomic,weak) IBOutlet UIImageView *pro_kongOrDuo;//空或多
 
--(void)setPositionTableViewCellControlContentWithModel:(COCHisRecordsModel *)dataModel;
+-(void)setPositionTableViewCellControlContentWithModel:(OrderModel *)dataModel;
 
 
 

@@ -7,11 +7,15 @@
 //
 
 #import "COCPositionHostViewController.h"
-
+#import "OrderModel.h"
 @interface COCPositionHostViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+    NSDictionary *dic ;
+}
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic , strong)NSArray *holdPosArray;
 @property (nonatomic,strong) UIView *noDataView;
+@property (nonatomic,strong) OrderModel *postionModel;
 
 @end
 static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
@@ -34,14 +38,8 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
-    if (self.holdPosArray.count > 0) {
-        self.holdPos_tableView.alpha = 1;
-        self.noDataView.alpha = 0;
-    }else{
-        self.holdPos_tableView.alpha = 0;
-        self.noDataView.alpha = 1;
-    }
+    self.tabBarController.tabBar.hidden = NO;
+   
 }
 
 
@@ -97,6 +95,15 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 
 -(void)reloadDataUI{
+    dic  =  [[ContractManager manager] hisOrderList];
+    if (dic.count > 0) {
+        self.postionModel =dic[dic.allKeys[0]];
+        self.holdPos_tableView.alpha = 1;
+        self.noDataView.alpha = 0;
+    }else{
+        self.holdPos_tableView.alpha = 0;
+        self.noDataView.alpha = 1;
+    }
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -107,7 +114,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.holdPosArray.count;
+    return dic.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCHostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communityReportCell_id_1];
@@ -116,7 +123,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-//    [cell setNewsTableViewCellControlContentWithModel:dic];
+    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
 
     return cell;
 }

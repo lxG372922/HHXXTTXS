@@ -7,8 +7,10 @@
 //
 
 #import "COCPositionViewController.h"
-#import "PositionModel.h"
-@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource,ContractManagerDelegate>
+#import "GLPositionModel.h"
+@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource,ContractManagerDelegate>{
+    NSDictionary *dic ;
+}
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic,strong) UIImageView *noDataImageView;
 @property (nonatomic,strong)UIButton *makeOrderBtn;
@@ -16,8 +18,8 @@
 @property (nonatomic,strong) COCHostModel *model;
 @property (nonatomic,strong) UIView *tableHearderView;
 @property (nonatomic,strong) UIView *noDataView;
-@property (nonatomic , strong)NSMutableDictionary *holdPosDic;
-@property (nonatomic,strong) PositionModel *postionModel;
+@property (nonatomic , strong)NSMutableArray *holdPosArray;
+@property (nonatomic,strong) GLPositionModel *postionModel;
 
 @end
 static NSString *const communitypostionCell_id= @"communitypostionCell_id";
@@ -26,7 +28,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 - (void)viewDidLoad{
     [super viewDidLoad];
     [[ContractManager manager] addDelegate:self];
-    self.postionModel = [[PositionModel alloc]init];
+    self.postionModel = [[GLPositionModel alloc]init];
     //历史记录
     [self creatRightBarButton];
     [self configUI];
@@ -46,14 +48,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         [self.holdPos_tableView.mj_header endRefreshing];
         return;
     }
-    if (self.holdPosDic.count > 0) {
-
-        self.holdPos_tableView.alpha = 1;
-        self.noDataView.alpha = 0;
-    }else{
-        self.holdPos_tableView.alpha = 0;
-        self.noDataView.alpha = 1;
-    }
+    self.tabBarController.tabBar.hidden = NO;
+   
     [SVProgressHUD show];
     [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
 }
@@ -61,12 +57,17 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 -(void)progressHUDdismiss{
     //l可用资金
-    self.holdPosDic =  [[ContractManager manager] positions];
-    self.headerView.bondCaLabel.text = [self.holdPosDic objectForKey:@"margin"];
-//    self.holdPosArray
-    
-   self.postionModel =  [PositionModel createModelWithData:self.holdPosDic];
+  dic  =  [[ContractManager manager] positions];
+    if (dic.count > 0) {
+        self.postionModel =dic[dic.allKeys[0]];
+        self.holdPos_tableView.alpha = 1;
+        self.noDataView.alpha = 0;
+    }else{
+        self.holdPos_tableView.alpha = 0;
+        self.noDataView.alpha = 1;
+    }
   
+    self.headerView.bondjinE.text =self.postionModel.margin;
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -132,12 +133,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
     return _noDataView;
 }
--(NSMutableDictionary *)holdPosDic{
-    if (!_holdPosDic) {
-        _holdPosDic = [NSMutableDictionary dictionary];
+-(NSMutableArray *)holdPosArray{
+    if (!_holdPosArray) {
+        _holdPosArray = [NSMutableArray array];
 //        _holdPosArray = @[@"2"];
     }
-    return _holdPosDic;
+    return _holdPosArray;
 }
 
 -(UITableView *)holdPos_tableView{
@@ -221,7 +222,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.holdPosDic.count;
+    return dic.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
@@ -243,7 +244,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     cell.backgroundColor = UIColor.clearColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    [cell setPositionTableViewCellControlContentWithModel:self.postionModel];
+    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
+    
+    
 //
     return cell;
 }
@@ -260,6 +263,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
     COCPositionDetailViewController *hisVc = [[COCPositionDetailViewController alloc]init];
     hisVc.hidesBottomBarWhenPushed = YES;
+    [hisVc updatelabelDataWith:self.postionModel];
     [self.navigationController pushViewController:hisVc animated:YES];
 }
 
