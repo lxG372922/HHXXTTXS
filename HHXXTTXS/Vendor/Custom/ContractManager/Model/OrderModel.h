@@ -21,7 +21,7 @@ typedef enum : NSUInteger {
     ContractTradeTypeCloseShort             // 买入平空(买)
 } ContractTradeType;
 
-@interface OrderModel : NSObject
+@interface OrderModel : NSObject<NSCoding>
 
 /** name */
 @property (strong, nonatomic) NSString *name;
