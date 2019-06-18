@@ -26,24 +26,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    self.title = @"修改密码";
     
     self.view.backgroundColor = RGB(245, 245, 245);
     self.textTF = [[UITextField alloc]initWithFrame:CGRectMake(0, 20 + TOP_BAR_HEIGHT, SCREEN_WIDTH, 50)];
     self.textTF.textAlignment = NSTextAlignmentCenter;
+    self.textTF.placeholder = @"请输入旧密码";
     self.textTF.backgroundColor = RGB(255, 255, 255);
     [self.view addSubview:self.textTF];
     
     
     self.textTF1 = [[UITextField alloc]initWithFrame:CGRectMake(0, 80 + TOP_BAR_HEIGHT, SCREEN_WIDTH, 50)];
     self.textTF1.textAlignment = NSTextAlignmentCenter;
+    self.textTF1.placeholder = @"请输入新密码";
     self.textTF1.backgroundColor = RGB(255, 255, 255);
     [self.view addSubview:self.textTF1];
     
     
-    self.textTF1 = [[UITextField alloc]initWithFrame:CGRectMake(0, 140 + TOP_BAR_HEIGHT, SCREEN_WIDTH, 50)];
-    self.textTF1.textAlignment = NSTextAlignmentCenter;
-    self.textTF1.backgroundColor = RGB(255, 255, 255);
-    [self.view addSubview:self.textTF1];
+    self.textTF2 = [[UITextField alloc]initWithFrame:CGRectMake(0, 140 + TOP_BAR_HEIGHT, SCREEN_WIDTH, 50)];
+    self.textTF2.textAlignment = NSTextAlignmentCenter;
+    self.textTF2.backgroundColor = RGB(255, 255, 255);
+    self.textTF2.placeholder = @"请输入新密码";
+    [self.view addSubview:self.textTF2];
     
     
     self.saveBtn = [[UIButton alloc]initWithFrame:CGRectMake(25, TOP_BAR_HEIGHT + 240, SCREEN_WIDTH - 50, 45)];

@@ -13,6 +13,7 @@
 @property(nonatomic,copy) NSArray * syDaMArray ;
 @property(nonatomic,assign)CGFloat heightCell;
 @property(nonatomic,strong) MJRefreshNormalHeader * syyheader ;
+@property(nonatomic,strong) UIButton * updataBtn ;//更新按钮
 @end
 
 @implementation XSYTableView
@@ -29,6 +30,15 @@
          _syyheader = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(reloadUpdateData)];
         self.mj_header = _syyheader;
         [self registerNib:[UINib nibWithNibName:@"MarketTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell1"];
+        
+        self.updataBtn = [myButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(0, 0, 100, 35) title:@"重新加载" colors:ColorWhite andBackground:COCColorTheme tag:1234 andBlock:^(myButton *button) {
+            
+            [self reloadUpdateData];
+        }];
+        CGPoint cen =self.updataBtn.center;
+        cen = self.center;
+        self.updataBtn.center = cen;
+        self.updataBtn.y -= 70;
     }
     
     return self;
@@ -55,9 +65,10 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     if ( _syDaMArray.count>0) {
+        [_updataBtn removeFromSuperview];
         return  _syDaMArray.count;
     }
-    
+    [self addSubview:_updataBtn];
     return  0;
 }
 
@@ -100,7 +111,7 @@
     
     for (int i=0; i<titleArr.count; i++) {
         
-        UILabel * label = [myLabel labelWithframe:CGRectMake(20+(i>0?wid:0)+i*wid, 0, (i==0?wid*2:wid), 40) backgroundColor:[UIColor whiteColor] title:titleArr[i] font:14 Alignment:i==2?NSTextAlignmentRight:NSTextAlignmentLeft textColor:[UIColor blackColor]];
+        UILabel * label = [myLabel labelWithframe:CGRectMake(20+(i>0?wid:0)+i*wid, 0, (i==0?wid*2:wid), 40) backgroundColor:[UIColor whiteColor] title:titleArr[i] font:14 Alignment:i==2?NSTextAlignmentRight:NSTextAlignmentLeft textColor:COCColorTheme];
         
         [header addSubview:label];
     }

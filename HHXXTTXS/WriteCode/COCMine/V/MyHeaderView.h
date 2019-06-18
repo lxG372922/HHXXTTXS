@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyHeaderView : UIView
+
+
+
 //背景图
 @property (nonatomic , strong)UIImageView *bgImage;
 
@@ -29,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 //积分
 @property (nonatomic , strong)UILabel *integralLab;
 @property (nonatomic , strong)UILabel *integralNum;
+
 
 
 

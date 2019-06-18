@@ -18,10 +18,14 @@
     // Initialization code
 }
 - (void)reloadData:(NSDictionary *)dic{
-    self.nameLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"contractName"]];
-    self.codeLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"symbol"]];
-    self.priceLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"nowV"]];
-    self.chgLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"upDownRate"]];
+    if (dic.allKeys.count != 0) {
+        NSString *priceStr = [NSString stringWithFormat:@"%@",[dic objectForKey:@"nowV"]];
+        
+        self.nameLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"contractName"]];
+        self.codeLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"symbol"]];
+        self.priceLab.text = [priceStr substringFromIndex:1];
+        self.chgLab.text = [NSString stringWithFormat:@"%@",[dic objectForKey:@"upDownRate"]];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

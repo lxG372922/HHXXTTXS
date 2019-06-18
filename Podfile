@@ -17,5 +17,7 @@ target 'HHXXTTXS' do
   pod 'PYSearch'
   pod 'QCKJLCWorking'
   pod 'RTRootNavigationController'
+
   pod 'TYPagerController'
+  pod 'MBProgressHUD'
 end

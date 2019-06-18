@@ -18,6 +18,7 @@ static char *gl_loadingPropertyKey = "gl_loadingPropertyKey";
 - (void)gl_startAnimating {
     
     [self gl_startAnimatingWithOffset:CGPointZero activityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+    
 }
 
 /**

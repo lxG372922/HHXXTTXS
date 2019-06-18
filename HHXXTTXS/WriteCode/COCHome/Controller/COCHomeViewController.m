@@ -26,7 +26,6 @@
     self.zHeadView.frame = CGRectMake(0, 0, SCREEN_Width, 540);
     self.zHeadView.practiceBlock = ^{
         COCHomePracticeViewController *practice = [[COCHomePracticeViewController alloc]init];
-//        weakSelf.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:practice animated:YES];
     };
     self.zTableView.tableHeaderView = self.zHeadView;

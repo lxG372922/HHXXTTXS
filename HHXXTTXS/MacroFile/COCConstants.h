@@ -19,8 +19,11 @@
 #define APIKey_jisu                                 [COCServerManager manager].optimalServer.appkey_jisu
 
 /// ----- 测试账号 ----
-#define TestAccount                                 @"13212341234"
-#define TestPsd                                     @"123456"
+#define Account                                 @"13212341234"
+#define Psd                                     @"123456"
+
+// --- 模拟账号资金 ---
+#define SIMULATECAPITAL                         @(500000)
 
 // ------ 字体样式 ----------
 #define fFont @"EuphemiaUCAS"
@@ -52,6 +55,8 @@
 
 /** 是否是竖屏 */
 #define IS_PORTRAIT (([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown))
+
+#define isReachability [NetCheck isNetWorkReachable]
 
 // -- 导航栏和Tabbar针对iPhone X 的适配  --
 #define Nav_topH (IS_HETERO_SCREEN ? 88.0 : 64.0)
@@ -91,9 +96,9 @@
 
 
 // 项目中主要颜色的定义
-#define COCColorTheme                           HexColor(0xA35128)     // 主题颜色
-#define COCColorLong                            HexColor(0xcc3366)     // 上涨颜色(红色)
-#define COCColorShort                           HexColor(0x28A351)     // 下跌颜色(绿色)
+#define COCColorTheme                           RGB(29, 36, 51)     // 主题颜色
+#define COCColorLong                            RGB(223, 114, 78)      // 上涨颜色(红色)
+#define COCColorShort                           RGB(93, 165, 111)     // 下跌颜色(绿色)
 #define COCColorLongBG                          HexColor(0xFDE7EE)     // 上涨背景颜色(红色背景)
 #define COCColorShortBG                         HexColor(0xEDF7EB)     // 下跌背景颜色(绿色背景)
 #define COCColorTitle                           HexColor(0x333333)     // 用于主要文字提示，标题，重要文字
@@ -113,7 +118,9 @@
 #define COCColorAlert_BGColor                   HexAlphaColor(0x000000,0.4)
 #define Colorblack [UIColor colorWithHexString:@"#333333"]
 #define ColorWhite  [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1/1.0]
+
 #define ColorGrayYinHui [UIColor colorsWithRed:221 green:221 blue:221]
+
 #define ColorGrayQian [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1/1.0]
 #define ColorClear [UIColor clearColor]
 #define ColorCellLine [UIColor colorWithHexString:@"#d8d8d8" ]
