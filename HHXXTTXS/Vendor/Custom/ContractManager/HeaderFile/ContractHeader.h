@@ -6,6 +6,10 @@
 //  Copyright © 2019 apple. All rights reserved.
 //
 
+/**
+ 期货交易工具类
+ */
+
 #ifndef ContractHeader_h
 #define ContractHeader_h
 

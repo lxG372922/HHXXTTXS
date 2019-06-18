@@ -36,15 +36,17 @@
     [self coufUI];
 }
 
+-(void)getNameTest{
+    self.name = [NSString stringWithFormat:@"%@",userGet(@"USERNAME")];
+    titleL.text = [NSString stringWithFormat:@"请填入您个人的银行卡信息\n请填入与  %@  信息一致的银行卡卡号",self.name];
+}
+
 -(void)coufUI{
-    
-    NSString *name = userGet(@"USERNAME");
     
     titleL = [[UILabel alloc]initWithFrame:CGRectMake(SCREEN_Width*0.05, Nav_topH, SCREEN_Width*0.9, SCREEN_Width*0.15)];
     titleL.numberOfLines = 0;
     titleL.textColor = RGBColor(60, 60, 60);
     titleL.font = NameFont(14);
-    titleL.text = [NSString stringWithFormat:@"请填入您个人的银行卡信息\n请填入与  %@  信息一致的银行卡卡号",name];
     [self addSubview:titleL];
     
     
@@ -86,6 +88,8 @@
         
         _cardT.placeholder = @"请输入正确的银行卡号";
         
+        _cardT.keyboardType = UIKeyboardTypeNumberPad;
+        
         _cardT.delegate = self;
     }
     return _cardT;
@@ -104,6 +108,7 @@
     ASOHTTPRequest *request = [[ASOHTTPRequest alloc]init];
     
 //    6228480402564890018
+    
     
     [request oneGet:[NSString stringWithFormat:@"https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=%@&cardBinCheck=true",textField.text] path:[NSString string] parameters:[NSDictionary dictionary] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

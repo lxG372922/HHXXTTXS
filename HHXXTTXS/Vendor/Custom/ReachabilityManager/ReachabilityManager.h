@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+NS_ASSUME_NONNULL_BEGIN
 @class ReachabilityManager;
 @protocol ReachabilityManagerDelegate <NSObject>
 @optional
@@ -73,3 +74,4 @@ typedef void(^ReachabilityManagerBlock)(ReachabilityManager *manager);
 - (void)beginMonitorNetWorking;
 
 @end
+NS_ASSUME_NONNULL_END

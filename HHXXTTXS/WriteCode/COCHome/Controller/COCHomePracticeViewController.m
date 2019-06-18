@@ -39,6 +39,7 @@
 -(void)addtailkClick{
     COCPositionHostViewController *hostVc  = [[COCPositionHostViewController alloc]init];
     hostVc.title = @"历史订单";
+    hostVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hostVc animated:YES];
 }
 
@@ -70,10 +71,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden =YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden =NO;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -122,6 +125,7 @@
         return market;
     }else{
         COCPositionViewController *position = [[COCPositionViewController alloc]init];
+
         return position;
     }
 }
