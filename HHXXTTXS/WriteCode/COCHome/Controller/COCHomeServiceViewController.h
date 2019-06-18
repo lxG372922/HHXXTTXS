@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface COCHomeServiceViewController : UIViewController
+@interface COCHomeServiceViewController : COCBaseViewController
 
 @end
 

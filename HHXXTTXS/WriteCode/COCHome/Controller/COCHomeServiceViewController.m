@@ -7,8 +7,8 @@
 //
 
 #import "COCHomeServiceViewController.h"
-
 @interface COCHomeServiceViewController ()
+@property (nonatomic, strong)UIWebView *webView;
 
 @end
 
@@ -16,7 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"服务条款";
+    self.webView = [[UIWebView alloc] init];
+    self.webView.backgroundColor = [UIColor whiteColor];
+    NSString *url = [[NSBundle mainBundle] pathForResource:@"server_protocol" ofType:@"html"];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [self.webView loadRequest:request];
+    [self.view addSubview:self.webView];
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.left.right.mas_equalTo(self.view);
+    }];
 }
 
 /*

@@ -8,10 +8,12 @@
 
 #import "COCHomeAboutUsViewController.h"
 #import <StoreKit/StoreKit.h>
-
+#import "COCHomeServiceViewController.h"
 @interface COCHomeAboutUsViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *headerV;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImg;
 @property (strong, nonatomic) UITableView *zTableView;
+@property (weak, nonatomic) IBOutlet UILabel *appnameLab;
 @end
 
 @implementation COCHomeAboutUsViewController
@@ -20,6 +22,11 @@
     [super viewDidLoad];
     self.title = @"关于我们";
     [self configTableView];
+    NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];
+    NSString *icon = [[infoPlist valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
+    NSString *app_Name = [infoPlist objectForKey:@"CFBundleDisplayName"];
+    self.appnameLab.text = app_Name;
+    self.logoImg.image = LXGetImage(icon);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -65,6 +72,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         [self gotoCommit];
+    }else if (indexPath.row == 1){
+        COCHomeServiceViewController *service = [[COCHomeServiceViewController alloc]init];
+        service.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:service animated:YES];
     }
 }
 
