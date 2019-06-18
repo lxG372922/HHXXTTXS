@@ -21,6 +21,7 @@
     if (self = [super initWithFrame:CGRectMake(0, oiginY, SCREEN_Width, 100)]) {
         //获取可用资金
         NSString *avaiCaptital =  [[ContractManager manager] getCurrentAvailCaptital];
+        NSString *marketCapital =  [[ContractManager manager] getCurrentAvailCaptital];
         
         self.totailLabel =[[UILabel alloc] initWithFrame:CGRectMake(10, 20, SCREEN_Width/2 - 20, 20)];
         self.totailLabel.text = @"浮动总盈亏";
@@ -82,11 +83,11 @@
         
         self.netCapjinE =[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.netCapLabel.frame), CGRectGetMaxY(self.bondCaLabel.frame), SCREEN_Width/4 - 30 ,20)];
         
-        if (model.netCapital == nil || [model.netCapital isEqualToString:@""]) {
-            self.netCapjinE.text = @"0.00";
-        }else{
-            self.netCapjinE.text = model.netCapital;
-        }
+//        if (model.netCapital == nil || [model.netCapital isEqualToString:@""]) {
+//            self.netCapjinE.text = @"0.00";
+//        }else{
+            self.netCapjinE.text = avaiCaptital;
+//        }
         
         self.netCapjinE.textColor = RGBColor(249, 115, 84);
         self.netCapjinE.font = UiFontSys(14);
