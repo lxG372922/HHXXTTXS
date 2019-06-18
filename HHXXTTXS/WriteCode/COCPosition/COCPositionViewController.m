@@ -124,8 +124,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 -(NSArray *)holdPosArray{
     if (!_holdPosArray) {
-        _holdPosArray = [NSArray array];
-//        _holdPosArray = @[@"2"];
+//        _holdPosArray = [NSArray array];
+        _holdPosArray = @[@"2"];
     }
     return _holdPosArray;
 }
