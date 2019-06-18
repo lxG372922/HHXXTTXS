@@ -34,7 +34,10 @@
 - (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action {
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.___backBtn];
-    
+    if( [[UIDevice currentDevice].systemVersion floatValue] < 11.0) {
+        item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"bt_navigation_back_nor"] style:UIBarButtonItemStylePlain target:self action:@selector(p_backBtnAction)];
+    }
+
     self.___backTarget = target;
     
     self.___backAction = action;
@@ -46,14 +49,12 @@
 
 /**
  返回按钮事件
- 
- @param backBtn 返回按钮
  */
-- (void)p_backBtnAction:(UIButton *)backBtn {
+- (void)p_backBtnAction {
     
     if (self.shouldBackBlock) {
         
-        BOOL isCanBack = self.shouldBackBlock(backBtn);
+        BOOL isCanBack = self.shouldBackBlock(self.___backBtn);
         
         if (isCanBack && self.___backTarget && [self.___backTarget respondsToSelector:self.___backAction]) {
             // 可返回
@@ -74,7 +75,7 @@
     if (!____backBtn) {
         ____backBtn = [[UIButton alloc] init];
         [____backBtn setImage:[UIImage imageNamed:@"bt_navigation_back_nor"] forState:UIControlStateNormal];
-        [____backBtn addTarget:self action:@selector(p_backBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+        [____backBtn addTarget:self action:@selector(p_backBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return ____backBtn;
 }

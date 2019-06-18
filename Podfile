@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '11.0'
+ platform :ios, '10.0'
 
 target 'HHXXTTXS' do
 
@@ -17,7 +17,6 @@ target 'HHXXTTXS' do
   pod 'PYSearch'
   pod 'QCKJLCWorking'
   pod 'RTRootNavigationController'
-
   pod 'TYPagerController'
   pod 'MBProgressHUD'
 end
