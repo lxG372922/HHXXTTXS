@@ -70,7 +70,13 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         self.noDataView.alpha = 1;
     }
   
-    self.headerView.bondjinE.text =self.postionModel.margin;
+    
+    
+    self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
+    self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
+    self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
+    
+    
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -214,9 +220,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 #pragma -------------------ContractManagerDelegate -------------
 
-//-(void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList{
-//    NSLog(@"positionList = %@",positionList);
-//}
+- (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList {
+    
+    [self progressHUDdismiss];
+    
+}
+
 
 #pragma ------------------tableviewDelegate---------------
 
@@ -269,4 +278,5 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     [hisVc updatelabelDataWith:self.postionModel];
     [self.navigationController pushViewController:hisVc animated:YES];
 }
+
 @end
