@@ -106,7 +106,7 @@
     
     NSDictionary * dict;
     if(type == 1){
-        dict = @{@"KongOrDuo":@"Duo",@"price":_marketmodel.current,@"BaoZJin":@"10000",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
+        dict = @{@"KongOrDuo":@"Duo",@"price":_marketmodel.current,@"BaoZJin":@"1000",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
     }else if(type == 2){
           //dict = @{@"KongOrDuo":@"",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"1"};
         //选择多=空
@@ -122,7 +122,7 @@
     }else{
         
 
-          dict = @{@"KongOrDuo":@"Kong",@"price":_marketmodel.current,@"BaoZJin":@"898798",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
+          dict = @{@"KongOrDuo":@"Kong",@"price":_marketmodel.current,@"BaoZJin":@"1000",@"shouxuFei":@"12.434",@"isSelectedJY":@"0"};
         
     }
     

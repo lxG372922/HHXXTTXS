@@ -46,6 +46,15 @@ NS_ASSUME_NONNULL_BEGIN
 /** 当前价格 */
 @property (strong, nonatomic) NSString *currentPrice;
 
+/** 止盈价*/
+@property (strong, nonatomic) NSString *zhiYPrice;
+
+/** 止损价 */
+@property (strong, nonatomic) NSString *zhiSPrice;
+
+/** 开仓时间 */
+@property (strong, nonatomic) NSString *avgTime;
+
 #pragma mark - 扩展属性 ---
 
 /** 存储唯一标识符 */

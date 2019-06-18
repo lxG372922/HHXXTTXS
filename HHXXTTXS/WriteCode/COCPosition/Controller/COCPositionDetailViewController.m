@@ -32,7 +32,7 @@
     self.proPzLabel.text = self.dataModel.name;
     if ((self.dataModel.positionType = ContractPositionTypeLong)) {
         self.fangXLabel.text = @"买多";
-    }else{
+    }else if((self.dataModel.positionType = ContractTradeTypeOpenShort)){
         self.fangXLabel.text = @"买空";
     }
     self.wtNumLabel.text = self.dataModel.totalHands;

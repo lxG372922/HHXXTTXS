@@ -69,6 +69,13 @@
     if (self.arrowPosition) {
         self.zTableView.foldingState = YUFoldingSectionStateShow;
     }
+    
+    if (@available(iOS 11.0, *)) {
+        self.zTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     [self.zTableView registerClass:[ContentTableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
     self.zHeadView = [[COCHomeHeaderView alloc] instanceView];
     weakSelf(self);

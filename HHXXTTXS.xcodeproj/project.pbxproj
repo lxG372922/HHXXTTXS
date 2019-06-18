@@ -82,6 +82,7 @@
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
 		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
 		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
+		04ED941C22B8C6D000598327 /* FAPHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941B22B8C6D000598327 /* FAPHelp.m */; };
 		04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */; };
 		04F7DAF022B7C6FB00EBBE07 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */; };
 		04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE722B7C6FB00EBBE07 /* LoginViewController.m */; };
@@ -287,6 +288,8 @@
 		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
 		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
 		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
+		04ED941A22B8C6D000598327 /* FAPHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAPHelp.h; sourceTree = "<group>"; };
+		04ED941B22B8C6D000598327 /* FAPHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAPHelp.m; sourceTree = "<group>"; };
 		04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewPopAlert.m; sourceTree = "<group>"; };
 		04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPopAlert.h; sourceTree = "<group>"; };
 		04F7DAE422B7C6FB00EBBE07 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -551,14 +554,14 @@
 		049B972F22B38268003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
+				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
+				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */,
 				04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */,
 				04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */,
 				049B973622B38556003D943E /* COCPositionHostViewController.h */,
 				049B973722B38556003D943E /* COCPositionHostViewController.m */,
-				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
-				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
-				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				049B978E22B7298F003D943E /* COCSetCCViewController.h */,
 				049B978F22B7298F003D943E /* COCSetCCViewController.m */,
 				049B979022B7298F003D943E /* COCSetCCViewController.xib */,
@@ -930,6 +933,8 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				04ED941A22B8C6D000598327 /* FAPHelp.h */,
+				04ED941B22B8C6D000598327 /* FAPHelp.m */,
 				043D116522B3836300E7E29C /* ContractManager */,
 				04ED940E22B7B7A200598327 /* NetCheck.h */,
 				04ED940D22B7B7A200598327 /* NetCheck.m */,
@@ -1408,6 +1413,7 @@
 				04F7DAF322B7C6FB00EBBE07 /* RegisteViewController.m in Sources */,
 				049B975E22B3BECA003D943E /* ModifyNameViewController.m in Sources */,
 				0458099522B7A8D50083A8C8 /* detailsTopView.m in Sources */,
+				04ED941C22B8C6D000598327 /* FAPHelp.m in Sources */,
 				04DAFC3A22B892FE00EF35D3 /* COCHomeAboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
