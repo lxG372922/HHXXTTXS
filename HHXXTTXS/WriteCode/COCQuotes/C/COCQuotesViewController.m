@@ -28,6 +28,11 @@
 -(void)xjh_CreatMarketUi{
     
     _xjh_tableview = [[XSYTableView alloc] initWithCustomFrame:CGRectMake(0, Nav_topH, SCREEN_Width, SCREEN_Height-Nav_topH-Tab_H)];
+    if (@available(iOS 11.0, *)) {
+        _xjh_tableview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     _xjh_tableview.xjhDelegate = self;
     [self.view addSubview:_xjh_tableview];
     
