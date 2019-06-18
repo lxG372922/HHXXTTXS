@@ -57,6 +57,8 @@
         _mytableView.dataSource = self;
         _mytableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _mytableView.bounces = NO;
+        _mytableView.showsVerticalScrollIndicator = NO;
+        _mytableView.showsHorizontalScrollIndicator = NO;
         if (@available(iOS 11.0, *)) {
             _mytableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         } else {
