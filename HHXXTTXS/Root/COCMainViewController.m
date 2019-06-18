@@ -12,7 +12,6 @@
 #import "COCQuotesViewController.h"
 #import "COCPositionViewController.h"
 #import "COCMineViewController.h"
-#import "COCSimulationViewController.h"
 
 #import "COCOpenViewController.h"
 

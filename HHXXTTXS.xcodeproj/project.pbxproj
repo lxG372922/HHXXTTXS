@@ -138,7 +138,6 @@
 		18F20BA522B352F10064DE4C /* COCPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BA422B352F10064DE4C /* COCPositionViewController.m */; };
 		18F20BA822B352F90064DE4C /* COCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BA722B352F90064DE4C /* COCMineViewController.m */; };
 		18F20BAB22B353000064DE4C /* COCOpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BAA22B353000064DE4C /* COCOpenViewController.m */; };
-		18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BAD22B353060064DE4C /* COCSimulationViewController.m */; };
 		18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 18F20BB222B354E60064DE4C /* server_protocol.html */; };
 		18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BB522B354E60064DE4C /* ASOHTTPRequest.m */; };
 		18F20BBE22B354E60064DE4C /* ASORequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BB722B354E60064DE4C /* ASORequestSerializer.m */; };
@@ -404,8 +403,6 @@
 		18F20BA722B352F90064DE4C /* COCMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCMineViewController.m; sourceTree = "<group>"; };
 		18F20BA922B353000064DE4C /* COCOpenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCOpenViewController.h; sourceTree = "<group>"; };
 		18F20BAA22B353000064DE4C /* COCOpenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCOpenViewController.m; sourceTree = "<group>"; };
-		18F20BAC22B353060064DE4C /* COCSimulationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCSimulationViewController.h; sourceTree = "<group>"; };
-		18F20BAD22B353060064DE4C /* COCSimulationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCSimulationViewController.m; sourceTree = "<group>"; };
 		18F20BB222B354E60064DE4C /* server_protocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = server_protocol.html; sourceTree = "<group>"; };
 		18F20BB422B354E60064DE4C /* ASORequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASORequestSerializer.h; sourceTree = "<group>"; };
 		18F20BB522B354E60064DE4C /* ASOHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOHTTPRequest.m; sourceTree = "<group>"; };
@@ -1046,18 +1043,8 @@
 				18F20B9A22B352340064DE4C /* COCPosition */,
 				18F20B9922B352320064DE4C /* COCMine */,
 				18F20B9822B3522F0064DE4C /* COCOpen */,
-				18F20B9722B3522D0064DE4C /* COCSimulation */,
 			);
 			path = WriteCode;
-			sourceTree = "<group>";
-		};
-		18F20B9722B3522D0064DE4C /* COCSimulation */ = {
-			isa = PBXGroup;
-			children = (
-				18F20BAC22B353060064DE4C /* COCSimulationViewController.h */,
-				18F20BAD22B353060064DE4C /* COCSimulationViewController.m */,
-			);
-			path = COCSimulation;
 			sourceTree = "<group>";
 		};
 		18F20B9822B3522F0064DE4C /* COCOpen */ = {
@@ -1333,7 +1320,6 @@
 				049B97B222B73C51003D943E /* COCMarketHeaderView.m in Sources */,
 				04F7DAFC22B7C72300EBBE07 /* SelectPhotoManager.m in Sources */,
 				049B97B622B743AE003D943E /* PKProgressHUD.m in Sources */,
-				18F20BAE22B353060064DE4C /* COCSimulationViewController.m in Sources */,
 				049B97B022B73C51003D943E /* COCHomeHeaderView.m in Sources */,
 				045809CA22B7A90F0083A8C8 /* HSCrossLineView.m in Sources */,
 				0439139622B7C12300E7C4D9 /* YUFoldingTableView.m in Sources */,
