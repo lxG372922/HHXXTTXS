@@ -43,11 +43,6 @@
     return headerFooterView;
 }
 
-- (void)yuFoldingTableView:(YUFoldingTableView *)yuTableView didSelectHeaderViewAtSection:(NSInteger)section
-{
-//    NSLog(@"点击了headerView - %ld", section);
-}
-
 - (void)getData{
     WS(weakSelf);
     [COCHomeModel requestAnnouncementDataSuccessBlock:^(NSArray * _Nullable data) {
@@ -63,6 +58,7 @@
 
 - (void)configTableView{
     self.zTableView = [[YUFoldingTableView alloc]initWithFrame:CGRectMake(0, COCNavBar_height, SCREEN_Width, SCREEN_Height-(COCNavBar_height))];
+    self.zTableView.showsVerticalScrollIndicator = NO;
     self.zTableView.foldingDelegate = self;
     if (self.arrowPosition) {
         self.zTableView.foldingState = YUFoldingSectionStateShow;

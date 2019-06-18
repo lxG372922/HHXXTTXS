@@ -46,7 +46,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         [self.holdPos_tableView.mj_header endRefreshing];
         return;
     }
-    self.tabBarController.tabBar.hidden = NO;
     if (self.holdPosDic.count > 0) {
 
         self.holdPos_tableView.alpha = 1;

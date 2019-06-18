@@ -34,6 +34,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+
     if (self.holdPosArray.count > 0) {
         self.holdPos_tableView.alpha = 1;
         self.noDataView.alpha = 0;
