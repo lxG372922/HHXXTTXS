@@ -324,13 +324,8 @@ static ContractManager *_manager;
         
         marketValue += [tempModel.marketValue floatValue];
     }
-    
-<<<<<<< HEAD
-    if (!isExist) {
-=======
+
     if (!isExist && orderModel) {
-        
->>>>>>> 87f3e1b6b7b84be6dbcf6fd8c5af1f382cb59412
         GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
         [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
         marketValue += [newPosition.marketValue floatValue];
