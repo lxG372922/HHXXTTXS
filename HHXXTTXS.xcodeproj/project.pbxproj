@@ -587,13 +587,13 @@
 		049B979622B73C50003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				049B979722B73C50003D943E /* COCHomeMarketViewController.xib */,
-				049B979822B73C50003D943E /* COCHomeMarketViewController.m */,
-				049B979922B73C50003D943E /* COCHomeViewController.m */,
-				049B979A22B73C50003D943E /* COCHomePracticeViewController.h */,
 				049B979B22B73C50003D943E /* COCHomeMarketViewController.h */,
-				049B979C22B73C50003D943E /* COCHomeViewController.h */,
+				049B979822B73C50003D943E /* COCHomeMarketViewController.m */,
+				049B979722B73C50003D943E /* COCHomeMarketViewController.xib */,
+				049B979A22B73C50003D943E /* COCHomePracticeViewController.h */,
 				049B979D22B73C50003D943E /* COCHomePracticeViewController.m */,
+				049B979C22B73C50003D943E /* COCHomeViewController.h */,
+				049B979922B73C50003D943E /* COCHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
