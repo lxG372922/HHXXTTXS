@@ -9,6 +9,7 @@ typedef void(^clickNextBlock)(void);
 @property (nonatomic,copy)clickNextBlock practiceBlock;
 @property (nonatomic,copy)clickNextBlock openBlock;
 @property (nonatomic,copy)clickNextBlock aboutUsBlock;
+@property (nonatomic,copy)clickNextBlock MarketBlock;
 
 -(instancetype)instanceView;
 

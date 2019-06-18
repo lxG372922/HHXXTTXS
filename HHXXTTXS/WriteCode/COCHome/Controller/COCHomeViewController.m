@@ -86,6 +86,9 @@
         about.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:about animated:YES];
     };
+    self.zHeadView.MarketBlock = ^{
+        weakSelf.tabBarController.selectedIndex = 1;
+    };
     self.zTableView.tableHeaderView = self.zHeadView;
     self.zTableView.tableFooterView = [self configFooterView];
     [self.view addSubview:self.zTableView];
@@ -94,7 +97,7 @@
 #pragma mark - YUFoldingTableViewDelegate / required（必须实现的代理）
 - (NSInteger )numberOfSectionForYUFoldingTableView:(YUFoldingTableView *)yuTableView
 {
-    return 5;
+    return self.announcementArr.count;
 }
 - (NSInteger )yuFoldingTableView:(YUFoldingTableView *)yuTableView numberOfRowsInSection:(NSInteger )section
 {

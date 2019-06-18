@@ -711,19 +711,19 @@
 		049B979E22B73C50003D943E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049B979F22B73C51003D943E /* COCHomeHeaderView.h */,
+				049B97A422B73C51003D943E /* COCHomeHeaderView.m */,
+				049B97A022B73C51003D943E /* COCHomeHeaderView.xib */,
+				049B97A722B73C51003D943E /* COCHomeMarketTableViewCell.h */,
+				049B97A322B73C51003D943E /* COCHomeMarketTableViewCell.m */,
+				049B97A222B73C51003D943E /* COCHomeMarketTableViewCell.xib */,
+				049B97A122B73C51003D943E /* COCMarketHeaderView.h */,
+				049B97A622B73C51003D943E /* COCMarketHeaderView.m */,
+				049B97A522B73C51003D943E /* COCMarketHeaderView.xib */,
 				04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */,
 				04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */,
 				04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */,
 				04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */,
-				049B979F22B73C51003D943E /* COCHomeHeaderView.h */,
-				049B97A022B73C51003D943E /* COCHomeHeaderView.xib */,
-				049B97A122B73C51003D943E /* COCMarketHeaderView.h */,
-				049B97A222B73C51003D943E /* COCHomeMarketTableViewCell.xib */,
-				049B97A322B73C51003D943E /* COCHomeMarketTableViewCell.m */,
-				049B97A422B73C51003D943E /* COCHomeHeaderView.m */,
-				049B97A522B73C51003D943E /* COCMarketHeaderView.xib */,
-				049B97A622B73C51003D943E /* COCMarketHeaderView.m */,
-				049B97A722B73C51003D943E /* COCHomeMarketTableViewCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
