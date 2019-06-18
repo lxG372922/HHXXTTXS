@@ -43,7 +43,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 //    self.tabBarController.tabBar.hidden = NO;
    
     [SVProgressHUD show];
-    [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
+    [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1];
 }
 
 
@@ -60,18 +60,25 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }else{
         self.holdPos_tableView.alpha = 0;
         self.noDataView.alpha = 1;
+
     }
   
+     if(Has_Login){
+        self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
+        self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
+        self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
+     }else{
+         self.headerView.bondjinE.text = @"0.00";
+         self.headerView.totaijinE.text = @"0.00";
+         self.headerView.netCapjinE.text = @"0.00";
+     }
     
-    
-    self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
-    self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
-    self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
-    
-    
-    [self.holdPos_tableView.mj_header endRefreshing];
-    [SVProgressHUD dismiss];
-    [self.holdPos_tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self.holdPos_tableView.mj_header endRefreshing];
+        [SVProgressHUD dismiss];
+        [self.holdPos_tableView reloadData];
+    });
 }
 
 -(void)configUI{
@@ -152,16 +159,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
 //        self.holdPos_tableView.tableHeaderView = self.tableHearderView;
         _holdPos_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [SVProgressHUD show];
-            [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
+//            [SVProgressHUD show];
+            [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1];
             
         }];
         
-        _holdPos_tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
-            
-            [SVProgressHUD show];
-            
-        }];
     }
     return _holdPos_tableView;
 }
@@ -215,7 +217,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 - (void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList {
     
     [self progressHUDdismiss];
-    
 }
 
 
@@ -246,7 +247,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         OrderModel * mode = [OrderModel new];
         mode.name = self.postionModel.name;
 //        mode.symbol = self.postionModel.;
-        mode.tradePrice = self.postionModel.avgPrice;
+        mode.tradePrice = self.postionModel.currentPrice;
         mode.tradeHands = self.postionModel.totalHands;
         mode.identifier = self.postionModel.identifier;
         //    mode.tradeAmount =[NSString stringWithFormat:@"%0.02f",jine*shu];
@@ -256,19 +257,19 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
         NSString * show;
         
-        if (self.postionModel.positionType ==ContractPositionTypeLong  ) {
+        if (self.postionModel.positionType == ContractPositionTypeLong) {
             
             mode.tradeType = ContractTradeTypeCloseLong;
-            
+            show = @"买多";
         }else{
-            
-            mode.tradeType = ContractTradeTypeOpenShort;
+            show = @"卖空";
+            mode.tradeType = ContractTradeTypeCloseShort;
         }
         
         [[ContractManager manager]addOrderWithModel:mode];
         
         [SVProgressHUD show];
-        [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
+//        [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
     };
     cell.backgroundColor = UIColor.clearColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

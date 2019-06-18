@@ -362,9 +362,13 @@ static ContractManager *_manager;
             continue;
         }
         
-        if ([tempKey isEqualToString:orderModel.identifier] && [tempModel isCanUpdateWithOrderTradeType:orderModel.tradeType]) {
+        if ([tempModel.identifier isEqualToString:orderModel.identifier] && [tempModel isCanUpdateWithOrderTradeType:orderModel.tradeType]) {
             [tempModel updateWithOrderModel:orderModel];
             isExist = YES;
+        }
+        
+        if ([tempModel.marketValue floatValue] <= 0) {
+            [self.positions removeObjectForKey:tempKey];
         }
         
         marketValue += [tempModel.marketValue floatValue];
@@ -372,7 +376,7 @@ static ContractManager *_manager;
         pl += [tempModel.pl floatValue];
     }
 
-    if (!isExist && orderModel) {
+    if (!isExist && orderModel && (orderModel.tradeType == ContractTradeTypeOpenLong || orderModel.tradeType == ContractTradeTypeOpenShort)) {
         GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
         [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
         marketValue += [newPosition.marketValue floatValue];
