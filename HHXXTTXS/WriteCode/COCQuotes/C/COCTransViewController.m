@@ -19,7 +19,7 @@
     NSArray *colorArray;
     //初始化为
     NSDictionary *dataDic;
-    
+    NSString * kongorDuo;
 
 }
 
@@ -50,7 +50,16 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 
 -(void)commitClick{
+    //
+    if ([kongorDuo isEqualToString:@"Duo"]) {
     
+        
+    }else if([kongorDuo isEqualToString:@"Kong"]){
+    
+        
+    }else{
+      
+    }
     
 }
 
@@ -61,22 +70,26 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     self.shouxulabel.text = [dic objectForKey:@"shouxuFei"];//手续费
     dataDic = [NSDictionary dictionaryWithDictionary:dic];
     NSString *  isJiaoY = [dic objectForKey:@"isSelectedJY"];
-    NSString * kongorDuo = [dic objectForKey:@"KongOrDuo"];
+    kongorDuo = [dic objectForKey:@"KongOrDuo"];
     
     if ([kongorDuo isEqualToString:@"Duo"]) {
         [self.commitBtn setBackgroundColor:RGB(248, 114, 83)];
         self.kongORDuoLabel.alpha = 1;
         self.priceLabel.alpha = 1;
+        _kongORDuoLabel.text = @"买多";
         
     }else if([kongorDuo isEqualToString:@"Kong"]){
         [self.commitBtn setBackgroundColor:RGB(26, 164, 112)];
         self.kongORDuoLabel.alpha = 1;
         self.priceLabel.alpha = 1;
+        _kongORDuoLabel.text = @"卖空";
+        
     }else{
         [self.commitBtn setTitle:@"请开启" forState:UIControlStateNormal];
         [self.commitBtn setBackgroundColor:RGB(20, 44, 51)];
         self.kongORDuoLabel.alpha = 0;
         self.priceLabel.alpha = 0;
+        _kongORDuoLabel.text = @"";
     }
     [_tableView reloadData];
 }

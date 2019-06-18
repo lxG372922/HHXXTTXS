@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GLPositionModel : NSObject
+@interface GLPositionModel : NSObject<NSCoding>
 
 /** 唯一标识符 */
 @property (strong, nonatomic) NSString *identifier;

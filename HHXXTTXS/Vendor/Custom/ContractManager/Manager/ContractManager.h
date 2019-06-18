@@ -57,8 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 重置模拟资金 */
 - (void)resetSimulateCapitail;
 
+/* 添加代理 */
 - (void)addDelegate:(id<ContractManagerDelegate>)delegate;
-
+/* 移除代理 */
 - (void)removeDelegate:(id<ContractManagerDelegate>)delegate;
 
 /* 当前可用的金额 */

@@ -221,6 +221,8 @@ static ContractManager *_manager;
         
         [self.hisOrderList setObject:tempArray forKey:orderModel.identifier];
         
+        [NSKeyedArchiver archiveRootObject:self.hisOrderList toFile:COC_ArchiverPath_HisSimulateOrders];
+        
         switch (orderModel.tradeType) {
             case ContractTradeTypeOpenLong:
             {
@@ -325,7 +327,7 @@ static ContractManager *_manager;
         marketValue += [tempModel.marketValue floatValue];
     }
     
-    if (!isExist) {
+    if (!isExist && orderModel) {
         
         GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
         [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
@@ -334,6 +336,9 @@ static ContractManager *_manager;
     
     self.marketCapital = [@(marketValue) stringValue];
     
+    [NSKeyedArchiver archiveRootObject:self.positions toFile:COC_ArchiverPath_SimulatePostion];
+    
+    [NSKeyedArchiver archiveRootObject:self.availableCapital toFile:COC_ArchiverPath_CurrentCapital];
     // 发送代理消息
     if (self.delegateContainer.count >= 1) {
         [self.delegateContainer compact];
