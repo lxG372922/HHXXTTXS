@@ -8,7 +8,9 @@
 
 #import "COCTransViewController.h"
 #import "COCTrasTableViewCell.h"
-
+#import "ContractManager.h"
+#import "OrderModel.h"
+#import "UIViewPopAlert.h"
 @interface COCTransViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray *dataArray;//创建一个数据源数组
     NSMutableDictionary *dic;//创建一个字典进行判断收缩还是展开
@@ -42,7 +44,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     dataArray = @[@"每次跳动=¥10",@"参考价格1136.6",@"参考价格1136.6"];
     sectionArr = @[@"手数",@"止损",@"止盈"];
     fanWArray = @[@"(范围1-20手)",@"(范围100.00 - 600.00)",@"(范围300.00 - 1800.00)"];
-    btnSTitleArray = @[@[@"1手",@"2手",@"5手",@"10手",@"15手",@"20手"],@[@"$100",@"$150",@"$200",@"$300",@"$450",@"$600"],@[@"$300",@"$450",@"$600",@"$900",@"$1350",@"$1800"]];
+    btnSTitleArray = @[@[@"1",@"2",@"5",@"10",@"15",@"20"],@[@"$100",@"$150",@"$200",@"$300",@"$450",@"$600"],@[@"$300",@"$450",@"$600",@"$900",@"$1350",@"$1800"]];
 
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.commitBtn];
@@ -51,21 +53,53 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 -(void)commitClick{
     //
-    if ([kongorDuo isEqualToString:@"Duo"]) {
     
-        
-    }else if([kongorDuo isEqualToString:@"Kong"]){
+    COCTrasTableViewCell * cell1 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
+    //判读金额 是否可以买入卖出
+    NSString * jinestr = [[ContractManager manager] getCurrentAvailCaptital];
+    CGFloat jine = [jinestr floatValue];
+    CGFloat shu = [cell1.infoTextTF.text floatValue];
+    CGFloat price = [_marketmodel.current floatValue];
+    
+    if (jine<(shu*price)) {
         
-    }else{
-      
+        int maxNum = jine/price;
+        [UIViewPopAlert pushAlertOneActionViewWithMessage:@"" Target:self Title:[NSString stringWithFormat:@"目前持有金额：%@\n最大交易量为：%d",jinestr,maxNum] oneAlertTitle:@"知道了" ChangeSystem:NO oneActionfunc:^{
+            
+        }];
+        return;
+        
     }
+    
+    
+    OrderModel * mode = [OrderModel new];
+    mode.name = _marketName;
+    mode.symbol = _marketmodel.product_code;
+    mode.tradePrice = _marketmodel.current;
+    mode.tradeHands = cell1.infoTextTF.text;
+    mode.identifier = _marketmodel.product_code;
+    
+    NSString * show;
+    
+    if ([kongorDuo isEqualToString:@"Duo"]  ) {
+    
+        mode.tradeType = ContractTradeTypeOpenLong;
+        show = @"买多";
+    }else{
+        show = @"卖空";
+      mode.tradeType = ContractTradeTypeOpenShort;
+    }
+    
+     [[ContractManager manager]addOrderWithModel:mode];
+    
+    [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@交易成功",show]];
     
 }
 
 -(void)creatDataWith:(NSDictionary *)dic{
     self.kongORDuoLabel.text = [dic objectForKey:@"KongOrDuo"];//买多或卖空
-    self.priceLabel.text = [dic objectForKey:@"price"];//价格
+    self.priceLabel.text = _marketmodel.current;//价格
     self.baoZJinlabel.text = [dic objectForKey:@"BaoZJin"];//保证金
     self.shouxulabel.text = [dic objectForKey:@"shouxuFei"];//手续费
     dataDic = [NSDictionary dictionaryWithDictionary:dic];
@@ -118,7 +152,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         priceLabel.textColor = [UIColor whiteColor];
         priceLabel.font = FONT(14);
         priceLabel.textAlignment = NSTextAlignmentCenter;
-        priceLabel.text = @"27123";
+        priceLabel.text = _marketmodel.current;
         self.priceLabel = priceLabel;
         [_commitBtn addSubview:priceLabel];
         

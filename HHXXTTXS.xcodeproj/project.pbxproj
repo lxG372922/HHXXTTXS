@@ -73,12 +73,18 @@
 		049B97B922B74B2D003D943E /* COCTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97B822B74B2D003D943E /* COCTransViewController.m */; };
 		049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97BB22B77062003D943E /* COCTrasTableViewCell.m */; };
 		049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */; };
+		04DAFC3522B892D100EF35D3 /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */; };
+		04DAFC3622B892D100EF35D3 /* YUCustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */; };
+		04DAFC3A22B892FE00EF35D3 /* COCHomeAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3722B892FE00EF35D3 /* COCHomeAboutUsViewController.m */; };
+		04DAFC3B22B892FE00EF35D3 /* COCHomeAboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */; };
+		04DAFC3E22B8934A00EF35D3 /* COCHomeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */; };
 		04E57F9D22B7BF3F007BF39A /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57F9622B7BEC9007BF39A /* OrderModel.m */; };
 		04E57FA022B7BF85007BF39A /* PositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57F9E22B7BF85007BF39A /* PositionModel.m */; };
 		04E57FA322B7C0E3007BF39A /* GLPositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57FA222B7C0E3007BF39A /* GLPositionModel.m */; };
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
 		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
 		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
+		04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */; };
 		04F7DAF022B7C6FB00EBBE07 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */; };
 		04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE722B7C6FB00EBBE07 /* LoginViewController.m */; };
 		04F7DAF222B7C6FB00EBBE07 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE822B7C6FB00EBBE07 /* UITextField+PlaceHolder.m */; };
@@ -266,6 +272,15 @@
 		049B97BA22B77062003D943E /* COCTrasTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCTrasTableViewCell.h; sourceTree = "<group>"; };
 		049B97BB22B77062003D943E /* COCTrasTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCTrasTableViewCell.m; sourceTree = "<group>"; };
 		049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCTrasTableViewCell.xib; sourceTree = "<group>"; };
+		04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
+		04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCustomHeaderView.h; sourceTree = "<group>"; };
+		04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
+		04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCustomHeaderView.m; sourceTree = "<group>"; };
+		04DAFC3722B892FE00EF35D3 /* COCHomeAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCHomeAboutUsViewController.m; sourceTree = "<group>"; };
+		04DAFC3822B892FE00EF35D3 /* COCHomeAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCHomeAboutUsViewController.h; sourceTree = "<group>"; };
+		04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCHomeAboutUsViewController.xib; sourceTree = "<group>"; };
+		04DAFC3C22B8934A00EF35D3 /* COCHomeServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHomeServiceViewController.h; sourceTree = "<group>"; };
+		04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeServiceViewController.m; sourceTree = "<group>"; };
 		04E57F9622B7BEC9007BF39A /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		04E57F9822B7BEC9007BF39A /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
 		04E57F9E22B7BF85007BF39A /* PositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionModel.m; sourceTree = "<group>"; };
@@ -277,6 +292,8 @@
 		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
 		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
 		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
+		04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewPopAlert.m; sourceTree = "<group>"; };
+		04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPopAlert.h; sourceTree = "<group>"; };
 		04F7DAE422B7C6FB00EBBE07 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		04F7DAE522B7C6FB00EBBE07 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PlaceHolder.m"; sourceTree = "<group>"; };
@@ -628,10 +645,10 @@
 		049B976722B3BEEB003D943E /* M */ = {
 			isa = PBXGroup;
 			children = (
-				049B976822B3BEEB003D943E /* MarketlistCodeAllHX.m */,
-				049B976922B3BEEB003D943E /* MarketModelHX.m */,
 				049B976A22B3BEEB003D943E /* MarketlistCodeAllHX.h */,
+				049B976822B3BEEB003D943E /* MarketlistCodeAllHX.m */,
 				049B976B22B3BEEB003D943E /* MarketModelHX.h */,
+				049B976922B3BEEB003D943E /* MarketModelHX.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -639,6 +656,8 @@
 		049B976C22B3BEEB003D943E /* V */ = {
 			isa = PBXGroup;
 			children = (
+				04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */,
+				04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */,
 				0458099022B7A8D50083A8C8 /* BottomView.h */,
 				0458098F22B7A8D50083A8C8 /* BottomView.m */,
 				049B97BA22B77062003D943E /* COCTrasTableViewCell.h */,
@@ -673,6 +692,9 @@
 		049B979622B73C50003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04DAFC3822B892FE00EF35D3 /* COCHomeAboutUsViewController.h */,
+				04DAFC3722B892FE00EF35D3 /* COCHomeAboutUsViewController.m */,
+				04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */,
 				049B979B22B73C50003D943E /* COCHomeMarketViewController.h */,
 				049B979822B73C50003D943E /* COCHomeMarketViewController.m */,
 				049B979722B73C50003D943E /* COCHomeMarketViewController.xib */,
@@ -680,6 +702,8 @@
 				049B979D22B73C50003D943E /* COCHomePracticeViewController.m */,
 				049B979C22B73C50003D943E /* COCHomeViewController.h */,
 				049B979922B73C50003D943E /* COCHomeViewController.m */,
+				04DAFC3C22B8934A00EF35D3 /* COCHomeServiceViewController.h */,
+				04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -687,6 +711,10 @@
 		049B979E22B73C50003D943E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */,
+				04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */,
+				04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */,
+				04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */,
 				049B979F22B73C51003D943E /* COCHomeHeaderView.h */,
 				049B97A022B73C51003D943E /* COCHomeHeaderView.xib */,
 				049B97A122B73C51003D943E /* COCMarketHeaderView.h */,
@@ -1204,6 +1232,7 @@
 				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
 				049B97B122B73C51003D943E /* COCMarketHeaderView.xib in Resources */,
 				049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */,
+				04DAFC3B22B892FE00EF35D3 /* COCHomeAboutUsViewController.xib in Resources */,
 				04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1287,6 +1316,7 @@
 				049B97AC22B73C51003D943E /* COCHomePracticeViewController.m in Sources */,
 				045809C022B7A90F0083A8C8 /* HSStockChartColor.m in Sources */,
 				045809C822B7A90F0083A8C8 /* HSBarChartView.m in Sources */,
+				04DAFC3E22B8934A00EF35D3 /* COCHomeServiceViewController.m in Sources */,
 				18F20B7622B351EB0064DE4C /* NumStepper.m in Sources */,
 				049B978422B685D6003D943E /* COCHostTableViewCell.m in Sources */,
 				18F20AE022B34F340064DE4C /* COCBaseListView.m in Sources */,
@@ -1327,6 +1357,8 @@
 				04E57FA322B7C0E3007BF39A /* GLPositionModel.m in Sources */,
 				049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
+				04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */,
+				04DAFC3622B892D100EF35D3 /* YUCustomHeaderView.m in Sources */,
 				045809CD22B7A90F0083A8C8 /* HSCrossLineModel.m in Sources */,
 				045809C722B7A90F0083A8C8 /* HSScaleBaseView.m in Sources */,
 				0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */,
@@ -1365,6 +1397,7 @@
 				049B975D22B3BECA003D943E /* SignatureViewController.m in Sources */,
 				18F20BAB22B353000064DE4C /* COCOpenViewController.m in Sources */,
 				045809C122B7A90F0083A8C8 /* HSStockChartViewVariable.m in Sources */,
+				04DAFC3522B892D100EF35D3 /* ContentTableViewCell.m in Sources */,
 				18F20BA822B352F90064DE4C /* COCMineViewController.m in Sources */,
 				185B0FAB22B7A34000491D58 /* CarryView.m in Sources */,
 				18F20B0D22B350010064DE4C /* NSObject+DrawText.m in Sources */,
@@ -1385,6 +1418,7 @@
 				04F7DAF322B7C6FB00EBBE07 /* RegisteViewController.m in Sources */,
 				049B975E22B3BECA003D943E /* ModifyNameViewController.m in Sources */,
 				0458099522B7A8D50083A8C8 /* detailsTopView.m in Sources */,
+				04DAFC3A22B892FE00EF35D3 /* COCHomeAboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

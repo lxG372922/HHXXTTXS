@@ -7,6 +7,8 @@ typedef void(^clickNextBlock)(void);
 @interface COCHomeHeaderView : UIView
 
 @property (nonatomic,copy)clickNextBlock practiceBlock;
+@property (nonatomic,copy)clickNextBlock openBlock;
+@property (nonatomic,copy)clickNextBlock aboutUsBlock;
 
 -(instancetype)instanceView;
 
