@@ -120,7 +120,7 @@
         
         self.identifier = orderModel.identifier;
         self.name = orderModel.name;
-        
+        self.lever = orderModel.lever;
         switch (orderModel.tradeType) {
             case ContractTradeTypeOpenLong:
             {

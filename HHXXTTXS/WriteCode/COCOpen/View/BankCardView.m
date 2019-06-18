@@ -88,6 +88,8 @@
         
         _cardT.placeholder = @"请输入正确的银行卡号";
         
+        _cardT.keyboardType = UIKeyboardTypeNumberPad;
+        
         _cardT.delegate = self;
     }
     return _cardT;

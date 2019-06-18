@@ -61,7 +61,17 @@
 
 -(void)clickSaveBtn:(UIButton *)sender{
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if([self.textTF.text isEqualToString:UserMiMa]){
+        NSLog(@"1");
+        if([self.textTF1.text isEqualToString:self.textTF2.text]){
+            LoginAndSaveMiMa(self.textTF2.text)
+            LogOutRemoveUid;
+            [self.navigationController popViewControllerAnimated:YES];
+            [G_Window showMBHUDAlertWithMessage:@"账号或密码错误 已退出当前账号" hide:1.5];
+        }
+    }
+    
+    
     
 }
 
