@@ -175,13 +175,13 @@ static ContractManager *_manager;
         }
     }
     
-    return self.availableCapital ? : @"0";
+    return !isStrEmpty(self.availableCapital) ? self.availableCapital : @"0";
 }
 
 /* 当前的市值 */
 - (NSString *)getCurrentMarketCapital {
     
-    return self.marketCapital;
+    return !isStrEmpty(self.marketCapital) ? self.marketCapital : @"0";
 }
 
 /**
@@ -189,7 +189,7 @@ static ContractManager *_manager;
  */
 - (NSString *)getAllOCCMargin {
     
-    return self.occMargin;
+    return !isStrEmpty(self.occMargin) ? self.occMargin : @"0";
 }
 
 
@@ -197,9 +197,8 @@ static ContractManager *_manager;
  总浮动盈亏
  */
 - (NSString *)getAllPL {
-    return self.pl;
+    return !isStrEmpty(self.pl) ? self.pl : @"0";
 }
-
 
 /**
  获得当前总资产
@@ -331,7 +330,7 @@ static ContractManager *_manager;
     self.positions = @{}.mutableCopy;
     self.orderList = @[].mutableCopy;
     self.availableCapital = @"";
-    self.hisOrderList = @[].mutableCopy;
+    self.hisOrderList = @{}.mutableCopy;
     self.marketCapital = @"";
     self.occMargin = @"";
     self.pl = @"";

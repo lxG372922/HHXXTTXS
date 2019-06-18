@@ -59,6 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /* 添加代理 */
 - (void)addDelegate:(id<ContractManagerDelegate>)delegate;
+
 /* 移除代理 */
 - (void)removeDelegate:(id<ContractManagerDelegate>)delegate;
 
