@@ -69,6 +69,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getCurrentMarketCapital;
 
 /**
+ 总占用保证金
+ */
+- (NSString *)getAllOCCMargin;
+
+/**
+ 总浮动盈亏
+ */
+- (NSString *)getAllPL;
+
+
+/**
+ 获得当前总资产
+ */
+- (NSString *)getCurrentAllCapital;
+
+/**
  当前的资金可开手数
 
  @param price 价格
