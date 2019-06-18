@@ -118,7 +118,9 @@
 #define COCColorAlert_BGColor                   HexAlphaColor(0x000000,0.4)
 #define Colorblack [UIColor colorWithHexString:@"#333333"]
 #define ColorWhite  [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1/1.0]
+
 #define ColorGrayYinHui [UIColor colorsWithRed:221 green:221 blue:221]
+
 #define ColorGrayQian [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1/1.0]
 #define ColorClear [UIColor clearColor]
 #define ColorCellLine [UIColor colorWithHexString:@"#d8d8d8" ]
