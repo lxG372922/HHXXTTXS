@@ -79,6 +79,7 @@
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
 		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
 		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
+		04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */; };
 		04F7DAF022B7C6FB00EBBE07 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */; };
 		04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE722B7C6FB00EBBE07 /* LoginViewController.m */; };
 		04F7DAF222B7C6FB00EBBE07 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE822B7C6FB00EBBE07 /* UITextField+PlaceHolder.m */; };
@@ -277,6 +278,8 @@
 		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
 		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
 		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
+		04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewPopAlert.m; sourceTree = "<group>"; };
+		04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPopAlert.h; sourceTree = "<group>"; };
 		04F7DAE422B7C6FB00EBBE07 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		04F7DAE522B7C6FB00EBBE07 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PlaceHolder.m"; sourceTree = "<group>"; };
@@ -628,10 +631,10 @@
 		049B976722B3BEEB003D943E /* M */ = {
 			isa = PBXGroup;
 			children = (
-				049B976822B3BEEB003D943E /* MarketlistCodeAllHX.m */,
-				049B976922B3BEEB003D943E /* MarketModelHX.m */,
 				049B976A22B3BEEB003D943E /* MarketlistCodeAllHX.h */,
+				049B976822B3BEEB003D943E /* MarketlistCodeAllHX.m */,
 				049B976B22B3BEEB003D943E /* MarketModelHX.h */,
+				049B976922B3BEEB003D943E /* MarketModelHX.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -639,6 +642,8 @@
 		049B976C22B3BEEB003D943E /* V */ = {
 			isa = PBXGroup;
 			children = (
+				04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */,
+				04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */,
 				0458099022B7A8D50083A8C8 /* BottomView.h */,
 				0458098F22B7A8D50083A8C8 /* BottomView.m */,
 				049B97BA22B77062003D943E /* COCTrasTableViewCell.h */,
@@ -1327,6 +1332,7 @@
 				04E57FA322B7C0E3007BF39A /* GLPositionModel.m in Sources */,
 				049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */,
 				18F20B1022B350010064DE4C /* NSString+GLDate.m in Sources */,
+				04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */,
 				045809CD22B7A90F0083A8C8 /* HSCrossLineModel.m in Sources */,
 				045809C722B7A90F0083A8C8 /* HSScaleBaseView.m in Sources */,
 				0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */,
