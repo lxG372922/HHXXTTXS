@@ -29,6 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"实盘开户";
+    
     NSString *isSubmit = userGet(@"isSubmit");
     
     if ([isSubmit isEqualToString:@"YES"]) {

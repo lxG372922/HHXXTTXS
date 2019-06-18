@@ -7,35 +7,35 @@
 //
 
 #import "PositionModel.h"
-
+#import "NSObject+XsyCoding.h"
 @implementation PositionModel
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [self yy_modelEncodeWithCoder:aCoder];
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    return [self yy_modelInitWithCoder:aDecoder];
-}
-
-- (NSString *)description
-{
-    return [self yy_modelDescription];
-}
+XSYCodingImplementation
+//- (void)encodeWithCoder:(NSCoder *)aCoder {
+//    [self yy_modelEncodeWithCoder:aCoder];
+//}
+//
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    return [self yy_modelInitWithCoder:aDecoder];
+//}
+//
+//- (NSString *)description
+//{
+//    return [self yy_modelDescription];
+//}
 
 + (instancetype)createModelWithData:(NSDictionary *)dataDict{
     
     PositionModel *model = nil;
     if (dataDict && [dataDict isKindOfClass:[NSDictionary class]]) {
         model = [[PositionModel alloc] init];
-        model.pro_Name = [dataDict objectForKey:@"pro_Name"];
-        model.pro_shou = [dataDict objectForKey:@"pro_shou"];
-        model.pro_duoOrKong = [dataDict objectForKey:@"pro_duoOrKong"];
-        model.pro_Price = [dataDict objectForKey:@"pro_Price"];
-        model.pro_KCPrice = [dataDict objectForKey:@"pro_KCPrice"];
-        model.pro_nowPrice = [dataDict objectForKey:@"pro_nowPrice"];
-        model.pro_zhiyPrice = [dataDict objectForKey:@"pro_zhiyPrice"];
-        model.pro_zhisPrice = [dataDict objectForKey:@"pro_zhisPrice"];
+        model.pro_Name = [dataDict objectForKey:@"name"];
+        model.pro_shou = [dataDict objectForKey:@"totalHands"];
+        model.pro_duoOrKong = [dataDict objectForKey:@"pl_Rate"];
+        model.pro_Price = [dataDict objectForKey:@"pl_Rate"];
+        model.pro_KCPrice = [dataDict objectForKey:@"avgPrice"];
+        model.pro_nowPrice = [dataDict objectForKey:@"currentPrice"];
+        model.pro_zhiyPrice = [dataDict objectForKey:@"saveIdentifier"];
+        model.pro_zhisPrice = [dataDict objectForKey:@"saveIdentifier"];
     }
     return model;
 }

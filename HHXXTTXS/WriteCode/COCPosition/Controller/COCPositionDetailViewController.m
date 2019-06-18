@@ -7,7 +7,7 @@
 //
 
 #import "COCPositionDetailViewController.h"
-
+#import "GLPositionModel.h"
 @interface COCPositionDetailViewController ()
 
 @end
@@ -17,9 +17,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单详情";
+    /*
+     @property (nonatomic,weak)IBOutlet UILabel *proPzLabel;//交易品种
+     @property (nonatomic,weak)IBOutlet UILabel *fangXLabel;//交易方向
+     @property (nonatomic,weak)IBOutlet UILabel *wtNumLabel;//委托数量
+     @property (nonatomic,weak)IBOutlet UILabel *cjNumLabel;//成交数量
+     @property (nonatomic,weak)IBOutlet UILabel *jyzhfLabel;//交易综合费用
+     @property (nonatomic,weak)IBOutlet UILabel *baoZLabel;//保证金
+     @property (nonatomic,weak)IBOutlet UILabel *junJLabel;//开仓均价
+     @property (nonatomic,weak)IBOutlet UILabel *leiXLabel;//开仓类型
+     @property (nonatomic,weak)IBOutlet UILabel *kcTimeLabel;//开仓时间
+     @property (nonatomic,weak)IBOutlet UILabel *dingDLabel;//订单编号
+     */
+    self.proPzLabel.text = self.dataModel.name;
+    self.fangXLabel.text = self.dataModel.name;
+    self.wtNumLabel.text = self.dataModel.totalHands;
+    self.cjNumLabel.text = self.dataModel.totalHands;
+    self.jyzhfLabel.text = self.dataModel.pl;
+    self.baoZLabel.text = self.dataModel.margin;
+    self.junJLabel.text = self.dataModel.avgPrice;
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)updatelabelDataWith:(GLPositionModel *)dataModel
+{
+    self.dataModel = dataModel;
+}
 /*
 #pragma mark - Navigation
 

@@ -214,10 +214,10 @@ static COCMainViewController *_instance;
 - (NSMutableArray *)selectedImgNames {
     if (!_selectedImgNames) {
         _selectedImgNames = @[
-                              @"tabbar_home_sel",
-                              @"tabbar_market_sel",
-                              @"tabbar_news_sel",
-                              @"tabbar_me_sel"
+                              @"tab_1",
+                              @"tab_2",
+                              @"tab_3",
+                              @"tab_4"
                               ].mutableCopy;
     }
     return _selectedImgNames;
@@ -226,10 +226,10 @@ static COCMainViewController *_instance;
 - (NSMutableArray *)unSelectedImgNames {
     if (!_unSelectedImgNames) {
         _unSelectedImgNames = @[
-                                @"tabbar_home_nor",
-                                @"tabbar_market_nor",
-                                @"tabbar_news_nor",
-                                @"tabbar_me_nor"
+                                @"tab_5",
+                                @"tab_6",
+                                @"tab_7",
+                                @"tab_8"
                                 ].mutableCopy;
     }
     return _unSelectedImgNames;

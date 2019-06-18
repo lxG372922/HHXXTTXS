@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0439139622B7C12300E7C4D9 /* YUFoldingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */; };
 		0439139722B7C12300E7C4D9 /* YUFoldingSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */; };
-		0439139822B7C12300E7C4D9 /* YUFolding_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */; };
 		043D117022B3836300E7E29C /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D116822B3836300E7E29C /* ContractManager.m */; };
 		0458099422B7A8D50083A8C8 /* myButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098C22B7A8D40083A8C8 /* myButton.m */; };
 		0458099522B7A8D50083A8C8 /* detailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0458098D22B7A8D40083A8C8 /* detailsTopView.m */; };
@@ -84,6 +83,9 @@
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
 		04ED93FB22B7B5EF00598327 /* COCPositionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */; };
 		04ED940F22B7B7A200598327 /* NetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED940D22B7B7A200598327 /* NetCheck.m */; };
+		04ED941722B89BBE00598327 /* NSObject+XsyCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */; };
+		04ED941822B89BBE00598327 /* XsyModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941222B89BBD00598327 /* XsyModelManager.m */; };
+		04ED941922B89BBE00598327 /* XsyFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED941622B89BBD00598327 /* XsyFileManager.m */; };
 		04EFC3B822B885E6005A3F60 /* UIViewPopAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */; };
 		04F7DAF022B7C6FB00EBBE07 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE622B7C6FB00EBBE07 /* UITextView+PlaceHolder.m */; };
 		04F7DAF122B7C6FB00EBBE07 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7DAE722B7C6FB00EBBE07 /* LoginViewController.m */; };
@@ -150,7 +152,6 @@
 		0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingTableView.m; sourceTree = "<group>"; };
 		0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUFoldingSectionHeader.m; sourceTree = "<group>"; };
 		0439139322B7C12300E7C4D9 /* YUFoldingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingTableView.h; sourceTree = "<group>"; };
-		0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YUFolding_arrow.png; sourceTree = "<group>"; };
 		0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUFoldingSectionHeader.h; sourceTree = "<group>"; };
 		043D116722B3836300E7E29C /* ContractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractManager.h; sourceTree = "<group>"; };
 		043D116822B3836300E7E29C /* ContractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractManager.m; sourceTree = "<group>"; };
@@ -292,6 +293,12 @@
 		04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCPositionDetailViewController.h; sourceTree = "<group>"; };
 		04ED940D22B7B7A200598327 /* NetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetCheck.m; sourceTree = "<group>"; };
 		04ED940E22B7B7A200598327 /* NetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetCheck.h; sourceTree = "<group>"; };
+		04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XsyCoding.m"; sourceTree = "<group>"; };
+		04ED941222B89BBD00598327 /* XsyModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XsyModelManager.m; sourceTree = "<group>"; };
+		04ED941322B89BBD00598327 /* XsyFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XsyFileManager.h; sourceTree = "<group>"; };
+		04ED941422B89BBD00598327 /* XsyModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XsyModelManager.h; sourceTree = "<group>"; };
+		04ED941522B89BBD00598327 /* NSObject+XsyCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XsyCoding.h"; sourceTree = "<group>"; };
+		04ED941622B89BBD00598327 /* XsyFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XsyFileManager.m; sourceTree = "<group>"; };
 		04EFC3B622B885E6005A3F60 /* UIViewPopAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewPopAlert.m; sourceTree = "<group>"; };
 		04EFC3B722B885E6005A3F60 /* UIViewPopAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewPopAlert.h; sourceTree = "<group>"; };
 		04F7DAE422B7C6FB00EBBE07 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -434,7 +441,6 @@
 				0439139122B7C12300E7C4D9 /* YUFoldingTableView.m */,
 				0439139222B7C12300E7C4D9 /* YUFoldingSectionHeader.m */,
 				0439139322B7C12300E7C4D9 /* YUFoldingTableView.h */,
-				0439139422B7C12300E7C4D9 /* YUFolding_arrow.png */,
 				0439139522B7C12300E7C4D9 /* YUFoldingSectionHeader.h */,
 			);
 			path = YUFoldingTableView;
@@ -711,19 +717,19 @@
 		049B979E22B73C50003D943E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				049B979F22B73C51003D943E /* COCHomeHeaderView.h */,
+				049B97A422B73C51003D943E /* COCHomeHeaderView.m */,
+				049B97A022B73C51003D943E /* COCHomeHeaderView.xib */,
+				049B97A722B73C51003D943E /* COCHomeMarketTableViewCell.h */,
+				049B97A322B73C51003D943E /* COCHomeMarketTableViewCell.m */,
+				049B97A222B73C51003D943E /* COCHomeMarketTableViewCell.xib */,
+				049B97A122B73C51003D943E /* COCMarketHeaderView.h */,
+				049B97A622B73C51003D943E /* COCMarketHeaderView.m */,
+				049B97A522B73C51003D943E /* COCMarketHeaderView.xib */,
 				04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */,
 				04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */,
 				04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */,
 				04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */,
-				049B979F22B73C51003D943E /* COCHomeHeaderView.h */,
-				049B97A022B73C51003D943E /* COCHomeHeaderView.xib */,
-				049B97A122B73C51003D943E /* COCMarketHeaderView.h */,
-				049B97A222B73C51003D943E /* COCHomeMarketTableViewCell.xib */,
-				049B97A322B73C51003D943E /* COCHomeMarketTableViewCell.m */,
-				049B97A422B73C51003D943E /* COCHomeHeaderView.m */,
-				049B97A522B73C51003D943E /* COCMarketHeaderView.xib */,
-				049B97A622B73C51003D943E /* COCMarketHeaderView.m */,
-				049B97A722B73C51003D943E /* COCHomeMarketTableViewCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,6 +752,19 @@
 				04E57F9622B7BEC9007BF39A /* OrderModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04ED941022B89BBD00598327 /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */,
+				04ED941222B89BBD00598327 /* XsyModelManager.m */,
+				04ED941322B89BBD00598327 /* XsyFileManager.h */,
+				04ED941422B89BBD00598327 /* XsyModelManager.h */,
+				04ED941522B89BBD00598327 /* NSObject+XsyCoding.h */,
+				04ED941622B89BBD00598327 /* XsyFileManager.m */,
+			);
+			path = Coding;
 			sourceTree = "<group>";
 		};
 		04F7DAE322B7C6FB00EBBE07 /* LoginViewController */ = {
@@ -834,7 +853,6 @@
 		18F20AC322B34E960064DE4C /* HHXXTTXS */ = {
 			isa = PBXGroup;
 			children = (
-				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20AD222B34E960064DE4C /* Info.plist */,
 				18F20B9622B352140064DE4C /* WriteCode */,
 				18F20ADA22B34F080064DE4C /* BaseFile */,
@@ -939,6 +957,7 @@
 		18F20B1F22B351EB0064DE4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				04ED941022B89BBD00598327 /* Coding */,
 				043D116522B3836300E7E29C /* ContractManager */,
 				04ED940E22B7B7A200598327 /* NetCheck.h */,
 				04ED940D22B7B7A200598327 /* NetCheck.m */,
@@ -1122,6 +1141,7 @@
 		18F20BAF22B354E60064DE4C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20BB222B354E60064DE4C /* server_protocol.html */,
 			);
 			path = Resource;
@@ -1226,7 +1246,6 @@
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
 				049B97AE22B73C51003D943E /* COCHomeMarketTableViewCell.xib in Resources */,
 				049B977822B3BEEB003D943E /* MarketTableViewCell.xib in Resources */,
-				0439139822B7C12300E7C4D9 /* YUFolding_arrow.png in Resources */,
 				18F20BBC22B354E60064DE4C /* server_protocol.html in Resources */,
 				18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */,
 				049B978522B685D6003D943E /* COCHostTableViewCell.xib in Resources */,
@@ -1373,6 +1392,7 @@
 				18F20B1222B350010064DE4C /* NSString+Attribute.m in Sources */,
 				18F20B7C22B351EB0064DE4C /* JMBaseButtonConfig.m in Sources */,
 				18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */,
+				04ED941922B89BBE00598327 /* XsyFileManager.m in Sources */,
 				18F20ADD22B34F230064DE4C /* COCBaseView.m in Sources */,
 				18F20B7722B351EB0064DE4C /* IndentTextField.m in Sources */,
 				049B97AB22B73C51003D943E /* COCHomeViewController.m in Sources */,
@@ -1384,6 +1404,7 @@
 				18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */,
 				185B0FA822B7A34000491D58 /* BankCardView.m in Sources */,
 				18F20B7322B351EB0064DE4C /* KeyBoardManager.m in Sources */,
+				04ED941722B89BBE00598327 /* NSObject+XsyCoding.m in Sources */,
 				18F20B7422B351EB0064DE4C /* ASOServerManager.m in Sources */,
 				045809C522B7A90F0083A8C8 /* HSVolumeScaleInfoView.m in Sources */,
 				049B977622B3BEEB003D943E /* MarketlistCodeAllHX.m in Sources */,
@@ -1411,6 +1432,7 @@
 				045809CE22B7A90F0083A8C8 /* HSKLineView.m in Sources */,
 				18F20B0A22B350010064DE4C /* UIView+Frame.m in Sources */,
 				045809CF22B7A90F0083A8C8 /* HSKLineSegmentView.m in Sources */,
+				04ED941822B89BBE00598327 /* XsyModelManager.m in Sources */,
 				045809C322B7A90F0083A8C8 /* HSDateScaleInfoView.m in Sources */,
 				049B974122B38D27003D943E /* COCHostModel.m in Sources */,
 				18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */,

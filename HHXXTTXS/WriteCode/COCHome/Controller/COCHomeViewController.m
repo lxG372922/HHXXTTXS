@@ -43,11 +43,6 @@
     return headerFooterView;
 }
 
-- (void)yuFoldingTableView:(YUFoldingTableView *)yuTableView didSelectHeaderViewAtSection:(NSInteger)section
-{
-//    NSLog(@"点击了headerView - %ld", section);
-}
-
 - (void)getData{
     WS(weakSelf);
     [COCHomeModel requestAnnouncementDataSuccessBlock:^(NSArray * _Nullable data) {
@@ -63,6 +58,7 @@
 
 - (void)configTableView{
     self.zTableView = [[YUFoldingTableView alloc]initWithFrame:CGRectMake(0, COCNavBar_height, SCREEN_Width, SCREEN_Height-(COCNavBar_height))];
+    self.zTableView.showsVerticalScrollIndicator = NO;
     self.zTableView.foldingDelegate = self;
     if (self.arrowPosition) {
         self.zTableView.foldingState = YUFoldingSectionStateShow;
@@ -86,6 +82,9 @@
         about.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:about animated:YES];
     };
+    self.zHeadView.MarketBlock = ^{
+        weakSelf.tabBarController.selectedIndex = 1;
+    };
     self.zTableView.tableHeaderView = self.zHeadView;
     self.zTableView.tableFooterView = [self configFooterView];
     [self.view addSubview:self.zTableView];
@@ -94,7 +93,7 @@
 #pragma mark - YUFoldingTableViewDelegate / required（必须实现的代理）
 - (NSInteger )numberOfSectionForYUFoldingTableView:(YUFoldingTableView *)yuTableView
 {
-    return 5;
+    return self.announcementArr.count;
 }
 - (NSInteger )yuFoldingTableView:(YUFoldingTableView *)yuTableView numberOfRowsInSection:(NSInteger )section
 {
@@ -112,6 +111,7 @@
     if (cell == nil) {
         cell = [[ContentTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     cell.contentL.text = [NSString stringWithFormat:@"%@",[self.announcementArr[indexPath.row] objectForKey:@"metadesc"]];
     cell.contentL.lineBreakMode = NSLineBreakByTruncatingTail;
     CGSize maximumLabelSize = CGSizeMake(SCREEN_Width*0.9, 9999);//labelsize的最大值

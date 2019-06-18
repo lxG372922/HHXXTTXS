@@ -1,11 +1,3 @@
-//
-//  YUFoldingSectionHeader.m
-//  YUFoldingTableView
-//
-//  Created by administrator on 16/8/24.
-//  Copyright © 2016年 timelywind. All rights reserved.
-//
-
 #import "YUFoldingSectionHeader.h"
 
 static CGFloat const YUFoldingSeperatorLineWidth = 0.3f;
