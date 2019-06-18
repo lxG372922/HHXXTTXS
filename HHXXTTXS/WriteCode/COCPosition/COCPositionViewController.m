@@ -96,6 +96,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 -(void)addtailkClick{
     COCPositionHostViewController *hostVc  = [[COCPositionHostViewController alloc]init];
     hostVc.title = @"历史订单";
+    hostVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hostVc animated:YES];
 }
 
@@ -124,8 +125,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 }
 -(NSArray *)holdPosArray{
     if (!_holdPosArray) {
-        _holdPosArray = [NSArray array];
-//        _holdPosArray = @[@"2"];
+//        _holdPosArray = [NSArray array];
+        _holdPosArray = @[@"2"];
     }
     return _holdPosArray;
 }
@@ -174,8 +175,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         yjpcBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         [yjpcBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
         [_tableHearderView addSubview:yjpcBtn];
-        
-        
     }
     return _tableHearderView;
 }

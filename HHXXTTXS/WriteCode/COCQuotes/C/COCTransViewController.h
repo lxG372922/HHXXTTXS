@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
  ** isSelectedJY  是否点击交易
  */
 
-
 -(void)creatDataWith:(NSDictionary *)dic;
 
 @end

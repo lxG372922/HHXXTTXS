@@ -97,10 +97,12 @@
     if (_fillV.nameT.text.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入您的姓名"];
         return;
+    }else{
+        userSave(self.fillV.nameT.text, @"USERNAME");
     }
 
     if (_fillV.numberT.text.length == 0) {
-        [SVProgressHUD showErrorWithStatus:@"请输入您的银行卡卡号"];
+        [SVProgressHUD showErrorWithStatus:@"请输入您的身份证号码"];
         return;
     }
     
@@ -122,7 +124,6 @@
         if ([checkStr isEqualToString:@"200"]) {
             [SVProgressHUD showSuccessWithStatus:@"校验成功"];
             NSLog(@"%@",weakSelf.fillV.nameT.text);
-            userSave(weakSelf.fillV.nameT.text, @"USERNAME");
 
             [UIView animateWithDuration:0.5 animations:^{
 

@@ -129,7 +129,9 @@ static COCMainViewController *_instance;
     COCSimulationViewController *simulationVC = [[COCSimulationViewController alloc] init];
     simulationVC.title = @"模拟";
     simulationVC.hidesBottomBarWhenPushed = NO;
-    COCBaseNaviController *simulateNV = [[COCBaseNaviController alloc] initWithRootViewController:simulationVC];
+    
+//    COCBaseNaviController *simulateNV = [[COCBaseNaviController alloc] initWithRootViewController:simulationVC];
+    
 //    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
 //    meVC.title = @"我的";
 //    meVC.hidesBottomBarWhenPushed = NO;
