@@ -44,7 +44,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     dataArray = @[@"每次跳动=¥10",@"参考价格1136.6",@"参考价格1136.6"];
     sectionArr = @[@"手数",@"止损",@"止盈"];
     fanWArray = @[@"(范围1-20手)",@"(范围100.00 - 600.00)",@"(范围300.00 - 1800.00)"];
-    btnSTitleArray = @[@[@"1",@"2",@"5",@"10",@"15",@"20"],@[@"$100",@"$150",@"$200",@"$300",@"$450",@"$600"],@[@"$300",@"$450",@"$600",@"$900",@"$1350",@"$1800"]];
+    btnSTitleArray = @[@[@"1",@"2",@"5",@"10",@"15",@"20"],@[@"¥100",@"¥150",@"¥200",@"¥300",@"¥450",@"¥600"],@[@"¥300",@"¥450",@"¥600",@"¥900",@"¥1350",@"¥1800"]];
 
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.commitBtn];
@@ -170,7 +170,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 400) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-      
+      _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
          [_tableView registerNib:[UINib nibWithNibName:@"COCTrasTableViewCell" bundle:nil] forCellReuseIdentifier:communitypostionCell_id];
          UIView *footView = [[UIView alloc]init];
 //        footView.backgroundColor =[UIColor orangeColor];
@@ -233,7 +233,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
         cell.btnView.hidden = YES;
         cell.fanWLabel.hidden = YES;
-        return 56;
+        cell.grayLabel.hidden = NO;
+        return 59;
         
     }
     
@@ -244,13 +245,15 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         if (_seleIndex == indexPath) {
             cell.btnView.hidden = NO;
             cell.fanWLabel.hidden = NO;
+            cell.grayLabel.hidden = YES;
             return 130;
             
         }else{
     
             cell.btnView.hidden = YES;
             cell.fanWLabel.hidden = YES;
-            return 56;
+            cell.grayLabel.hidden = NO;
+            return 59;
             
         }
         
@@ -270,6 +273,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }else{
         NSString *tipsString = [dataDic objectForKey:@"price"];
         cell.tipLabel.text = [NSString stringWithFormat:@"参考价%@",tipsString];
+        cell.infoTextTF.text = @"100";
     }
     
     cell.fanWLabel.text = fanWArray[indexPath.row];

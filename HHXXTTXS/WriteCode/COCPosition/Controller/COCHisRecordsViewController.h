@@ -7,7 +7,7 @@
 //
 
 #import "COCBaseViewController.h"
-
+@class GLPositionModel;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface COCHisRecordsViewController : COCBaseViewController
@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak)IBOutlet UILabel *pcTimeLabel;//平仓时间
 @property (nonatomic,weak)IBOutlet UILabel *orderLabel;//订单编号
 
+-(void)updatelabelDataWith:(GLPositionModel *)dataModel;
 
 @end
 

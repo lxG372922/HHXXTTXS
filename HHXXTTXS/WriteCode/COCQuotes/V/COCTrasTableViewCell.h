@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) IBOutlet UITextField *infoTextTF;
 @property (nonatomic,weak) IBOutlet UIImageView *jtImageView;//产品名
 @property (nonatomic,weak) IBOutlet UIView *btnView;
+@property (weak, nonatomic) IBOutlet UILabel *grayLabel;
 
 @property (nonatomic,weak) IBOutlet UIButton *btn1;
 @property (nonatomic,weak) IBOutlet UIButton *btn2;

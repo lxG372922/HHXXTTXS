@@ -81,7 +81,7 @@
 
 - (NSString *)marketValue {
     
-    if (!isStrEmpty(self.margin) && !isStrEmpty(self.pl)) {
+    if (!isStrEmpty(self.margin) && !isStrEmpty(self.pl) && [self.totalHands integerValue] > 0) {
         
         CGFloat marketValue = [self.margin floatValue] + [self.pl floatValue];
         if (marketValue <= 0) {

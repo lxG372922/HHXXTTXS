@@ -46,7 +46,7 @@
     
     titleArr2 = @[@"昵称",@"个性签名",@"修改密码",@"重置模拟资金"];
     
-    titleArrM2 = @[@"icon_5",@"形状",@"icon_7",@"icon_7"];
+    titleArrM2 = @[@"icon_5",@"形状",@"icon_7",@"chongzhi"];
   
     [self mytableView];
 }

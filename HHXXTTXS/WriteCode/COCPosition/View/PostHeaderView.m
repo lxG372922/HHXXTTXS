@@ -55,7 +55,7 @@
         if(Has_Login){
             self.aviablejinE.text  = avaiCaptital;
         }else{
-            self.aviablejinE.text  = @"0.00";
+            self.aviablejinE.text  = @"00.00";
         }
         
         self.aviablejinE.textColor = RGBColor(249, 115, 84);
@@ -86,7 +86,7 @@
         self.netCapLabel.font = UiFontSys(13);
         [self addSubview:self.netCapLabel];
         
-        self.netCapjinE =[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.netCapLabel.frame), CGRectGetMaxY(self.bondCaLabel.frame), SCREEN_Width/4 - 30 ,20)];
+        self.netCapjinE =[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.netCapLabel.frame), CGRectGetMaxY(self.bondCaLabel.frame), SCREEN_Width/4  ,20)];
         
 //        if (model.netCapital == nil || [model.netCapital isEqualToString:@""]) {
 //            self.netCapjinE.text = @"0.00";
@@ -104,6 +104,18 @@
         self.netCapjinE.textColor = RGBColor(249, 115, 84);
         self.netCapjinE.font = UiFontSys(14);
         [self addSubview:self.netCapjinE];
+        
+        if(Has_Login){
+            self.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
+            self.totaijinE.text = [[ContractManager manager] getAllPL];
+            self.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
+        }else{
+            self.bondjinE.text = @"0.00";
+            self.totaijinE.text = @"0.00";
+            self.netCapjinE.text = @"0.00";
+        }
+       
+        
         
     }
     return self;
