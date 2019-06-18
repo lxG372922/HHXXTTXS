@@ -7,7 +7,8 @@
 //
 
 #import "COCHostTableViewCell.h"
-#import "COCHisRecordsModel.h"
+#import "OrderModel.h"
+
 @implementation COCHostTableViewCell
 
 - (void)awakeFromNib {
@@ -21,16 +22,16 @@
     // Configure the view for the selected state
 }
 
--(void)setPositionTableViewCellControlContentWithModel:(COCHisRecordsModel *)dataModel
+-(void)setPositionTableViewCellControlContentWithModel:(OrderModel *)dataModel
 {
-    self.pro_Name.text = dataModel.pro_Name;
-    self.pro_Time.text = dataModel.pro_Time;
-    self.pro_Shou.text = dataModel.pro_shou;
-    self.pro_roatePoint.text = dataModel.pro_roatePoint;
-    self.pro_style.text = dataModel.pro_style;
-    self.pro_JSYKSPrice.text = dataModel.pro_JSYKSPrice;
+    self.pro_Name.text = dataModel.name;
+    self.pro_Time.text = dataModel.name;
+    self.pro_Shou.text = dataModel.name;
+    self.pro_roatePoint.text = dataModel.name;
+    self.pro_style.text = dataModel.name;
+    self.pro_JSYKSPrice.text = dataModel.name;
     
-    if ([dataModel.pro_shou isEqualToString:@"多"]) {
+    if ([dataModel.name isEqualToString:@"多"]) {
         self.pro_kongOrDuo.image = [UIImage imageNamed:@"duo-3"];
     }else{
         self.pro_kongOrDuo.image = [UIImage imageNamed:@"kong-2"];

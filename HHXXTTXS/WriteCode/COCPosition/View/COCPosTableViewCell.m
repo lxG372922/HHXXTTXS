@@ -7,7 +7,7 @@
 //
 
 #import "COCPosTableViewCell.h"
-
+#import "GLPositionModel.h"
 @implementation COCPosTableViewCell
 
 - (void)awakeFromNib {
@@ -48,16 +48,16 @@
     }
 }
 
--(void)setPositionTableViewCellControlContentWithModel:(PositionModel *)dataModel{
+-(void)setPositionTableViewCellControlContentWithModel:(GLPositionModel *)dataModel{
     
-    self.pro_Name.text = dataModel.pro_Name;
-     self.pro_shou.text = dataModel.pro_shou;
-     self.pro_duoOrKong.text = dataModel.pro_duoOrKong;
-     self.pro_Price.text = dataModel.pro_Price;
-     self.pro_KCPrice.text = dataModel.pro_KCPrice;
-     self.pro_nowPrice.text = dataModel.pro_nowPrice;
-     self.pro_zhiyPrice.text = dataModel.pro_zhiyPrice;
-     self.pro_zhiyPrice.text = dataModel.pro_zhisPrice;
+     self.pro_Name.text = dataModel.name;
+     self.pro_shou.text = dataModel.totalHands;
+     self.pro_duoOrKong.text = @"多";
+     self.pro_Price.text = dataModel.pl;
+     self.pro_KCPrice.text = dataModel.avgPrice;
+     self.pro_nowPrice.text = dataModel.currentPrice;
+     self.pro_zhiyPrice.text = dataModel.name;
+     self.pro_zhisPrice.text = dataModel.name;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class PositionModel;
+@class GLPositionModel;
 
 typedef void(^SetZYZSBlock)(void);//设置止盈止损
 typedef void(^MArketSBlock)(void);//设置行情
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy)MArketSBlock Marketblock;
 @property (nonatomic,copy)PINGCangBlock pingCblock;
 
--(void)setPositionTableViewCellControlContentWithModel:(PositionModel *)dataModel;
+-(void)setPositionTableViewCellControlContentWithModel:(GLPositionModel *)dataModel;
 
 
 @end
