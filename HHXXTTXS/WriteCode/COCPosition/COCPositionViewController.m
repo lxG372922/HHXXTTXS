@@ -242,13 +242,26 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
     };
     cell.pingCblock = ^(NSNumber * _Nonnull index) {
+        
         OrderModel * mode = [OrderModel new];
+        mode.name = self.postionModel.name;
+//        mode.symbol = self.postionModel.;
+        mode.tradePrice = self.postionModel.avgPrice;
+        mode.tradeHands = self.postionModel.totalHands;
         mode.identifier = self.postionModel.identifier;
+        //    mode.tradeAmount =[NSString stringWithFormat:@"%0.02f",jine*shu];
+        mode.zhiYPrice = self.postionModel.zhiYPrice;
+        mode.zhiSPrice =self.postionModel.zhiSPrice;
+        mode.avgTime =[FAPHelp getNowTime1];
+        
         NSString * show;
-        if ((self.postionModel.positionType = ContractTradeTypeOpenLong)  ) {
+        
+        if (self.postionModel.positionType ==ContractPositionTypeLong  ) {
+            
             mode.tradeType = ContractTradeTypeCloseLong;
+            
         }else{
-            show = @"卖空";
+            
             mode.tradeType = ContractTradeTypeOpenShort;
         }
         

@@ -59,10 +59,12 @@
         self.kanduoLabel.text = @"买多";
         self.fangXLabel.text = @"买多";
         self.leixLabel.text= @"买多";
+        self.kclxLabel.text =  @"买多";
     }else{
          self.kanduoLabel.text = @"买空";
          self.fangXLabel.text = @"买空";
         self.leixLabel.text= @"买空";
+        self.kclxLabel.text =  @"买空";
     }
     self.ykLabel.text = self.dataModel.pl;
     self.bilieLabel.text = self.dataModel.pl_Rate;
@@ -70,6 +72,12 @@
     self.numberLabel.text = self.dataModel.totalHands;
     self.baoZLabel.text = self.dataModel.margin;
     self.kcPriceLabel.text = self.dataModel.marketValue;
+    self.pingZLabel.text = self.dataModel.name;
+    
+    self.kcPriceLabel.text = self.dataModel.avgPrice;
+    self.kcTimeLabel.text = self.dataModel.avgTime;
+
+//    self.shouxuLabel.text =self.dataModel.
     
 //    self.kanduoLabel.text = self.dataModel.
     
