@@ -32,14 +32,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     //历史记录
     [self creatRightBarButton];
     [self configUI];
-    if (!isReachability) {
-        [PKProgressHUD pkShowErrorWithStatueTitle:@"无网络，请稍后重试!"];
-        [self.holdPos_tableView.mj_header endRefreshing];
-        return;
-    }
-   
-   
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -240,16 +232,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     };
     cell.pingCblock = ^(NSNumber * _Nonnull index) {
         OrderModel * mode = [OrderModel new];
-        mode.name = self.postionModel.name;
-        mode.tradeHands = self.postionModel.totalHands;
-        mode.avgTime =[FAPHelp getNowTime1];
         mode.identifier = self.postionModel.identifier;
         NSString * show;
-        
         if ((self.postionModel.positionType = ContractTradeTypeOpenLong)  ) {
 
             mode.tradeType = ContractTradeTypeCloseLong;
-            show = @"买多";
         }else{
             show = @"卖空";
             mode.tradeType = ContractTradeTypeOpenShort;
