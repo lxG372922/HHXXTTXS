@@ -79,6 +79,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         [SVProgressHUD dismiss];
         [self.holdPos_tableView reloadData];
     });
+
 }
 
 -(void)configUI{
