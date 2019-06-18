@@ -67,6 +67,8 @@
         self.kclxLabel.text =  @"买空";
     }
     self.ykLabel.text = self.dataModel.pl;
+    CGFloat plValue = ([self.dataModel.currentPrice floatValue] - [self.dataModel.avgPrice floatValue]);
+    self.ykLabel.text = [NSString stringWithFormat:@"%.2f",plValue];
     self.bilieLabel.text = self.dataModel.pl_Rate;
     self.pingZLabel.text = self.dataModel.name;
     self.numberLabel.text = self.dataModel.totalHands;
