@@ -141,28 +141,28 @@
     }];
     [_headerImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).mas_offset((SCREEN_WIDTH - 50) / 2);
-        make.top.equalTo(self.mas_top).mas_offset(20);
+        make.top.equalTo(self.mas_top).mas_offset(20+StatusBarheight);
         make.width.mas_equalTo(50);
         make.height.mas_equalTo(50);
     }];
     
     [_nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).mas_offset(25);
-        make.top.equalTo(self.mas_top).mas_offset(80);
+        make.top.equalTo(self.mas_top).mas_offset(80+StatusBarheight);
         make.width.mas_equalTo(SCREEN_WIDTH - 50);
         make.height.mas_equalTo(20);
     }];
     
     [_signatureLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).mas_offset(25);
-        make.top.equalTo(self.mas_top).mas_offset(105);
+        make.top.equalTo(self.mas_top).mas_offset(105+StatusBarheight);
         make.width.mas_equalTo(SCREEN_WIDTH - 50);
         make.height.mas_equalTo(18);
     }];
     
     [_certificationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).mas_offset((SCREEN_WIDTH - 120) / 2);
-        make.top.equalTo(self.mas_top).mas_offset(150);
+        make.top.equalTo(self.mas_top).mas_offset(140+StatusBarheight);
         make.width.mas_equalTo(120);
         make.height.mas_equalTo(35);
     }];

@@ -38,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
     titleArr1 = @[@"交易明细",@"资金明细",@"银行卡",@"账户认证"];
     titleArrM1 = @[@"icon_1",@"icon_2",@"icon_3",@"icon_4"];
     
@@ -55,16 +57,21 @@
         _mytableView.dataSource = self;
         _mytableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _mytableView.bounces = NO;
+        if (@available(iOS 11.0, *)) {
+            _mytableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
         [self.view addSubview:_mytableView];
         
         [_mytableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view.mas_left).mas_offset(0);
-            make.top.equalTo(self.view.mas_top).mas_offset(TOP_BAR_HEIGHT);
+            make.top.equalTo(self.view.mas_top).mas_offset(0);
             make.right.equalTo(self.view.mas_right).mas_offset(0);
             make.bottom.equalTo(self.view.mas_bottom).mas_offset(-(BottomSafeArea + TAB_BAR_HRIGHT));
         }];
         
-        _headerV = [[MyHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+        _headerV = [[MyHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200 + NavMustAdd)];
         [self headerViewWithData];
         //实名认证按钮
         [self.headerV.certificationBtn addTarget:self action:@selector(clickCertificationBtn:) forControlEvents:UIControlEventTouchUpInside];
