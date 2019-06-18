@@ -215,11 +215,36 @@ static ContractManager *_manager;
     
     if (orderModel) {
         
-        [self p_updatePositionListWithOrderModel:orderModel];
-        
         NSMutableArray *tempArray = [self getHisOrderListForIdentifier:orderModel.identifier].mutableCopy;
         
         [tempArray addObject:orderModel];
+        
+        [self.hisOrderList setObject:tempArray forKey:orderModel.identifier];
+        
+        switch (orderModel.tradeType) {
+            case ContractTradeTypeOpenLong:
+            {
+                self.availableCapital = [@([self.availableCapital floatValue] - [orderModel.tradeAmount floatValue]) stringValue];
+            }
+                break;
+            case ContractTradeTypeOpenShort:
+            {
+                self.availableCapital = [@([self.availableCapital floatValue] - [orderModel.tradeAmount floatValue]) stringValue];
+            }
+                break;
+            case ContractTradeTypeCloseLong:
+            {
+                self.availableCapital = [@([self.availableCapital floatValue] + [orderModel.tradeAmount floatValue]) stringValue];
+            }
+                break;
+            case ContractTradeTypeCloseShort:
+            {
+                self.availableCapital = [@([self.availableCapital floatValue] + [orderModel.tradeAmount floatValue]) stringValue];
+            }
+                break;
+        }
+        
+        [self p_updatePositionListWithOrderModel:orderModel];
         
         // 发送代理消息
         if (self.delegateContainer.count >= 1) {

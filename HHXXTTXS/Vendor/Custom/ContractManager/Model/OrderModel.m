@@ -51,4 +51,12 @@
     return string;
 }
 
+- (NSString *)tradeAmount {
+    if (isStrEmpty(_tradeAmount) || [_tradeAmount floatValue] <= 0) {
+        CGFloat tradeAmount = [self.tradePrice floatValue] * [self.tradeHands floatValue];
+        _tradeAmount = [@(tradeAmount) stringValue];
+    }
+    return _tradeAmount;
+}
+
 @end

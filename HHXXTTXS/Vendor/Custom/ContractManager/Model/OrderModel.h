@@ -46,9 +46,11 @@ typedef enum : NSUInteger {
 
 #pragma mark - 扩展属性 --
 
-
 /** save identifier */
 @property (strong, nonatomic) NSString *saveIdentifier;
+
+/** 交易额 */
+@property (strong, nonatomic) NSString *tradeAmount;
 
 @end
 
