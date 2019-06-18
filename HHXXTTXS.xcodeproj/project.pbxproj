@@ -856,7 +856,6 @@
 		18F20AC322B34E960064DE4C /* HHXXTTXS */ = {
 			isa = PBXGroup;
 			children = (
-				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20AD222B34E960064DE4C /* Info.plist */,
 				18F20B9622B352140064DE4C /* WriteCode */,
 				18F20ADA22B34F080064DE4C /* BaseFile */,
@@ -1145,6 +1144,7 @@
 		18F20BAF22B354E60064DE4C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20BB222B354E60064DE4C /* server_protocol.html */,
 			);
 			path = Resource;
