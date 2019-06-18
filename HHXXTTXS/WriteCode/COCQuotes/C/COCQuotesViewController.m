@@ -51,7 +51,26 @@
         if ([result isEqualToString:@"Y"]) {
             
             weakSelf.xjhDaraArray = [MarketModelHX mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+            
             [weakSelf.xjh_tableview UpDateTalbeViewWitharray: weakSelf.xjhDaraArray];
+            
+        NSDictionary * dict =  [[ContractManager manager] positions];
+            for (NSString * str in dict.allKeys) {
+                
+                NSString * sttt = [str stringByReplacingOccurrencesOfString:@"_1" withString:@""];
+               sttt = [sttt stringByReplacingOccurrencesOfString:@"_2" withString:@""];
+                for (MarketModelHX * mod in weakSelf.xjhDaraArray) {
+                    if ([mod.product_code isEqualToString: sttt]) {
+                        
+                        [[ContractManager manager] updateNewPrice:mod.current forIdentifier:sttt];
+                        continue;
+                    }
+                }
+                
+                
+            }
+            
+            
         }else{
             
             [SVProgressHUD showErrorWithStatus:NoDataAndTouchRefresh];
