@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak)IBOutlet UILabel *cjNumLabel;//成交数量
 @property (nonatomic,weak)IBOutlet UILabel *jyzhfLabel;//交易综合费用
 @property (nonatomic,weak)IBOutlet UILabel *baoZLabel;//保证金
+@property (nonatomic,weak)IBOutlet UILabel *junJLabel;//开仓均价
+@property (nonatomic,weak)IBOutlet UILabel *leiXLabel;//开仓类型
+@property (nonatomic,weak)IBOutlet UILabel *kcTimeLabel;//开仓时间
+@property (nonatomic,weak)IBOutlet UILabel *dingDLabel;//订单编号
+
+
 @end
 
 NS_ASSUME_NONNULL_END

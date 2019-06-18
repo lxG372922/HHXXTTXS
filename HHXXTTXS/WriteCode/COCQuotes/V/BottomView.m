@@ -12,12 +12,12 @@
 
 -(instancetype)initWithPrince:(NSString *)price maneyALl:(NSString*)moneyall  buyAction:(void (^)(void))BuyAction clickCenBtn:(void (^)(void))ClickCenBtn sellAction:(void (^)(void))SellAction{
     
-    if (self = [super initWithFrame:CGRectMake(0, SCREEN_HEIGHT-170, SCREEN_WIDTH, 170)]) {
+    if (self = [super initWithFrame:CGRectMake(0, SCREEN_HEIGHT-160, SCREEN_WIDTH, 160)]) {
         
        //可用资金
         _pricetitelLabel = [myLabel labelWithframe:CGRectMake(10, 30, 85, 20) backgroundColor:ColorClear title:@"可用资金($):" font:14 Alignment:NSTextAlignmentRight textColor:ColorWhite];
         [self addSubview:_pricetitelLabel];
-        
+  
         _priceLabel = [myLabel labelWithframe:CGRectMake(98, 27, 100, 23) backgroundColor:ColorClear title:moneyall font:17 Alignment:NSTextAlignmentLeft textColor:COCColorLong];
         [self addSubview:_priceLabel];
         

@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) NSArray *titleArray;
 @property (nonatomic,assign) NSInteger index;
+
 -(void) creatBtnWithTitle:(NSArray *)titleArray idnexRow:(NSInteger )index ;
 
 @end

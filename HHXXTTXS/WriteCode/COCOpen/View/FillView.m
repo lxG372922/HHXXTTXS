@@ -44,7 +44,6 @@
     
     [nameBackV addSubview:self.nameT];
     
-    
 #pragma mark 身份证号码
     
     numBackV = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_Width*0.05, CGRectGetMaxY(nameBackV.frame)+SCREEN_Width*0.05, SCREEN_Width*0.9, SCREEN_Width*0.12)];
@@ -63,7 +62,6 @@
     
 #pragma mark - 下一步
     [self addSubview:self.nextBtn];
-    
     
 }
 

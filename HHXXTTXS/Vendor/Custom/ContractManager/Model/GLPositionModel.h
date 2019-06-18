@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GLPositionModel : NSObject
+@interface GLPositionModel : NSObject<NSCoding>
 
 /** 唯一标识符 */
 @property (strong, nonatomic) NSString *identifier;
@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 扩展属性 ---
 
+/** 存储唯一标识符 */
+@property (strong, nonatomic) NSString *saveIdentifier;
+
 /** 收益率 */
 @property (strong, nonatomic) NSString *pl_Rate;
 
@@ -56,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 市值 */
 @property (strong, nonatomic) NSString *marketValue;
+
+/** 从委托订单创建一个持仓模型 */
++ (instancetype)createPositionWithOrderModel:(OrderModel *)orderModel;
 
 /**
  根据订单模型更新持仓模型

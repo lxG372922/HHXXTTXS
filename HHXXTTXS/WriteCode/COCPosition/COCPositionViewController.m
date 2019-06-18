@@ -8,7 +8,7 @@
 
 #import "COCPositionViewController.h"
 
-@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource,ContractManagerDelegate>
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic,strong) UIImageView *noDataImageView;
 @property (nonatomic,strong)UIButton *makeOrderBtn;
@@ -24,6 +24,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [[ContractManager manager] addDelegate:self];
     //历史记录
     [self creatRightBarButton];
     [self configUI];
@@ -57,7 +58,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 
 -(void)progressHUDdismiss{
-    
+    //l可用资金
+    NSMutableDictionary *dic =  [[ContractManager manager] positions];
+    self.headerView.bondCaLabel.text = [dic objectForKey:@"margin"];
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -96,6 +99,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 -(void)addtailkClick{
     COCPositionHostViewController *hostVc  = [[COCPositionHostViewController alloc]init];
     hostVc.title = @"历史订单";
+    hostVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hostVc animated:YES];
 }
 
@@ -174,8 +178,6 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         yjpcBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         [yjpcBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
         [_tableHearderView addSubview:yjpcBtn];
-        
-        
     }
     return _tableHearderView;
 }
@@ -183,7 +185,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 #pragma ---------------按钮点击事件
 
 -(void)makeOrderClick{
-    self.tabBarController.selectedIndex = 1;
+    if(Has_Login){
+         self.tabBarController.selectedIndex = 1;
+    }else{
+        [PKProgressHUD pkShowErrorWithStatueTitle:@"未登录，请先登录！"];
+    }
+   
 }
 -(void)showAllClick{
     if (!isReachability) {
@@ -194,6 +201,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 //    COCTransViewController *transVC = [[COCTransViewController alloc]init];
 //    transVC.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:transVC animated:YES];
+}
+
+#pragma -------------------ContractManagerDelegate -------------
+
+-(void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList{
+    
 }
 
 #pragma ------------------tableviewDelegate---------------
