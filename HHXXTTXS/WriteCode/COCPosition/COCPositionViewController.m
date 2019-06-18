@@ -7,7 +7,7 @@
 //
 
 #import "COCPositionViewController.h"
-
+#import "PositionModel.h"
 @interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource,ContractManagerDelegate>
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic,strong) UIImageView *noDataImageView;
@@ -16,7 +16,8 @@
 @property (nonatomic,strong) COCHostModel *model;
 @property (nonatomic,strong) UIView *tableHearderView;
 @property (nonatomic,strong) UIView *noDataView;
-@property (nonatomic , strong)NSArray *holdPosArray;
+@property (nonatomic , strong)NSMutableDictionary *holdPosDic;
+@property (nonatomic,strong) PositionModel *postionModel;
 
 @end
 static NSString *const communitypostionCell_id= @"communitypostionCell_id";
@@ -25,6 +26,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 - (void)viewDidLoad{
     [super viewDidLoad];
     [[ContractManager manager] addDelegate:self];
+    self.postionModel = [[PositionModel alloc]init];
     //历史记录
     [self creatRightBarButton];
     [self configUI];
@@ -45,7 +47,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         return;
     }
     self.tabBarController.tabBar.hidden = NO;
-    if (self.holdPosArray.count > 0) {
+    if (self.holdPosDic.count > 0) {
         self.holdPos_tableView.alpha = 1;
         self.noDataView.alpha = 0;
     }else{
@@ -59,8 +61,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 -(void)progressHUDdismiss{
     //l可用资金
-    NSMutableDictionary *dic =  [[ContractManager manager] positions];
-    self.headerView.bondCaLabel.text = [dic objectForKey:@"margin"];
+    self.holdPosDic =  [[ContractManager manager] positions];
+    self.headerView.bondCaLabel.text = [self.holdPosDic objectForKey:@"margin"];
+//    self.holdPosArray
+    
+   self.postionModel =  [PositionModel createModelWithData:self.holdPosDic];
+  
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];
@@ -126,12 +132,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
     return _noDataView;
 }
--(NSArray *)holdPosArray{
-    if (!_holdPosArray) {
-        _holdPosArray = [NSArray array];
+-(NSMutableDictionary *)holdPosDic{
+    if (!_holdPosDic) {
+        _holdPosDic = [NSMutableDictionary dictionary];
 //        _holdPosArray = @[@"2"];
     }
-    return _holdPosArray;
+    return _holdPosDic;
 }
 
 -(UITableView *)holdPos_tableView{
@@ -205,9 +211,9 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 #pragma -------------------ContractManagerDelegate -------------
 
--(void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList{
-    
-}
+//-(void)contractManager:(ContractManager *)manager positionListDidChange:(NSDictionary<NSString *,GLPositionModel *> *)positionList{
+//    NSLog(@"positionList = %@",positionList);
+//}
 
 #pragma ------------------tableviewDelegate---------------
 
@@ -215,7 +221,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.holdPosArray.count;
+    return self.holdPosDic.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
@@ -237,8 +243,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     cell.backgroundColor = UIColor.clearColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    //    [cell setNewsTableViewCellControlContentWithModel:dic];
-    
+    [cell setPositionTableViewCellControlContentWithModel:self.postionModel];
+//
     return cell;
 }
 

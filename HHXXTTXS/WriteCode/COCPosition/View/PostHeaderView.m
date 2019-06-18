@@ -52,7 +52,12 @@
 //        }else{
 //            self.aviablejinE.text = model.avaiCapital;
 //        }
-        self.aviablejinE.text  = avaiCaptital;
+        if(Has_Login){
+            self.aviablejinE.text  = avaiCaptital;
+        }else{
+            self.aviablejinE.text  = @"0.00";
+        }
+        
         self.aviablejinE.textColor = RGBColor(249, 115, 84);
         self.aviablejinE.font = UiFontSys(14);
         [self addSubview:self.aviablejinE];
@@ -86,7 +91,14 @@
 //        if (model.netCapital == nil || [model.netCapital isEqualToString:@""]) {
 //            self.netCapjinE.text = @"0.00";
 //        }else{
-            self.netCapjinE.text = avaiCaptital;
+//            self.netCapjinE.text = avaiCaptital;
+//
+        if(Has_Login){
+            self.netCapjinE.text  = avaiCaptital;
+        }else{
+            self.netCapjinE.text  = @"0.00";
+        }
+        
 //        }
         
         self.netCapjinE.textColor = RGBColor(249, 115, 84);
