@@ -58,7 +58,8 @@
             plValue = plValue * (- 1.0f);
         }
         
-        _pl = [@(plValue) stringValue];
+       _pl = [NSString stringWithFormat:@"%.2f",plValue];
+//        _pl = [@(plValue) stringValue];
         
     }else {
         _pl = @"0.00";
