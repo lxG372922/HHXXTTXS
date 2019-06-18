@@ -39,11 +39,9 @@
 -(void)addtailkClick{
     COCPositionHostViewController *hostVc  = [[COCPositionHostViewController alloc]init];
     hostVc.title = @"历史订单";
-//    hostVc.hidesBottomBarWhenPushed = YES;
+    hostVc.hidesBottomBarWhenPushed =YES;
     [self.navigationController pushViewController:hostVc animated:YES];
 }
-
-
 
 - (void)addTabPageBar {
     TYTabPagerBar *tabBar = [[TYTabPagerBar alloc]init];
@@ -112,10 +110,11 @@
 - (UIViewController *)pagerController:(TYPagerController *)pagerController controllerForIndex:(NSInteger)index prefetching:(BOOL)prefetching {
     if (index == 0) {
         COCHomeMarketViewController *market = [[COCHomeMarketViewController alloc]init];
+        
         return market;
     }else{
         COCPositionViewController *position = [[COCPositionViewController alloc]init];
-
+        
         return position;
     }
 }

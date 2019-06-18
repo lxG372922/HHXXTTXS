@@ -27,7 +27,7 @@
     if(!_outBtn){
         _outBtn = [[UIButton alloc]init];
         [_outBtn setTitle:@"退出登录" forState:UIControlStateNormal];
-        _outBtn.backgroundColor = RGB(51, 51, 51);
+        _outBtn.backgroundColor = RGB(18, 44, 50);
         _outBtn.layer.masksToBounds = YES;
         _outBtn.layer.cornerRadius = 10;
     }

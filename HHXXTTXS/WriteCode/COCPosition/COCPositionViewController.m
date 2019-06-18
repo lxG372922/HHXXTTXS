@@ -48,7 +48,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         [self.holdPos_tableView.mj_header endRefreshing];
         return;
     }
-    self.tabBarController.tabBar.hidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
    
     [SVProgressHUD show];
     [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];

@@ -34,7 +34,7 @@
         [self addSubview:self.passTF];
         [self addSubview:self.loginBtn];
         [self addSubview:self.regisBtn];
-//        [self addSubview:self.forgetBtn];
+        [self addSubview:self.forgetBtn];
         [self addSubview:self.userLine];
         [self addSubview:self.passLine];
     }
@@ -124,7 +124,7 @@
         _loginBtn  = [[UIButton alloc]init];
         _loginBtn.layer.masksToBounds = YES;
         _loginBtn.layer.cornerRadius = 20;
-        _loginBtn.backgroundColor = RGB(51, 51, 51);
+        _loginBtn.backgroundColor = RGB(18, 44, 50);
     }
     return _loginBtn;
 }
@@ -142,6 +142,7 @@
         _forgetBtn = [[UIButton alloc]init];
         _forgetBtn.titleLabel.font = FONT(14);
 //        _forgetBtn.backgroundColor = [UIColor yellowColor];
+        [_forgetBtn setImage:[UIImage imageNamed:@"bt_navigation_white_nor"] forState:UIControlStateNormal];
     }
     return _forgetBtn;
 }
@@ -151,7 +152,7 @@
     if(type == 1){
         [_logoImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset((SCREEN_Width- 60)/2);
-            make.top.equalTo(self.mas_top).mas_offset(50);
+            make.top.equalTo(self.mas_top).mas_offset(50+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(60);
             make.height.mas_equalTo(60);
         }];
@@ -159,21 +160,21 @@
         _phoneBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0 + 5 / 2, 0, 0 - 5 / 2);
         [_phoneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(200);
+            make.top.equalTo(self.mas_top).mas_offset(200+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(90);
             make.height.mas_equalTo(20);
         }];
         
         [_userTF mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(230);
+            make.top.equalTo(self.mas_top).mas_offset(230+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(40);
         }];
         
         [_userLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(271);
+            make.top.equalTo(self.mas_top).mas_offset(271+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(1);
         }];
@@ -182,28 +183,28 @@
         _passBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0 + 5 / 2, 0, 0 - 5 / 2);
         [_passBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(280);
+            make.top.equalTo(self.mas_top).mas_offset(280+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(90);
             make.height.mas_equalTo(20);
         }];
         
         [_passTF mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(310);
+            make.top.equalTo(self.mas_top).mas_offset(310+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(40);
         }];
         
         [_passLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(351);
+            make.top.equalTo(self.mas_top).mas_offset(351+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(1);
         }];
         [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(60);
-            make.top.equalTo(self.mas_top).mas_offset(380);
+            make.top.equalTo(self.mas_top).mas_offset(380+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 120);
             make.height.mas_equalTo(40);
         }];
@@ -211,16 +212,16 @@
         _regisBtn.titleLabel.font = FONT(14);
         [_regisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.mas_right).mas_offset(-30);
-            make.top.equalTo(self.mas_top).mas_offset(440);
+            make.top.equalTo(self.mas_top).mas_offset(440+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(80);
             make.height.mas_equalTo(20);
         }];
-        [_forgetBtn setTitle:@"忘记密码?" forState:UIControlStateNormal];
+        
         [_forgetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.mas_right).mas_offset(-30);
-            make.top.equalTo(self.mas_top).mas_offset(440);
-            make.width.mas_equalTo(80);
-            make.height.mas_equalTo(20);
+            make.left.equalTo(self.mas_left).mas_offset(20);
+            make.top.equalTo(self.mas_top).mas_offset(50);
+            make.width.mas_equalTo(30);
+            make.height.mas_equalTo(30);
         }];
         
     }else if(type == 2){
@@ -229,7 +230,7 @@
         _regisBtn.titleLabel.font = FONT(17);
         [_regisBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(20);
-            make.top.equalTo(self.mas_top).mas_offset(170);
+            make.top.equalTo(self.mas_top).mas_offset(170+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(50);
             make.height.mas_equalTo(20);
         }];
@@ -239,21 +240,21 @@
         _phoneBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0 + 5 / 2, 0, 0 - 5 / 2);
         [_phoneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(200);
+            make.top.equalTo(self.mas_top).mas_offset(200+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(90);
             make.height.mas_equalTo(20);
         }];
         
         [_userTF mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(230);
+            make.top.equalTo(self.mas_top).mas_offset(230+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(40);
         }];
         
         [_userLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(271);
+            make.top.equalTo(self.mas_top).mas_offset(271+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(1);
         }];
@@ -262,21 +263,21 @@
         _passBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 0 + 5 / 2, 0, 0 - 5 / 2);
         [_passBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(280);
+            make.top.equalTo(self.mas_top).mas_offset(280+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(90);
             make.height.mas_equalTo(20);
         }];
         
         [_passTF mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(310);
+            make.top.equalTo(self.mas_top).mas_offset(310+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(40);
         }];
         
         [_passLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(40);
-            make.top.equalTo(self.mas_top).mas_offset(351);
+            make.top.equalTo(self.mas_top).mas_offset(351+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 80);
             make.height.mas_equalTo(1);
         }];
@@ -284,9 +285,16 @@
         [_loginBtn setTitle:@"注册" forState:UIControlStateNormal];
         [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(60);
-            make.top.equalTo(self.mas_top).mas_offset(380);
+            make.top.equalTo(self.mas_top).mas_offset(380+TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 120);
             make.height.mas_equalTo(40);
+        }];
+        
+        [_forgetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.mas_left).mas_offset(20);
+            make.top.equalTo(self.mas_top).mas_offset(50);
+            make.width.mas_equalTo(30);
+            make.height.mas_equalTo(30);
         }];
         
     }else if(type == 3){

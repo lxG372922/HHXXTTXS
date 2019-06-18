@@ -28,7 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _loginV = [[LoginView alloc]initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, SCREEN_Width, SCREEN_HEIGHT - TOP_BAR_HEIGHT)];
+    self.navigationController.navigationBar.hidden = YES;
+    
+    
+    _loginV = [[LoginView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, SCREEN_HEIGHT)];
     _loginV.backgroundColor = RGB(150, 150, 151);
     _loginV.userTF.delegate = self;
     [_loginV getcreateWithViewFrame:1];
@@ -87,9 +90,8 @@
 //忘记密码
 -(void)clickForgetBtn:(UIButton *)sender
 {
-    ForgetViewController *forget = [[ForgetViewController alloc]init];
     
-    [self.navigationController pushViewController:forget animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
