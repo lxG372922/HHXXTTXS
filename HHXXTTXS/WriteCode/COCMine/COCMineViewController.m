@@ -14,6 +14,7 @@
 #import "SignatureViewController.h"
 #import "ModifyPassViewController.h"
 #import "LoginViewController.h"
+#import "COCOpenViewController.h"
 @interface COCMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr1, *titleArr2;
@@ -92,6 +93,15 @@
     [self.navigationController pushViewController:login animated:YES];
 }
 -(void)clickCertificationBtn:(UIButton *)sender{
+    
+    if(Has_Login){
+        COCOpenViewController * cocopen = [[COCOpenViewController alloc]init];
+        cocopen.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:cocopen animated:YES];
+    }else{
+        [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
+    }
+   
     NSLog(@"实名认证");
 }
 -(void)headerViewWithData{
@@ -199,7 +209,15 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        NSLog(@"0");
+        if(Has_Login){
+            COCOpenViewController * cocopen = [[COCOpenViewController alloc]init];
+            cocopen.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:cocopen animated:YES];
+        }else{
+            [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
+        }
+       
+        
     }else{
         if(Has_Login){
             if(indexPath.row == 0){
