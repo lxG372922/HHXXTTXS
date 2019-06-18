@@ -897,9 +897,9 @@
 		18F20B1522B350310064DE4C /* MacroFile */ = {
 			isa = PBXGroup;
 			children = (
-				0458099822B7A8F30083A8C8 /* COCOpenHeader.h */,
 				18F20B1622B350470064DE4C /* COCConstants.h */,
 				18F20B1722B350800064DE4C /* COCLocalStoragePublicKey.h */,
+				0458099822B7A8F30083A8C8 /* COCOpenHeader.h */,
 				18F20B1822B3508F0064DE4C /* COCPrefixHeader.pch */,
 				18F20B1922B3509F0064DE4C /* COCPublicEnum.h */,
 			);
