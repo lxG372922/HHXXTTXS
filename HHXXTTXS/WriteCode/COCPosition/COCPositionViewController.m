@@ -239,7 +239,26 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         
     };
     cell.pingCblock = ^(NSNumber * _Nonnull index) {
+        OrderModel * mode = [OrderModel new];
+        mode.name = self.postionModel.name;
+        mode.tradeHands = self.postionModel.totalHands;
+        mode.avgTime =[FAPHelp getNowTime1];
+        mode.identifier = self.postionModel.identifier;
+        NSString * show;
         
+        if ((self.postionModel.positionType = ContractTradeTypeOpenLong)  ) {
+
+            mode.tradeType = ContractTradeTypeCloseLong;
+            show = @"买多";
+        }else{
+            show = @"卖空";
+            mode.tradeType = ContractTradeTypeOpenShort;
+        }
+        
+        [[ContractManager manager]addOrderWithModel:mode];
+        
+        [SVProgressHUD show];
+        [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
     };
     cell.backgroundColor = UIColor.clearColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -257,7 +276,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     //    NSDictionary *dic = self.holdPosArray[indexPath.row];
     //    NSString *title = [dic objectForKey:@"title"];
     //    CGSize titleSize  =[title boundingRectWithSize:CGSizeMake(SCREEN_Width - 30.00, CGFLOAT_MAX) fontSize:16];
-    return 150;
+    return 130;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    NSDictionary *dic = self.holdPosArray[indexPath.row];
