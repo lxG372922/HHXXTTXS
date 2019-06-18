@@ -71,7 +71,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
   
     
-    
+    self.headerView.aviablejinE.text = [[ContractManager manager] getCurrentAvailCaptital];
     self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
     self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
     self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];

@@ -124,6 +124,8 @@
         self.identifier = orderModel.identifier;
         self.name = orderModel.name;
         self.lever = orderModel.lever;
+        self.currentPrice = orderModel.tradePrice;
+        
         switch (orderModel.tradeType) {
             case ContractTradeTypeOpenLong:
             {
