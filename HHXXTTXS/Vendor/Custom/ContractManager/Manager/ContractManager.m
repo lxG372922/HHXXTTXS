@@ -162,7 +162,7 @@ static ContractManager *_manager;
 //            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
 //        }
         
-        self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulatePostion];
+        self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_CurrentCapital];
         
         if (!self.availableCapital) {
             self.availableCapital = [SIMULATECAPITAL stringValue];
