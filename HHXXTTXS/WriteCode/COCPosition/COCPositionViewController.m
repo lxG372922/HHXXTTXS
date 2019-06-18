@@ -8,7 +8,7 @@
 
 #import "COCPositionViewController.h"
 
-@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface COCPositionViewController ()<UITableViewDelegate,UITableViewDataSource,ContractManagerDelegate>
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic,strong) UIImageView *noDataImageView;
 @property (nonatomic,strong)UIButton *makeOrderBtn;
@@ -58,6 +58,8 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 -(void)progressHUDdismiss{
     
+    //l可用资金
+  
     [self.holdPos_tableView.mj_header endRefreshing];
     [SVProgressHUD dismiss];
     [self.holdPos_tableView reloadData];

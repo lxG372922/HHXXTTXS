@@ -326,7 +326,6 @@ static ContractManager *_manager;
     }
     
     if (!isExist) {
-        
         GLPositionModel *newPosition = [GLPositionModel createPositionWithOrderModel:orderModel];
         [self.positions setObject:newPosition forKey:newPosition.saveIdentifier];
         marketValue += [newPosition.marketValue floatValue];
