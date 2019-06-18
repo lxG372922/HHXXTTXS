@@ -9,6 +9,14 @@
 #import "OrderModel.h"
 
 @implementation OrderModel
+
+- (NSString *)lever {
+    if (!_lever) {
+        _lever = @"1";
+    }
+    return _lever;
+}
+
 - (NSString *)saveIdentifier {
     
     if (!_saveIdentifier) {
@@ -49,6 +57,14 @@
     
     
     return string;
+}
+
+- (NSString *)tradeAmount {
+    if (isStrEmpty(_tradeAmount) || [_tradeAmount floatValue] <= 0) {
+        CGFloat tradeAmount = ([self.tradePrice floatValue] * [self.tradeHands floatValue]) / [self.lever integerValue];
+        _tradeAmount = [@(tradeAmount) stringValue];
+    }
+    return _tradeAmount;
 }
 
 @end

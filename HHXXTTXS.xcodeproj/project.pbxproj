@@ -136,7 +136,7 @@
 		18F20BBD22B354E60064DE4C /* ASOHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BB522B354E60064DE4C /* ASOHTTPRequest.m */; };
 		18F20BBE22B354E60064DE4C /* ASORequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BB722B354E60064DE4C /* ASORequestSerializer.m */; };
 		18F20BBF22B354E60064DE4C /* ASOResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20BB922B354E60064DE4C /* ASOResponseSerializer.m */; };
-		BFA12C6C8B9F8AAEA7D9E19E /* libPods-HHXXTTXS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C44C322C4567A300FEB0EF /* libPods-HHXXTTXS.a */; };
+		BBA6C4D436014EC95931704C /* libPods-HHXXTTXS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C44C322C4567A300FEB0EF /* libPods-HHXXTTXS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -402,7 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA12C6C8B9F8AAEA7D9E19E /* libPods-HHXXTTXS.a in Frameworks */,
+				BBA6C4D436014EC95931704C /* libPods-HHXXTTXS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

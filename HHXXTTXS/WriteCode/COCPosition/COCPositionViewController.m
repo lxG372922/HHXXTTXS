@@ -96,6 +96,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 -(void)addtailkClick{
     COCPositionHostViewController *hostVc  = [[COCPositionHostViewController alloc]init];
     hostVc.title = @"历史订单";
+    hostVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hostVc animated:YES];
 }
 
