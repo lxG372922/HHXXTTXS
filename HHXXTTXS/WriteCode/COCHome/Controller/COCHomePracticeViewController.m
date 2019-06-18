@@ -20,7 +20,7 @@
     
     [self addPagerController];
     
-    [self creatRightBarButton];
+//    [self creatRightBarButton];
     
     [self loadData];
 }
