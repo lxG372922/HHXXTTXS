@@ -757,12 +757,12 @@
 		04ED941022B89BBD00598327 /* Coding */ = {
 			isa = PBXGroup;
 			children = (
-				04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */,
-				04ED941222B89BBD00598327 /* XsyModelManager.m */,
-				04ED941322B89BBD00598327 /* XsyFileManager.h */,
-				04ED941422B89BBD00598327 /* XsyModelManager.h */,
 				04ED941522B89BBD00598327 /* NSObject+XsyCoding.h */,
+				04ED941122B89BBD00598327 /* NSObject+XsyCoding.m */,
+				04ED941322B89BBD00598327 /* XsyFileManager.h */,
 				04ED941622B89BBD00598327 /* XsyFileManager.m */,
+				04ED941422B89BBD00598327 /* XsyModelManager.h */,
+				04ED941222B89BBD00598327 /* XsyModelManager.m */,
 			);
 			path = Coding;
 			sourceTree = "<group>";
