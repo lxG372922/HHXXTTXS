@@ -84,7 +84,7 @@
         
     }
     cell1.marketmodel = _syDaMArray[indexPath.row];
- 
+    [cell1 setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell1;
     
 }

@@ -554,14 +554,14 @@
 		049B972F22B38268003D943E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
+				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
+				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				04ED93F922B7B5EE00598327 /* COCPositionDetailViewController.h */,
 				04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */,
 				04ED93F822B7B5EE00598327 /* COCPositionDetailViewController.xib */,
 				049B973622B38556003D943E /* COCPositionHostViewController.h */,
 				049B973722B38556003D943E /* COCPositionHostViewController.m */,
-				049B978922B71360003D943E /* COCHisRecordsViewController.h */,
-				049B978A22B71360003D943E /* COCHisRecordsViewController.m */,
-				049B978B22B71360003D943E /* COCHisRecordsViewController.xib */,
 				049B978E22B7298F003D943E /* COCSetCCViewController.h */,
 				049B978F22B7298F003D943E /* COCSetCCViewController.m */,
 				049B979022B7298F003D943E /* COCSetCCViewController.xib */,
@@ -897,9 +897,9 @@
 		18F20B1522B350310064DE4C /* MacroFile */ = {
 			isa = PBXGroup;
 			children = (
-				0458099822B7A8F30083A8C8 /* COCOpenHeader.h */,
 				18F20B1622B350470064DE4C /* COCConstants.h */,
 				18F20B1722B350800064DE4C /* COCLocalStoragePublicKey.h */,
+				0458099822B7A8F30083A8C8 /* COCOpenHeader.h */,
 				18F20B1822B3508F0064DE4C /* COCPrefixHeader.pch */,
 				18F20B1922B3509F0064DE4C /* COCPublicEnum.h */,
 			);
@@ -1558,7 +1558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5THF8E8SHG;
+				DEVELOPMENT_TEAM = DU23Y346G4;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1630,7 +1630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5THF8E8SHG;
+				DEVELOPMENT_TEAM = DU23Y346G4;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

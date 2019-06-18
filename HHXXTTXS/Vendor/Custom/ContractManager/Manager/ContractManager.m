@@ -155,12 +155,15 @@ static ContractManager *_manager;
     
     if (isStrEmpty(self.availableCapital)) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
+//        if (@available(iOS 11.0, *)) {
+//            self.availableCapital = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSString class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+//            self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
+//        }
+        
+        self.availableCapital = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulatePostion];
+        
         if (!self.availableCapital) {
             self.availableCapital = [SIMULATECAPITAL stringValue];
         }
@@ -388,14 +391,14 @@ static ContractManager *_manager;
 - (NSMutableDictionary<NSString *,GLPositionModel *> *)positions {
     if (!_positions) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _positions = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
+//        if (@available(iOS 11.0, *)) {
+//            _positions = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _positions = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulatePostion];
+//        }
         
-        if (!_positions || !data) {
+        if (!_positions) {
             _positions = @{}.mutableCopy;
         }
     }
@@ -404,13 +407,13 @@ static ContractManager *_manager;
 
 - (NSMutableArray<OrderModel *> *)orderList {
     if (!_orderList) {
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulatePostion];
-        if (@available(iOS 11.0, *)) {
-            _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _orderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
-        if (!_orderList || !data) {
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_SimulateOrders];
+//        if (@available(iOS 11.0, *)) {
+//            _orderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _orderList = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_SimulateOrders];
+//        }
+        if (!_orderList) {
             _orderList = @[].mutableCopy;
         }
     }
@@ -420,13 +423,13 @@ static ContractManager *_manager;
 - (NSMutableDictionary<NSString *,NSArray<OrderModel *> *> *)hisOrderList {
     if (!_hisOrderList) {
         
-        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_HisSimulateOrders];
-        if (@available(iOS 11.0, *)) {
-            _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
-        } else {
-            _hisOrderList = [NSKeyedUnarchiver unarchiveObjectWithData:data ? : [NSData data]];
-        }
-        if(!_hisOrderList || !data) {
+//        NSData *data = [NSData dataWithContentsOfFile:COC_ArchiverPath_HisSimulateOrders];
+//        if (@available(iOS 11.0, *)) {
+//            _hisOrderList = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSMutableArray class] fromData:data ? : [NSData data] error:nil];
+//        } else {
+            _hisOrderList = [NSKeyedUnarchiver unarchiveObjectWithFile:COC_ArchiverPath_HisSimulateOrders];
+//        }
+        if(!_hisOrderList) {
             _hisOrderList = @{}.mutableCopy;
         }
     }

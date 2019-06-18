@@ -7,7 +7,7 @@
 //
 
 #import "COCHostTableViewCell.h"
-#import "OrderModel.h"
+#import "GLPositionModel.h"
 
 @implementation COCHostTableViewCell
 
@@ -22,18 +22,20 @@
     // Configure the view for the selected state
 }
 
--(void)setPositionTableViewCellControlContentWithModel:(OrderModel *)dataModel
+-(void)setPositionTableViewCellControlContentWithModel:(GLPositionModel *)dataModel
 {
     self.pro_Name.text = dataModel.name;
-    self.pro_Time.text = dataModel.name;
-    self.pro_Shou.text = dataModel.name;
-    self.pro_roatePoint.text = dataModel.name;
-    self.pro_style.text = dataModel.name;
+    self.pro_Time.text = dataModel.margin;
+    self.pro_Shou.text = dataModel.totalHands;
+    self.pro_roatePoint.text = dataModel.lever;
+    
     self.pro_JSYKSPrice.text = dataModel.name;
     
-    if ([dataModel.name isEqualToString:@"多"]) {
+    if (dataModel.positionType == ContractTradeTypeOpenLong) {
+        self.pro_style.text = @"买多";
         self.pro_kongOrDuo.image = [UIImage imageNamed:@"duo-3"];
-    }else{
+    }else if(dataModel.positionType == ContractTradeTypeOpenLong){
+        self.pro_style.text = @"卖空";
         self.pro_kongOrDuo.image = [UIImage imageNamed:@"kong-2"];
     }
     

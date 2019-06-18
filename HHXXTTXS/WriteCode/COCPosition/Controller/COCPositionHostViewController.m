@@ -10,7 +10,7 @@
 #import "OrderModel.h"
 @interface COCPositionHostViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    NSDictionary *dic ;
+    NSDictionary * dicArray ;
 }
 @property (nonatomic , strong)UITableView *holdPos_tableView;
 @property (nonatomic , strong)NSArray *holdPosArray;
@@ -35,6 +35,9 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     }];
      [self.view addSubview:self.noDataView];
     // Do any additional setup after loading the view.
+    
+    
+    [self reloadDataUI];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -95,9 +98,9 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 
 -(void)reloadDataUI{
-    dic  =  [[ContractManager manager] hisOrderList];
-    if (dic.count > 0) {
-        self.postionModel =dic[dic.allKeys[0]];
+    dicArray  =  [[ContractManager manager] positions];
+    if (dicArray.count > 0) {
+//        self.postionModel =dicArray[];
         self.holdPos_tableView.alpha = 1;
         self.noDataView.alpha = 0;
     }else{
@@ -114,7 +117,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dic.count;
+    return dicArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCHostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communityReportCell_id_1];
@@ -123,7 +126,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
+    [cell setPositionTableViewCellControlContentWithModel:dicArray[dicArray.allKeys[indexPath.row]]];
 
     return cell;
 }

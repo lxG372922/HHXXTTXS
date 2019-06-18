@@ -21,9 +21,9 @@
     label.textColor = textColor;
     
     label.textAlignment = Alignment;
-    
+
     label.font = [UIFont systemFontOfSize:font];
-    
+
     
     return label;
     

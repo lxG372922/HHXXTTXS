@@ -27,6 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self configTableView];
     
+    
 }
 
 - (UIView *)yuFoldingTableView:(YUFoldingTableView *)yuTableView viewForHeaderInSection:(NSInteger)section
@@ -57,9 +58,14 @@
 }
 
 - (void)configTableView{
-    self.zTableView = [[YUFoldingTableView alloc]initWithFrame:CGRectMake(0, COCNavBar_height, SCREEN_Width, SCREEN_Height-(COCNavBar_height))];
+    self.zTableView = [[YUFoldingTableView alloc]initWithFrame:CGRectMake(0, Nav_topH, SCREEN_Width, SCREEN_Height-(Nav_topH+TAB_BAR_HRIGHT))];
     self.zTableView.showsVerticalScrollIndicator = NO;
     self.zTableView.foldingDelegate = self;
+    if (@available(iOS 11.0, *)) {
+        self.zTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     if (self.arrowPosition) {
         self.zTableView.foldingState = YUFoldingSectionStateShow;
     }
@@ -74,16 +80,19 @@
     self.zHeadView = [[COCHomeHeaderView alloc] instanceView];
     weakSelf(self);
     self.zHeadView.frame = CGRectMake(0, 0, SCREEN_Width, 580);
+//    针对性练习
     self.zHeadView.practiceBlock = ^{
         COCHomePracticeViewController *practice = [[COCHomePracticeViewController alloc]init];
         practice.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:practice animated:YES];
     };
+//    开户
     self.zHeadView.openBlock = ^{
         COCOpenViewController *open = [[COCOpenViewController alloc]init];
         open.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:open animated:YES];
     };
+//    关于我们
     self.zHeadView.aboutUsBlock = ^{
         COCHomeAboutUsViewController *about = [[COCHomeAboutUsViewController alloc]init];
         about.hidesBottomBarWhenPushed = YES;
@@ -119,12 +128,10 @@
         cell = [[ContentTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.contentL.text = [NSString stringWithFormat:@"%@",[self.announcementArr[indexPath.row] objectForKey:@"metadesc"]];
+    cell.contentL.text = [NSString stringWithFormat:@"%@",[self.announcementArr[indexPath.section] objectForKey:@"metadesc"]];
     cell.contentL.lineBreakMode = NSLineBreakByTruncatingTail;
     CGSize maximumLabelSize = CGSizeMake(SCREEN_Width*0.9, 9999);//labelsize的最大值
-    //关键语句
     CGSize expectSize = [cell.contentL sizeThatFits:maximumLabelSize];
-    //别忘了把frame给回label，如果用xib加了约束的话可以只改一个约束的值
     cell.contentL.frame = CGRectMake(SCREEN_Width*0.05, 0, SCREEN_Width*0.9, expectSize.height+20);
     yuTableView.rowHeight = expectSize.height+20;
     
