@@ -121,20 +121,20 @@ static COCMainViewController *_instance;
     COCBaseNaviController *newsNV = [[COCBaseNaviController alloc] initWithRootViewController:newsVC];
     
     
-//    COCMineViewController *meVC = [[COCMineViewController alloc] init];
-//    meVC.title = @"我的";
-//    meVC.hidesBottomBarWhenPushed = NO;
-//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
+    COCMineViewController *meVC = [[COCMineViewController alloc] init];
+    meVC.title = @"我的";
+    meVC.hidesBottomBarWhenPushed = NO;
+    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
     
 //    COCSimulationViewController *simulationVC = [[COCSimulationViewController alloc] init];
 //    simulationVC.title = @"模拟";
 //    simulationVC.hidesBottomBarWhenPushed = NO;
 //    COCBaseNaviController *simulateNV = [[COCBaseNaviController alloc] initWithRootViewController:simulationVC];
     
-    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
-    meVC.title = @"开户";
-    meVC.hidesBottomBarWhenPushed = NO;
-    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
+//    COCOpenViewController *meVC = [[COCOpenViewController alloc] init];
+//    meVC.title = @"开户";
+//    meVC.hidesBottomBarWhenPushed = NO;
+//    COCBaseNaviController *meNV = [[COCBaseNaviController alloc] initWithRootViewController:meVC];
     
     [self.VCArray addObject:homeNV];
     [self.VCArray addObject:marketNV];
