@@ -29,7 +29,9 @@
     self.pro_Shou.text = dataModel.totalHands;
     self.pro_roatePoint.text = dataModel.margin;
     
-    self.pro_JSYKSPrice.text = dataModel.name;
+//    self.pro_JSYKSPrice.text = dataModel.name;
+    CGFloat plValue = ([dataModel.currentPrice floatValue] - [dataModel.avgPrice floatValue]);
+    self.pro_JSYKSPrice.text = [NSString stringWithFormat:@"%.2fRMB",plValue];
     
     if (dataModel.positionType == ContractPositionTypeLong) {
         self.pro_style.text = @"买多";
