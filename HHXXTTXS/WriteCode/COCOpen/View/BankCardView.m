@@ -105,6 +105,7 @@
     
 //    6228480402564890018
     
+    
     [request oneGet:[NSString stringWithFormat:@"https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=%@&cardBinCheck=true",textField.text] path:[NSString string] parameters:[NSDictionary dictionary] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [SVProgressHUD dismiss];

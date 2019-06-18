@@ -94,6 +94,7 @@
 		185B0FAC22B7A34000491D58 /* IdentityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0FA122B7A33F00491D58 /* IdentityView.m */; };
 		185B0FAD22B7A34000491D58 /* LXBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0FA322B7A33F00491D58 /* LXBaseView.m */; };
 		185B0FAE22B7A34000491D58 /* UIImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0FA622B7A34000491D58 /* UIImageExt.m */; };
+		185B0FB022B7A97700491D58 /* bank.json in Resources */ = {isa = PBXBuildFile; fileRef = 185B0FAF22B7A97700491D58 /* bank.json */; };
 		18F20AC622B34E960064DE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F20AC522B34E960064DE4C /* AppDelegate.m */; };
 		18F20ACC22B34E960064DE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACA22B34E960064DE4C /* Main.storyboard */; };
 		18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F20ACD22B34E960064DE4C /* Assets.xcassets */; };
@@ -308,6 +309,7 @@
 		185B0FA522B7A34000491D58 /* OpenString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenString.h; sourceTree = "<group>"; };
 		185B0FA622B7A34000491D58 /* UIImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExt.m; sourceTree = "<group>"; };
 		185B0FA722B7A34000491D58 /* UIImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExt.h; sourceTree = "<group>"; };
+		185B0FAF22B7A97700491D58 /* bank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bank.json; sourceTree = "<group>"; };
 		18F20AC122B34E960064DE4C /* HHXXTTXS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHXXTTXS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F20AC422B34E960064DE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18F20AC522B34E960064DE4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 		18F20AC322B34E960064DE4C /* HHXXTTXS */ = {
 			isa = PBXGroup;
 			children = (
+				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20AD222B34E960064DE4C /* Info.plist */,
 				18F20B9622B352140064DE4C /* WriteCode */,
 				18F20ADA22B34F080064DE4C /* BaseFile */,
@@ -1185,6 +1188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185B0FB022B7A97700491D58 /* bank.json in Resources */,
 				049B97AD22B73C51003D943E /* COCHomeHeaderView.xib in Resources */,
 				049B97A922B73C51003D943E /* COCHomeMarketViewController.xib in Resources */,
 				049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */,
