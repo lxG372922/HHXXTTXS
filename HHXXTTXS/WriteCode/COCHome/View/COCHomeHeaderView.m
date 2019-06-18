@@ -65,7 +65,12 @@
 }
 
 - (void)clickzViewThree{
-    self.openBlock();
+    if(Has_Login){
+        self.openBlock();
+    }else{
+        [PKProgressHUD pkShowErrorWithStatueTitle:@"未登录，请先登录！"];
+    }
+    
 }
 
 - (void)clickzViewFour{

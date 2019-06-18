@@ -1,11 +1,3 @@
-//
-//  COCHomeAboutUsViewController.m
-//  HHXXTTXS
-//
-//  Created by mac on 2019/6/18.
-//  Copyright © 2019 apple. All rights reserved.
-//
-
 #import "COCHomeAboutUsViewController.h"
 #import <StoreKit/StoreKit.h>
 #import "COCHomeServiceViewController.h"

@@ -115,6 +115,7 @@
     if (cell == nil) {
         cell = [[ContentTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     cell.contentL.text = [NSString stringWithFormat:@"%@",[self.announcementArr[indexPath.row] objectForKey:@"metadesc"]];
     cell.contentL.lineBreakMode = NSLineBreakByTruncatingTail;
     CGSize maximumLabelSize = CGSizeMake(SCREEN_Width*0.9, 9999);//labelsize的最大值

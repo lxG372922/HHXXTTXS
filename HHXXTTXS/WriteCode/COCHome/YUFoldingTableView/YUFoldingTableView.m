@@ -1,11 +1,3 @@
-//
-//  YUFoldingTableView.m
-//  YUFoldingTableView
-//
-//  Created by administrator on 16/8/24.
-//  Copyright © 2016年 timelywind. All rights reserved.
-//
-
 #import "YUFoldingTableView.h"
 
 static NSString *YUFoldingSectionHeaderID = @"YUFoldingSectionHeader";

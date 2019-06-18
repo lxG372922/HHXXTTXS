@@ -1,11 +1,3 @@
-//
-//  ContentTableViewCell.m
-//  GUPP
-//
-//  Created by apple on 2019/6/18.
-//  Copyright © 2019 apple. All rights reserved.
-//
-
 #define XXXXFont(x) [UIFont fontWithName:@"PingFangSC-Light" size:x]//苹方细体
 
 #define MMMRGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

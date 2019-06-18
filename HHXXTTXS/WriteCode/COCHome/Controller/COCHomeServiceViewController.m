@@ -1,11 +1,3 @@
-//
-//  COCHomeServiceViewController.m
-//  HHXXTTXS
-//
-//  Created by mac on 2019/6/18.
-//  Copyright © 2019 apple. All rights reserved.
-//
-
 #import "COCHomeServiceViewController.h"
 @interface COCHomeServiceViewController ()
 @property (nonatomic, strong)UIWebView *webView;
