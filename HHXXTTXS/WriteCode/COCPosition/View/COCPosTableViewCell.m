@@ -61,7 +61,7 @@
     }
      self.pro_Price.text = dataModel.pl;
      self.pro_KCPrice.text = dataModel.avgPrice;
-     self.pro_nowPrice.text = dataModel.avgPrice;
+     self.pro_nowPrice.text = dataModel.currentPrice;
      self.pro_zhiyPrice.text = dataModel.zhiYPrice;
      self.pro_zhisPrice.text = dataModel.zhiSPrice;
 }
