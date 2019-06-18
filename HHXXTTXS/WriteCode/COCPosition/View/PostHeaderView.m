@@ -106,6 +106,7 @@
         [self addSubview:self.netCapjinE];
         
         if(Has_Login){
+            
             self.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
             self.totaijinE.text = [[ContractManager manager] getAllPL];
             self.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];

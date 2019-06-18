@@ -31,8 +31,8 @@
     if (!isStrEmpty(self.lever) && !isStrEmpty(self.totalHands) && !isStrEmpty(self.avgPrice)) {
         
         CGFloat marginValue = [_totalHands integerValue] * [_avgPrice floatValue] * (1.0f / [_lever floatValue]);
-        
-        _margin = [@(marginValue) stringValue];
+        _margin = [NSString stringWithFormat:@"%.2f",marginValue];
+//        _margin = [@(marginValue) stringValue];
     }else {
         _margin = @"0";
     }
