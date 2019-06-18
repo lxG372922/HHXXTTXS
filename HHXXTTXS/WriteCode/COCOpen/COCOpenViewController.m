@@ -97,10 +97,8 @@
     if (_fillV.nameT.text.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入您的姓名"];
         return;
-    }else{
-        userSave(self.fillV.nameT.text, @"USERNAME");
     }
-
+    
     if (_fillV.numberT.text.length == 0) {
         [SVProgressHUD showErrorWithStatus:@"请输入您的身份证号码"];
         return;
@@ -112,7 +110,7 @@
     ASOHTTPRequest *request = [[ASOHTTPRequest alloc]init];
 
     [request oneGet:[NSString stringWithFormat:@"http://apis.juhe.cn/idcard/index?cardno=%@&key=%@",_fillV.numberT.text,juheKey] path:[NSString string] parameters:[NSDictionary dictionary] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
+        
         [SVProgressHUD dismiss];
 
         NSDictionary *dic = (NSDictionary *)responseObject;
@@ -123,13 +121,15 @@
 
         if ([checkStr isEqualToString:@"200"]) {
             [SVProgressHUD showSuccessWithStatus:@"校验成功"];
-            NSLog(@"%@",weakSelf.fillV.nameT.text);
-
+            
+            userSave(weakSelf.fillV.nameT.text, @"USERNAME");
+            
             [UIView animateWithDuration:0.5 animations:^{
-
                 weakSelf.fillV.alpha = 0;
                 weakSelf.bankV.alpha = 1;
-
+                
+                [weakSelf.bankV getNameTest];
+                
             }];
 
         }else{

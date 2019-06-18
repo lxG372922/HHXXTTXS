@@ -10,6 +10,20 @@
 
 @implementation OrderModel
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [self yy_modelEncodeWithCoder:aCoder];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [self yy_modelInitWithCoder:aDecoder];
+}
+
+- (NSString *)description
+{
+    return [self yy_modelDescription];
+}
+
+
 - (NSString *)lever {
     if (!_lever) {
         _lever = @"1";

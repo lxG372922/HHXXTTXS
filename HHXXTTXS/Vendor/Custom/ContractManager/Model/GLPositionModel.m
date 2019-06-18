@@ -11,6 +11,20 @@
 
 @implementation GLPositionModel
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [self yy_modelEncodeWithCoder:aCoder];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [self yy_modelInitWithCoder:aDecoder];
+}
+
+- (NSString *)description
+{
+    return [self yy_modelDescription];
+}
+
+
 - (NSString *)margin {
     
     if (!isStrEmpty(self.lever) && !isStrEmpty(self.totalHands) && !isStrEmpty(self.avgPrice)) {
