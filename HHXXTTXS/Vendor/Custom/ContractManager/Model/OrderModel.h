@@ -44,6 +44,15 @@ typedef enum : NSUInteger {
 /** 杠杆 */
 @property (strong, nonatomic) NSString *lever;
 
+/** 止盈价*/
+@property (strong, nonatomic) NSString *zhiYPrice;
+
+/** 止损价 */
+@property (strong, nonatomic) NSString *zhiSPrice;
+
+/** 开仓时间 */
+@property (strong, nonatomic) NSString *avgTime;
+
 #pragma mark - 扩展属性 --
 
 /** save identifier */

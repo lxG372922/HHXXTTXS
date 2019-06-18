@@ -89,15 +89,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntx-ep-VoS">
-                                <rect key="frame" x="154" y="100" width="21" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="3r3-hA-sIY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="持仓量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-LD-O2w">
                                 <rect key="frame" x="10" y="100" width="43" height="20"/>
                                 <constraints>
@@ -125,10 +116,19 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1手" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntx-ep-VoS">
+                                <rect key="frame" x="168" y="97" width="21" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3r3-hA-sIY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="fUn-zt-Wp2" firstAttribute="top" secondItem="vP3-PC-ucg" secondAttribute="bottom" constant="10" id="4qI-ON-VOx"/>
-                            <constraint firstItem="Ntx-ep-VoS" firstAttribute="top" secondItem="jny-mo-GpN" secondAttribute="bottom" constant="10" id="5vp-Vf-NJ8"/>
+                            <constraint firstItem="Ntx-ep-VoS" firstAttribute="top" secondItem="jny-mo-GpN" secondAttribute="bottom" constant="7" id="5vp-Vf-NJ8"/>
                             <constraint firstItem="vP3-PC-ucg" firstAttribute="top" secondItem="TRd-yx-Efg" secondAttribute="top" constant="10" id="6SK-4O-bMz"/>
                             <constraint firstItem="fh9-w4-OJt" firstAttribute="leading" secondItem="TRd-yx-Efg" secondAttribute="leading" constant="10" id="Aj2-qx-Mc7"/>
                             <constraint firstItem="ReN-Ba-Sw9" firstAttribute="trailing" secondItem="gZR-LD-O2w" secondAttribute="trailing" id="GXf-cv-DMD"/>
@@ -141,7 +141,7 @@
                             <constraint firstItem="ReN-Ba-Sw9" firstAttribute="leading" secondItem="gZR-LD-O2w" secondAttribute="leading" id="XyE-q0-baD"/>
                             <constraint firstItem="gZR-LD-O2w" firstAttribute="leading" secondItem="TRd-yx-Efg" secondAttribute="leading" constant="10" id="dNH-6x-zw8"/>
                             <constraint firstItem="vP3-PC-ucg" firstAttribute="leading" secondItem="izz-Yc-UPT" secondAttribute="trailing" constant="100" id="eUy-uY-xXB"/>
-                            <constraint firstItem="Ntx-ep-VoS" firstAttribute="leading" secondItem="gZR-LD-O2w" secondAttribute="trailing" constant="101" id="fSp-A5-LVJ"/>
+                            <constraint firstItem="Ntx-ep-VoS" firstAttribute="leading" secondItem="gZR-LD-O2w" secondAttribute="trailing" constant="115" id="fSp-A5-LVJ"/>
                             <constraint firstItem="fh9-w4-OJt" firstAttribute="top" secondItem="TjC-rr-qtL" secondAttribute="bottom" constant="10" id="jSz-VC-LKj"/>
                             <constraint firstItem="jny-mo-GpN" firstAttribute="top" secondItem="fUn-zt-Wp2" secondAttribute="bottom" constant="10" id="q21-jG-voD"/>
                             <constraint firstItem="ReN-Ba-Sw9" firstAttribute="top" secondItem="gZR-LD-O2w" secondAttribute="bottom" constant="10" id="upI-YD-pyT"/>
@@ -158,9 +158,9 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jay-vc-ZDQ">
-                    <rect key="frame" x="10" y="242" width="394" height="113"/>
+                    <rect key="frame" x="10" y="242" width="394" height="139"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JuL-8L-WWA">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="113"/>
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="139"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开仓均价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyF-76-DSM">
@@ -235,7 +235,7 @@
                     </view>
                     <color key="backgroundColor" red="0.84719073830000002" green="0.84719073830000002" blue="0.84719073830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="113" id="ylw-SV-S5v"/>
+                        <constraint firstAttribute="height" constant="139" id="ylw-SV-S5v"/>
                     </constraints>
                     <blurEffect style="light"/>
                 </visualEffectView>

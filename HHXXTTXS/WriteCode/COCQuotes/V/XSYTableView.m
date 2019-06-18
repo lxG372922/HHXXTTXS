@@ -31,6 +31,8 @@
         self.mj_header = _syyheader;
         [self registerNib:[UINib nibWithNibName:@"MarketTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell1"];
         
+       
+        
         self.updataBtn = [myButton buttonWithType:UIButtonTypeSystem frame:CGRectMake(0, 0, 100, 35) title:@"重新加载" colors:ColorWhite andBackground:COCColorTheme tag:1234 andBlock:^(myButton *button) {
             
             [self reloadUpdateData];

@@ -52,12 +52,16 @@
     
      self.pro_Name.text = dataModel.name;
      self.pro_shou.text = dataModel.totalHands;
-     self.pro_duoOrKong.text = @"多";
+    if ((dataModel.positionType = ContractPositionTypeLong)) {
+        self.pro_duoOrKong.text = @"买多";
+    }else{
+        self.pro_duoOrKong.text = @"买空";
+    }
      self.pro_Price.text = dataModel.pl;
      self.pro_KCPrice.text = dataModel.avgPrice;
      self.pro_nowPrice.text = dataModel.currentPrice;
-     self.pro_zhiyPrice.text = dataModel.name;
-     self.pro_zhisPrice.text = dataModel.name;
+     self.pro_zhiyPrice.text = dataModel.zhiYPrice;
+     self.pro_zhisPrice.text = dataModel.zhiSPrice;
 }
 
 @end

@@ -154,60 +154,6 @@
                         <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJO-19-Tyy">
-                        <rect key="frame" x="10" y="92" width="105" height="20"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="5A5-kr-RLU"/>
-                            <constraint firstAttribute="width" constant="105" id="HUg-sM-3Af"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <state key="normal" title="设置止盈止损">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="2"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <action selector="setZyzsBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qoi-U6-XPN"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKj-4b-t4e">
-                        <rect key="frame" x="158.5" y="92" width="58" height="20"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="2E0-VY-kDm"/>
-                            <constraint firstAttribute="width" constant="58" id="kc9-6h-g3c"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <state key="normal" title="行情">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <action selector="marketBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Vl-Gd-IAS"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-f8-ny7">
                         <rect key="frame" x="305" y="92" width="60" height="20"/>
                         <color key="backgroundColor" red="0.061506269944360252" green="0.059552672527091219" blue="0.11475874352331605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -233,12 +179,10 @@
                 <constraints>
                     <constraint firstItem="4rR-Kq-kh8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="22A-fL-U4U"/>
                     <constraint firstItem="KLk-QG-kM4" firstAttribute="leading" secondItem="YuW-gd-Mup" secondAttribute="trailing" id="2Qc-OM-Vqr"/>
-                    <constraint firstItem="yJO-19-Tyy" firstAttribute="top" secondItem="shd-L5-9Od" secondAttribute="bottom" constant="10" id="3U3-i7-BX0"/>
                     <constraint firstItem="0T4-ii-Fkn" firstAttribute="leading" secondItem="27z-29-aKL" secondAttribute="trailing" id="5em-yv-RCr"/>
                     <constraint firstItem="6Eg-Jq-NUd" firstAttribute="leading" secondItem="shd-L5-9Od" secondAttribute="trailing" constant="51" id="7Al-t7-yGa"/>
                     <constraint firstItem="0T4-ii-Fkn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="CK5-c2-wMc"/>
                     <constraint firstItem="D7i-x2-upz" firstAttribute="top" secondItem="CAH-bc-LdM" secondAttribute="bottom" constant="2" id="CkO-q8-BR8"/>
-                    <constraint firstItem="PKj-4b-t4e" firstAttribute="top" secondItem="4rR-Kq-kh8" secondAttribute="bottom" constant="64" id="Cna-Ii-poC"/>
                     <constraint firstItem="PFO-MF-GMz" firstAttribute="top" secondItem="0T4-ii-Fkn" secondAttribute="bottom" constant="10" id="HiG-AG-w4z"/>
                     <constraint firstItem="6Eg-Jq-NUd" firstAttribute="top" secondItem="PFO-MF-GMz" secondAttribute="bottom" id="KB4-l8-Ayo"/>
                     <constraint firstItem="27z-29-aKL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Kzg-mK-OO8"/>
@@ -262,15 +206,12 @@
                     <constraint firstItem="nXI-Wl-KhX" firstAttribute="baseline" secondItem="CAH-bc-LdM" secondAttribute="baseline" constant="2" id="n71-WN-i1C"/>
                     <constraint firstItem="D7i-x2-upz" firstAttribute="leading" secondItem="eU8-r0-H3R" secondAttribute="trailing" id="nAO-Fm-ppN"/>
                     <constraint firstItem="4rR-Kq-kh8" firstAttribute="leading" secondItem="0T4-ii-Fkn" secondAttribute="trailing" constant="10" id="of6-3D-Ime"/>
-                    <constraint firstItem="PKj-4b-t4e" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="riW-26-JH0"/>
                     <constraint firstItem="Nuu-Is-7Hn" firstAttribute="top" secondItem="27z-29-aKL" secondAttribute="bottom" constant="10" id="s1U-wr-jay"/>
-                    <constraint firstItem="yJO-19-Tyy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xGJ-Tz-uYc"/>
                     <constraint firstItem="27z-29-aKL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xbx-D9-hM6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="marketDetailBtn" destination="PKj-4b-t4e" id="Sbv-2z-g4L"/>
                 <outlet property="pingCButton" destination="Qmp-f8-ny7" id="puE-As-QRC"/>
                 <outlet property="pro_KCPrice" destination="Nuu-Is-7Hn" id="gjd-cd-dS3"/>
                 <outlet property="pro_Name" destination="27z-29-aKL" id="jrx-C4-xPt"/>
@@ -280,7 +221,6 @@
                 <outlet property="pro_shou" destination="0T4-ii-Fkn" id="OaB-kO-a86"/>
                 <outlet property="pro_zhisPrice" destination="D7i-x2-upz" id="nDj-Vx-Ss9"/>
                 <outlet property="pro_zhiyPrice" destination="CAH-bc-LdM" id="1G0-xM-IRM"/>
-                <outlet property="setYSButton" destination="yJO-19-Tyy" id="Bmh-ng-y6X"/>
             </connections>
             <point key="canvasLocation" x="265.94202898550725" y="52.566964285714285"/>
         </tableViewCell>

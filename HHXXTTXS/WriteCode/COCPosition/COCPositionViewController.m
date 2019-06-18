@@ -150,7 +150,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         _holdPos_tableView.backgroundColor = RGBColor(247, 247, 247);
         [_holdPos_tableView registerNib:[UINib nibWithNibName:@"COCPosTableViewCell" bundle:nil] forCellReuseIdentifier:communitypostionCell_id];
         
-        self.holdPos_tableView.tableHeaderView = self.tableHearderView;
+//        self.holdPos_tableView.tableHeaderView = self.tableHearderView;
         _holdPos_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [SVProgressHUD show];
             [self performSelector:@selector(progressHUDdismiss) withObject:self afterDelay:1.5];
