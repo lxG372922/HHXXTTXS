@@ -13,6 +13,7 @@
 #import "HSStockChartModelGroup.h"
 #import "HSStockChartModel.h"
 #import "COCTransViewController.h"
+#import "ContractManager.h"
 @interface MarketDetailsViewController ()<HSStockChartViewDelegate>
 @property(nonatomic,strong)detailsTopView * topView;
 @property(nonatomic,strong) BottomView * bottomView ;
@@ -40,9 +41,15 @@
     [self.view addSubview:_topView];
     
     
+    NSString * str ;
+    if (Has_Login) {
+        str = [[ContractManager manager] getCurrentAvailCaptital];
+    }else{
+        str = @"---";
+    }
     //尾
     weakSelf(self);
-    _bottomView =[[BottomView alloc] initWithPrince:_marketmodel.current maneyALl:@"789890" buyAction:^{
+    _bottomView =[[BottomView alloc] initWithPrince:_marketmodel.current maneyALl:str buyAction:^{
         
         [weakSelf clickType:1];
         
@@ -56,14 +63,14 @@
     
 //    //sege
     _clickTimeSegement = [[UISegmentedControl alloc] initWithItems:@[@"1分",@"3分",@"5分",@"15分",@"60分"]];
-    _clickTimeSegement.frame =CGRectMake(20, _topView.height+Nav_topH, SCREEN_WIDTH-40, 40);
-    _clickTimeSegement.tintColor = [UIColor lightGrayColor];
-    
+    _clickTimeSegement.frame =CGRectMake(20, _topView.height+Nav_topH, SCREEN_WIDTH-40, 30);
+    _clickTimeSegement.tintColor = COCColorLong;//[UIColor lightGrayColor];
+     [_clickTimeSegement addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventValueChanged];
     _clickTimeSegement.selectedSegmentIndex = 0;
     [self.view addSubview:_clickTimeSegement];
-    [_clickTimeSegement addTarget:self action:@selector(selectItem:) forControlEvents:UIControlEventTouchUpInside];
+   
     //line
-    _chartView = [[HSStockChartView alloc] initWithFrame:CGRectMake(0, _topView.height+Nav_topH+_clickTimeSegement.height+10, SCREEN_WIDTH, SCREEN_HEIGHT-Nav_topH-_topView.height-_bottomView.height)];
+    _chartView = [[HSStockChartView alloc] initWithFrame:CGRectMake(0, _topView.height+Nav_topH+_clickTimeSegement.height+3, SCREEN_WIDTH, SCREEN_HEIGHT-Nav_topH-_topView.height-_bottomView.height-_clickTimeSegement.height)];
     _chartView.delegate = self;
     [self.view addSubview:_chartView];
     
@@ -72,6 +79,15 @@
     
 }
 -(void)clickType:(int)type{
+    
+    
+    
+    if(!Has_Login){
+        
+        [SVProgressHUD showErrorWithStatus:@"请登录"];
+        return;
+        
+    }
     /*
      *
      ** KongOrDuo 买空或买多
