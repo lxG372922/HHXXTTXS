@@ -15,6 +15,7 @@
 #import "ModifyPassViewController.h"
 #import "LoginViewController.h"
 #import "COCOpenViewController.h"
+#import "ContractManager.h"
 @interface COCMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr1, *titleArr2;
@@ -43,8 +44,9 @@
     titleArr1 = @[@"交易明细",@"资金明细",@"银行卡",@"账户认证"];
     titleArrM1 = @[@"icon_1",@"icon_2",@"icon_3",@"icon_4"];
     
-    titleArr2 = @[@"昵称",@"个性签名",@"修改密码"];
-    titleArrM2 = @[@"icon_5",@"形状",@"icon_7"];
+    titleArr2 = @[@"昵称",@"个性签名",@"修改密码",@"重置模拟资金"];
+    
+    titleArrM2 = @[@"icon_5",@"形状",@"icon_7",@"icon_7"];
   
     [self mytableView];
 }
@@ -144,7 +146,7 @@
     if(section == 0){
         return 4;
     }else{
-        return 3;
+        return 4;
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -244,6 +246,9 @@
                 modify.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:modify animated:YES];
                 NSLog(@"3");
+            }else{
+                [[ContractManager manager] resetSimulateCapitail];
+                [G_Window showMBHUDAlertWithMessage:@"重置成功" hide:1.5];
             }
         }else{
             [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
