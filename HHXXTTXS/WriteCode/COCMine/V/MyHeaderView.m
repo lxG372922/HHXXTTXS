@@ -26,8 +26,8 @@
         [self addSubview:self.nameLab];
         [self addSubview:self.signatureLab];
         [self addSubview:self.certificationBtn];
-        [self addSubview:self.integralLab];
-        [self addSubview:self.integralNum];
+//        [self addSubview:self.integralLab];
+//        [self addSubview:self.integralNum];
         
         [self createHeaderViewFrame];
         
@@ -48,7 +48,8 @@
         _headerImage = [[UIImageView alloc]init];
         _headerImage.layer.cornerRadius = 25;
         _headerImage.layer.masksToBounds =YES;
-        _headerImage.backgroundColor = [UIColor redColor];
+        _headerImage.image = [UIImage imageNamed:@"header"];
+//        _headerImage.backgroundColor = [UIColor redColor];
         UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGRActionChangeHeaderImg)];
         //为View标签添加手势
         self.headerImage.userInteractionEnabled=YES;
@@ -58,25 +59,31 @@
 }
 - (void)tapGRActionChangeHeaderImg{
     
-    if (!_photoManager) {
-        _photoManager =[[SelectPhotoManager alloc]init];
+    if(Has_Login){
+        if (!_photoManager) {
+            _photoManager =[[SelectPhotoManager alloc]init];
+        }
+        [_photoManager startSelectPhotoWithImageName:@"选择头像"];
+        __weak typeof(self)mySelf=self;
+        
+        //选取照片成功
+        _photoManager.successHandle=^(SelectPhotoManager *manager,UIImage *image){
+            mySelf.headerImage.image = image;
+            //保存到本地
+            NSData *data = UIImagePNGRepresentation(image);
+            [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"headerImage"];
+        };
+    }else{
+        [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
     }
-    [_photoManager startSelectPhotoWithImageName:@"选择头像"];
-    __weak typeof(self)mySelf=self;
     
-    //选取照片成功
-    _photoManager.successHandle=^(SelectPhotoManager *manager,UIImage *image){
-        mySelf.headerImage.image = image;
-        //保存到本地
-    NSData *data = UIImagePNGRepresentation(image);
-        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"headerImage"];
-    };
+    
     
 }
 - (UILabel *)nameLab{
     if(!_nameLab){
         _nameLab = [[UILabel alloc]init];
-        _nameLab.text = @"全天下最最最最";
+//        _nameLab.text = @"全天下最最最最";
         _nameLab.textAlignment = NSTextAlignmentCenter;
         _nameLab.font = FONT(16);
         
@@ -86,7 +93,6 @@
 - (UILabel *)signatureLab{
     if(!_signatureLab){
         _signatureLab = [[UILabel alloc]init];
-        _signatureLab.text = @"全天下最最最最";
         _signatureLab.textAlignment = NSTextAlignmentCenter;
         _signatureLab.font = FONT(14);
     }
@@ -155,7 +161,7 @@
     }];
     
     [_certificationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).mas_offset(50);
+        make.left.equalTo(self.mas_left).mas_offset((SCREEN_WIDTH - 120) / 2);
         make.top.equalTo(self.mas_top).mas_offset(150);
         make.width.mas_equalTo(120);
         make.height.mas_equalTo(35);

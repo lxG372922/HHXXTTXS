@@ -65,6 +65,14 @@
         
         _headerV = [[MyHeaderView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
         [self headerViewWithData];
+        //实名认证按钮
+        [self.headerV.certificationBtn addTarget:self action:@selector(clickCertificationBtn:) forControlEvents:UIControlEventTouchUpInside];
+        if(Has_Login){
+            
+        }else{
+           
+        }
+        
         self.mytableView.tableHeaderView = self.headerV;
         
         _footerV = [[MyFooterView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160)];
@@ -76,16 +84,38 @@
     }
     return _mytableView;
 }
+
+-(void)tapGRActionChangeHeaderImg{
+    [G_Window showMBHUDAlertWithMessage:@"请登录" hide:2.0];
+    
+    LoginViewController *login = [[LoginViewController alloc]init];
+    [self.navigationController pushViewController:login animated:YES];
+}
+-(void)clickCertificationBtn:(UIButton *)sender{
+    NSLog(@"实名认证");
+}
 -(void)headerViewWithData{
-    if(Has_Name){
-        _headerV.nameLab.text = UserName;
+    if(Has_Login){
+        _headerV.nameLab.userInteractionEnabled = NO;
+        self.headerV.signatureLab.hidden = NO;
+        if(Has_Name){
+            _headerV.nameLab.text = UserName;
+        }else{
+            _headerV.nameLab.text = @"天下无双";
+        }
+        if(Has_QM){
+            _headerV.signatureLab.text = UserQM;
+        }else{
+            _headerV.signatureLab.text = @"个性签名";
+        }
+
     }else{
-        _headerV.nameLab.text = @"天下无双";
-    }
-    if(Has_QM){
-        _headerV.signatureLab.text = UserQM;
-    }else{
-        _headerV.signatureLab.text = @"个性签名";
+        self.headerV.signatureLab.hidden = YES;
+        UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGRActionChangeHeaderImg)];
+        //为View标签添加手势
+        self.headerV.nameLab.userInteractionEnabled=YES;
+        [self.headerV.nameLab addGestureRecognizer:gesture];
+        _headerV.nameLab.text = @"去登录";
     }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -132,7 +162,7 @@
             }
             
         }
-        if(Has_QM){
+        if(Has_QM && Has_Login){
             if(indexPath.row == 0){
                 
             }else if(indexPath.row == 1){
@@ -171,27 +201,32 @@
     if(indexPath.section == 0){
         NSLog(@"0");
     }else{
-        if(indexPath.row == 0){
-            NSLog(@"1");
-            ModifyNameViewController *modify = [[ModifyNameViewController alloc]init];
-            modify.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:modify animated:YES];
-        }else if(indexPath.row == 1){
-            SignatureViewController *ignature = [[SignatureViewController alloc]init];
-            ignature.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ignature animated:YES];
-            NSLog(@"2");
-        }else if(indexPath.row == 2){
-            ModifyPassViewController *modify = [[ModifyPassViewController alloc]init];
-            modify.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:modify animated:YES];
-            NSLog(@"3");
+        if(Has_Login){
+            if(indexPath.row == 0){
+                NSLog(@"1");
+                ModifyNameViewController *modify = [[ModifyNameViewController alloc]init];
+                modify.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:modify animated:YES];
+            }else if(indexPath.row == 1){
+                SignatureViewController *ignature = [[SignatureViewController alloc]init];
+                ignature.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:ignature animated:YES];
+                NSLog(@"2");
+            }else if(indexPath.row == 2){
+                ModifyPassViewController *modify = [[ModifyPassViewController alloc]init];
+                modify.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:modify animated:YES];
+                NSLog(@"3");
+            }
+        }else{
+            [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
         }
+        
     }
 }
 -(void)clickOutBtn:(UIButton *)sender{
     if([UserId isEqualToString:@""]){
-//        [G_Window showMBHUDAlertWithMessage:@"请登录" hide:2.0];
+        [G_Window showMBHUDAlertWithMessage:@"请登录" hide:2.0];
         
         LoginViewController *login = [[LoginViewController alloc]init];
         [self.navigationController pushViewController:login animated:YES];
@@ -203,6 +238,8 @@
         _okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
             // 1.清除用户名、密码的存储
             LogOutRemoveUid;
+            
+            [self viewWillAppear:1];
             [self.mytableView reloadData];
             // 2.跳转到登录界面
             //            [self performSegueWithIdentifier:@"Logout" sender:nil];

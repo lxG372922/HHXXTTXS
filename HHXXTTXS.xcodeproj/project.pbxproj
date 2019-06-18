@@ -584,12 +584,12 @@
 		049B974E22B3BECA003D943E /* C */ = {
 			isa = PBXGroup;
 			children = (
-				049B974F22B3BECA003D943E /* SignatureViewController.h */,
-				049B975022B3BECA003D943E /* ModifyPassViewController.h */,
 				049B975122B3BECA003D943E /* ModifyNameViewController.h */,
-				049B975222B3BECA003D943E /* ModifyPassViewController.m */,
-				049B975322B3BECA003D943E /* SignatureViewController.m */,
 				049B975422B3BECA003D943E /* ModifyNameViewController.m */,
+				049B975022B3BECA003D943E /* ModifyPassViewController.h */,
+				049B975222B3BECA003D943E /* ModifyPassViewController.m */,
+				049B974F22B3BECA003D943E /* SignatureViewController.h */,
+				049B975322B3BECA003D943E /* SignatureViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -598,14 +598,14 @@
 			isa = PBXGroup;
 			children = (
 				04F7DAF622B7C72300EBBE07 /* HUD */,
+				049B975722B3BECA003D943E /* MyFooterView.h */,
+				049B975A22B3BECA003D943E /* MyFooterView.m */,
+				049B975922B3BECA003D943E /* MyHeaderView.h */,
+				049B975622B3BECA003D943E /* MyHeaderView.m */,
+				049B975B22B3BECA003D943E /* MyTableViewCell.h */,
+				049B975822B3BECA003D943E /* MyTableViewCell.m */,
 				04F7DAF922B7C72300EBBE07 /* SelectPhotoManager.h */,
 				04F7DAFA22B7C72300EBBE07 /* SelectPhotoManager.m */,
-				049B975622B3BECA003D943E /* MyHeaderView.m */,
-				049B975722B3BECA003D943E /* MyFooterView.h */,
-				049B975822B3BECA003D943E /* MyTableViewCell.m */,
-				049B975922B3BECA003D943E /* MyHeaderView.h */,
-				049B975A22B3BECA003D943E /* MyFooterView.m */,
-				049B975B22B3BECA003D943E /* MyTableViewCell.h */,
 			);
 			path = V;
 			sourceTree = "<group>";
