@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong)UIButton *lastBtn;
 
+@property(nonatomic,copy)NSString *name;
+
+-(void)getNameTest;
+
 @end
 
 NS_ASSUME_NONNULL_END
