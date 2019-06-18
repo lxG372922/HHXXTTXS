@@ -18,6 +18,7 @@
     NSArray *btnSTitleArray;
     NSArray *colorArray;
     //初始化为
+    NSDictionary *dataDic;
     
 
 }
@@ -58,18 +59,26 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     self.priceLabel.text = [dic objectForKey:@"price"];//价格
     self.baoZJinlabel.text = [dic objectForKey:@"BaoZJin"];//保证金
     self.shouxulabel.text = [dic objectForKey:@"shouxuFei"];//手续费
-    
+    dataDic = [NSDictionary dictionaryWithDictionary:dic];
     NSString *  isJiaoY = [dic objectForKey:@"isSelectedJY"];
-    if ([isJiaoY isEqualToString:@"1"]) {
+    NSString * kongorDuo = [dic objectForKey:@"KongOrDuo"];
+    
+    if ([kongorDuo isEqualToString:@"Duo"]) {
+        [self.commitBtn setBackgroundColor:RGB(248, 114, 83)];
+        self.kongORDuoLabel.alpha = 1;
+        self.priceLabel.alpha = 1;
+        
+    }else if([kongorDuo isEqualToString:@"Kong"]){
+        [self.commitBtn setBackgroundColor:RGB(26, 164, 112)];
+        self.kongORDuoLabel.alpha = 1;
+        self.priceLabel.alpha = 1;
+    }else{
         [self.commitBtn setTitle:@"请开启" forState:UIControlStateNormal];
         [self.commitBtn setBackgroundColor:RGB(20, 44, 51)];
         self.kongORDuoLabel.alpha = 0;
         self.priceLabel.alpha = 0;
-    }else{
-        [self.commitBtn setTitle:@"" forState:UIControlStateNormal];
-        self.kongORDuoLabel.alpha = 1;
-        self.priceLabel.alpha = 1;
     }
+    [_tableView reloadData];
 }
 
 //懒加载
@@ -126,7 +135,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         self.baoZJinlabel = baoZJinlabel;
         baoZJinlabel.textAlignment = NSTextAlignmentRight;
         baoZJinlabel.textColor = [UIColor  grayColor];
-        baoZJinlabel.text = @"$150.0";
+        baoZJinlabel.text = [NSString stringWithFormat:@"¥%@",[dataDic objectForKey:@"BaoZJin"]];
         [footView addSubview:baoZJinlabel];
         
         
@@ -141,7 +150,7 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
         shouxulabel.textAlignment = NSTextAlignmentRight;
         shouxulabel.textColor = [UIColor  grayColor];
         self.shouxulabel = shouxulabel;
-        shouxulabel.text = @"$20.0";
+        shouxulabel.text = [NSString stringWithFormat:@"¥%@",[dataDic objectForKey:@"shouxuFei"]];;
         [footView addSubview:shouxulabel];
         
         self.tableView.tableFooterView = footView;
@@ -204,7 +213,13 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     }
 //    cell.backgroundColor = [UIColor orangeColor];
     cell.titleLabel.text = sectionArr[indexPath.row];
-    cell.tipLabel.text = dataArray[indexPath.row];
+    if (indexPath.row == 0) {
+        cell.tipLabel.text = dataArray[indexPath.row];
+    }else{
+        NSString *tipsString = [dataDic objectForKey:@"price"];
+        cell.tipLabel.text = [NSString stringWithFormat:@"参考价%@",tipsString];
+    }
+    
     cell.fanWLabel.text = fanWArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell creatBtnWithTitle:btnSTitleArray[indexPath.row] idnexRow:indexPath.row ];
