@@ -254,8 +254,19 @@
                     [self.navigationController pushViewController:modify animated:YES];
                     NSLog(@"3");
                 }else if(indexPath.row == 3){
-                    [[ContractManager manager] resetSimulateCapitail];
-                    [G_Window showMBHUDAlertWithMessage:@"重置成功" hide:1.5];
+                    
+                    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"是否要重置模拟账号资金" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                        [[ContractManager manager] resetSimulateCapitail];
+                        [G_Window showMBHUDAlertWithMessage:@"重置成功" hide:1.5];
+                    }];
+
+                    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                    
+                    [alertVC addAction:okAction];
+                    [alertVC addAction:cancelAction];
+                    
+                    [self presentViewController:alertVC animated:YES completion:nil];
                 }
             }else {
                 [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
