@@ -51,11 +51,14 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     //l可用资金
     if (Has_Login) {
         dic  =  [[ContractManager manager] positions];
-        NSArray *dataSource = [dic allValues];
-        self.holdPosArray = [dataSource mutableCopy];
+        if (dic.count > 0) {
+            NSArray *dataSource = [dic allValues];
+            self.holdPosArray = [dataSource mutableCopy];
+            self.postionModel = dic[dic.allKeys[0]];
+        }
         self.noDataView.alpha = 0;
-        self.postionModel = dic[dic.allKeys[0]];
-         self.holdPos_tableView.alpha = 1;
+       
+        self.holdPos_tableView.alpha = 1;
     }else{
         self.noDataView.alpha = 1;
          self.holdPos_tableView.alpha = 0;
@@ -246,7 +249,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dic.count;
+    if (dic.count > 0) {
+         return dic.count;
+    }else{
+        return 0;
+    }
+   
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
@@ -295,8 +303,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
 //    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
-    GLPositionModel *glPosition = [self.holdPosArray objectAtIndex:indexPath.row];
-    [cell setPositionTableViewCellControlContentWithModel:glPosition];
+    if (self.holdPosArray.count > 0) {
+        GLPositionModel *glPosition = [self.holdPosArray objectAtIndex:indexPath.row];
+        [cell setPositionTableViewCellControlContentWithModel:glPosition];
+    }
+   
     
 //
     return cell;
