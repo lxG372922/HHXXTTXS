@@ -29,7 +29,7 @@
         self.totailLabel.font = UiFontSys(13);
         [self addSubview:self.totailLabel];
         
-        self.totaijinE =[[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.totailLabel.frame)+3, SCREEN_Width/2 - 20, 30)];
+        self.totaijinE =[[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.totailLabel.frame)+3, SCREEN_Width/2 , 30)];
         if (model.totailCapital == nil || [model.totailCapital isEqualToString:@""]) {
             self.totaijinE.text = @"+0.00";
         }else{
@@ -46,7 +46,7 @@
         self.aviableLabel.font = UiFontSys(13);
         [self addSubview:self.aviableLabel];
         
-        self.aviablejinE =[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.aviableLabel.frame), 20, SCREEN_Width/4 - 30 ,20)];
+        self.aviablejinE =[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.aviableLabel.frame), 20, SCREEN_Width/4 +10 ,20)];
 //        if (model.avaiCapital == nil || [model.avaiCapital isEqualToString:@""]) {
 //            self.aviablejinE.text = @"0.00";
 //        }else{
