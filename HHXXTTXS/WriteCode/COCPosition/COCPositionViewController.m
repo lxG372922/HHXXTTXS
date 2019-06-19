@@ -49,25 +49,42 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
 
 -(void)progressHUDdismiss{
     //l可用资金
-  dic  =  [[ContractManager manager] positions];
-    NSArray *dataSource = [dic allValues];
-    self.holdPosArray = [dataSource mutableCopy];
-
-    if (self.holdPosArray.count > 0) {
-        self.postionModel = dic[dic.allKeys[0]];
-        self.holdPos_tableView.alpha = 1;
-        self.noDataView.alpha = 0;
+    if (Has_Login) {
+        dic  =  [[ContractManager manager] positions];
+        if (dic.count > 0) {
+            NSArray *dataSource = [dic allValues];
+            self.holdPosArray = [dataSource mutableCopy];
+            self.postionModel = dic[dic.allKeys[0]];
+            self.noDataView.alpha = 0;
+            self.holdPos_tableView.alpha = 1;
+        }else{
+            self.noDataView.alpha = 1;
+            self.holdPos_tableView.alpha = 0;
+        }
+      
     }else{
-        self.holdPos_tableView.alpha = 0;
         self.noDataView.alpha = 1;
-
+         self.holdPos_tableView.alpha = 0;
     }
   
+    
+//    if (self.holdPosArray.count > 0) {
+//        self.postionModel = dic[dic.allKeys[0]];
+//        self.holdPos_tableView.alpha = 1;
+//        self.noDataView.alpha = 0;
+//    }else{
+//        self.holdPos_tableView.alpha = 0;
+//        self.noDataView.alpha = 1;
+//
+//    }
+  
      if(Has_Login){
-        self.headerView.bondjinE.text = [[ContractManager manager] getAllOCCMargin];
-        self.headerView.totaijinE.text = [[ContractManager manager] getAllPL];
-        self.headerView.netCapjinE.text = [[ContractManager manager] getCurrentAllCapital];
-         self.headerView.aviablejinE.text = [[ContractManager manager]getCurrentAvailCaptital];
+        
+         self.headerView.bondjinE.text =[NSString stringWithFormat:@"%.2f",[[ContractManager manager] getAllOCCMargin].floatValue];
+         
+        self.headerView.totaijinE.text = [NSString stringWithFormat:@"%.2f",[[ContractManager manager] getAllPL].floatValue];
+        self.headerView.netCapjinE.text = [NSString stringWithFormat:@"%.2f",[[ContractManager manager] getCurrentAllCapital].floatValue];
+         self.headerView.aviablejinE.text = [NSString stringWithFormat:@"%.2f",[[ContractManager manager]getCurrentAvailCaptital].floatValue];
      }else{
          self.headerView.bondjinE.text = @"0.00";
          self.headerView.totaijinE.text = @"0.00";
@@ -235,7 +252,12 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dic.count;
+    if (dic.count > 0) {
+         return dic.count;
+    }else{
+        return 0;
+    }
+   
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     COCPosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:communitypostionCell_id];
@@ -284,8 +306,11 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
 //    [cell setPositionTableViewCellControlContentWithModel:dic[dic.allKeys[0]]];
-    GLPositionModel *glPosition = [self.holdPosArray objectAtIndex:indexPath.row];
-    [cell setPositionTableViewCellControlContentWithModel:glPosition];
+    if (self.holdPosArray.count > 0) {
+        GLPositionModel *glPosition = [self.holdPosArray objectAtIndex:indexPath.row];
+        [cell setPositionTableViewCellControlContentWithModel:glPosition];
+    }
+   
     
 //
     return cell;

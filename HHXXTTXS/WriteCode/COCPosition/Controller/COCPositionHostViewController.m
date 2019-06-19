@@ -57,7 +57,7 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
         [_noDataView addSubview:imageView];
         UIButton *makeOrderBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         makeOrderBtn.frame = CGRectMake(0, CGRectGetMaxY(imageView.frame) + 10, SCALE_Length(80.f), SCALE_Length(28.f));
-        [makeOrderBtn setTitle:@"没有订单数据" forState:UIControlStateNormal];
+        [makeOrderBtn setTitle:@"没有订单" forState:UIControlStateNormal];
 //        [makeOrderBtn setBackgroundColor:BTNCOlor];
 //        [makeOrderBtn addTarget:self action:@selector(makeOrderClick) forControlEvents:UIControlEventTouchUpInside];
         makeOrderBtn.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -98,7 +98,14 @@ static NSString *const communityReportCell_id_1 = @"communityReportCell_id_1";
 }
 
 -(void)reloadDataUI{
-    dicArray  =  [[ContractManager manager] positions];
+    
+    //l可用资金
+    if (Has_Login) {
+       dicArray  =  [[ContractManager manager] positions];
+    }else{
+        
+    }
+   
     if (dicArray.count > 0) {
 //        self.postionModel =dicArray[];
         self.holdPos_tableView.alpha = 1;

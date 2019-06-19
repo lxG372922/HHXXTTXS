@@ -79,8 +79,7 @@ static COCMainViewController *_instance;
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+    [super viewDidLoad]; 
 }
 
 #pragma mark - 公共方法 --
