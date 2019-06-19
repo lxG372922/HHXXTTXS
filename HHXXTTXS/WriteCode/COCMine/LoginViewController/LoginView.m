@@ -37,6 +37,8 @@
         [self addSubview:self.forgetBtn];
         [self addSubview:self.userLine];
         [self addSubview:self.passLine];
+        [self addSubview:self.protocolBtn];
+        [self addSubview:self.protocolInfoBtn];
     }
     return self;
 }
@@ -146,6 +148,38 @@
         [_forgetBtn setImage:[UIImage imageNamed:@"bt_navigation_white_nor"] forState:UIControlStateNormal];
     }
     return _forgetBtn;
+}
+
+- (UIButton *)protocolBtn {
+    if (!_protocolBtn) {
+        _protocolBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_protocolBtn setImage:[UIImage imageNamed:@"icon_protocol_sel"] forState:UIControlStateSelected];
+        [_protocolBtn setSelected:YES];
+        [_protocolBtn setImage:[UIImage imageNamed:@"icon_protocol_nor"] forState:UIControlStateNormal];
+        [_protocolBtn addTarget:self action:@selector(p_protocolBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _protocolBtn;
+}
+
+- (UIButton *)protocolInfoBtn {
+    if (!_protocolInfoBtn) {
+        _protocolInfoBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_protocolInfoBtn setTitleColor:COCColorBackGround forState:UIControlStateNormal];
+        
+        NSMutableAttributedString *attr = [@" 我已阅读并同意" gl_createAttributedStringWithFont:[UIFont fontWithName:fFont size:12.0f] textColor:COCColorBackGround].mutableCopy;
+        
+        [attr appendAttributedString:[@"《国际原油期货用户协议》" gl_createAttributedStringWithFont:[UIFont fontWithName:fFont size:14.0f] textColor:[UIColor cyanColor]]];
+        
+        [_protocolInfoBtn setAttributedTitle:attr forState:UIControlStateNormal];
+//        [_protocolInfoBtn addTarget:self action:@selector(p_protocolInfoBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _protocolInfoBtn;
+}
+
+- (void)p_protocolBtnAction:(UIButton *)btn {
+    
+    [self.protocolBtn setSelected:!btn.isSelected];
+    
 }
 
 -(void)getcreateWithViewFrame:(int)type{
@@ -283,10 +317,21 @@
             make.height.mas_equalTo(1);
         }];
         
+        [self.protocolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.passLine.mas_left);
+            make.top.equalTo(self.passLine.mas_bottom).offset(SCALE_Length(20.0f));
+            make.size.mas_equalTo(CGSizeMake(18.0f, 18.0f));
+        }];
+        
+        [self.protocolInfoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.protocolBtn.mas_right);
+            make.centerY.equalTo(self.protocolBtn.mas_centerY);
+        }];
+        
         [_loginBtn setTitle:@"注册" forState:UIControlStateNormal];
         [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).mas_offset(60);
-            make.top.equalTo(self.mas_top).mas_offset(380+TOP_BAR_HEIGHT);
+            make.top.equalTo(self.mas_top).mas_offset(420 +TOP_BAR_HEIGHT);
             make.width.mas_equalTo(SCREEN_Width - 120);
             make.height.mas_equalTo(40);
         }];

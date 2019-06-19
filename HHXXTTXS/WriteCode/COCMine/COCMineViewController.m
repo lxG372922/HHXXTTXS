@@ -16,6 +16,8 @@
 #import "LoginViewController.h"
 #import "COCOpenViewController.h"
 #import "ContractManager.h"
+#import <StoreKit/StoreKit.h>
+
 @interface COCMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *titleArr1, *titleArr2;
@@ -44,10 +46,10 @@
     titleArr1 = @[@"交易明细",@"资金明细",@"银行卡",@"账户认证"];
     titleArrM1 = @[@"icon_1",@"icon_2",@"icon_3",@"icon_4"];
     
-    titleArr2 = @[@"昵称",@"个性签名",@"修改密码",@"重置模拟资金"];
+    titleArr2 = @[@"昵称",@"个性签名",@"修改密码",@"重置模拟资金",@"去评分"];
     
-    titleArrM2 = @[@"icon_5",@"形状",@"icon_7",@"chongzhi"];
-  
+    titleArrM2 = @[@"icon_5",@"形状",@"icon_7",@"chongzhi",@"icon_comment"];
+    
     [self mytableView];
 }
 
@@ -82,7 +84,7 @@
         if(Has_Login){
             
         }else{
-           
+            
         }
         
         self.mytableView.tableHeaderView = self.headerV;
@@ -112,7 +114,7 @@
     }else{
         [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
     }
-   
+    
     NSLog(@"实名认证");
 }
 -(void)headerViewWithData{
@@ -130,7 +132,7 @@
         }else{
             _headerV.signatureLab.text = @"个性签名";
         }
-
+        
     }else{
         [self.footerV.outBtn setTitle:@"去登录" forState:UIControlStateNormal];
         self.headerV.signatureLab.hidden = YES;
@@ -148,7 +150,7 @@
     if(section == 0){
         return 4;
     }else{
-        return 4;
+        return titleArr2.count;
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -229,33 +231,42 @@
         }else{
             [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
         }
-       
+        
         
     }else{
-        if(Has_Login){
-            if(indexPath.row == 0){
-                NSLog(@"1");
-                ModifyNameViewController *modify = [[ModifyNameViewController alloc]init];
-                modify.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:modify animated:YES];
-            }else if(indexPath.row == 1){
-                SignatureViewController *ignature = [[SignatureViewController alloc]init];
-                ignature.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:ignature animated:YES];
-                NSLog(@"2");
-            }else if(indexPath.row == 2){
-                ModifyPassViewController *modify = [[ModifyPassViewController alloc]init];
-                modify.hidesBottomBarWhenPushed = YES;
-                [self.navigationController pushViewController:modify animated:YES];
-                NSLog(@"3");
-            }else{
-                [[ContractManager manager] resetSimulateCapitail];
-                [G_Window showMBHUDAlertWithMessage:@"重置成功" hide:1.5];
-            }
-        }else{
-            [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
-        }
         
+        if (indexPath.row <= 3) {
+            if(Has_Login){
+                
+                if(indexPath.row == 0){
+                    NSLog(@"1");
+                    ModifyNameViewController *modify = [[ModifyNameViewController alloc]init];
+                    modify.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:modify animated:YES];
+                }else if(indexPath.row == 1){
+                    SignatureViewController *ignature = [[SignatureViewController alloc]init];
+                    ignature.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:ignature animated:YES];
+                    NSLog(@"2");
+                }else if(indexPath.row == 2){
+                    ModifyPassViewController *modify = [[ModifyPassViewController alloc]init];
+                    modify.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:modify animated:YES];
+                    NSLog(@"3");
+                }else if(indexPath.row == 3){
+                    [[ContractManager manager] resetSimulateCapitail];
+                    [G_Window showMBHUDAlertWithMessage:@"重置成功" hide:1.5];
+                }
+            }else {
+                [G_Window showMBHUDAlertWithMessage:@"请登录" hide:1.5];
+            }
+        }else {
+            if (indexPath.row == 4) {
+                if (@available(iOS 10.3, *)) {
+                    [SKStoreReviewController requestReview];
+                }
+            }
+        }
     }
 }
 -(void)clickOutBtn:(UIButton *)sender{

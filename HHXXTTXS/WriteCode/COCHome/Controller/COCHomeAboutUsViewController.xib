@@ -12,9 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="COCHomeAboutUsViewController">
             <connections>
-                <outlet property="appnameLab" destination="y0Y-zu-xPf" id="e6B-E0-SSz"/>
-                <outlet property="headerV" destination="bUI-in-Hjo" id="PB9-LX-drk"/>
-                <outlet property="logoImg" destination="E0i-mK-w3K" id="mko-aR-Kim"/>
+                <outlet property="listView" destination="CnA-3b-BKn" id="kN2-2l-ciy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,45 +20,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-        </view>
-        <view contentMode="scaleToFill" id="bUI-in-Hjo">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-mK-w3K">
-                    <rect key="frame" x="167" y="77" width="80" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="1fg-z3-L1X"/>
-                        <constraint firstAttribute="height" constant="80" id="kcR-NM-11S"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="8"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0Y-zu-xPf">
-                    <rect key="frame" x="0.0" y="165" width="414" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-3b-BKn">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="1k9-H8-O4L"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.9370916485786438" green="0.93694382905960083" blue="0.95754462480545044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="y0Y-zu-xPf" firstAttribute="top" secondItem="E0i-mK-w3K" secondAttribute="bottom" constant="8" id="Ar1-f3-1BC"/>
-                <constraint firstItem="GJr-4c-25M" firstAttribute="trailing" secondItem="y0Y-zu-xPf" secondAttribute="trailing" id="Cy9-3q-l3U"/>
-                <constraint firstItem="y0Y-zu-xPf" firstAttribute="leading" secondItem="GJr-4c-25M" secondAttribute="leading" id="Fzj-pE-3QI"/>
-                <constraint firstItem="E0i-mK-w3K" firstAttribute="centerX" secondItem="bUI-in-Hjo" secondAttribute="centerX" id="Zuu-gL-xLI"/>
-                <constraint firstItem="E0i-mK-w3K" firstAttribute="centerY" secondItem="bUI-in-Hjo" secondAttribute="centerY" constant="-8" id="dbh-vW-NKK"/>
-                <constraint firstItem="y0Y-zu-xPf" firstAttribute="centerX" secondItem="bUI-in-Hjo" secondAttribute="centerX" id="kah-Xi-RbY"/>
+                <constraint firstItem="CnA-3b-BKn" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="4Ee-7u-Ccz"/>
+                <constraint firstItem="CnA-3b-BKn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="7bJ-i5-NmB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CnA-3b-BKn" secondAttribute="trailing" id="R9o-0n-xA0"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="CnA-3b-BKn" secondAttribute="bottom" id="qbx-Xo-gZa"/>
             </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="GJr-4c-25M"/>
-            <point key="canvasLocation" x="1049.2753623188407" y="-173.4375"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
 </document>

@@ -72,6 +72,7 @@
 		049B97B922B74B2D003D943E /* COCTransViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97B822B74B2D003D943E /* COCTransViewController.m */; };
 		049B97BD22B77062003D943E /* COCTrasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B97BB22B77062003D943E /* COCTrasTableViewCell.m */; };
 		049B97BE22B77062003D943E /* COCTrasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */; };
+		04AEE67922BA22FE005AC621 /* COCAboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AEE67822BA22FE005AC621 /* COCAboutView.m */; };
 		04DAFC3522B892D100EF35D3 /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */; };
 		04DAFC3622B892D100EF35D3 /* YUCustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */; };
 		04DAFC3A22B892FE00EF35D3 /* COCHomeAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3722B892FE00EF35D3 /* COCHomeAboutUsViewController.m */; };
@@ -271,6 +272,8 @@
 		049B97BA22B77062003D943E /* COCTrasTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCTrasTableViewCell.h; sourceTree = "<group>"; };
 		049B97BB22B77062003D943E /* COCTrasTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCTrasTableViewCell.m; sourceTree = "<group>"; };
 		049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCTrasTableViewCell.xib; sourceTree = "<group>"; };
+		04AEE67722BA22FE005AC621 /* COCAboutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCAboutView.h; sourceTree = "<group>"; };
+		04AEE67822BA22FE005AC621 /* COCAboutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCAboutView.m; sourceTree = "<group>"; };
 		04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
 		04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCustomHeaderView.h; sourceTree = "<group>"; };
 		04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
@@ -719,6 +722,8 @@
 				04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */,
 				04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */,
 				04DAFC3422B892D100EF35D3 /* YUCustomHeaderView.m */,
+				04AEE67722BA22FE005AC621 /* COCAboutView.h */,
+				04AEE67822BA22FE005AC621 /* COCAboutView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1287,6 +1292,7 @@
 				04F7DAF422B7C6FB00EBBE07 /* ForgetViewController.m in Sources */,
 				04F7DAF222B7C6FB00EBBE07 /* UITextField+PlaceHolder.m in Sources */,
 				18F20B0B22B350010064DE4C /* UIView+CenterLoading.m in Sources */,
+				04AEE67922BA22FE005AC621 /* COCAboutView.m in Sources */,
 				049B976022B3BECA003D943E /* MyTableViewCell.m in Sources */,
 				049B977B22B3BEEB003D943E /* XSYTableView.m in Sources */,
 				04F7DAF522B7C6FB00EBBE07 /* LoginView.m in Sources */,

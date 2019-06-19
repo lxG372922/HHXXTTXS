@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic , strong)UIButton *forgetBtn;
 
+/** 协议选中按钮 */
+@property (strong, nonatomic) UIButton *protocolBtn;
+
+/** 协议按钮 */
+@property (strong, nonatomic) UIButton *protocolInfoBtn;
 
 -(void)getcreateWithViewFrame:(int)type;
 

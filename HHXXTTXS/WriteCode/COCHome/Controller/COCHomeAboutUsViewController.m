@@ -1,11 +1,11 @@
 #import "COCHomeAboutUsViewController.h"
-#import <StoreKit/StoreKit.h>
-#import "COCHomeServiceViewController.h"
+#import "COCAboutView.h"
 @interface COCHomeAboutUsViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (strong, nonatomic) IBOutlet UIView *headerV;
-@property (weak, nonatomic) IBOutlet UIImageView *logoImg;
-@property (strong, nonatomic) UITableView *zTableView;
-@property (weak, nonatomic) IBOutlet UILabel *appnameLab;
+@property (weak, nonatomic) IBOutlet UITableView *listView;
+
+/** aboutView */
+@property (strong, nonatomic) COCAboutView *aboutView;
+
 @end
 
 @implementation COCHomeAboutUsViewController
@@ -13,35 +13,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"关于我们";
-    [self configTableView];
-    NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];
-    NSString *icon = [[infoPlist valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
-    NSString *app_Name = [infoPlist objectForKey:@"CFBundleDisplayName"];
-    self.appnameLab.text = app_Name;
-    self.logoImg.image = LXGetImage(icon);
+//    [self configTableView];
+//    NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];
+//    NSString *icon = [[infoPlist valueForKeyPath:@"CFBundleIcons.CFBundlePrimaryIcon.CFBundleIconFiles"] lastObject];
+//    NSString *app_Name = [infoPlist objectForKey:@"CFBundleDisplayName"];
+//    self.appnameLab.text = app_Name;
+//    self.logoImg.image = LXGetImage(icon);
     // Do any additional setup after loading the view from its nib.
+    self.listView.tableHeaderView = self.aboutView;
 }
 
-- (void)configTableView{
-    self.zTableView = [[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-    self.zTableView.delegate = self;
-    self.zTableView.dataSource = self;
-    [self.view addSubview:self.zTableView];
-    self.zTableView.rowHeight = 50;
-    self.headerV.frame = CGRectMake(0, 0, SCREEN_Width, 200);
-    self.zTableView.tableHeaderView = self.headerV;
-    
-    [self.zTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.mas_equalTo(self.view);
-    }];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    CGFloat aboutHeight = [self.aboutView getHeight];
+    self.aboutView.frame = CGRectMake(0, 0, SCREEN_WIDTH, aboutHeight);
+    self.listView.tableHeaderView = self.aboutView;
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -49,33 +45,12 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
-    NSArray *titleArr = @[@"去评分",@"服务协议",@"版本信息"];
-    cell.textLabel.text = titleArr[indexPath.row];
-    
-    if (indexPath.row == 2) {
-        cell.detailTextLabel.text = @"1.0.0";
-    }else{
-        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-    }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        [self gotoCommit];
-    }else if (indexPath.row == 1){
-        COCHomeServiceViewController *service = [[COCHomeServiceViewController alloc]init];
-        service.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:service animated:YES];
-    }
-}
-
-// 给个好评
--(void)gotoCommit{
-    if (@available(iOS 10.3, *)) {
-        [SKStoreReviewController requestReview];
-    }
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -96,5 +71,11 @@
     return CGFLOAT_MIN;
 }
 
+- (COCAboutView *)aboutView {
+    if (!_aboutView) {
+        _aboutView = [[COCAboutView alloc] init];
+    }
+    return _aboutView;
+}
 
 @end
