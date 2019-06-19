@@ -55,10 +55,13 @@ static NSString *const communitypostionCell_id= @"communitypostionCell_id";
             NSArray *dataSource = [dic allValues];
             self.holdPosArray = [dataSource mutableCopy];
             self.postionModel = dic[dic.allKeys[0]];
+            self.noDataView.alpha = 0;
+            self.holdPos_tableView.alpha = 1;
+        }else{
+            self.noDataView.alpha = 1;
+            self.holdPos_tableView.alpha = 0;
         }
-        self.noDataView.alpha = 0;
-       
-        self.holdPos_tableView.alpha = 1;
+      
     }else{
         self.noDataView.alpha = 1;
          self.holdPos_tableView.alpha = 0;
