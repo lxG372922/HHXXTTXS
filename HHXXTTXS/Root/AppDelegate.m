@@ -15,37 +15,21 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
     
-        weakSelf(self);
-        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+#pragma mark - Debug --
     
-        self.initWithSTViewControllerBlock = ^{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[COCMainViewController shareInstance] tabBarVC];
     
-            weakSelf.window.rootViewController = [[COCMainViewController shareInstance] tabBarVC];
-            [weakSelf.window makeKeyAndVisible];
-        };
+    [self.window makeKeyAndVisible];
     
+    [self p_setUpServer];
     
-        [self p_setUpServer];
+    [self p_setUpSVHUD];
     
-        [self p_setUpSVHUD];
-    
-        return [super application:application didFinishLaunchingWithOptions:launchOptions];
-    
-    
-//#pragma mark - Debug --
-//    
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    self.window.rootViewController = [[COCMainViewController shareInstance] tabBarVC];
-//    
-//    [self.window makeKeyAndVisible];
-//    
-//    [self p_setUpServer];
-//    
-//    [self p_setUpSVHUD];
-//    
-//    return YES;
+    return YES;
 }
 
 - (void)p_setUpKeyboardManager {

@@ -168,7 +168,7 @@
         
         NSMutableAttributedString *attr = [@" 我已阅读并同意" gl_createAttributedStringWithFont:[UIFont fontWithName:fFont size:12.0f] textColor:COCColorBackGround].mutableCopy;
         
-        [attr appendAttributedString:[@"《国际原油期货用户协议》" gl_createAttributedStringWithFont:[UIFont fontWithName:fFont size:14.0f] textColor:[UIColor cyanColor]]];
+        [attr appendAttributedString:[@"《万宝行情资讯用户协议》" gl_createAttributedStringWithFont:[UIFont fontWithName:fFont size:14.0f] textColor:[UIColor cyanColor]]];
         
         [_protocolInfoBtn setAttributedTitle:attr forState:UIControlStateNormal];
 //        [_protocolInfoBtn addTarget:self action:@selector(p_protocolInfoBtnAction:) forControlEvents:UIControlEventTouchUpInside];

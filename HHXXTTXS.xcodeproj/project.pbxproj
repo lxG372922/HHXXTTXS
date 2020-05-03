@@ -78,7 +78,6 @@
 		04DAFC3A22B892FE00EF35D3 /* COCHomeAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3722B892FE00EF35D3 /* COCHomeAboutUsViewController.m */; };
 		04DAFC3B22B892FE00EF35D3 /* COCHomeAboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */; };
 		04DAFC3E22B8934A00EF35D3 /* COCHomeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */; };
-		04DAFC4622B8F3C900EF35D3 /* logostore_1024pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DAFC4522B8F3C900EF35D3 /* logostore_1024pt.png */; };
 		04E57F9D22B7BF3F007BF39A /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57F9622B7BEC9007BF39A /* OrderModel.m */; };
 		04E57FA322B7C0E3007BF39A /* GLPositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E57FA222B7C0E3007BF39A /* GLPositionModel.m */; };
 		04ED93FA22B7B5EF00598327 /* COCPositionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED93F722B7B5EE00598327 /* COCPositionDetailViewController.m */; };
@@ -273,7 +272,6 @@
 		049B97BC22B77062003D943E /* COCTrasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = COCTrasTableViewCell.xib; sourceTree = "<group>"; };
 		04AEE67722BA22FE005AC621 /* COCAboutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCAboutView.h; sourceTree = "<group>"; };
 		04AEE67822BA22FE005AC621 /* COCAboutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCAboutView.m; sourceTree = "<group>"; };
-		04AEE67A22BA3363005AC621 /* HHXXTTXS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HHXXTTXS.entitlements; sourceTree = "<group>"; };
 		04DAFC3122B892D100EF35D3 /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewCell.m; sourceTree = "<group>"; };
 		04DAFC3222B892D100EF35D3 /* YUCustomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCustomHeaderView.h; sourceTree = "<group>"; };
 		04DAFC3322B892D100EF35D3 /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewCell.h; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 		04DAFC3922B892FE00EF35D3 /* COCHomeAboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COCHomeAboutUsViewController.xib; sourceTree = "<group>"; };
 		04DAFC3C22B8934A00EF35D3 /* COCHomeServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCHomeServiceViewController.h; sourceTree = "<group>"; };
 		04DAFC3D22B8934A00EF35D3 /* COCHomeServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COCHomeServiceViewController.m; sourceTree = "<group>"; };
-		04DAFC4522B8F3C900EF35D3 /* logostore_1024pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logostore_1024pt.png; sourceTree = "<group>"; };
 		04E57F9622B7BEC9007BF39A /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		04E57F9822B7BEC9007BF39A /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
 		04E57FA122B7C0E3007BF39A /* GLPositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPositionModel.h; sourceTree = "<group>"; };
@@ -834,7 +831,6 @@
 		18F20AC322B34E960064DE4C /* HHXXTTXS */ = {
 			isa = PBXGroup;
 			children = (
-				04AEE67A22BA3363005AC621 /* HHXXTTXS.entitlements */,
 				18F20AD222B34E960064DE4C /* Info.plist */,
 				18F20B9622B352140064DE4C /* WriteCode */,
 				18F20ADA22B34F080064DE4C /* BaseFile */,
@@ -1114,7 +1110,6 @@
 		18F20BAF22B354E60064DE4C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				04DAFC4522B8F3C900EF35D3 /* logostore_1024pt.png */,
 				185B0FAF22B7A97700491D58 /* bank.json */,
 				18F20BB222B354E60064DE4C /* server_protocol.html */,
 			);
@@ -1223,7 +1218,6 @@
 				049B97A922B73C51003D943E /* COCHomeMarketViewController.xib in Resources */,
 				049B978D22B71360003D943E /* COCHisRecordsViewController.xib in Resources */,
 				18F20AD122B34E960064DE4C /* LaunchScreen.storyboard in Resources */,
-				04DAFC4622B8F3C900EF35D3 /* logostore_1024pt.png in Resources */,
 				049B978022B5E806003D943E /* COCPosTableViewCell.xib in Resources */,
 				049B979222B7298F003D943E /* COCSetCCViewController.xib in Resources */,
 				18F20ACE22B34E960064DE4C /* Assets.xcassets in Resources */,
@@ -1549,9 +1543,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = HHXXTTXS/HHXXTTXS.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = H6R344L4KW;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YD53NCK3Q;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1611,9 +1606,9 @@
 					"-framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hc.yyqh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanbaohangqing.zx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dev_qh;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
 			};
@@ -1625,10 +1620,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = HHXXTTXS/HHXXTTXS.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = H6R344L4KW;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8YD53NCK3Q;
 				GCC_PREFIX_HEADER = HHXXTTXS/MacroFile/COCPrefixHeader.pch;
 				INFOPLIST_FILE = HHXXTTXS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1688,9 +1683,9 @@
 					"-framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.hc.yyqh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanbaohangqing.zx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dis_qh;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
 			};

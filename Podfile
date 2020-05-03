@@ -15,7 +15,6 @@ target 'HHXXTTXS' do
   pod 'FCUUID'                    # UUID生成
   pod 'JhtMarquee'                # 跑马灯
   pod 'PYSearch'
-  pod 'QCKJLCWorking'
   pod 'RTRootNavigationController'
   pod 'TYPagerController'
   pod 'MBProgressHUD'

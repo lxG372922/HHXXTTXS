@@ -100,7 +100,7 @@
         _infoLabel = [[UILabel alloc] init];
         _infoLabel.font = [UIFont fontWithName:fFont size:18.0f];
         _infoLabel.textColor = COCColorTitle;
-        _infoLabel.attributedText = [[NSAttributedString alloc] initWithString:@"国际原油期货是一个创新的期货开户&模拟软件，本公司上海好程金融信息服务有限公司是一家成立于上海的金融公司，与上交所、港交所、纽交所等各大交易所建立了深厚的合作关系。全真模拟期货交易，极速开户，是您期货投资不可缺少的移动App。\n 公司自成立以来，秉承稳健经营、创新发展的宗旨，覆盖全球金融市场、多元化产品任您选择、提供最稳定的金融服务。\n 我们将扎实雄厚的技术实力以及专业创新的研究服务作为依托，为您提供配套完善的服务体系。专注服务广大期货用户，为广大期货投资者提供优质服务。" attributes:self.attribute];
+        _infoLabel.attributedText = [[NSAttributedString alloc] initWithString:@"万宝行情资讯是一个创新的期货开户&模拟软件，本公司上海好程金融信息服务有限公司是一家成立于上海的金融公司，与上交所、港交所、纽交所等各大交易所建立了深厚的合作关系。全真模拟期货交易，极速开户，是您期货投资不可缺少的移动App。\n 公司自成立以来，秉承稳健经营、创新发展的宗旨，覆盖全球金融市场、多元化产品任您选择、提供最稳定的金融服务。\n 我们将扎实雄厚的技术实力以及专业创新的研究服务作为依托，为您提供配套完善的服务体系。专注服务广大期货用户，为广大期货投资者提供优质服务。" attributes:self.attribute];
         
         _infoLabel.numberOfLines = 0;
     }

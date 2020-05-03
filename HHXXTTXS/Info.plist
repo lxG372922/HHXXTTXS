@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>国际原油期货</string>
+	<string>万宝行情资讯</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -32,19 +32,15 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>”国际原油期货”访问相机以拍摄图片用来改变用户信息</string>
+	<string>”万宝行情资讯”访问相机以拍摄图片用来改变用户信息</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>”国际原油期货”使用您的地理位置以提供更精准的服务</string>
+	<string>”万宝行情资讯”使用您的地理位置以提供更精准的服务</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>”国际原油期货”使用您的地理位置以提供更精准的服务</string>
+	<string>”万宝行情资讯”使用您的地理位置以提供更精准的服务</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>”国际原油期货”访问相册以添加图片到您的相册</string>
+	<string>”万宝行情资讯”访问相册以添加图片到您的相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>”国际原油期货”访问相册以选择图片用来改变用户信息</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+	<string>”万宝行情资讯”访问相册以选择图片用来改变用户信息</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
